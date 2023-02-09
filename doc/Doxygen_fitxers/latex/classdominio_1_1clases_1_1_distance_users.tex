@@ -1,0 +1,72 @@
+\hypertarget{classdominio_1_1clases_1_1_distance_users}{}\doxysection{Referencia de la Clase dominio.\+clases.\+Distance\+Users}
+\label{classdominio_1_1clases_1_1_distance_users}\index{dominio.clases.DistanceUsers@{dominio.clases.DistanceUsers}}
+
+
+Clase que calcula la distancia entre un usuario y un centroide.  
+
+
+\doxysubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{classdominio_1_1clases_1_1_distance_users_adb919e4bf1cb553475932af41c29c5d3}{calculate\+Euclidean\+Distance}} (Map$<$ \mbox{\hyperlink{classdominio_1_1clases_1_1_item}{Item}}, Double $>$ f1, Map$<$ \mbox{\hyperlink{classdominio_1_1clases_1_1_item}{Item}}, Double $>$ f2)
+\begin{DoxyCompactList}\small\item\em Metodo que calcula la distancia euclidiana entre un usuario y un centroide. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Clase que calcula la distancia entre un usuario y un centroide. 
+
+\begin{DoxyAuthor}{Autor}
+Muhammad Haris 
+\end{DoxyAuthor}
+
+
+Definición en la línea \mbox{\hyperlink{_distance_users_8java_source_l00016}{16}} del archivo \mbox{\hyperlink{_distance_users_8java_source}{Distance\+Users.\+java}}.
+
+
+
+\doxysubsection{Documentación de las funciones miembro}
+\mbox{\Hypertarget{classdominio_1_1clases_1_1_distance_users_adb919e4bf1cb553475932af41c29c5d3}\label{classdominio_1_1clases_1_1_distance_users_adb919e4bf1cb553475932af41c29c5d3}} 
+\index{dominio.clases.DistanceUsers@{dominio.clases.DistanceUsers}!calculateEuclideanDistance@{calculateEuclideanDistance}}
+\index{calculateEuclideanDistance@{calculateEuclideanDistance}!dominio.clases.DistanceUsers@{dominio.clases.DistanceUsers}}
+\doxysubsubsection{\texorpdfstring{calculateEuclideanDistance()}{calculateEuclideanDistance()}}
+{\footnotesize\ttfamily double dominio.\+clases.\+Distance\+Users.\+calculate\+Euclidean\+Distance (\begin{DoxyParamCaption}\item[{Map$<$ \mbox{\hyperlink{classdominio_1_1clases_1_1_item}{Item}}, Double $>$}]{f1,  }\item[{Map$<$ \mbox{\hyperlink{classdominio_1_1clases_1_1_item}{Item}}, Double $>$}]{f2 }\end{DoxyParamCaption})}
+
+
+
+Metodo que calcula la distancia euclidiana entre un usuario y un centroide. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em f1} & Map que guarda los items del usuario y sus respectivas valoraciones \\
+\hline
+{\em f2} & Map que guarda los items del centroide y sus respectivas valoraciones \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+Distancia euclidiana entre el usuario y el centroide 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{_distance_users_8java_source_l00024}{24}} del archivo \mbox{\hyperlink{_distance_users_8java_source}{Distance\+Users.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00024                                                                                           \{}
+\DoxyCodeLine{00025         \textcolor{keywordtype}{double} sum = 0;}
+\DoxyCodeLine{00026         \textcolor{keywordtype}{int} i = 0;}
+\DoxyCodeLine{00027         \textcolor{keywordflow}{for} (Item key : f1.keySet()) \{}
+\DoxyCodeLine{00028             Double v1 = f1.get(key);}
+\DoxyCodeLine{00029             Double v2 = f2.get(key);}
+\DoxyCodeLine{00030             \textcolor{keywordflow}{if} (v1 != \textcolor{keyword}{null} \&\& v2 != \textcolor{keyword}{null}) sum += Math.pow(v1-\/v2,2);}
+\DoxyCodeLine{00031             \textcolor{keywordflow}{else} ++i;}
+\DoxyCodeLine{00032         \}}
+\DoxyCodeLine{00033         \textcolor{keywordflow}{if} (i == f1.size()) \textcolor{keywordflow}{return} -\/1.0;}
+\DoxyCodeLine{00034         \textcolor{keywordflow}{else} \textcolor{keywordflow}{return} Math.sqrt(sum);}
+\DoxyCodeLine{00035     \}}
+
+\end{DoxyCode}
+
+
+La documentación para esta clase fue generada a partir del siguiente fichero\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_distance_users_8java}{Distance\+Users.\+java}}\end{DoxyCompactItemize}

@@ -1,0 +1,27 @@
+\hypertarget{_distance_users_8java_source}{}\doxysection{Distance\+Users.\+java}
+\label{_distance_users_8java_source}\index{DistanceUsers.java@{DistanceUsers.java}}
+\mbox{\hyperlink{_distance_users_8java}{Ir a la documentación de este archivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_distance_users_8java_source_l00001}00001 }
+\DoxyCodeLine{\Hypertarget{_distance_users_8java_source_l00006}00006 \textcolor{keyword}{package }dominio.clases;}
+\DoxyCodeLine{\Hypertarget{_distance_users_8java_source_l00007}00007 }
+\DoxyCodeLine{\Hypertarget{_distance_users_8java_source_l00008}00008 \textcolor{keyword}{import} java.util.*;}
+\DoxyCodeLine{\Hypertarget{_distance_users_8java_source_l00009}00009 }
+\DoxyCodeLine{\Hypertarget{_distance_users_8java_source_l00016}\mbox{\hyperlink{classdominio_1_1clases_1_1_distance_users}{00016}} \textcolor{keyword}{public} \textcolor{keyword}{class }\mbox{\hyperlink{classdominio_1_1clases_1_1_distance_users}{DistanceUsers}} \{}
+\DoxyCodeLine{\Hypertarget{_distance_users_8java_source_l00017}00017 }
+\DoxyCodeLine{\Hypertarget{_distance_users_8java_source_l00024}\mbox{\hyperlink{classdominio_1_1clases_1_1_distance_users_adb919e4bf1cb553475932af41c29c5d3}{00024}}     \textcolor{keyword}{public} \textcolor{keywordtype}{double} \mbox{\hyperlink{classdominio_1_1clases_1_1_distance_users_adb919e4bf1cb553475932af41c29c5d3}{calculateEuclideanDistance}} (Map<Item, Double> f1, Map<Item, Double> f2) \{}
+\DoxyCodeLine{\Hypertarget{_distance_users_8java_source_l00025}00025         \textcolor{keywordtype}{double} sum = 0;}
+\DoxyCodeLine{\Hypertarget{_distance_users_8java_source_l00026}00026         \textcolor{keywordtype}{int} i = 0;}
+\DoxyCodeLine{\Hypertarget{_distance_users_8java_source_l00027}00027         \textcolor{keywordflow}{for} (\mbox{\hyperlink{classdominio_1_1clases_1_1_item}{Item}} key : f1.keySet()) \{}
+\DoxyCodeLine{\Hypertarget{_distance_users_8java_source_l00028}00028             Double v1 = f1.get(key);}
+\DoxyCodeLine{\Hypertarget{_distance_users_8java_source_l00029}00029             Double v2 = f2.get(key);}
+\DoxyCodeLine{\Hypertarget{_distance_users_8java_source_l00030}00030             \textcolor{keywordflow}{if} (v1 != \textcolor{keyword}{null} \&\& v2 != \textcolor{keyword}{null}) sum += Math.pow(v1-\/v2,2);}
+\DoxyCodeLine{\Hypertarget{_distance_users_8java_source_l00031}00031             \textcolor{keywordflow}{else} ++i;}
+\DoxyCodeLine{\Hypertarget{_distance_users_8java_source_l00032}00032         \}}
+\DoxyCodeLine{\Hypertarget{_distance_users_8java_source_l00033}00033         \textcolor{keywordflow}{if} (i == f1.size()) \textcolor{keywordflow}{return} -\/1.0;}
+\DoxyCodeLine{\Hypertarget{_distance_users_8java_source_l00034}00034         \textcolor{keywordflow}{else} \textcolor{keywordflow}{return} Math.sqrt(sum);}
+\DoxyCodeLine{\Hypertarget{_distance_users_8java_source_l00035}00035     \}}
+\DoxyCodeLine{\Hypertarget{_distance_users_8java_source_l00036}00036 }
+\DoxyCodeLine{\Hypertarget{_distance_users_8java_source_l00037}00037 \}}
+
+\end{DoxyCode}

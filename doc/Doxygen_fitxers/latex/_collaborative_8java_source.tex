@@ -1,0 +1,231 @@
+\hypertarget{_collaborative_8java_source}{}\doxysection{Collaborative.\+java}
+\label{_collaborative_8java_source}\index{Collaborative.java@{Collaborative.java}}
+\mbox{\hyperlink{_collaborative_8java}{Ir a la documentación de este archivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00001}00001 }
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00006}00006 \textcolor{keyword}{package }dominio.clases;}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00007}00007 }
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00008}00008 \textcolor{keyword}{import} java.text.DecimalFormat;}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00009}00009 \textcolor{keyword}{import} java.text.NumberFormat;}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00010}00010 \textcolor{keyword}{import} java.util.*;}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00011}00011 \textcolor{keyword}{import} java.util.stream.Collectors;}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00012}00012 }
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00020}\mbox{\hyperlink{classdominio_1_1clases_1_1_collaborative}{00020}} \textcolor{keyword}{public} \textcolor{keyword}{class }\mbox{\hyperlink{classdominio_1_1clases_1_1_collaborative}{Collaborative}} \textcolor{keyword}{extends} \mbox{\hyperlink{classdominio_1_1clases_1_1_algorisme}{Algorisme}}\{}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00021}00021 }
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00022}\mbox{\hyperlink{classdominio_1_1clases_1_1_collaborative_a7b9ae47091602b139e756f51adc8ee2d}{00022}}     \textcolor{keyword}{public} \mbox{\hyperlink{classdominio_1_1clases_1_1_collaborative_a7b9ae47091602b139e756f51adc8ee2d}{Collaborative}}()\{}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00023}00023         super();}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00024}00024     \}}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00025}00025 }
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00030}\mbox{\hyperlink{classdominio_1_1clases_1_1_collaborative_a82492a33d04c759335cdb3684df61b9b}{00030}}     \textcolor{keyword}{private} \textcolor{keyword}{static} \textcolor{keyword}{final} Random \mbox{\hyperlink{classdominio_1_1clases_1_1_collaborative_a82492a33d04c759335cdb3684df61b9b}{random}} = \textcolor{keyword}{new} Random();}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00031}00031 }
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00040}\mbox{\hyperlink{classdominio_1_1clases_1_1_collaborative_a2c88acf8217278a6dcdde01d87e11c41}{00040}}     \textcolor{keyword}{public} ArrayList<Cluster> \mbox{\hyperlink{classdominio_1_1clases_1_1_collaborative_a2c88acf8217278a6dcdde01d87e11c41}{recommendations}} (List<Usuari> Usuaris, \textcolor{keywordtype}{int} k, \mbox{\hyperlink{classdominio_1_1clases_1_1_distance_users}{DistanceUsers}} distance, \textcolor{keywordtype}{int} n) \{}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00041}00041         List<Centroid> centroids = \mbox{\hyperlink{classdominio_1_1clases_1_1_collaborative_a26787a80fa20b38cb0b1e3486de530ad}{applyCentroids}}(Usuaris,k);}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00042}00042         ArrayList<Cluster> clusters = \textcolor{keyword}{new} ArrayList<>();}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00043}00043         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < n; ++i) \{}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00044}00044             \textcolor{keywordtype}{boolean} isLastIteration = i == n -\/ 1;}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00045}00045             \textcolor{keywordtype}{int} terminar = 0;}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00046}00046             \textcolor{keywordflow}{for} (\mbox{\hyperlink{classdominio_1_1clases_1_1_usuari}{Usuari}} \mbox{\hyperlink{classdominio_1_1clases_1_1_usuari}{Usuari}} : Usuaris) \{}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00047}00047                 \textcolor{keywordflow}{if} (i == 0) \{}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00048}00048                     \mbox{\hyperlink{classdominio_1_1clases_1_1_centroid}{Centroid}} centroid = \mbox{\hyperlink{classdominio_1_1clases_1_1_collaborative_a5d9aac320718b1fc379c782e20247392}{nearestCentroid}}(\mbox{\hyperlink{classdominio_1_1clases_1_1_usuari}{Usuari}}, centroids, distance, k);}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00049}00049                     \textcolor{keywordflow}{if} (\mbox{\hyperlink{classdominio_1_1clases_1_1_usuari}{Usuari}}.\mbox{\hyperlink{classdominio_1_1clases_1_1_usuari_aa22633a65abe77a2c62a8388d62f9902}{getUserId}}() != centroid.\mbox{\hyperlink{classdominio_1_1clases_1_1_centroid_a2a82449acb307b9cf06d140f76f025ec}{getCentroid\_user\_id}}()) \{}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00050}00050                        centroid.\mbox{\hyperlink{classdominio_1_1clases_1_1_centroid_abbf5337fa6de3789052b00b4897993a7}{recolocar}}(\mbox{\hyperlink{classdominio_1_1clases_1_1_usuari}{Usuari}});}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00051}00051                     \}}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00052}00052                     \mbox{\hyperlink{classdominio_1_1clases_1_1_usuari}{Usuari}}.\mbox{\hyperlink{classdominio_1_1clases_1_1_usuari_acb97a81acb22e74e5e753611e0fb5e2a}{setCentroid}}(centroid);}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00053}00053                     \mbox{\hyperlink{classdominio_1_1clases_1_1_collaborative_ac4da1ca873616191598d33f849ebc33d}{assignToCluster}}(clusters, \mbox{\hyperlink{classdominio_1_1clases_1_1_usuari}{Usuari}}, centroid);}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00054}00054                 \}}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00055}00055                 \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00056}00056                     \textcolor{keywordtype}{double} dis = distance.\mbox{\hyperlink{classdominio_1_1clases_1_1_distance_users_adb919e4bf1cb553475932af41c29c5d3}{calculateEuclideanDistance}}(\mbox{\hyperlink{classdominio_1_1clases_1_1_usuari}{Usuari}}.\mbox{\hyperlink{classdominio_1_1clases_1_1_usuari_a5f2f72c56d755b0785792c34622f419d}{getRatedItems}}(), \mbox{\hyperlink{classdominio_1_1clases_1_1_usuari}{Usuari}}.\mbox{\hyperlink{classdominio_1_1clases_1_1_usuari_af0cbe31c9973df8ab4d5e494808bfa02}{getCentroid}}().\mbox{\hyperlink{classdominio_1_1clases_1_1_centroid_a7552ecd5388c2d3045fb1cd13a4318b1}{getCentroid}}());}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00057}00057                     \textcolor{keywordflow}{if} (dis <= \mbox{\hyperlink{classdominio_1_1clases_1_1_usuari}{Usuari}}.\mbox{\hyperlink{classdominio_1_1clases_1_1_usuari_a1f5ef8dcfa734f14de2f700fefba2af4}{getNearest\_dist}}()) \{}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00058}00058                         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classdominio_1_1clases_1_1_usuari}{Usuari}}.\mbox{\hyperlink{classdominio_1_1clases_1_1_usuari_a1f5ef8dcfa734f14de2f700fefba2af4}{getNearest\_dist}}() == Double.MAX\_VALUE) \mbox{\hyperlink{classdominio_1_1clases_1_1_usuari}{Usuari}}.\mbox{\hyperlink{classdominio_1_1clases_1_1_usuari_a5d7415677c4193ad03bce948a5de2fc9}{setNearest\_dist}}(dis);}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00059}00059                         ++terminar;}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00060}00060                     \}}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00061}00061                     \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00062}00062                         \mbox{\hyperlink{classdominio_1_1clases_1_1_centroid}{Centroid}} centroid = \mbox{\hyperlink{classdominio_1_1clases_1_1_collaborative_a5d9aac320718b1fc379c782e20247392}{nearestCentroid}}(\mbox{\hyperlink{classdominio_1_1clases_1_1_usuari}{Usuari}}, centroids, distance, k);}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00063}00063                         \textcolor{keywordflow}{if} (centroid != \mbox{\hyperlink{classdominio_1_1clases_1_1_usuari}{Usuari}}.\mbox{\hyperlink{classdominio_1_1clases_1_1_usuari_af0cbe31c9973df8ab4d5e494808bfa02}{getCentroid}}()) \{}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00064}00064                             \mbox{\hyperlink{classdominio_1_1clases_1_1_usuari}{Usuari}}.\mbox{\hyperlink{classdominio_1_1clases_1_1_usuari_af0cbe31c9973df8ab4d5e494808bfa02}{getCentroid}}().\mbox{\hyperlink{classdominio_1_1clases_1_1_centroid_a9f13b81d164983cbd93eb9ed51929bb6}{eliminar}}(\mbox{\hyperlink{classdominio_1_1clases_1_1_usuari}{Usuari}});}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00065}00065                             centroid.\mbox{\hyperlink{classdominio_1_1clases_1_1_centroid_abbf5337fa6de3789052b00b4897993a7}{recolocar}}(\mbox{\hyperlink{classdominio_1_1clases_1_1_usuari}{Usuari}});}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00066}00066                             \mbox{\hyperlink{classdominio_1_1clases_1_1_collaborative_ab49cbd617aa3a3eb96f8cbeca19952fc}{eliminateFromCluster}}(\mbox{\hyperlink{classdominio_1_1clases_1_1_usuari}{Usuari}}, clusters);}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00067}00067                             \mbox{\hyperlink{classdominio_1_1clases_1_1_usuari}{Usuari}}.\mbox{\hyperlink{classdominio_1_1clases_1_1_usuari_acb97a81acb22e74e5e753611e0fb5e2a}{setCentroid}}(centroid);}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00068}00068                             \mbox{\hyperlink{classdominio_1_1clases_1_1_collaborative_ac4da1ca873616191598d33f849ebc33d}{assignToCluster}}(clusters, \mbox{\hyperlink{classdominio_1_1clases_1_1_usuari}{Usuari}}, centroid);}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00069}00069                         \}}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00070}00070                     \}}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00071}00071                 \}}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00072}00072             \}}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00073}00073             \textcolor{keywordtype}{boolean} shouldTerminate = isLastIteration || terminar == Usuaris.size();}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00074}00074             \textcolor{keywordflow}{if} (shouldTerminate) \{}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00075}00075                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00076}00076             \}}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00077}00077             centroids = \mbox{\hyperlink{classdominio_1_1clases_1_1_collaborative_a542e8d67b9d573784a48b90552527254}{relocateCentroids}}(clusters);}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00078}00078         \}}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00079}00079         \textcolor{keywordflow}{return} clusters;}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00080}00080     \}}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00081}00081 }
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00087}\mbox{\hyperlink{classdominio_1_1clases_1_1_collaborative_ab49cbd617aa3a3eb96f8cbeca19952fc}{00087}}     \textcolor{keyword}{public} \textcolor{keyword}{static} \textcolor{keywordtype}{void} \mbox{\hyperlink{classdominio_1_1clases_1_1_collaborative_ab49cbd617aa3a3eb96f8cbeca19952fc}{eliminateFromCluster}}(\mbox{\hyperlink{classdominio_1_1clases_1_1_usuari}{Usuari}} u, List<Cluster> clusters) \{}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00088}00088         \textcolor{keywordflow}{for} (\mbox{\hyperlink{classdominio_1_1clases_1_1_cluster}{Cluster}} c: clusters) \{}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00089}00089             \textcolor{keywordflow}{if} (c.getCentroid() == u.\mbox{\hyperlink{classdominio_1_1clases_1_1_usuari_af0cbe31c9973df8ab4d5e494808bfa02}{getCentroid}}()) \{}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00090}00090                 HashSet<Usuari> usuaris = \textcolor{keyword}{new} HashSet<>();}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00091}00091                 usuaris = c.getUsuaris();}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00092}00092                 usuaris.remove(u);}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00093}00093                 c.setUsuaris(usuaris);}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00094}00094             \}}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00095}00095         \}}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00096}00096     \}}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00097}00097 }
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00105}\mbox{\hyperlink{classdominio_1_1clases_1_1_collaborative_a26787a80fa20b38cb0b1e3486de530ad}{00105}}     \textcolor{keyword}{public} \textcolor{keyword}{static} List<Centroid> \mbox{\hyperlink{classdominio_1_1clases_1_1_collaborative_a26787a80fa20b38cb0b1e3486de530ad}{applyCentroids}}(List<Usuari> Usuaris, \textcolor{keywordtype}{int} k) \{}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00106}00106         List<Centroid> centroids = \textcolor{keyword}{new} ArrayList<>();}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00107}00107         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = 0; j < k; ++j) \{}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00108}00108             \textcolor{keywordtype}{int} aux = 0;}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00109}00109             \mbox{\hyperlink{classdominio_1_1clases_1_1_usuari}{Usuari}} u = Usuaris.get(\mbox{\hyperlink{classdominio_1_1clases_1_1_collaborative_a82492a33d04c759335cdb3684df61b9b}{random}}.nextInt(Usuaris.size()));}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00110}00110             \textcolor{keywordflow}{for} (\mbox{\hyperlink{classdominio_1_1clases_1_1_centroid}{Centroid}} ce : centroids) \{}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00111}00111                 \textcolor{keywordflow}{if} (u.\mbox{\hyperlink{classdominio_1_1clases_1_1_usuari_aa22633a65abe77a2c62a8388d62f9902}{getUserId}}() != ce.getCentroid\_user\_id()) \{}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00112}00112                     ++aux;}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00113}00113                 \}}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00114}00114             \}}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00115}00115             \textcolor{keywordflow}{if} (aux == centroids.size()) \{}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00116}00116                 \mbox{\hyperlink{classdominio_1_1clases_1_1_centroid}{Centroid}} c = \textcolor{keyword}{new} \mbox{\hyperlink{classdominio_1_1clases_1_1_centroid}{Centroid}}();}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00117}00117                 c.\mbox{\hyperlink{classdominio_1_1clases_1_1_centroid_a4c4f26d82b78884146156288d0524ac7}{setCentroid\_number}}(j + 1);}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00118}00118                 u.\mbox{\hyperlink{classdominio_1_1clases_1_1_usuari_a5f2f72c56d755b0785792c34622f419d}{getRatedItems}}().forEach((key, value) -\/> \{}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00119}00119                     c.\mbox{\hyperlink{classdominio_1_1clases_1_1_centroid_a7552ecd5388c2d3045fb1cd13a4318b1}{getCentroid}}().put(key, value);}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00120}00120                     c.\mbox{\hyperlink{classdominio_1_1clases_1_1_centroid_a5787d49d784ab4ed714d35cb94c7de03}{getValoraciones}}().put(key, value);}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00121}00121                     c.\mbox{\hyperlink{classdominio_1_1clases_1_1_centroid_a6f48ac0624159d16ddac3ca2e347b509}{getTimes}}().put(key, 1);}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00122}00122                 \});}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00123}00123                 c.\mbox{\hyperlink{classdominio_1_1clases_1_1_centroid_a912d24adbeea1ed779aa516b90396242}{setCentroid\_user\_id}}(u.\mbox{\hyperlink{classdominio_1_1clases_1_1_usuari_aa22633a65abe77a2c62a8388d62f9902}{getUserId}}());}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00124}00124                 centroids.add(c);}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00125}00125             \} \textcolor{keywordflow}{else} -\/-\/j;}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00126}00126         \}}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00127}00127         \textcolor{keywordflow}{return} centroids;}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00128}00128 }
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00129}00129     \}}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00130}00130 }
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00137}\mbox{\hyperlink{classdominio_1_1clases_1_1_collaborative_a542e8d67b9d573784a48b90552527254}{00137}}     \textcolor{keyword}{public} \textcolor{keyword}{static} List<Centroid> \mbox{\hyperlink{classdominio_1_1clases_1_1_collaborative_a542e8d67b9d573784a48b90552527254}{relocateCentroids}}(ArrayList<Cluster> clusters) \{}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00138}00138         List<Centroid> centroids = \textcolor{keyword}{new} ArrayList<>();}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00139}00139         \textcolor{keywordflow}{for} (\mbox{\hyperlink{classdominio_1_1clases_1_1_cluster}{Cluster}} c : clusters) \{}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00140}00140             \mbox{\hyperlink{classdominio_1_1clases_1_1_centroid}{Centroid}} ce = \mbox{\hyperlink{classdominio_1_1clases_1_1_collaborative_a80dac1e093db8ac2c951429ee26c82bf}{average}}(c.getCentroid());}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00141}00141             centroids.add(ce);}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00142}00142         \}}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00143}00143         \textcolor{keywordflow}{return} centroids;}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00144}00144     \}}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00145}00145 }
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00152}\mbox{\hyperlink{classdominio_1_1clases_1_1_collaborative_a80dac1e093db8ac2c951429ee26c82bf}{00152}}     \textcolor{keyword}{public} \textcolor{keyword}{static} \mbox{\hyperlink{classdominio_1_1clases_1_1_centroid}{Centroid}} \mbox{\hyperlink{classdominio_1_1clases_1_1_collaborative_a80dac1e093db8ac2c951429ee26c82bf}{average}}(\mbox{\hyperlink{classdominio_1_1clases_1_1_centroid}{Centroid}} centroid) \{}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00153}00153         HashMap<Item, Double> \mbox{\hyperlink{classdominio_1_1clases_1_1_collaborative_a80dac1e093db8ac2c951429ee26c82bf}{average}} = \textcolor{keyword}{new} HashMap<>();}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00154}00154         \textcolor{keywordflow}{for} (\mbox{\hyperlink{classdominio_1_1clases_1_1_item}{Item}} key : centroid.\mbox{\hyperlink{classdominio_1_1clases_1_1_centroid_a5787d49d784ab4ed714d35cb94c7de03}{getValoraciones}}().keySet()) \{}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00155}00155             \mbox{\hyperlink{classdominio_1_1clases_1_1_collaborative_a80dac1e093db8ac2c951429ee26c82bf}{average}}.put(key, centroid.\mbox{\hyperlink{classdominio_1_1clases_1_1_centroid_a5787d49d784ab4ed714d35cb94c7de03}{getValoraciones}}().get(key)/centroid.\mbox{\hyperlink{classdominio_1_1clases_1_1_centroid_a6f48ac0624159d16ddac3ca2e347b509}{getTimes}}().get(key));}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00156}00156         \}}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00157}00157         centroid.\mbox{\hyperlink{classdominio_1_1clases_1_1_centroid_a5521932ec18fc4699555dae945398a75}{setCentroid}}(\mbox{\hyperlink{classdominio_1_1clases_1_1_collaborative_a80dac1e093db8ac2c951429ee26c82bf}{average}});}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00158}00158         \textcolor{keywordflow}{return} centroid ;}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00159}00159     \}}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00160}00160 }
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00168}\mbox{\hyperlink{classdominio_1_1clases_1_1_collaborative_a2159e6f93241f9e5168bc3dfab1bd7cb}{00168}}     \textcolor{keyword}{public} \textcolor{keyword}{static} \textcolor{keywordtype}{int} \mbox{\hyperlink{classdominio_1_1clases_1_1_collaborative_a2159e6f93241f9e5168bc3dfab1bd7cb}{calculaItemsComun}}(Map<Item, Double> f1, Map<Item, Double> f2) \{}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00169}00169         \textcolor{keywordtype}{int} i = 0;}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00170}00170         \textcolor{keywordflow}{for} (\mbox{\hyperlink{classdominio_1_1clases_1_1_item}{Item}} key : f1.keySet()) \{}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00171}00171             \textcolor{keywordflow}{if} (f2.containsKey(key) == \textcolor{keyword}{true}) \{}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00172}00172                 ++i;}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00173}00173             \}}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00174}00174         \}}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00175}00175 }
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00176}00176         \textcolor{keywordflow}{return} i;}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00177}00177     \}}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00178}00178 }
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00187}\mbox{\hyperlink{classdominio_1_1clases_1_1_collaborative_a5d9aac320718b1fc379c782e20247392}{00187}}     \textcolor{keyword}{public} \textcolor{keyword}{static} \mbox{\hyperlink{classdominio_1_1clases_1_1_centroid}{Centroid}} \mbox{\hyperlink{classdominio_1_1clases_1_1_collaborative_a5d9aac320718b1fc379c782e20247392}{nearestCentroid}}(\mbox{\hyperlink{classdominio_1_1clases_1_1_usuari}{Usuari}} \mbox{\hyperlink{classdominio_1_1clases_1_1_usuari}{Usuari}}, List<Centroid> centroids, \mbox{\hyperlink{classdominio_1_1clases_1_1_distance_users}{DistanceUsers}} distance, \textcolor{keywordtype}{int} k) \{}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00188}00188         \textcolor{keywordtype}{double} minimumDistance = Double.MAX\_VALUE;}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00189}00189         \textcolor{keywordtype}{int} maxComun = -\/1;}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00190}00190         \mbox{\hyperlink{classdominio_1_1clases_1_1_centroid}{Centroid}} nearest = \textcolor{keyword}{new} \mbox{\hyperlink{classdominio_1_1clases_1_1_centroid}{Centroid}}();}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00191}00191         \textcolor{keywordflow}{for} (\mbox{\hyperlink{classdominio_1_1clases_1_1_centroid}{Centroid}} centroid : centroids) \{}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00192}00192             \textcolor{keywordtype}{double} currentDistance =  distance.\mbox{\hyperlink{classdominio_1_1clases_1_1_distance_users_adb919e4bf1cb553475932af41c29c5d3}{calculateEuclideanDistance}}(\mbox{\hyperlink{classdominio_1_1clases_1_1_usuari}{Usuari}}.\mbox{\hyperlink{classdominio_1_1clases_1_1_usuari_a5f2f72c56d755b0785792c34622f419d}{getRatedItems}}(), centroid.getCentroid());}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00193}00193             \textcolor{keywordtype}{int} currentComun = \mbox{\hyperlink{classdominio_1_1clases_1_1_collaborative_a2159e6f93241f9e5168bc3dfab1bd7cb}{calculaItemsComun}}(\mbox{\hyperlink{classdominio_1_1clases_1_1_usuari}{Usuari}}.\mbox{\hyperlink{classdominio_1_1clases_1_1_usuari_a5f2f72c56d755b0785792c34622f419d}{getRatedItems}}(), centroid.getCentroid());}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00194}00194             \textcolor{keywordflow}{if} (currentDistance < minimumDistance \&\& currentDistance != -\/1 || currentDistance == minimumDistance \&\& currentDistance != -\/1 \&\& currentComun > maxComun) \{}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00195}00195                 minimumDistance = currentDistance;}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00196}00196                 maxComun = currentComun;}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00197}00197                 nearest = centroid;}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00198}00198 }
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00199}00199             \}}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00200}00200 }
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00201}00201         \}}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00202}00202         \textcolor{keywordflow}{if} (nearest.\mbox{\hyperlink{classdominio_1_1clases_1_1_centroid_a7552ecd5388c2d3045fb1cd13a4318b1}{getCentroid}}().size() == 0) \{}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00203}00203             nearest = centroids.get(\mbox{\hyperlink{classdominio_1_1clases_1_1_collaborative_a82492a33d04c759335cdb3684df61b9b}{random}}.nextInt(k));}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00204}00204         \}}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00205}00205         \mbox{\hyperlink{classdominio_1_1clases_1_1_usuari}{Usuari}}.\mbox{\hyperlink{classdominio_1_1clases_1_1_usuari_a5d7415677c4193ad03bce948a5de2fc9}{setNearest\_dist}}(minimumDistance);}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00206}00206         \textcolor{keywordflow}{return} nearest;}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00207}00207     \}}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00208}00208 }
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00216}\mbox{\hyperlink{classdominio_1_1clases_1_1_collaborative_ac4da1ca873616191598d33f849ebc33d}{00216}}     \textcolor{keyword}{public} \textcolor{keyword}{static} \textcolor{keywordtype}{void} \mbox{\hyperlink{classdominio_1_1clases_1_1_collaborative_ac4da1ca873616191598d33f849ebc33d}{assignToCluster}}(ArrayList<Cluster> clusters, \mbox{\hyperlink{classdominio_1_1clases_1_1_usuari}{Usuari}} \mbox{\hyperlink{classdominio_1_1clases_1_1_usuari}{Usuari}}, \mbox{\hyperlink{classdominio_1_1clases_1_1_centroid}{Centroid}} centroid) \{}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00217}00217         \textcolor{keywordtype}{boolean} exist = \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00218}00218         \textcolor{keywordflow}{for} (\mbox{\hyperlink{classdominio_1_1clases_1_1_cluster}{Cluster}} c : clusters) \{}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00219}00219             \textcolor{keywordflow}{if} (c.getCentroid() == centroid) \{}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00220}00220                 exist = \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00221}00221                 c.addUsuari(\mbox{\hyperlink{classdominio_1_1clases_1_1_usuari}{Usuari}});}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00222}00222             \}}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00223}00223         \}}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00224}00224 }
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00225}00225         \textcolor{keywordflow}{if} (!exist) \{}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00226}00226             \mbox{\hyperlink{classdominio_1_1clases_1_1_cluster}{Cluster}} cl = \textcolor{keyword}{new} \mbox{\hyperlink{classdominio_1_1clases_1_1_cluster}{Cluster}}();}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00227}00227             cl.\mbox{\hyperlink{classdominio_1_1clases_1_1_cluster_ab976c629f05e6dd9eb26722b7e52becc}{setCentroid}}(centroid);}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00228}00228             HashSet<Usuari> u = \textcolor{keyword}{new} HashSet<>();}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00229}00229             u.add(\mbox{\hyperlink{classdominio_1_1clases_1_1_usuari}{Usuari}});}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00230}00230             cl.\mbox{\hyperlink{classdominio_1_1clases_1_1_cluster_aea65f87cb22759ab43ce09ab49c91127}{setUsuaris}}(u);}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00231}00231             clusters.add(cl);}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00232}00232         \}}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00233}00233 }
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00234}00234     \}}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00235}00235 }
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00242}\mbox{\hyperlink{classdominio_1_1clases_1_1_collaborative_aedf00b2f0f3420d45a77188f41075bc3}{00242}}     \textcolor{keyword}{public} \textcolor{keyword}{static} \textcolor{keywordtype}{double} \mbox{\hyperlink{classdominio_1_1clases_1_1_collaborative_aedf00b2f0f3420d45a77188f41075bc3}{maxDistanceUserCentroid}}(ArrayList<Cluster> clusters, \mbox{\hyperlink{classdominio_1_1clases_1_1_distance_users}{DistanceUsers}} distance) \{}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00243}00243         Double maxDistance = Double.MIN\_VALUE;}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00244}00244         \textcolor{keywordflow}{for} (\mbox{\hyperlink{classdominio_1_1clases_1_1_cluster}{Cluster}} c: clusters) \{}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00245}00245             HashSet<Usuari>  \mbox{\hyperlink{classdominio_1_1clases_1_1_algorisme_aa2a6296923e364755e6d0efaaaa4b2c2}{users}} = c.getUsuaris();}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00246}00246             Iterator<Usuari> it = \mbox{\hyperlink{classdominio_1_1clases_1_1_algorisme_aa2a6296923e364755e6d0efaaaa4b2c2}{users}}.iterator();}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00247}00247             \textcolor{keywordflow}{while} (it.hasNext()) \{}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00248}00248                 \textcolor{keywordtype}{double} d = distance.\mbox{\hyperlink{classdominio_1_1clases_1_1_distance_users_adb919e4bf1cb553475932af41c29c5d3}{calculateEuclideanDistance}}(it.next().getRatedItems(), c.getCentroid().getCentroid());}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00249}00249                 \textcolor{keywordflow}{if} (d > maxDistance) maxDistance = d;}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00250}00250             \}}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00251}00251         \}}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00252}00252         \textcolor{keywordflow}{return} maxDistance;}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00253}00253     \}}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00254}00254 }
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00261}\mbox{\hyperlink{classdominio_1_1clases_1_1_collaborative_a03a095d618fe44646af54f4c588f9730}{00261}}     \textcolor{keyword}{public} \textcolor{keyword}{static} ArrayList<Cluster> \mbox{\hyperlink{classdominio_1_1clases_1_1_collaborative_a03a095d618fe44646af54f4c588f9730}{ejecuta\_k\_means}}(List<Usuari> \mbox{\hyperlink{classdominio_1_1clases_1_1_algorisme_aa2a6296923e364755e6d0efaaaa4b2c2}{users}}) \{}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00262}00262         ArrayList<ArrayList<Cluster>> clustersDef = \textcolor{keyword}{new} ArrayList<>();}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00263}00263         List<Double> maxDistances1 = \textcolor{keyword}{new} ArrayList<>();}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00264}00264         \textcolor{keywordtype}{double} mindis = Double.MAX\_VALUE;}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00265}00265         \textcolor{keywordtype}{int} k\_definitiva = 0;}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00266}00266         \textcolor{keywordtype}{int} k\_alternativa = 0;}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00267}00267         \textcolor{keywordtype}{boolean} acabat = \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00268}00268         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} k1 = 3; k1 <= 12; ++k1) \{}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00269}00269             ArrayList<Cluster> clusters12 = \textcolor{keyword}{new} \mbox{\hyperlink{classdominio_1_1clases_1_1_collaborative_a7b9ae47091602b139e756f51adc8ee2d}{Collaborative}}().recommendations(\mbox{\hyperlink{classdominio_1_1clases_1_1_algorisme_aa2a6296923e364755e6d0efaaaa4b2c2}{users}},k1,\textcolor{keyword}{new} \mbox{\hyperlink{classdominio_1_1clases_1_1_distance_users}{DistanceUsers}}(),100);}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00270}00270             clustersDef.add(clusters12);}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00271}00271             \textcolor{keywordtype}{double} mdistance1 = \mbox{\hyperlink{classdominio_1_1clases_1_1_collaborative_aedf00b2f0f3420d45a77188f41075bc3}{maxDistanceUserCentroid}}(clusters12, \textcolor{keyword}{new} \mbox{\hyperlink{classdominio_1_1clases_1_1_distance_users}{DistanceUsers}}());}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00272}00272             maxDistances1.add(mdistance1);}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00273}00273             \textcolor{keywordflow}{if} (mdistance1 < mindis) \{}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00274}00274                 mindis = mdistance1;}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00275}00275                 k\_alternativa = k1;}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00276}00276             \}}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00277}00277             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < maxDistances1.size(); ++i) \{}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00278}00278                 \textcolor{keywordflow}{if} (i != maxDistances1.size() -\/ 1) \{}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00279}00279                     \textcolor{keywordflow}{if} (maxDistances1.get(i) >= maxDistances1.get(i+1)) \{}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00280}00280                         \textcolor{keywordflow}{if} (maxDistances1.get(i) -\/ maxDistances1.get(i+1) < 1) \{}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00281}00281                             k\_definitiva = i + 3;}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00282}00282                             acabat = \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00283}00283                             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00284}00284                         \}}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00285}00285                     \}}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00286}00286                     \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00287}00287                         \textcolor{keywordflow}{if} (maxDistances1.get(i+1) -\/ maxDistances1.get(i) > 0.2) \{}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00288}00288                             k\_definitiva = i + 3;}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00289}00289                             acabat = \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00290}00290                             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00291}00291                         \}}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00292}00292                     \}}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00293}00293                 \}}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00294}00294             \}}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00295}00295             \textcolor{keywordflow}{if} (acabat) \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00296}00296         \}}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00297}00297         \textcolor{keywordflow}{if} (k\_definitiva != 0) \textcolor{keywordflow}{return} clustersDef.get(k\_definitiva-\/3);}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00298}00298         \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00299}00299             ArrayList<Cluster> aux;}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00300}00300             k\_definitiva = k\_alternativa;}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00301}00301             aux = \textcolor{keyword}{new} \mbox{\hyperlink{classdominio_1_1clases_1_1_collaborative_a7b9ae47091602b139e756f51adc8ee2d}{Collaborative}}().recommendations(\mbox{\hyperlink{classdominio_1_1clases_1_1_algorisme_aa2a6296923e364755e6d0efaaaa4b2c2}{users}},k\_definitiva,\textcolor{keyword}{new} \mbox{\hyperlink{classdominio_1_1clases_1_1_distance_users}{DistanceUsers}}(),100);}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00302}00302             \textcolor{keywordflow}{return} aux;}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00303}00303         \}}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00304}00304     \}}
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00305}00305 }
+\DoxyCodeLine{\Hypertarget{_collaborative_8java_source_l00306}00306 \}}
+
+\end{DoxyCode}

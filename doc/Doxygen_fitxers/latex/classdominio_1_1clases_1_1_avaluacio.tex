@@ -1,0 +1,186 @@
+\hypertarget{classdominio_1_1clases_1_1_avaluacio}{}\doxysection{Referencia de la Clase dominio.\+clases.\+Avaluacio}
+\label{classdominio_1_1clases_1_1_avaluacio}\index{dominio.clases.Avaluacio@{dominio.clases.Avaluacio}}
+
+
+Clase dedicada a la evaluacion de recomendaciones mediante el calculo del DCG de un conjunto de valoraciones para un conjunto de usuarios.  
+
+
+\doxysubsection*{Métodos públicos estáticos}
+\begin{DoxyCompactItemize}
+\item 
+static String \mbox{\hyperlink{classdominio_1_1clases_1_1_avaluacio_a6097e0538c2f66438f1d09f8f6585cec}{DCG}} (\mbox{\hyperlink{classdominio_1_1clases_1_1_usuari}{Usuari}} LR, \mbox{\hyperlink{classdominio_1_1clases_1_1_usuari}{Usuari}} LT)
+\begin{DoxyCompactList}\small\item\em Metodo responsable de la aplicacion de la formula del DCG propiamente dicho. \end{DoxyCompactList}\item 
+static Hash\+Map$<$ \mbox{\hyperlink{classdominio_1_1clases_1_1_item}{Item}}, Double $>$ \mbox{\hyperlink{classdominio_1_1clases_1_1_avaluacio_a6d7fb87ff65af489726e43e652c6effb}{sort\+By\+Value}} (Hash\+Map$<$ \mbox{\hyperlink{classdominio_1_1clases_1_1_item}{Item}}, Double $>$ data)
+\begin{DoxyCompactList}\small\item\em Metodo dedicado a la reordenacion de las valoraciones segun su valor (paso necesario para la aplicacion del DCG) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Métodos privados estáticos}
+\begin{DoxyCompactItemize}
+\item 
+static double \mbox{\hyperlink{classdominio_1_1clases_1_1_avaluacio_a10c705e9b4bb3d549f7a47ccd918c7e9}{compute\+Ideal\+DCG}} (Hash\+Map$<$ \mbox{\hyperlink{classdominio_1_1clases_1_1_item}{Item}}, Double $>$ LR)
+\begin{DoxyCompactList}\small\item\em Metodo que computa el DCG ideal. \end{DoxyCompactList}\item 
+static double \mbox{\hyperlink{classdominio_1_1clases_1_1_avaluacio_a6c3beb045b7f416a0494eac6127db2bf}{log}} (int x, int b)
+\begin{DoxyCompactList}\small\item\em Metodo que realiza el calculo del logaritmo de un valor en base b, esto es\+: log\+\_\+b(x) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Clase dedicada a la evaluacion de recomendaciones mediante el calculo del DCG de un conjunto de valoraciones para un conjunto de usuarios. 
+
+\begin{DoxyAuthor}{Autor}
+Cristian Sanchez Estape 
+\end{DoxyAuthor}
+
+
+Definición en la línea \mbox{\hyperlink{_avaluacio_8java_source_l00015}{15}} del archivo \mbox{\hyperlink{_avaluacio_8java_source}{Avaluacio.\+java}}.
+
+
+
+\doxysubsection{Documentación de las funciones miembro}
+\mbox{\Hypertarget{classdominio_1_1clases_1_1_avaluacio_a6097e0538c2f66438f1d09f8f6585cec}\label{classdominio_1_1clases_1_1_avaluacio_a6097e0538c2f66438f1d09f8f6585cec}} 
+\index{dominio.clases.Avaluacio@{dominio.clases.Avaluacio}!DCG@{DCG}}
+\index{DCG@{DCG}!dominio.clases.Avaluacio@{dominio.clases.Avaluacio}}
+\doxysubsubsection{\texorpdfstring{DCG()}{DCG()}}
+{\footnotesize\ttfamily static String dominio.\+clases.\+Avaluacio.\+DCG (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classdominio_1_1clases_1_1_usuari}{Usuari}}}]{LR,  }\item[{\mbox{\hyperlink{classdominio_1_1clases_1_1_usuari}{Usuari}}}]{LT }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Metodo responsable de la aplicacion de la formula del DCG propiamente dicho. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em LR} & Usuario con las valoraciones ideales que deberia realizar \\
+\hline
+{\em LT} & Usuario con las valoraciones predecidas/realizadas \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{_avaluacio_8java_source_l00023}{23}} del archivo \mbox{\hyperlink{_avaluacio_8java_source}{Avaluacio.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00023                                                    \{}
+\DoxyCodeLine{00024         HashMap<Item, Double> copyLR = LR.getRatedItems();}
+\DoxyCodeLine{00025         HashMap<Item, Double> copyLT = LT.getRatedItems();}
+\DoxyCodeLine{00026         HashMap<Item, Double> valueHolder = \textcolor{keyword}{new} HashMap<>(copyLR);}
+\DoxyCodeLine{00027         \textcolor{keywordtype}{double} \mbox{\hyperlink{classdominio_1_1clases_1_1_avaluacio_a6097e0538c2f66438f1d09f8f6585cec}{DCG}}, iDCG;}
+\DoxyCodeLine{00028         iDCG = \mbox{\hyperlink{classdominio_1_1clases_1_1_avaluacio_a10c705e9b4bb3d549f7a47ccd918c7e9}{computeIdealDCG}}(\mbox{\hyperlink{classdominio_1_1clases_1_1_avaluacio_a6d7fb87ff65af489726e43e652c6effb}{sortByValue}}(valueHolder));}
+\DoxyCodeLine{00029         \textcolor{keywordtype}{int} i;}
+\DoxyCodeLine{00030         i = 1;}
+\DoxyCodeLine{00031         \mbox{\hyperlink{classdominio_1_1clases_1_1_avaluacio_a6097e0538c2f66438f1d09f8f6585cec}{DCG}} = 0.;}
+\DoxyCodeLine{00032         \textcolor{keywordflow}{for} (Item item : copyLR.keySet()) \{}
+\DoxyCodeLine{00033             \textcolor{keywordflow}{if} (copyLT.get(item) != \textcolor{keyword}{null}) \{}
+\DoxyCodeLine{00034                 \mbox{\hyperlink{classdominio_1_1clases_1_1_avaluacio_a6097e0538c2f66438f1d09f8f6585cec}{DCG}} += (Math.pow(2, copyLR.get(item)) -\/ 1) / \mbox{\hyperlink{classdominio_1_1clases_1_1_avaluacio_a6c3beb045b7f416a0494eac6127db2bf}{log}}(i + 1, 2);}
+\DoxyCodeLine{00035             \} \textcolor{keywordflow}{else} \mbox{\hyperlink{classdominio_1_1clases_1_1_avaluacio_a6097e0538c2f66438f1d09f8f6585cec}{DCG}} += (Math.pow(2, 0) -\/ 1) / \mbox{\hyperlink{classdominio_1_1clases_1_1_avaluacio_a6c3beb045b7f416a0494eac6127db2bf}{log}}(i + 1, 2);}
+\DoxyCodeLine{00036             i++;}
+\DoxyCodeLine{00037         \}}
+\DoxyCodeLine{00038         \textcolor{keywordflow}{return} \textcolor{stringliteral}{"{}"{}} + \mbox{\hyperlink{classdominio_1_1clases_1_1_avaluacio_a6097e0538c2f66438f1d09f8f6585cec}{DCG}}/iDCG;}
+\DoxyCodeLine{00039     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdominio_1_1clases_1_1_avaluacio_a10c705e9b4bb3d549f7a47ccd918c7e9}\label{classdominio_1_1clases_1_1_avaluacio_a10c705e9b4bb3d549f7a47ccd918c7e9}} 
+\index{dominio.clases.Avaluacio@{dominio.clases.Avaluacio}!computeIdealDCG@{computeIdealDCG}}
+\index{computeIdealDCG@{computeIdealDCG}!dominio.clases.Avaluacio@{dominio.clases.Avaluacio}}
+\doxysubsubsection{\texorpdfstring{computeIdealDCG()}{computeIdealDCG()}}
+{\footnotesize\ttfamily static double dominio.\+clases.\+Avaluacio.\+compute\+Ideal\+DCG (\begin{DoxyParamCaption}\item[{Hash\+Map$<$ \mbox{\hyperlink{classdominio_1_1clases_1_1_item}{Item}}, Double $>$}]{LR }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Metodo que computa el DCG ideal. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em LR} & Mapa de items de los cuales hay que sacar el valor del DCG ideal \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+El valor correspondiente al DCG ideal 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{_avaluacio_8java_source_l00047}{47}} del archivo \mbox{\hyperlink{_avaluacio_8java_source}{Avaluacio.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00047                                                                     \{}
+\DoxyCodeLine{00048         \textcolor{keywordtype}{int} i = 1;}
+\DoxyCodeLine{00049         \textcolor{keywordtype}{double} iDCG = 0.;}
+\DoxyCodeLine{00050         \textcolor{keywordflow}{for} (Item item : LR.keySet()) \{}
+\DoxyCodeLine{00051             iDCG += (Math.pow(2, LR.get(item)) -\/ 1) / \mbox{\hyperlink{classdominio_1_1clases_1_1_avaluacio_a6c3beb045b7f416a0494eac6127db2bf}{log}}(i + 1, 2);}
+\DoxyCodeLine{00052             i++;}
+\DoxyCodeLine{00053         \}}
+\DoxyCodeLine{00054         \textcolor{keywordflow}{return} iDCG;}
+\DoxyCodeLine{00055     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdominio_1_1clases_1_1_avaluacio_a6d7fb87ff65af489726e43e652c6effb}\label{classdominio_1_1clases_1_1_avaluacio_a6d7fb87ff65af489726e43e652c6effb}} 
+\index{dominio.clases.Avaluacio@{dominio.clases.Avaluacio}!sortByValue@{sortByValue}}
+\index{sortByValue@{sortByValue}!dominio.clases.Avaluacio@{dominio.clases.Avaluacio}}
+\doxysubsubsection{\texorpdfstring{sortByValue()}{sortByValue()}}
+{\footnotesize\ttfamily static Hash\+Map$<$ \mbox{\hyperlink{classdominio_1_1clases_1_1_item}{Item}}, Double $>$ dominio.\+clases.\+Avaluacio.\+sort\+By\+Value (\begin{DoxyParamCaption}\item[{Hash\+Map$<$ \mbox{\hyperlink{classdominio_1_1clases_1_1_item}{Item}}, Double $>$}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Metodo dedicado a la reordenacion de las valoraciones segun su valor (paso necesario para la aplicacion del DCG) 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em data} & Conjunto de items valorados por un usuario \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+Conjunto de items valorados por un usuario y ordenados segun la valoracion (numerica) de los items 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{_avaluacio_8java_source_l00063}{63}} del archivo \mbox{\hyperlink{_avaluacio_8java_source}{Avaluacio.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00063                                                                                 \{}
+\DoxyCodeLine{00064         List<Map.Entry<Item, Double>> list = \textcolor{keyword}{new} LinkedList<>(data.entrySet());}
+\DoxyCodeLine{00065         Collections.sort(list, (o1, o2) -\/> \{}
+\DoxyCodeLine{00066             \textcolor{keywordtype}{int} cmp = o2.getValue().compareTo(o1.getValue());}
+\DoxyCodeLine{00067             if (cmp == 0) \textcolor{keywordflow}{return} o2.getKey().getId().compareTo(o1.getKey().getId());}
+\DoxyCodeLine{00068             \textcolor{keywordflow}{return} cmp;}
+\DoxyCodeLine{00069         \});}
+\DoxyCodeLine{00070         HashMap<Item, Double> sortedMap = \textcolor{keyword}{new} LinkedHashMap<>();}
+\DoxyCodeLine{00071         \textcolor{keywordflow}{for} (Map.Entry<Item, Double> entry : list) sortedMap.put(entry.getKey(), entry.getValue());}
+\DoxyCodeLine{00072         \textcolor{keywordflow}{return} sortedMap;}
+\DoxyCodeLine{00073     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdominio_1_1clases_1_1_avaluacio_a6c3beb045b7f416a0494eac6127db2bf}\label{classdominio_1_1clases_1_1_avaluacio_a6c3beb045b7f416a0494eac6127db2bf}} 
+\index{dominio.clases.Avaluacio@{dominio.clases.Avaluacio}!log@{log}}
+\index{log@{log}!dominio.clases.Avaluacio@{dominio.clases.Avaluacio}}
+\doxysubsubsection{\texorpdfstring{log()}{log()}}
+{\footnotesize\ttfamily static double dominio.\+clases.\+Avaluacio.\+log (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Metodo que realiza el calculo del logaritmo de un valor en base b, esto es\+: log\+\_\+b(x) 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em x} & Indice del item tratado \\
+\hline
+{\em b} & Base del logaritmo \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+Logaritmo en base b de x 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{_avaluacio_8java_source_l00082}{82}} del archivo \mbox{\hyperlink{_avaluacio_8java_source}{Avaluacio.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00082                                             \{}
+\DoxyCodeLine{00083         \textcolor{keywordflow}{return} (Math.log(x) / Math.log(b));}
+\DoxyCodeLine{00084     \}}
+
+\end{DoxyCode}
+
+
+La documentación para esta clase fue generada a partir del siguiente fichero\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_avaluacio_8java}{Avaluacio.\+java}}\end{DoxyCompactItemize}

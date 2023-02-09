@@ -1,0 +1,572 @@
+\hypertarget{classdominio_1_1clases_1_1_collaborative}{}\doxysection{Referencia de la Clase dominio.\+clases.\+Collaborative}
+\label{classdominio_1_1clases_1_1_collaborative}\index{dominio.clases.Collaborative@{dominio.clases.Collaborative}}
+
+
+Clase dedicada a la implementacion del algoritmo K-\/means.  
+
+
+\doxysubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classdominio_1_1clases_1_1_collaborative_a7b9ae47091602b139e756f51adc8ee2d}{Collaborative}} ()
+\item 
+Array\+List$<$ \mbox{\hyperlink{classdominio_1_1clases_1_1_cluster}{Cluster}} $>$ \mbox{\hyperlink{classdominio_1_1clases_1_1_collaborative_a2c88acf8217278a6dcdde01d87e11c41}{recommendations}} (List$<$ \mbox{\hyperlink{classdominio_1_1clases_1_1_usuari}{Usuari}} $>$ Usuaris, int k, \mbox{\hyperlink{classdominio_1_1clases_1_1_distance_users}{Distance\+Users}} distance, int n)
+\begin{DoxyCompactList}\small\item\em Metodo que ejecuta el algoritmo k-\/means. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Métodos públicos estáticos}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{classdominio_1_1clases_1_1_collaborative_ab49cbd617aa3a3eb96f8cbeca19952fc}{eliminate\+From\+Cluster}} (\mbox{\hyperlink{classdominio_1_1clases_1_1_usuari}{Usuari}} u, List$<$ \mbox{\hyperlink{classdominio_1_1clases_1_1_cluster}{Cluster}} $>$ clusters)
+\begin{DoxyCompactList}\small\item\em Metodo que elimina un usuario de su cluster. \end{DoxyCompactList}\item 
+static List$<$ \mbox{\hyperlink{classdominio_1_1clases_1_1_centroid}{Centroid}} $>$ \mbox{\hyperlink{classdominio_1_1clases_1_1_collaborative_a26787a80fa20b38cb0b1e3486de530ad}{apply\+Centroids}} (List$<$ \mbox{\hyperlink{classdominio_1_1clases_1_1_usuari}{Usuari}} $>$ Usuaris, int k)
+\begin{DoxyCompactList}\small\item\em Metodo que genera y devuelve k centroides. \end{DoxyCompactList}\item 
+static List$<$ \mbox{\hyperlink{classdominio_1_1clases_1_1_centroid}{Centroid}} $>$ \mbox{\hyperlink{classdominio_1_1clases_1_1_collaborative_a542e8d67b9d573784a48b90552527254}{relocate\+Centroids}} (Array\+List$<$ \mbox{\hyperlink{classdominio_1_1clases_1_1_cluster}{Cluster}} $>$ clusters)
+\begin{DoxyCompactList}\small\item\em Metodo que recoloca el centroide de todos los clusters respecto al promedio de los usuarios asignados. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{classdominio_1_1clases_1_1_centroid}{Centroid}} \mbox{\hyperlink{classdominio_1_1clases_1_1_collaborative_a80dac1e093db8ac2c951429ee26c82bf}{average}} (\mbox{\hyperlink{classdominio_1_1clases_1_1_centroid}{Centroid}} centroid)
+\begin{DoxyCompactList}\small\item\em Metodo que mueve el centroide a su posicion promedio. Se suman las valoraciones de los items en comun de todos los usuarios pertenecientes al cluster y se divide entre el numero de veces que aparece el item. \end{DoxyCompactList}\item 
+static int \mbox{\hyperlink{classdominio_1_1clases_1_1_collaborative_a2159e6f93241f9e5168bc3dfab1bd7cb}{calcula\+Items\+Comun}} (Map$<$ \mbox{\hyperlink{classdominio_1_1clases_1_1_item}{Item}}, Double $>$ f1, Map$<$ \mbox{\hyperlink{classdominio_1_1clases_1_1_item}{Item}}, Double $>$ f2)
+\begin{DoxyCompactList}\small\item\em Metodo que devuelve los items en comun entre un usuario y un centroide. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{classdominio_1_1clases_1_1_centroid}{Centroid}} \mbox{\hyperlink{classdominio_1_1clases_1_1_collaborative_a5d9aac320718b1fc379c782e20247392}{nearest\+Centroid}} (\mbox{\hyperlink{classdominio_1_1clases_1_1_usuari}{Usuari}} \mbox{\hyperlink{classdominio_1_1clases_1_1_usuari}{Usuari}}, List$<$ \mbox{\hyperlink{classdominio_1_1clases_1_1_centroid}{Centroid}} $>$ centroids, \mbox{\hyperlink{classdominio_1_1clases_1_1_distance_users}{Distance\+Users}} distance, int k)
+\begin{DoxyCompactList}\small\item\em Metodo que devuelve el centroide mas cercano a un usuario. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classdominio_1_1clases_1_1_collaborative_ac4da1ca873616191598d33f849ebc33d}{assign\+To\+Cluster}} (Array\+List$<$ \mbox{\hyperlink{classdominio_1_1clases_1_1_cluster}{Cluster}} $>$ clusters, \mbox{\hyperlink{classdominio_1_1clases_1_1_usuari}{Usuari}} \mbox{\hyperlink{classdominio_1_1clases_1_1_usuari}{Usuari}}, \mbox{\hyperlink{classdominio_1_1clases_1_1_centroid}{Centroid}} centroid)
+\begin{DoxyCompactList}\small\item\em Metodo que asigna el usuario a su cluster correspondiente. \end{DoxyCompactList}\item 
+static double \mbox{\hyperlink{classdominio_1_1clases_1_1_collaborative_aedf00b2f0f3420d45a77188f41075bc3}{max\+Distance\+User\+Centroid}} (Array\+List$<$ \mbox{\hyperlink{classdominio_1_1clases_1_1_cluster}{Cluster}} $>$ clusters, \mbox{\hyperlink{classdominio_1_1clases_1_1_distance_users}{Distance\+Users}} distance)
+\begin{DoxyCompactList}\small\item\em Metodo que encuentra la distancia del usuario más lejano a su centroide de entre todos los clusters. \end{DoxyCompactList}\item 
+static Array\+List$<$ \mbox{\hyperlink{classdominio_1_1clases_1_1_cluster}{Cluster}} $>$ \mbox{\hyperlink{classdominio_1_1clases_1_1_collaborative_a03a095d618fe44646af54f4c588f9730}{ejecuta\+\_\+k\+\_\+means}} (List$<$ \mbox{\hyperlink{classdominio_1_1clases_1_1_usuari}{Usuari}} $>$ \mbox{\hyperlink{classdominio_1_1clases_1_1_algorisme_aa2a6296923e364755e6d0efaaaa4b2c2}{users}})
+\begin{DoxyCompactList}\small\item\em Metodo que encuentra la k optima y ejecuta el algoritmo k-\/means al completo. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Atributos privados estáticos}
+\begin{DoxyCompactItemize}
+\item 
+static final Random \mbox{\hyperlink{classdominio_1_1clases_1_1_collaborative_a82492a33d04c759335cdb3684df61b9b}{random}} = new Random()
+\begin{DoxyCompactList}\small\item\em Instancia de Random() \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Otros miembros heredados}
+
+
+\doxysubsection{Descripción detallada}
+Clase dedicada a la implementacion del algoritmo K-\/means. 
+
+\begin{DoxyAuthor}{Autor}
+Muhammad Haris 
+\end{DoxyAuthor}
+
+
+Definición en la línea \mbox{\hyperlink{_collaborative_8java_source_l00020}{20}} del archivo \mbox{\hyperlink{_collaborative_8java_source}{Collaborative.\+java}}.
+
+
+
+\doxysubsection{Documentación del constructor y destructor}
+\mbox{\Hypertarget{classdominio_1_1clases_1_1_collaborative_a7b9ae47091602b139e756f51adc8ee2d}\label{classdominio_1_1clases_1_1_collaborative_a7b9ae47091602b139e756f51adc8ee2d}} 
+\index{dominio.clases.Collaborative@{dominio.clases.Collaborative}!Collaborative@{Collaborative}}
+\index{Collaborative@{Collaborative}!dominio.clases.Collaborative@{dominio.clases.Collaborative}}
+\doxysubsubsection{\texorpdfstring{Collaborative()}{Collaborative()}}
+{\footnotesize\ttfamily dominio.\+clases.\+Collaborative.\+Collaborative (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea \mbox{\hyperlink{_collaborative_8java_source_l00022}{22}} del archivo \mbox{\hyperlink{_collaborative_8java_source}{Collaborative.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00022                           \{}
+\DoxyCodeLine{00023         super();}
+\DoxyCodeLine{00024     \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Documentación de las funciones miembro}
+\mbox{\Hypertarget{classdominio_1_1clases_1_1_collaborative_a2c88acf8217278a6dcdde01d87e11c41}\label{classdominio_1_1clases_1_1_collaborative_a2c88acf8217278a6dcdde01d87e11c41}} 
+\index{dominio.clases.Collaborative@{dominio.clases.Collaborative}!recommendations@{recommendations}}
+\index{recommendations@{recommendations}!dominio.clases.Collaborative@{dominio.clases.Collaborative}}
+\doxysubsubsection{\texorpdfstring{recommendations()}{recommendations()}}
+{\footnotesize\ttfamily Array\+List$<$ \mbox{\hyperlink{classdominio_1_1clases_1_1_cluster}{Cluster}} $>$ dominio.\+clases.\+Collaborative.\+recommendations (\begin{DoxyParamCaption}\item[{List$<$ \mbox{\hyperlink{classdominio_1_1clases_1_1_usuari}{Usuari}} $>$}]{Usuaris,  }\item[{int}]{k,  }\item[{\mbox{\hyperlink{classdominio_1_1clases_1_1_distance_users}{Distance\+Users}}}]{distance,  }\item[{int}]{n }\end{DoxyParamCaption})}
+
+
+
+Metodo que ejecuta el algoritmo k-\/means. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em Usuaris} & Lista de usuarios del dataset \\
+\hline
+{\em k} & Numero de clusters \\
+\hline
+{\em distance} & Instancia de la clase \mbox{\hyperlink{classdominio_1_1clases_1_1_distance_users}{Distance\+Users}} \\
+\hline
+{\em n} & Numero maximo de iteraciones \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+K clusters 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{_collaborative_8java_source_l00040}{40}} del archivo \mbox{\hyperlink{_collaborative_8java_source}{Collaborative.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00040                                                                                                            \{}
+\DoxyCodeLine{00041         List<Centroid> centroids = \mbox{\hyperlink{classdominio_1_1clases_1_1_collaborative_a26787a80fa20b38cb0b1e3486de530ad}{applyCentroids}}(Usuaris,k);}
+\DoxyCodeLine{00042         ArrayList<Cluster> clusters = \textcolor{keyword}{new} ArrayList<>();}
+\DoxyCodeLine{00043         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < n; ++i) \{}
+\DoxyCodeLine{00044             \textcolor{keywordtype}{boolean} isLastIteration = i == n -\/ 1;}
+\DoxyCodeLine{00045             \textcolor{keywordtype}{int} terminar = 0;}
+\DoxyCodeLine{00046             \textcolor{keywordflow}{for} (Usuari Usuari : Usuaris) \{}
+\DoxyCodeLine{00047                 \textcolor{keywordflow}{if} (i == 0) \{}
+\DoxyCodeLine{00048                     Centroid centroid = \mbox{\hyperlink{classdominio_1_1clases_1_1_collaborative_a5d9aac320718b1fc379c782e20247392}{nearestCentroid}}(Usuari, centroids, distance, k);}
+\DoxyCodeLine{00049                     \textcolor{keywordflow}{if} (Usuari.getUserId() != centroid.getCentroid\_user\_id()) \{}
+\DoxyCodeLine{00050                        centroid.recolocar(Usuari);}
+\DoxyCodeLine{00051                     \}}
+\DoxyCodeLine{00052                     Usuari.setCentroid(centroid);}
+\DoxyCodeLine{00053                     \mbox{\hyperlink{classdominio_1_1clases_1_1_collaborative_ac4da1ca873616191598d33f849ebc33d}{assignToCluster}}(clusters, Usuari, centroid);}
+\DoxyCodeLine{00054                 \}}
+\DoxyCodeLine{00055                 \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{00056                     \textcolor{keywordtype}{double} dis = distance.calculateEuclideanDistance(Usuari.getRatedItems(), Usuari.getCentroid().getCentroid());}
+\DoxyCodeLine{00057                     \textcolor{keywordflow}{if} (dis <= Usuari.getNearest\_dist()) \{}
+\DoxyCodeLine{00058                         \textcolor{keywordflow}{if} (Usuari.getNearest\_dist() == Double.MAX\_VALUE) Usuari.setNearest\_dist(dis);}
+\DoxyCodeLine{00059                         ++terminar;}
+\DoxyCodeLine{00060                     \}}
+\DoxyCodeLine{00061                     \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{00062                         Centroid centroid = \mbox{\hyperlink{classdominio_1_1clases_1_1_collaborative_a5d9aac320718b1fc379c782e20247392}{nearestCentroid}}(Usuari, centroids, distance, k);}
+\DoxyCodeLine{00063                         \textcolor{keywordflow}{if} (centroid != Usuari.getCentroid()) \{}
+\DoxyCodeLine{00064                             Usuari.getCentroid().eliminar(Usuari);}
+\DoxyCodeLine{00065                             centroid.recolocar(Usuari);}
+\DoxyCodeLine{00066                             \mbox{\hyperlink{classdominio_1_1clases_1_1_collaborative_ab49cbd617aa3a3eb96f8cbeca19952fc}{eliminateFromCluster}}(Usuari, clusters);}
+\DoxyCodeLine{00067                             Usuari.setCentroid(centroid);}
+\DoxyCodeLine{00068                             \mbox{\hyperlink{classdominio_1_1clases_1_1_collaborative_ac4da1ca873616191598d33f849ebc33d}{assignToCluster}}(clusters, Usuari, centroid);}
+\DoxyCodeLine{00069                         \}}
+\DoxyCodeLine{00070                     \}}
+\DoxyCodeLine{00071                 \}}
+\DoxyCodeLine{00072             \}}
+\DoxyCodeLine{00073             \textcolor{keywordtype}{boolean} shouldTerminate = isLastIteration || terminar == Usuaris.size();}
+\DoxyCodeLine{00074             \textcolor{keywordflow}{if} (shouldTerminate) \{}
+\DoxyCodeLine{00075                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00076             \}}
+\DoxyCodeLine{00077             centroids = \mbox{\hyperlink{classdominio_1_1clases_1_1_collaborative_a542e8d67b9d573784a48b90552527254}{relocateCentroids}}(clusters);}
+\DoxyCodeLine{00078         \}}
+\DoxyCodeLine{00079         \textcolor{keywordflow}{return} clusters;}
+\DoxyCodeLine{00080     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdominio_1_1clases_1_1_collaborative_ab49cbd617aa3a3eb96f8cbeca19952fc}\label{classdominio_1_1clases_1_1_collaborative_ab49cbd617aa3a3eb96f8cbeca19952fc}} 
+\index{dominio.clases.Collaborative@{dominio.clases.Collaborative}!eliminateFromCluster@{eliminateFromCluster}}
+\index{eliminateFromCluster@{eliminateFromCluster}!dominio.clases.Collaborative@{dominio.clases.Collaborative}}
+\doxysubsubsection{\texorpdfstring{eliminateFromCluster()}{eliminateFromCluster()}}
+{\footnotesize\ttfamily static void dominio.\+clases.\+Collaborative.\+eliminate\+From\+Cluster (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classdominio_1_1clases_1_1_usuari}{Usuari}}}]{u,  }\item[{List$<$ \mbox{\hyperlink{classdominio_1_1clases_1_1_cluster}{Cluster}} $>$}]{clusters }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Metodo que elimina un usuario de su cluster. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em u} & El usuario a eliminar \\
+\hline
+{\em clusters} & Lista de todos los clusters \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{_collaborative_8java_source_l00087}{87}} del archivo \mbox{\hyperlink{_collaborative_8java_source}{Collaborative.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00087                                                                               \{}
+\DoxyCodeLine{00088         \textcolor{keywordflow}{for} (Cluster c: clusters) \{}
+\DoxyCodeLine{00089             \textcolor{keywordflow}{if} (c.getCentroid() == u.getCentroid()) \{}
+\DoxyCodeLine{00090                 HashSet<Usuari> usuaris = \textcolor{keyword}{new} HashSet<>();}
+\DoxyCodeLine{00091                 usuaris = c.getUsuaris();}
+\DoxyCodeLine{00092                 usuaris.remove(u);}
+\DoxyCodeLine{00093                 c.setUsuaris(usuaris);}
+\DoxyCodeLine{00094             \}}
+\DoxyCodeLine{00095         \}}
+\DoxyCodeLine{00096     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdominio_1_1clases_1_1_collaborative_a26787a80fa20b38cb0b1e3486de530ad}\label{classdominio_1_1clases_1_1_collaborative_a26787a80fa20b38cb0b1e3486de530ad}} 
+\index{dominio.clases.Collaborative@{dominio.clases.Collaborative}!applyCentroids@{applyCentroids}}
+\index{applyCentroids@{applyCentroids}!dominio.clases.Collaborative@{dominio.clases.Collaborative}}
+\doxysubsubsection{\texorpdfstring{applyCentroids()}{applyCentroids()}}
+{\footnotesize\ttfamily static List$<$ \mbox{\hyperlink{classdominio_1_1clases_1_1_centroid}{Centroid}} $>$ dominio.\+clases.\+Collaborative.\+apply\+Centroids (\begin{DoxyParamCaption}\item[{List$<$ \mbox{\hyperlink{classdominio_1_1clases_1_1_usuari}{Usuari}} $>$}]{Usuaris,  }\item[{int}]{k }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Metodo que genera y devuelve k centroides. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em Usuaris} & Lista de usuarios del dataset \\
+\hline
+{\em k} & Numero de clusters \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+Lista de los centroides generados 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{_collaborative_8java_source_l00105}{105}} del archivo \mbox{\hyperlink{_collaborative_8java_source}{Collaborative.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00105                                                                              \{}
+\DoxyCodeLine{00106         List<Centroid> centroids = \textcolor{keyword}{new} ArrayList<>();}
+\DoxyCodeLine{00107         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = 0; j < k; ++j) \{}
+\DoxyCodeLine{00108             \textcolor{keywordtype}{int} aux = 0;}
+\DoxyCodeLine{00109             Usuari u = Usuaris.get(\mbox{\hyperlink{classdominio_1_1clases_1_1_collaborative_a82492a33d04c759335cdb3684df61b9b}{random}}.nextInt(Usuaris.size()));}
+\DoxyCodeLine{00110             \textcolor{keywordflow}{for} (Centroid ce : centroids) \{}
+\DoxyCodeLine{00111                 \textcolor{keywordflow}{if} (u.getUserId() != ce.getCentroid\_user\_id()) \{}
+\DoxyCodeLine{00112                     ++aux;}
+\DoxyCodeLine{00113                 \}}
+\DoxyCodeLine{00114             \}}
+\DoxyCodeLine{00115             \textcolor{keywordflow}{if} (aux == centroids.size()) \{}
+\DoxyCodeLine{00116                 Centroid c = \textcolor{keyword}{new} Centroid();}
+\DoxyCodeLine{00117                 c.setCentroid\_number(j + 1);}
+\DoxyCodeLine{00118                 u.getRatedItems().forEach((key, value) -\/> \{}
+\DoxyCodeLine{00119                     c.getCentroid().put(key, value);}
+\DoxyCodeLine{00120                     c.getValoraciones().put(key, value);}
+\DoxyCodeLine{00121                     c.getTimes().put(key, 1);}
+\DoxyCodeLine{00122                 \});}
+\DoxyCodeLine{00123                 c.setCentroid\_user\_id(u.getUserId());}
+\DoxyCodeLine{00124                 centroids.add(c);}
+\DoxyCodeLine{00125             \} \textcolor{keywordflow}{else} -\/-\/j;}
+\DoxyCodeLine{00126         \}}
+\DoxyCodeLine{00127         \textcolor{keywordflow}{return} centroids;}
+\DoxyCodeLine{00128 }
+\DoxyCodeLine{00129     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdominio_1_1clases_1_1_collaborative_a542e8d67b9d573784a48b90552527254}\label{classdominio_1_1clases_1_1_collaborative_a542e8d67b9d573784a48b90552527254}} 
+\index{dominio.clases.Collaborative@{dominio.clases.Collaborative}!relocateCentroids@{relocateCentroids}}
+\index{relocateCentroids@{relocateCentroids}!dominio.clases.Collaborative@{dominio.clases.Collaborative}}
+\doxysubsubsection{\texorpdfstring{relocateCentroids()}{relocateCentroids()}}
+{\footnotesize\ttfamily static List$<$ \mbox{\hyperlink{classdominio_1_1clases_1_1_centroid}{Centroid}} $>$ dominio.\+clases.\+Collaborative.\+relocate\+Centroids (\begin{DoxyParamCaption}\item[{Array\+List$<$ \mbox{\hyperlink{classdominio_1_1clases_1_1_cluster}{Cluster}} $>$}]{clusters }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Metodo que recoloca el centroide de todos los clusters respecto al promedio de los usuarios asignados. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em clusters} & Los clusters actuales \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+Lista de los centroides recolocados 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{_collaborative_8java_source_l00137}{137}} del archivo \mbox{\hyperlink{_collaborative_8java_source}{Collaborative.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00137                                                                                 \{}
+\DoxyCodeLine{00138         List<Centroid> centroids = \textcolor{keyword}{new} ArrayList<>();}
+\DoxyCodeLine{00139         \textcolor{keywordflow}{for} (Cluster c : clusters) \{}
+\DoxyCodeLine{00140             Centroid ce = \mbox{\hyperlink{classdominio_1_1clases_1_1_collaborative_a80dac1e093db8ac2c951429ee26c82bf}{average}}(c.getCentroid());}
+\DoxyCodeLine{00141             centroids.add(ce);}
+\DoxyCodeLine{00142         \}}
+\DoxyCodeLine{00143         \textcolor{keywordflow}{return} centroids;}
+\DoxyCodeLine{00144     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdominio_1_1clases_1_1_collaborative_a80dac1e093db8ac2c951429ee26c82bf}\label{classdominio_1_1clases_1_1_collaborative_a80dac1e093db8ac2c951429ee26c82bf}} 
+\index{dominio.clases.Collaborative@{dominio.clases.Collaborative}!average@{average}}
+\index{average@{average}!dominio.clases.Collaborative@{dominio.clases.Collaborative}}
+\doxysubsubsection{\texorpdfstring{average()}{average()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{classdominio_1_1clases_1_1_centroid}{Centroid}} dominio.\+clases.\+Collaborative.\+average (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classdominio_1_1clases_1_1_centroid}{Centroid}}}]{centroid }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Metodo que mueve el centroide a su posicion promedio. Se suman las valoraciones de los items en comun de todos los usuarios pertenecientes al cluster y se divide entre el numero de veces que aparece el item. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em centroid} & El centroide \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+El centroide promedio 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{_collaborative_8java_source_l00152}{152}} del archivo \mbox{\hyperlink{_collaborative_8java_source}{Collaborative.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00152                                                       \{}
+\DoxyCodeLine{00153         HashMap<Item, Double> \mbox{\hyperlink{classdominio_1_1clases_1_1_collaborative_a80dac1e093db8ac2c951429ee26c82bf}{average}} = \textcolor{keyword}{new} HashMap<>();}
+\DoxyCodeLine{00154         \textcolor{keywordflow}{for} (Item key : centroid.getValoraciones().keySet()) \{}
+\DoxyCodeLine{00155             \mbox{\hyperlink{classdominio_1_1clases_1_1_collaborative_a80dac1e093db8ac2c951429ee26c82bf}{average}}.put(key, centroid.getValoraciones().get(key)/centroid.getTimes().get(key));}
+\DoxyCodeLine{00156         \}}
+\DoxyCodeLine{00157         centroid.\mbox{\hyperlink{classdominio_1_1clases_1_1_centroid_a5521932ec18fc4699555dae945398a75}{setCentroid}}(\mbox{\hyperlink{classdominio_1_1clases_1_1_collaborative_a80dac1e093db8ac2c951429ee26c82bf}{average}});}
+\DoxyCodeLine{00158         \textcolor{keywordflow}{return} centroid ;}
+\DoxyCodeLine{00159     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdominio_1_1clases_1_1_collaborative_a2159e6f93241f9e5168bc3dfab1bd7cb}\label{classdominio_1_1clases_1_1_collaborative_a2159e6f93241f9e5168bc3dfab1bd7cb}} 
+\index{dominio.clases.Collaborative@{dominio.clases.Collaborative}!calculaItemsComun@{calculaItemsComun}}
+\index{calculaItemsComun@{calculaItemsComun}!dominio.clases.Collaborative@{dominio.clases.Collaborative}}
+\doxysubsubsection{\texorpdfstring{calculaItemsComun()}{calculaItemsComun()}}
+{\footnotesize\ttfamily static int dominio.\+clases.\+Collaborative.\+calcula\+Items\+Comun (\begin{DoxyParamCaption}\item[{Map$<$ \mbox{\hyperlink{classdominio_1_1clases_1_1_item}{Item}}, Double $>$}]{f1,  }\item[{Map$<$ \mbox{\hyperlink{classdominio_1_1clases_1_1_item}{Item}}, Double $>$}]{f2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Metodo que devuelve los items en comun entre un usuario y un centroide. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em f1} & Map que guarda los items del usuario y sus respectivas valoraciones \\
+\hline
+{\em f2} & Map que guarda los items del centroide y sus respectivas valoraciones \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+Numero de items en comun 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{_collaborative_8java_source_l00168}{168}} del archivo \mbox{\hyperlink{_collaborative_8java_source}{Collaborative.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00168                                                                                     \{}
+\DoxyCodeLine{00169         \textcolor{keywordtype}{int} i = 0;}
+\DoxyCodeLine{00170         \textcolor{keywordflow}{for} (Item key : f1.keySet()) \{}
+\DoxyCodeLine{00171             \textcolor{keywordflow}{if} (f2.containsKey(key) == \textcolor{keyword}{true}) \{}
+\DoxyCodeLine{00172                 ++i;}
+\DoxyCodeLine{00173             \}}
+\DoxyCodeLine{00174         \}}
+\DoxyCodeLine{00175 }
+\DoxyCodeLine{00176         \textcolor{keywordflow}{return} i;}
+\DoxyCodeLine{00177     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdominio_1_1clases_1_1_collaborative_a5d9aac320718b1fc379c782e20247392}\label{classdominio_1_1clases_1_1_collaborative_a5d9aac320718b1fc379c782e20247392}} 
+\index{dominio.clases.Collaborative@{dominio.clases.Collaborative}!nearestCentroid@{nearestCentroid}}
+\index{nearestCentroid@{nearestCentroid}!dominio.clases.Collaborative@{dominio.clases.Collaborative}}
+\doxysubsubsection{\texorpdfstring{nearestCentroid()}{nearestCentroid()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{classdominio_1_1clases_1_1_centroid}{Centroid}} dominio.\+clases.\+Collaborative.\+nearest\+Centroid (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classdominio_1_1clases_1_1_usuari}{Usuari}}}]{Usuari,  }\item[{List$<$ \mbox{\hyperlink{classdominio_1_1clases_1_1_centroid}{Centroid}} $>$}]{centroids,  }\item[{\mbox{\hyperlink{classdominio_1_1clases_1_1_distance_users}{Distance\+Users}}}]{distance,  }\item[{int}]{k }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Metodo que devuelve el centroide mas cercano a un usuario. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em \mbox{\hyperlink{classdominio_1_1clases_1_1_usuari}{Usuari}}} & El usuario \\
+\hline
+{\em centroids} & La lista de todos los centroides \\
+\hline
+{\em distance} & Instancia de la clase \mbox{\hyperlink{classdominio_1_1clases_1_1_distance_users}{Distance\+Users}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+El centroide mas cercano al usuario 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{_collaborative_8java_source_l00187}{187}} del archivo \mbox{\hyperlink{_collaborative_8java_source}{Collaborative.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00187                                                                                                                    \{}
+\DoxyCodeLine{00188         \textcolor{keywordtype}{double} minimumDistance = Double.MAX\_VALUE;}
+\DoxyCodeLine{00189         \textcolor{keywordtype}{int} maxComun = -\/1;}
+\DoxyCodeLine{00190         Centroid nearest = \textcolor{keyword}{new} Centroid();}
+\DoxyCodeLine{00191         \textcolor{keywordflow}{for} (Centroid centroid : centroids) \{}
+\DoxyCodeLine{00192             \textcolor{keywordtype}{double} currentDistance =  distance.calculateEuclideanDistance(Usuari.getRatedItems(), centroid.getCentroid());}
+\DoxyCodeLine{00193             \textcolor{keywordtype}{int} currentComun = \mbox{\hyperlink{classdominio_1_1clases_1_1_collaborative_a2159e6f93241f9e5168bc3dfab1bd7cb}{calculaItemsComun}}(Usuari.getRatedItems(), centroid.getCentroid());}
+\DoxyCodeLine{00194             \textcolor{keywordflow}{if} (currentDistance < minimumDistance \&\& currentDistance != -\/1 || currentDistance == minimumDistance \&\& currentDistance != -\/1 \&\& currentComun > maxComun) \{}
+\DoxyCodeLine{00195                 minimumDistance = currentDistance;}
+\DoxyCodeLine{00196                 maxComun = currentComun;}
+\DoxyCodeLine{00197                 nearest = centroid;}
+\DoxyCodeLine{00198 }
+\DoxyCodeLine{00199             \}}
+\DoxyCodeLine{00200 }
+\DoxyCodeLine{00201         \}}
+\DoxyCodeLine{00202         \textcolor{keywordflow}{if} (nearest.getCentroid().size() == 0) \{}
+\DoxyCodeLine{00203             nearest = centroids.get(\mbox{\hyperlink{classdominio_1_1clases_1_1_collaborative_a82492a33d04c759335cdb3684df61b9b}{random}}.nextInt(k));}
+\DoxyCodeLine{00204         \}}
+\DoxyCodeLine{00205         Usuari.setNearest\_dist(minimumDistance);}
+\DoxyCodeLine{00206         \textcolor{keywordflow}{return} nearest;}
+\DoxyCodeLine{00207     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdominio_1_1clases_1_1_collaborative_ac4da1ca873616191598d33f849ebc33d}\label{classdominio_1_1clases_1_1_collaborative_ac4da1ca873616191598d33f849ebc33d}} 
+\index{dominio.clases.Collaborative@{dominio.clases.Collaborative}!assignToCluster@{assignToCluster}}
+\index{assignToCluster@{assignToCluster}!dominio.clases.Collaborative@{dominio.clases.Collaborative}}
+\doxysubsubsection{\texorpdfstring{assignToCluster()}{assignToCluster()}}
+{\footnotesize\ttfamily static void dominio.\+clases.\+Collaborative.\+assign\+To\+Cluster (\begin{DoxyParamCaption}\item[{Array\+List$<$ \mbox{\hyperlink{classdominio_1_1clases_1_1_cluster}{Cluster}} $>$}]{clusters,  }\item[{\mbox{\hyperlink{classdominio_1_1clases_1_1_usuari}{Usuari}}}]{Usuari,  }\item[{\mbox{\hyperlink{classdominio_1_1clases_1_1_centroid}{Centroid}}}]{centroid }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Metodo que asigna el usuario a su cluster correspondiente. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em clusters} & La lista de todos los clusters \\
+\hline
+{\em \mbox{\hyperlink{classdominio_1_1clases_1_1_usuari}{Usuari}}} & El usuario a asignar \\
+\hline
+{\em centroid} & El centroide al que pertenece el usuario \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{_collaborative_8java_source_l00216}{216}} del archivo \mbox{\hyperlink{_collaborative_8java_source}{Collaborative.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00216                                                                                                       \{}
+\DoxyCodeLine{00217         \textcolor{keywordtype}{boolean} exist = \textcolor{keyword}{false};}
+\DoxyCodeLine{00218         \textcolor{keywordflow}{for} (Cluster c : clusters) \{}
+\DoxyCodeLine{00219             \textcolor{keywordflow}{if} (c.getCentroid() == centroid) \{}
+\DoxyCodeLine{00220                 exist = \textcolor{keyword}{true};}
+\DoxyCodeLine{00221                 c.addUsuari(Usuari);}
+\DoxyCodeLine{00222             \}}
+\DoxyCodeLine{00223         \}}
+\DoxyCodeLine{00224 }
+\DoxyCodeLine{00225         \textcolor{keywordflow}{if} (!exist) \{}
+\DoxyCodeLine{00226             Cluster cl = \textcolor{keyword}{new} Cluster();}
+\DoxyCodeLine{00227             cl.setCentroid(centroid);}
+\DoxyCodeLine{00228             HashSet<Usuari> u = \textcolor{keyword}{new} HashSet<>();}
+\DoxyCodeLine{00229             u.add(Usuari);}
+\DoxyCodeLine{00230             cl.setUsuaris(u);}
+\DoxyCodeLine{00231             clusters.add(cl);}
+\DoxyCodeLine{00232         \}}
+\DoxyCodeLine{00233 }
+\DoxyCodeLine{00234     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdominio_1_1clases_1_1_collaborative_aedf00b2f0f3420d45a77188f41075bc3}\label{classdominio_1_1clases_1_1_collaborative_aedf00b2f0f3420d45a77188f41075bc3}} 
+\index{dominio.clases.Collaborative@{dominio.clases.Collaborative}!maxDistanceUserCentroid@{maxDistanceUserCentroid}}
+\index{maxDistanceUserCentroid@{maxDistanceUserCentroid}!dominio.clases.Collaborative@{dominio.clases.Collaborative}}
+\doxysubsubsection{\texorpdfstring{maxDistanceUserCentroid()}{maxDistanceUserCentroid()}}
+{\footnotesize\ttfamily static double dominio.\+clases.\+Collaborative.\+max\+Distance\+User\+Centroid (\begin{DoxyParamCaption}\item[{Array\+List$<$ \mbox{\hyperlink{classdominio_1_1clases_1_1_cluster}{Cluster}} $>$}]{clusters,  }\item[{\mbox{\hyperlink{classdominio_1_1clases_1_1_distance_users}{Distance\+Users}}}]{distance }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Metodo que encuentra la distancia del usuario más lejano a su centroide de entre todos los clusters. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em clusters} & La lista de todos los clusters \\
+\hline
+{\em distance} & Instancia de la clase \mbox{\hyperlink{classdominio_1_1clases_1_1_distance_users}{Distance\+Users}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+La distancia del usuario más lejano 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{_collaborative_8java_source_l00242}{242}} del archivo \mbox{\hyperlink{_collaborative_8java_source}{Collaborative.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00242                                                                                                       \{}
+\DoxyCodeLine{00243         Double maxDistance = Double.MIN\_VALUE;}
+\DoxyCodeLine{00244         \textcolor{keywordflow}{for} (Cluster c: clusters) \{}
+\DoxyCodeLine{00245             HashSet<Usuari>  \mbox{\hyperlink{classdominio_1_1clases_1_1_algorisme_aa2a6296923e364755e6d0efaaaa4b2c2}{users}} = c.getUsuaris();}
+\DoxyCodeLine{00246             Iterator<Usuari> it = \mbox{\hyperlink{classdominio_1_1clases_1_1_algorisme_aa2a6296923e364755e6d0efaaaa4b2c2}{users}}.iterator();}
+\DoxyCodeLine{00247             \textcolor{keywordflow}{while} (it.hasNext()) \{}
+\DoxyCodeLine{00248                 \textcolor{keywordtype}{double} d = distance.calculateEuclideanDistance(it.next().getRatedItems(), c.getCentroid().getCentroid());}
+\DoxyCodeLine{00249                 \textcolor{keywordflow}{if} (d > maxDistance) maxDistance = d;}
+\DoxyCodeLine{00250             \}}
+\DoxyCodeLine{00251         \}}
+\DoxyCodeLine{00252         \textcolor{keywordflow}{return} maxDistance;}
+\DoxyCodeLine{00253     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdominio_1_1clases_1_1_collaborative_a03a095d618fe44646af54f4c588f9730}\label{classdominio_1_1clases_1_1_collaborative_a03a095d618fe44646af54f4c588f9730}} 
+\index{dominio.clases.Collaborative@{dominio.clases.Collaborative}!ejecuta\_k\_means@{ejecuta\_k\_means}}
+\index{ejecuta\_k\_means@{ejecuta\_k\_means}!dominio.clases.Collaborative@{dominio.clases.Collaborative}}
+\doxysubsubsection{\texorpdfstring{ejecuta\_k\_means()}{ejecuta\_k\_means()}}
+{\footnotesize\ttfamily static Array\+List$<$ \mbox{\hyperlink{classdominio_1_1clases_1_1_cluster}{Cluster}} $>$ dominio.\+clases.\+Collaborative.\+ejecuta\+\_\+k\+\_\+means (\begin{DoxyParamCaption}\item[{List$<$ \mbox{\hyperlink{classdominio_1_1clases_1_1_usuari}{Usuari}} $>$}]{users }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Metodo que encuentra la k optima y ejecuta el algoritmo k-\/means al completo. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em users} & Lista de usuarios del dataset \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+K clusters 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{_collaborative_8java_source_l00261}{261}} del archivo \mbox{\hyperlink{_collaborative_8java_source}{Collaborative.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00261                                                                          \{}
+\DoxyCodeLine{00262         ArrayList<ArrayList<Cluster>> clustersDef = \textcolor{keyword}{new} ArrayList<>();}
+\DoxyCodeLine{00263         List<Double> maxDistances1 = \textcolor{keyword}{new} ArrayList<>();}
+\DoxyCodeLine{00264         \textcolor{keywordtype}{double} mindis = Double.MAX\_VALUE;}
+\DoxyCodeLine{00265         \textcolor{keywordtype}{int} k\_definitiva = 0;}
+\DoxyCodeLine{00266         \textcolor{keywordtype}{int} k\_alternativa = 0;}
+\DoxyCodeLine{00267         \textcolor{keywordtype}{boolean} acabat = \textcolor{keyword}{false};}
+\DoxyCodeLine{00268         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} k1 = 3; k1 <= 12; ++k1) \{}
+\DoxyCodeLine{00269             ArrayList<Cluster> clusters12 = \textcolor{keyword}{new} \mbox{\hyperlink{classdominio_1_1clases_1_1_collaborative_a7b9ae47091602b139e756f51adc8ee2d}{Collaborative}}().recommendations(\mbox{\hyperlink{classdominio_1_1clases_1_1_algorisme_aa2a6296923e364755e6d0efaaaa4b2c2}{users}},k1,\textcolor{keyword}{new} DistanceUsers(),100);}
+\DoxyCodeLine{00270             clustersDef.add(clusters12);}
+\DoxyCodeLine{00271             \textcolor{keywordtype}{double} mdistance1 = \mbox{\hyperlink{classdominio_1_1clases_1_1_collaborative_aedf00b2f0f3420d45a77188f41075bc3}{maxDistanceUserCentroid}}(clusters12, \textcolor{keyword}{new} DistanceUsers());}
+\DoxyCodeLine{00272             maxDistances1.add(mdistance1);}
+\DoxyCodeLine{00273             \textcolor{keywordflow}{if} (mdistance1 < mindis) \{}
+\DoxyCodeLine{00274                 mindis = mdistance1;}
+\DoxyCodeLine{00275                 k\_alternativa = k1;}
+\DoxyCodeLine{00276             \}}
+\DoxyCodeLine{00277             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < maxDistances1.size(); ++i) \{}
+\DoxyCodeLine{00278                 \textcolor{keywordflow}{if} (i != maxDistances1.size() -\/ 1) \{}
+\DoxyCodeLine{00279                     \textcolor{keywordflow}{if} (maxDistances1.get(i) >= maxDistances1.get(i+1)) \{}
+\DoxyCodeLine{00280                         \textcolor{keywordflow}{if} (maxDistances1.get(i) -\/ maxDistances1.get(i+1) < 1) \{}
+\DoxyCodeLine{00281                             k\_definitiva = i + 3;}
+\DoxyCodeLine{00282                             acabat = \textcolor{keyword}{true};}
+\DoxyCodeLine{00283                             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00284                         \}}
+\DoxyCodeLine{00285                     \}}
+\DoxyCodeLine{00286                     \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{00287                         \textcolor{keywordflow}{if} (maxDistances1.get(i+1) -\/ maxDistances1.get(i) > 0.2) \{}
+\DoxyCodeLine{00288                             k\_definitiva = i + 3;}
+\DoxyCodeLine{00289                             acabat = \textcolor{keyword}{true};}
+\DoxyCodeLine{00290                             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00291                         \}}
+\DoxyCodeLine{00292                     \}}
+\DoxyCodeLine{00293                 \}}
+\DoxyCodeLine{00294             \}}
+\DoxyCodeLine{00295             \textcolor{keywordflow}{if} (acabat) \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00296         \}}
+\DoxyCodeLine{00297         \textcolor{keywordflow}{if} (k\_definitiva != 0) \textcolor{keywordflow}{return} clustersDef.get(k\_definitiva-\/3);}
+\DoxyCodeLine{00298         \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{00299             ArrayList<Cluster> aux;}
+\DoxyCodeLine{00300             k\_definitiva = k\_alternativa;}
+\DoxyCodeLine{00301             aux = \textcolor{keyword}{new} \mbox{\hyperlink{classdominio_1_1clases_1_1_collaborative_a7b9ae47091602b139e756f51adc8ee2d}{Collaborative}}().recommendations(\mbox{\hyperlink{classdominio_1_1clases_1_1_algorisme_aa2a6296923e364755e6d0efaaaa4b2c2}{users}},k\_definitiva,\textcolor{keyword}{new} DistanceUsers(),100);}
+\DoxyCodeLine{00302             \textcolor{keywordflow}{return} aux;}
+\DoxyCodeLine{00303         \}}
+\DoxyCodeLine{00304     \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Documentación de los datos miembro}
+\mbox{\Hypertarget{classdominio_1_1clases_1_1_collaborative_a82492a33d04c759335cdb3684df61b9b}\label{classdominio_1_1clases_1_1_collaborative_a82492a33d04c759335cdb3684df61b9b}} 
+\index{dominio.clases.Collaborative@{dominio.clases.Collaborative}!random@{random}}
+\index{random@{random}!dominio.clases.Collaborative@{dominio.clases.Collaborative}}
+\doxysubsubsection{\texorpdfstring{random}{random}}
+{\footnotesize\ttfamily final Random dominio.\+clases.\+Collaborative.\+random = new Random()\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Instancia de Random() 
+
+
+
+Definición en la línea \mbox{\hyperlink{_collaborative_8java_source_l00030}{30}} del archivo \mbox{\hyperlink{_collaborative_8java_source}{Collaborative.\+java}}.
+
+
+
+La documentación para esta clase fue generada a partir del siguiente fichero\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_collaborative_8java}{Collaborative.\+java}}\end{DoxyCompactItemize}

@@ -1,0 +1,176 @@
+\hypertarget{classdominio_1_1clases_1_1_slope_one}{}\doxysection{Referencia de la Clase dominio.\+clases.\+Slope\+One}
+\label{classdominio_1_1clases_1_1_slope_one}\index{dominio.clases.SlopeOne@{dominio.clases.SlopeOne}}
+
+
+Clase dedicada a la implementacion del algoritmo de prediccion \mbox{\hyperlink{classdominio_1_1clases_1_1_slope_one}{Slope\+One}}.  
+
+
+\doxysubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classdominio_1_1clases_1_1_slope_one_a1d8e25393af27ae0779edd9fc34c8832}{slope\+One}} (List$<$ \mbox{\hyperlink{classdominio_1_1clases_1_1_usuari}{Usuari}} $>$ \mbox{\hyperlink{classdominio_1_1clases_1_1_algorisme_aa2a6296923e364755e6d0efaaaa4b2c2}{users}}, double max, int k)
+\begin{DoxyCompactList}\small\item\em Metodo que computa el Weighted \mbox{\hyperlink{classdominio_1_1clases_1_1_slope_one}{Slope\+One}}. \end{DoxyCompactList}\item 
+Hash\+Map$<$ \mbox{\hyperlink{classdominio_1_1clases_1_1_item}{Item}}, Double $>$ \mbox{\hyperlink{classdominio_1_1clases_1_1_slope_one_a667af6b9487f6b406d5b7b0a32f9d7b3}{get\+Predictions}} ()
+\begin{DoxyCompactList}\small\item\em Metodo get de las predicciones generadas. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classdominio_1_1clases_1_1_slope_one_a4ae0debcdd31def7edbd2ed9d09e0408}{Slope\+One}} (\mbox{\hyperlink{classdominio_1_1clases_1_1_usuari}{Usuari}} u)
+\begin{DoxyCompactList}\small\item\em Constructora de \mbox{\hyperlink{classdominio_1_1clases_1_1_slope_one}{Slope\+One}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Atributos privados}
+\begin{DoxyCompactItemize}
+\item 
+Hash\+Map$<$ \mbox{\hyperlink{classdominio_1_1clases_1_1_item}{Item}}, Double $>$ \mbox{\hyperlink{classdominio_1_1clases_1_1_slope_one_a2b932364f1890dd0c3ff5a7f250f29bb}{predictions}} = new Hash\+Map$<$$>$()
+\begin{DoxyCompactList}\small\item\em Map que almacena, para un unico usuario, las predicciones sobre un conjunto determinado de items. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Otros miembros heredados}
+
+
+\doxysubsection{Descripción detallada}
+Clase dedicada a la implementacion del algoritmo de prediccion \mbox{\hyperlink{classdominio_1_1clases_1_1_slope_one}{Slope\+One}}. 
+
+\begin{DoxyAuthor}{Autor}
+Cristian Sanchez Estape 
+\end{DoxyAuthor}
+
+
+Definición en la línea \mbox{\hyperlink{_slope_one_8java_source_l00015}{15}} del archivo \mbox{\hyperlink{_slope_one_8java_source}{Slope\+One.\+java}}.
+
+
+
+\doxysubsection{Documentación del constructor y destructor}
+\mbox{\Hypertarget{classdominio_1_1clases_1_1_slope_one_a4ae0debcdd31def7edbd2ed9d09e0408}\label{classdominio_1_1clases_1_1_slope_one_a4ae0debcdd31def7edbd2ed9d09e0408}} 
+\index{dominio.clases.SlopeOne@{dominio.clases.SlopeOne}!SlopeOne@{SlopeOne}}
+\index{SlopeOne@{SlopeOne}!dominio.clases.SlopeOne@{dominio.clases.SlopeOne}}
+\doxysubsubsection{\texorpdfstring{SlopeOne()}{SlopeOne()}}
+{\footnotesize\ttfamily dominio.\+clases.\+Slope\+One.\+Slope\+One (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classdominio_1_1clases_1_1_usuari}{Usuari}}}]{u }\end{DoxyParamCaption})}
+
+
+
+Constructora de \mbox{\hyperlink{classdominio_1_1clases_1_1_slope_one}{Slope\+One}}. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em u} & Usuario sobre el cual se realizaran las predicciones \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{_slope_one_8java_source_l00080}{80}} del archivo \mbox{\hyperlink{_slope_one_8java_source}{Slope\+One.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00080                               \{}
+\DoxyCodeLine{00081         super();}
+\DoxyCodeLine{00082         super.setUser(u);}
+\DoxyCodeLine{00083     \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Documentación de las funciones miembro}
+\mbox{\Hypertarget{classdominio_1_1clases_1_1_slope_one_a1d8e25393af27ae0779edd9fc34c8832}\label{classdominio_1_1clases_1_1_slope_one_a1d8e25393af27ae0779edd9fc34c8832}} 
+\index{dominio.clases.SlopeOne@{dominio.clases.SlopeOne}!slopeOne@{slopeOne}}
+\index{slopeOne@{slopeOne}!dominio.clases.SlopeOne@{dominio.clases.SlopeOne}}
+\doxysubsubsection{\texorpdfstring{slopeOne()}{slopeOne()}}
+{\footnotesize\ttfamily void dominio.\+clases.\+Slope\+One.\+slope\+One (\begin{DoxyParamCaption}\item[{List$<$ \mbox{\hyperlink{classdominio_1_1clases_1_1_usuari}{Usuari}} $>$}]{users,  }\item[{double}]{max,  }\item[{int}]{k }\end{DoxyParamCaption})}
+
+
+
+Metodo que computa el Weighted \mbox{\hyperlink{classdominio_1_1clases_1_1_slope_one}{Slope\+One}}. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em users} & Lista de usuarios con valoraciones sobre un conjunto determinado de items \\
+\hline
+{\em max} & Valoracion maxima posible (cota maxima) \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{_slope_one_8java_source_l00027}{27}} del archivo \mbox{\hyperlink{_slope_one_8java_source}{Slope\+One.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00027                                                                 \{}
+\DoxyCodeLine{00028         HashMap<Item, Double> queries = \mbox{\hyperlink{classdominio_1_1clases_1_1_algorisme_aee088dc070748fe366f2068b0a512981}{user}}.\mbox{\hyperlink{classdominio_1_1clases_1_1_usuari_a5f2f72c56d755b0785792c34622f419d}{getRatedItems}}(), usersRatings;}
+\DoxyCodeLine{00029         HashMap<Item, Double> sums = \textcolor{keyword}{new} HashMap<>();}
+\DoxyCodeLine{00030         HashMap<Item, Integer> nums = \textcolor{keyword}{new} HashMap<>();}
+\DoxyCodeLine{00031         \textcolor{keywordflow}{for} (Item j : queries.keySet()) \{}
+\DoxyCodeLine{00032             \textcolor{keywordflow}{for} (Usuari i : \mbox{\hyperlink{classdominio_1_1clases_1_1_algorisme_aa2a6296923e364755e6d0efaaaa4b2c2}{users}}) \{}
+\DoxyCodeLine{00033                 usersRatings = i.getRatedItems();}
+\DoxyCodeLine{00034                 \textcolor{keywordflow}{if} (usersRatings.containsKey(j))}
+\DoxyCodeLine{00035                     \textcolor{keywordflow}{for} (Item J : usersRatings.keySet()) \{}
+\DoxyCodeLine{00036                         \textcolor{keywordflow}{if} (!J.equals(j)) \{}
+\DoxyCodeLine{00037                             \textcolor{keywordflow}{if} (sums.get(J) == \textcolor{keyword}{null}) \{}
+\DoxyCodeLine{00038                                 sums.put(J, 0.);}
+\DoxyCodeLine{00039                                 nums.put(J, 0);}
+\DoxyCodeLine{00040                             \}}
+\DoxyCodeLine{00041                             sums.put(J, sums.get(J) + queries.get(j) + (usersRatings.get(J) -\/ usersRatings.get(j)));}
+\DoxyCodeLine{00042                             nums.put(J, nums.get(J) + 1);}
+\DoxyCodeLine{00043                         \}}
+\DoxyCodeLine{00044                     \}}
+\DoxyCodeLine{00045             \}}
+\DoxyCodeLine{00046         \}}
+\DoxyCodeLine{00047         \textcolor{keywordflow}{for} (Item j : sums.keySet()) \{}
+\DoxyCodeLine{00048             \textcolor{keywordtype}{double} val = sums.get(j);}
+\DoxyCodeLine{00049             \textcolor{keywordflow}{if} (val >= 0.) \mbox{\hyperlink{classdominio_1_1clases_1_1_slope_one_a2b932364f1890dd0c3ff5a7f250f29bb}{predictions}}.put(j, val / nums.get(j));}
+\DoxyCodeLine{00050         \}}
+\DoxyCodeLine{00051         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classdominio_1_1clases_1_1_slope_one_a2b932364f1890dd0c3ff5a7f250f29bb}{predictions}}.size() > k) \{}
+\DoxyCodeLine{00052             Avaluacio.sortByValue(\mbox{\hyperlink{classdominio_1_1clases_1_1_slope_one_a2b932364f1890dd0c3ff5a7f250f29bb}{predictions}});}
+\DoxyCodeLine{00053             \textcolor{keywordtype}{int} count = 0;}
+\DoxyCodeLine{00054             HashMap<Item, Double> finalPreds = \textcolor{keyword}{new} LinkedHashMap<>();}
+\DoxyCodeLine{00055             \textcolor{keywordflow}{for} (Item i : \mbox{\hyperlink{classdominio_1_1clases_1_1_slope_one_a2b932364f1890dd0c3ff5a7f250f29bb}{predictions}}.keySet()) \{}
+\DoxyCodeLine{00056                 \textcolor{keywordtype}{double} val = \mbox{\hyperlink{classdominio_1_1clases_1_1_slope_one_a2b932364f1890dd0c3ff5a7f250f29bb}{predictions}}.get(i);}
+\DoxyCodeLine{00057                 \textcolor{keywordflow}{if} (val > max) finalPreds.put(i, max);}
+\DoxyCodeLine{00058                 \textcolor{keywordflow}{else} finalPreds.put(i, val);}
+\DoxyCodeLine{00059                 count++;}
+\DoxyCodeLine{00060                 \textcolor{keywordflow}{if} (count == k) \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00061             \}}
+\DoxyCodeLine{00062             \mbox{\hyperlink{classdominio_1_1clases_1_1_slope_one_a2b932364f1890dd0c3ff5a7f250f29bb}{predictions}} = \textcolor{keyword}{new} LinkedHashMap<>(finalPreds);}
+\DoxyCodeLine{00063         \}}
+\DoxyCodeLine{00064     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdominio_1_1clases_1_1_slope_one_a667af6b9487f6b406d5b7b0a32f9d7b3}\label{classdominio_1_1clases_1_1_slope_one_a667af6b9487f6b406d5b7b0a32f9d7b3}} 
+\index{dominio.clases.SlopeOne@{dominio.clases.SlopeOne}!getPredictions@{getPredictions}}
+\index{getPredictions@{getPredictions}!dominio.clases.SlopeOne@{dominio.clases.SlopeOne}}
+\doxysubsubsection{\texorpdfstring{getPredictions()}{getPredictions()}}
+{\footnotesize\ttfamily Hash\+Map$<$ \mbox{\hyperlink{classdominio_1_1clases_1_1_item}{Item}}, Double $>$ dominio.\+clases.\+Slope\+One.\+get\+Predictions (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Metodo get de las predicciones generadas. 
+
+\begin{DoxyReturn}{Devuelve}
+Devuelve un mapa donde, para cada item, tenemos su correspondiente prediccion 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{_slope_one_8java_source_l00071}{71}} del archivo \mbox{\hyperlink{_slope_one_8java_source}{Slope\+One.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00071                                                   \{}
+\DoxyCodeLine{00072         \textcolor{keywordflow}{return} \mbox{\hyperlink{classdominio_1_1clases_1_1_slope_one_a2b932364f1890dd0c3ff5a7f250f29bb}{predictions}};}
+\DoxyCodeLine{00073     \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Documentación de los datos miembro}
+\mbox{\Hypertarget{classdominio_1_1clases_1_1_slope_one_a2b932364f1890dd0c3ff5a7f250f29bb}\label{classdominio_1_1clases_1_1_slope_one_a2b932364f1890dd0c3ff5a7f250f29bb}} 
+\index{dominio.clases.SlopeOne@{dominio.clases.SlopeOne}!predictions@{predictions}}
+\index{predictions@{predictions}!dominio.clases.SlopeOne@{dominio.clases.SlopeOne}}
+\doxysubsubsection{\texorpdfstring{predictions}{predictions}}
+{\footnotesize\ttfamily Hash\+Map$<$\mbox{\hyperlink{classdominio_1_1clases_1_1_item}{Item}}, Double$>$ dominio.\+clases.\+Slope\+One.\+predictions = new Hash\+Map$<$$>$()\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Map que almacena, para un unico usuario, las predicciones sobre un conjunto determinado de items. 
+
+
+
+Definición en la línea \mbox{\hyperlink{_slope_one_8java_source_l00019}{19}} del archivo \mbox{\hyperlink{_slope_one_8java_source}{Slope\+One.\+java}}.
+
+
+
+La documentación para esta clase fue generada a partir del siguiente fichero\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_slope_one_8java}{Slope\+One.\+java}}\end{DoxyCompactItemize}

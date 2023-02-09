@@ -1,0 +1,362 @@
+\hypertarget{classdominio_1_1clases_1_1_content_based}{}\doxysection{Referencia de la Clase dominio.\+clases.\+Content\+Based}
+\label{classdominio_1_1clases_1_1_content_based}\index{dominio.clases.ContentBased@{dominio.clases.ContentBased}}
+
+
+Clase que implementa el sistema de recomendacion con el metodo \char`\"{}\+Content Based Filtering\char`\"{}.  
+
+
+\doxysubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classdominio_1_1clases_1_1_content_based_a9377b3601359575e470216472884cd12}{Content\+Based}} (\mbox{\hyperlink{classdominio_1_1clases_1_1_usuari}{Usuari}} \mbox{\hyperlink{classdominio_1_1clases_1_1_algorisme_aee088dc070748fe366f2068b0a512981}{user}}, \mbox{\hyperlink{classdominio_1_1clases_1_1_cjt__items}{Cjt\+\_\+items}} \mbox{\hyperlink{classdominio_1_1clases_1_1_algorisme_a966a79e4751cb23c2f8a0537511cd94e}{dataset}}, Hash\+Map$<$ \mbox{\hyperlink{classdominio_1_1clases_1_1_item}{Item}}, Array\+List$<$ Double $>$ $>$ \mbox{\hyperlink{classdominio_1_1clases_1_1_algorisme_a9c9055131097eeb0052bc6da89a59475}{ratings}}, double \mbox{\hyperlink{classdominio_1_1clases_1_1_content_based_af2be76954b698d6f016461ab3cee7516}{max\+Rating}}, List$<$ Boolean $>$ \mbox{\hyperlink{classdominio_1_1clases_1_1_content_based_afc91adb39d697089490568895be285af}{int\+At}}, List$<$ Boolean $>$ \mbox{\hyperlink{classdominio_1_1clases_1_1_content_based_a6340ab091377a0d056cfd20119370b2b}{doub\+At}}, List$<$ Boolean $>$ \mbox{\hyperlink{classdominio_1_1clases_1_1_content_based_a73e0142249ad740b54efef71f2078fb0}{date\+At}}, List$<$ Boolean $>$ \mbox{\hyperlink{classdominio_1_1clases_1_1_content_based_afc96c69348d58366f6b3d868a073a01f}{b\+At}}, List$<$ Boolean $>$ \mbox{\hyperlink{classdominio_1_1clases_1_1_content_based_a58fc6e587f94625f55819aafddd62141}{cat\+At}}, List$<$ Boolean $>$ \mbox{\hyperlink{classdominio_1_1clases_1_1_content_based_a78dbed395df5211421b8ecd94cce1308}{ft\+At}})
+\begin{DoxyCompactList}\small\item\em Constructora de \mbox{\hyperlink{classdominio_1_1clases_1_1_content_based}{Content\+Based}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classdominio_1_1clases_1_1_content_based_a672f34661a60a5596ae6d64f7e30f641}{setK}} (int \mbox{\hyperlink{classdominio_1_1clases_1_1_content_based_a81aee2992403d63aa5c1aeda9d55cb8b}{k}})
+\begin{DoxyCompactList}\small\item\em Setter del parametro k. \end{DoxyCompactList}\item 
+Hash\+Map$<$ \mbox{\hyperlink{classdominio_1_1clases_1_1_item}{Item}}, Double $>$ \mbox{\hyperlink{classdominio_1_1clases_1_1_content_based_a85943724cd710fd0ab3d14159604589a}{recommended\+\_\+items}} ()
+\begin{DoxyCompactList}\small\item\em Metodo que devuelve los items recomendados al usuario que pide la recomendacion junto con la prediccion de la valoracion qe haría dicho usuario para cada uno de los items. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Métodos privados}
+\begin{DoxyCompactItemize}
+\item 
+Hash\+Map$<$ \mbox{\hyperlink{classdominio_1_1clases_1_1_item}{Item}}, Double $>$ \mbox{\hyperlink{classdominio_1_1clases_1_1_content_based_a75b4c034a8b60bc1c267d700787c11ad}{get\+\_\+\+KNN}} (\mbox{\hyperlink{classdominio_1_1clases_1_1_item}{Item}} a, double rating)
+\begin{DoxyCompactList}\small\item\em Metodo que implementa el algortimo K-\/\+NN para un item a que recibe como parametro. Devuelve un diccionario con los k items con mejor prediccion de valoracion. Para la prediccion se usa la similitud entre ítems y se pondera con el rating dado por el usuario que pide la recomendacion del item a y con el rating promedio del ítem candidato a formar parte de los k-\/\+NN. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Atributos privados}
+\begin{DoxyCompactItemize}
+\item 
+Hash\+Map$<$ \mbox{\hyperlink{classdominio_1_1clases_1_1_item}{Item}}, Double $>$ \mbox{\hyperlink{classdominio_1_1clases_1_1_content_based_ac79c5546f6c70b0f5fa5edcd529c38ca}{rated\+Items}}
+\begin{DoxyCompactList}\small\item\em Diccionario con los ítems valorados por el Usuario que pide la recomendacion junto con su valoracion. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classdominio_1_1clases_1_1_content_based_af2be76954b698d6f016461ab3cee7516}{max\+Rating}}
+\begin{DoxyCompactList}\small\item\em Parametro que representa la valoracion maxima que se puede dar a un item. \end{DoxyCompactList}\item 
+List$<$ Boolean $>$ \mbox{\hyperlink{classdominio_1_1clases_1_1_content_based_afc91adb39d697089490568895be285af}{int\+At}}
+\item 
+List$<$ Boolean $>$ \mbox{\hyperlink{classdominio_1_1clases_1_1_content_based_a6340ab091377a0d056cfd20119370b2b}{doub\+At}}
+\item 
+List$<$ Boolean $>$ \mbox{\hyperlink{classdominio_1_1clases_1_1_content_based_a73e0142249ad740b54efef71f2078fb0}{date\+At}}
+\item 
+List$<$ Boolean $>$ \mbox{\hyperlink{classdominio_1_1clases_1_1_content_based_afc96c69348d58366f6b3d868a073a01f}{b\+At}}
+\item 
+List$<$ Boolean $>$ \mbox{\hyperlink{classdominio_1_1clases_1_1_content_based_a58fc6e587f94625f55819aafddd62141}{cat\+At}}
+\item 
+List$<$ Boolean $>$ \mbox{\hyperlink{classdominio_1_1clases_1_1_content_based_a78dbed395df5211421b8ecd94cce1308}{ft\+At}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Atributos privados estáticos}
+\begin{DoxyCompactItemize}
+\item 
+static int \mbox{\hyperlink{classdominio_1_1clases_1_1_content_based_a81aee2992403d63aa5c1aeda9d55cb8b}{k}}
+\begin{DoxyCompactList}\small\item\em Parametro k que se usa para el algoritmo K-\/\+NN. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Otros miembros heredados}
+
+
+\doxysubsection{Descripción detallada}
+Clase que implementa el sistema de recomendacion con el metodo \char`\"{}\+Content Based Filtering\char`\"{}. 
+
+\begin{DoxyAuthor}{Autor}
+Jordi Elgueta Serra 
+\end{DoxyAuthor}
+
+
+Definición en la línea \mbox{\hyperlink{_content_based_8java_source_l00017}{17}} del archivo \mbox{\hyperlink{_content_based_8java_source}{Content\+Based.\+java}}.
+
+
+
+\doxysubsection{Documentación del constructor y destructor}
+\mbox{\Hypertarget{classdominio_1_1clases_1_1_content_based_a9377b3601359575e470216472884cd12}\label{classdominio_1_1clases_1_1_content_based_a9377b3601359575e470216472884cd12}} 
+\index{dominio.clases.ContentBased@{dominio.clases.ContentBased}!ContentBased@{ContentBased}}
+\index{ContentBased@{ContentBased}!dominio.clases.ContentBased@{dominio.clases.ContentBased}}
+\doxysubsubsection{\texorpdfstring{ContentBased()}{ContentBased()}}
+{\footnotesize\ttfamily dominio.\+clases.\+Content\+Based.\+Content\+Based (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classdominio_1_1clases_1_1_usuari}{Usuari}}}]{user,  }\item[{\mbox{\hyperlink{classdominio_1_1clases_1_1_cjt__items}{Cjt\+\_\+items}}}]{dataset,  }\item[{Hash\+Map$<$ \mbox{\hyperlink{classdominio_1_1clases_1_1_item}{Item}}, Array\+List$<$ Double $>$ $>$}]{ratings,  }\item[{double}]{max\+Rating,  }\item[{List$<$ Boolean $>$}]{int\+At,  }\item[{List$<$ Boolean $>$}]{doub\+At,  }\item[{List$<$ Boolean $>$}]{date\+At,  }\item[{List$<$ Boolean $>$}]{b\+At,  }\item[{List$<$ Boolean $>$}]{cat\+At,  }\item[{List$<$ Boolean $>$}]{ft\+At }\end{DoxyParamCaption})}
+
+
+
+Constructora de \mbox{\hyperlink{classdominio_1_1clases_1_1_content_based}{Content\+Based}}. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em user} & \mbox{\hyperlink{classdominio_1_1clases_1_1_usuari}{Usuari}} que pide la recomendacion \\
+\hline
+{\em dataset} & Instancia de \mbox{\hyperlink{classdominio_1_1clases_1_1_cjt__items}{Cjt\+\_\+items}} que almacena el dataset de entrada procesado \\
+\hline
+{\em ratings} & Diccionario con los items (keys) y una lista de todas sus valoraciones \\
+\hline
+{\em max\+Rating} & Valoración máxima registrada \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{_content_based_8java_source_l00046}{46}} del archivo \mbox{\hyperlink{_content_based_8java_source}{Content\+Based.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00048                                                                 \{}
+\DoxyCodeLine{00049         super(\mbox{\hyperlink{classdominio_1_1clases_1_1_algorisme_aee088dc070748fe366f2068b0a512981}{user}},\mbox{\hyperlink{classdominio_1_1clases_1_1_algorisme_a966a79e4751cb23c2f8a0537511cd94e}{dataset}}, \mbox{\hyperlink{classdominio_1_1clases_1_1_algorisme_a9c9055131097eeb0052bc6da89a59475}{ratings}});}
+\DoxyCodeLine{00050         \mbox{\hyperlink{classdominio_1_1clases_1_1_content_based_ac79c5546f6c70b0f5fa5edcd529c38ca}{ratedItems}} = \mbox{\hyperlink{classdominio_1_1clases_1_1_algorisme_aee088dc070748fe366f2068b0a512981}{user}}.\mbox{\hyperlink{classdominio_1_1clases_1_1_usuari_a5f2f72c56d755b0785792c34622f419d}{getRatedItems}}();}
+\DoxyCodeLine{00051         this.\mbox{\hyperlink{classdominio_1_1clases_1_1_content_based_af2be76954b698d6f016461ab3cee7516}{maxRating}} = \mbox{\hyperlink{classdominio_1_1clases_1_1_content_based_af2be76954b698d6f016461ab3cee7516}{maxRating}};}
+\DoxyCodeLine{00052         this.\mbox{\hyperlink{classdominio_1_1clases_1_1_content_based_a73e0142249ad740b54efef71f2078fb0}{dateAt}} = \mbox{\hyperlink{classdominio_1_1clases_1_1_content_based_a73e0142249ad740b54efef71f2078fb0}{dateAt}};}
+\DoxyCodeLine{00053         this.\mbox{\hyperlink{classdominio_1_1clases_1_1_content_based_afc96c69348d58366f6b3d868a073a01f}{bAt}} = \mbox{\hyperlink{classdominio_1_1clases_1_1_content_based_afc96c69348d58366f6b3d868a073a01f}{bAt}};}
+\DoxyCodeLine{00054         this.\mbox{\hyperlink{classdominio_1_1clases_1_1_content_based_a58fc6e587f94625f55819aafddd62141}{catAt}} = \mbox{\hyperlink{classdominio_1_1clases_1_1_content_based_a58fc6e587f94625f55819aafddd62141}{catAt}};}
+\DoxyCodeLine{00055         this.\mbox{\hyperlink{classdominio_1_1clases_1_1_content_based_a78dbed395df5211421b8ecd94cce1308}{ftAt}} = \mbox{\hyperlink{classdominio_1_1clases_1_1_content_based_a78dbed395df5211421b8ecd94cce1308}{ftAt}};}
+\DoxyCodeLine{00056         this.\mbox{\hyperlink{classdominio_1_1clases_1_1_content_based_afc91adb39d697089490568895be285af}{intAt}} = \mbox{\hyperlink{classdominio_1_1clases_1_1_content_based_afc91adb39d697089490568895be285af}{intAt}};}
+\DoxyCodeLine{00057         this.\mbox{\hyperlink{classdominio_1_1clases_1_1_content_based_a6340ab091377a0d056cfd20119370b2b}{doubAt}} = \mbox{\hyperlink{classdominio_1_1clases_1_1_content_based_a6340ab091377a0d056cfd20119370b2b}{doubAt}};}
+\DoxyCodeLine{00058     \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Documentación de las funciones miembro}
+\mbox{\Hypertarget{classdominio_1_1clases_1_1_content_based_a672f34661a60a5596ae6d64f7e30f641}\label{classdominio_1_1clases_1_1_content_based_a672f34661a60a5596ae6d64f7e30f641}} 
+\index{dominio.clases.ContentBased@{dominio.clases.ContentBased}!setK@{setK}}
+\index{setK@{setK}!dominio.clases.ContentBased@{dominio.clases.ContentBased}}
+\doxysubsubsection{\texorpdfstring{setK()}{setK()}}
+{\footnotesize\ttfamily void dominio.\+clases.\+Content\+Based.\+setK (\begin{DoxyParamCaption}\item[{int}]{k }\end{DoxyParamCaption})}
+
+
+
+Setter del parametro k. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em k} & Valor que se asigna al parametro k para el K-\/\+NN \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{_content_based_8java_source_l00064}{64}} del archivo \mbox{\hyperlink{_content_based_8java_source}{Content\+Based.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00064                              \{}
+\DoxyCodeLine{00065         this.\mbox{\hyperlink{classdominio_1_1clases_1_1_content_based_a81aee2992403d63aa5c1aeda9d55cb8b}{k}} = \mbox{\hyperlink{classdominio_1_1clases_1_1_content_based_a81aee2992403d63aa5c1aeda9d55cb8b}{k}};}
+\DoxyCodeLine{00066     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdominio_1_1clases_1_1_content_based_a85943724cd710fd0ab3d14159604589a}\label{classdominio_1_1clases_1_1_content_based_a85943724cd710fd0ab3d14159604589a}} 
+\index{dominio.clases.ContentBased@{dominio.clases.ContentBased}!recommended\_items@{recommended\_items}}
+\index{recommended\_items@{recommended\_items}!dominio.clases.ContentBased@{dominio.clases.ContentBased}}
+\doxysubsubsection{\texorpdfstring{recommended\_items()}{recommended\_items()}}
+{\footnotesize\ttfamily Hash\+Map$<$ \mbox{\hyperlink{classdominio_1_1clases_1_1_item}{Item}}, Double $>$ dominio.\+clases.\+Content\+Based.\+recommended\+\_\+items (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Metodo que devuelve los items recomendados al usuario que pide la recomendacion junto con la prediccion de la valoracion qe haría dicho usuario para cada uno de los items. 
+
+\begin{DoxyReturn}{Devuelve}
+Diccionario de los items con sus respectivas predicciones de valoracion 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{_content_based_8java_source_l00073}{73}} del archivo \mbox{\hyperlink{_content_based_8java_source}{Content\+Based.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00073                                                      \{}
+\DoxyCodeLine{00074         HashMap<Item, Double> predictions = \textcolor{keyword}{new} HashMap<>();}
+\DoxyCodeLine{00075         Item minimum = \textcolor{keyword}{null};}
+\DoxyCodeLine{00076         \textcolor{keywordflow}{for} (Item item : \mbox{\hyperlink{classdominio_1_1clases_1_1_content_based_ac79c5546f6c70b0f5fa5edcd529c38ca}{ratedItems}}.keySet()) \{}
+\DoxyCodeLine{00077             \textcolor{keywordtype}{double} rating = \mbox{\hyperlink{classdominio_1_1clases_1_1_content_based_ac79c5546f6c70b0f5fa5edcd529c38ca}{ratedItems}}.get(item);}
+\DoxyCodeLine{00078             HashMap<Item, Double> knn = \mbox{\hyperlink{classdominio_1_1clases_1_1_content_based_a75b4c034a8b60bc1c267d700787c11ad}{get\_KNN}}(item, rating);}
+\DoxyCodeLine{00079             \textcolor{keywordflow}{for} (Item key : knn.keySet()) \{}
+\DoxyCodeLine{00080                 \textcolor{keywordflow}{if} (minimum == \textcolor{keyword}{null}) \{}
+\DoxyCodeLine{00081                     minimum = key;}
+\DoxyCodeLine{00082                     predictions.put(key, knn.get(key));}
+\DoxyCodeLine{00083                 \}}
+\DoxyCodeLine{00084                 \textcolor{comment}{//If item already in the map take the greatest rating prediction}}
+\DoxyCodeLine{00085                 \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (predictions.containsKey(key)) \{}
+\DoxyCodeLine{00086                     \textcolor{keywordflow}{if} (predictions.get(key) < knn.get(key))}
+\DoxyCodeLine{00087                         predictions.replace(key, knn.get(key));}
+\DoxyCodeLine{00088                 \}}
+\DoxyCodeLine{00089                 \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (predictions.size() < \mbox{\hyperlink{classdominio_1_1clases_1_1_content_based_a81aee2992403d63aa5c1aeda9d55cb8b}{k}}) \{}
+\DoxyCodeLine{00090                     \textcolor{keywordflow}{if} (predictions.get(minimum) > knn.get(key))}
+\DoxyCodeLine{00091                         minimum = key;}
+\DoxyCodeLine{00092                     predictions.put(key, knn.get(key));}
+\DoxyCodeLine{00093                 \}}
+\DoxyCodeLine{00094                 \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (predictions.get(minimum) < knn.get(key)) \{}
+\DoxyCodeLine{00095                     predictions.remove(minimum);}
+\DoxyCodeLine{00096                     predictions.put(key, knn.get(key));}
+\DoxyCodeLine{00097                     minimum = Collections.min(predictions.entrySet(), Map.Entry.comparingByValue()).getKey();}
+\DoxyCodeLine{00098                 \}}
+\DoxyCodeLine{00099             \}}
+\DoxyCodeLine{00100         \}}
+\DoxyCodeLine{00101         \textcolor{keywordflow}{return} predictions;}
+\DoxyCodeLine{00102     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdominio_1_1clases_1_1_content_based_a75b4c034a8b60bc1c267d700787c11ad}\label{classdominio_1_1clases_1_1_content_based_a75b4c034a8b60bc1c267d700787c11ad}} 
+\index{dominio.clases.ContentBased@{dominio.clases.ContentBased}!get\_KNN@{get\_KNN}}
+\index{get\_KNN@{get\_KNN}!dominio.clases.ContentBased@{dominio.clases.ContentBased}}
+\doxysubsubsection{\texorpdfstring{get\_KNN()}{get\_KNN()}}
+{\footnotesize\ttfamily Hash\+Map$<$ \mbox{\hyperlink{classdominio_1_1clases_1_1_item}{Item}}, Double $>$ dominio.\+clases.\+Content\+Based.\+get\+\_\+\+KNN (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classdominio_1_1clases_1_1_item}{Item}}}]{a,  }\item[{double}]{rating }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Metodo que implementa el algortimo K-\/\+NN para un item a que recibe como parametro. Devuelve un diccionario con los k items con mejor prediccion de valoracion. Para la prediccion se usa la similitud entre ítems y se pondera con el rating dado por el usuario que pide la recomendacion del item a y con el rating promedio del ítem candidato a formar parte de los k-\/\+NN. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em a} & \mbox{\hyperlink{classdominio_1_1clases_1_1_item}{Item}} para el cual se calculan los K-\/\+NN \\
+\hline
+{\em rating} & Valoracion del usuario que pide la recomendacion al ítem a \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+Estructura de datos que contiene, para un conjunto de items determinado, sus predicciones 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{_content_based_8java_source_l00114}{114}} del archivo \mbox{\hyperlink{_content_based_8java_source}{Content\+Based.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00114                                                                  \{}
+\DoxyCodeLine{00115         SortedMap<Double, List<Item>> maxPred = \textcolor{keyword}{new} TreeMap<>();}
+\DoxyCodeLine{00116         HashMap<String,Item> data = super.dataset.getItems();}
+\DoxyCodeLine{00117         \textcolor{keywordflow}{for} (Item dItem : data.values()) \{}
+\DoxyCodeLine{00118             \textcolor{keywordflow}{if} (!\mbox{\hyperlink{classdominio_1_1clases_1_1_content_based_ac79c5546f6c70b0f5fa5edcd529c38ca}{ratedItems}}.containsKey(dItem)) \{}
+\DoxyCodeLine{00119                 DistanceItems d = \textcolor{keyword}{new} DistanceItems(a, dItem, \mbox{\hyperlink{classdominio_1_1clases_1_1_algorisme_a966a79e4751cb23c2f8a0537511cd94e}{dataset}}.\mbox{\hyperlink{classdominio_1_1clases_1_1_cjt__items_a45da1fed3bd533038cac61d85d6c2bca}{getMaxValIntegers}}().values(), \mbox{\hyperlink{classdominio_1_1clases_1_1_algorisme_a966a79e4751cb23c2f8a0537511cd94e}{dataset}}.\mbox{\hyperlink{classdominio_1_1clases_1_1_cjt__items_a21af1ffbfe2964edf597b979c0731a94}{getMinValIntegers}}().values(),}
+\DoxyCodeLine{00120                         \mbox{\hyperlink{classdominio_1_1clases_1_1_algorisme_a966a79e4751cb23c2f8a0537511cd94e}{dataset}}.\mbox{\hyperlink{classdominio_1_1clases_1_1_cjt__items_ae850e287ca41c2994f877b1e00b53d85}{getMaxValDoubles}}().values(), \mbox{\hyperlink{classdominio_1_1clases_1_1_algorisme_a966a79e4751cb23c2f8a0537511cd94e}{dataset}}.\mbox{\hyperlink{classdominio_1_1clases_1_1_cjt__items_a8f50eb1411d7e506234ae0674be726ea}{getMinValDoubles}}().values(), \mbox{\hyperlink{classdominio_1_1clases_1_1_algorisme_a966a79e4751cb23c2f8a0537511cd94e}{dataset}}.\mbox{\hyperlink{classdominio_1_1clases_1_1_cjt__items_a5c36693e47cffb9da13c1aaeeb191df0}{getMaxDates}}().values(),}
+\DoxyCodeLine{00121                         \mbox{\hyperlink{classdominio_1_1clases_1_1_algorisme_a966a79e4751cb23c2f8a0537511cd94e}{dataset}}.\mbox{\hyperlink{classdominio_1_1clases_1_1_cjt__items_a71ed2c367bb59ec18a6e4b3a430a4e3b}{getMinDates}}().values(), \mbox{\hyperlink{classdominio_1_1clases_1_1_content_based_afc91adb39d697089490568895be285af}{intAt}}, \mbox{\hyperlink{classdominio_1_1clases_1_1_content_based_a6340ab091377a0d056cfd20119370b2b}{doubAt}}, \mbox{\hyperlink{classdominio_1_1clases_1_1_content_based_a73e0142249ad740b54efef71f2078fb0}{dateAt}}, \mbox{\hyperlink{classdominio_1_1clases_1_1_content_based_afc96c69348d58366f6b3d868a073a01f}{bAt}}, \mbox{\hyperlink{classdominio_1_1clases_1_1_content_based_a58fc6e587f94625f55819aafddd62141}{catAt}}, \mbox{\hyperlink{classdominio_1_1clases_1_1_content_based_a78dbed395df5211421b8ecd94cce1308}{ftAt}});}
+\DoxyCodeLine{00122                 \textcolor{keywordtype}{double} prediction = (1 -\/ d.get\_distance()) * \mbox{\hyperlink{classdominio_1_1clases_1_1_content_based_af2be76954b698d6f016461ab3cee7516}{maxRating}} -\/ (\mbox{\hyperlink{classdominio_1_1clases_1_1_content_based_af2be76954b698d6f016461ab3cee7516}{maxRating}} -\/ rating) / (2*\mbox{\hyperlink{classdominio_1_1clases_1_1_content_based_af2be76954b698d6f016461ab3cee7516}{maxRating}});}
+\DoxyCodeLine{00123                 \textcolor{keywordflow}{if} (super.ratings.containsKey((dItem))) \{}
+\DoxyCodeLine{00124                     \textcolor{keywordtype}{double} meanRating = 0;}
+\DoxyCodeLine{00125                     ArrayList<Double> stars = super.ratings.get(dItem);}
+\DoxyCodeLine{00126                     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{double} rate : stars)}
+\DoxyCodeLine{00127                         meanRating += rate;}
+\DoxyCodeLine{00128                     meanRating /= stars.size();}
+\DoxyCodeLine{00129                     prediction -\/= (\mbox{\hyperlink{classdominio_1_1clases_1_1_content_based_af2be76954b698d6f016461ab3cee7516}{maxRating}} -\/ meanRating) / (2*\mbox{\hyperlink{classdominio_1_1clases_1_1_content_based_af2be76954b698d6f016461ab3cee7516}{maxRating}});}
+\DoxyCodeLine{00130 }
+\DoxyCodeLine{00131                 \}}
+\DoxyCodeLine{00132                 \textcolor{keywordflow}{if} (prediction < 0) prediction = 0.0;}
+\DoxyCodeLine{00133                 \textcolor{keywordflow}{if}(maxPred.containsKey(prediction)) \{}
+\DoxyCodeLine{00134                     maxPred.get(prediction).add(dItem);}
+\DoxyCodeLine{00135                 \}}
+\DoxyCodeLine{00136                 \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{00137                     List<Item> value = \textcolor{keyword}{new} ArrayList<>(List.of(dItem));}
+\DoxyCodeLine{00138                     \textcolor{keywordflow}{if} (maxPred.size() < \mbox{\hyperlink{classdominio_1_1clases_1_1_content_based_a81aee2992403d63aa5c1aeda9d55cb8b}{k}})}
+\DoxyCodeLine{00139                         maxPred.put(prediction, value);}
+\DoxyCodeLine{00140                     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (maxPred.firstKey() < prediction) \{}
+\DoxyCodeLine{00141                         maxPred.remove(maxPred.firstKey());}
+\DoxyCodeLine{00142                         maxPred.put(prediction, value);}
+\DoxyCodeLine{00143                     \}}
+\DoxyCodeLine{00144                 \}}
+\DoxyCodeLine{00145             \}}
+\DoxyCodeLine{00146         \}}
+\DoxyCodeLine{00147         HashMap<Item, Double> knn = \textcolor{keyword}{new} HashMap<>();}
+\DoxyCodeLine{00148         \textcolor{keywordtype}{int} itemCounter = 0;}
+\DoxyCodeLine{00149         \textcolor{keywordflow}{for} (Double d : maxPred.keySet()) \{}
+\DoxyCodeLine{00150             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < maxPred.get(d).size() \&\& itemCounter < \mbox{\hyperlink{classdominio_1_1clases_1_1_content_based_a81aee2992403d63aa5c1aeda9d55cb8b}{k}}; ++i, ++itemCounter) \{}
+\DoxyCodeLine{00151                 knn.put(maxPred.get(d).get(i), d);}
+\DoxyCodeLine{00152             \}}
+\DoxyCodeLine{00153             \textcolor{keywordflow}{if} (itemCounter == \mbox{\hyperlink{classdominio_1_1clases_1_1_content_based_a81aee2992403d63aa5c1aeda9d55cb8b}{k}}) \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00154         \}}
+\DoxyCodeLine{00155         \textcolor{keywordflow}{return} knn;}
+\DoxyCodeLine{00156     \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Documentación de los datos miembro}
+\mbox{\Hypertarget{classdominio_1_1clases_1_1_content_based_a81aee2992403d63aa5c1aeda9d55cb8b}\label{classdominio_1_1clases_1_1_content_based_a81aee2992403d63aa5c1aeda9d55cb8b}} 
+\index{dominio.clases.ContentBased@{dominio.clases.ContentBased}!k@{k}}
+\index{k@{k}!dominio.clases.ContentBased@{dominio.clases.ContentBased}}
+\doxysubsubsection{\texorpdfstring{k}{k}}
+{\footnotesize\ttfamily int dominio.\+clases.\+Content\+Based.\+k\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Parametro k que se usa para el algoritmo K-\/\+NN. 
+
+
+
+Definición en la línea \mbox{\hyperlink{_content_based_8java_source_l00022}{22}} del archivo \mbox{\hyperlink{_content_based_8java_source}{Content\+Based.\+java}}.
+
+\mbox{\Hypertarget{classdominio_1_1clases_1_1_content_based_ac79c5546f6c70b0f5fa5edcd529c38ca}\label{classdominio_1_1clases_1_1_content_based_ac79c5546f6c70b0f5fa5edcd529c38ca}} 
+\index{dominio.clases.ContentBased@{dominio.clases.ContentBased}!ratedItems@{ratedItems}}
+\index{ratedItems@{ratedItems}!dominio.clases.ContentBased@{dominio.clases.ContentBased}}
+\doxysubsubsection{\texorpdfstring{ratedItems}{ratedItems}}
+{\footnotesize\ttfamily Hash\+Map$<$\mbox{\hyperlink{classdominio_1_1clases_1_1_item}{Item}},Double$>$ dominio.\+clases.\+Content\+Based.\+rated\+Items\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Diccionario con los ítems valorados por el Usuario que pide la recomendacion junto con su valoracion. 
+
+
+
+Definición en la línea \mbox{\hyperlink{_content_based_8java_source_l00026}{26}} del archivo \mbox{\hyperlink{_content_based_8java_source}{Content\+Based.\+java}}.
+
+\mbox{\Hypertarget{classdominio_1_1clases_1_1_content_based_af2be76954b698d6f016461ab3cee7516}\label{classdominio_1_1clases_1_1_content_based_af2be76954b698d6f016461ab3cee7516}} 
+\index{dominio.clases.ContentBased@{dominio.clases.ContentBased}!maxRating@{maxRating}}
+\index{maxRating@{maxRating}!dominio.clases.ContentBased@{dominio.clases.ContentBased}}
+\doxysubsubsection{\texorpdfstring{maxRating}{maxRating}}
+{\footnotesize\ttfamily double dominio.\+clases.\+Content\+Based.\+max\+Rating\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Parametro que representa la valoracion maxima que se puede dar a un item. 
+
+
+
+Definición en la línea \mbox{\hyperlink{_content_based_8java_source_l00030}{30}} del archivo \mbox{\hyperlink{_content_based_8java_source}{Content\+Based.\+java}}.
+
+\mbox{\Hypertarget{classdominio_1_1clases_1_1_content_based_afc91adb39d697089490568895be285af}\label{classdominio_1_1clases_1_1_content_based_afc91adb39d697089490568895be285af}} 
+\index{dominio.clases.ContentBased@{dominio.clases.ContentBased}!intAt@{intAt}}
+\index{intAt@{intAt}!dominio.clases.ContentBased@{dominio.clases.ContentBased}}
+\doxysubsubsection{\texorpdfstring{intAt}{intAt}}
+{\footnotesize\ttfamily List$<$Boolean$>$ dominio.\+clases.\+Content\+Based.\+int\+At\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{_content_based_8java_source_l00032}{32}} del archivo \mbox{\hyperlink{_content_based_8java_source}{Content\+Based.\+java}}.
+
+\mbox{\Hypertarget{classdominio_1_1clases_1_1_content_based_a6340ab091377a0d056cfd20119370b2b}\label{classdominio_1_1clases_1_1_content_based_a6340ab091377a0d056cfd20119370b2b}} 
+\index{dominio.clases.ContentBased@{dominio.clases.ContentBased}!doubAt@{doubAt}}
+\index{doubAt@{doubAt}!dominio.clases.ContentBased@{dominio.clases.ContentBased}}
+\doxysubsubsection{\texorpdfstring{doubAt}{doubAt}}
+{\footnotesize\ttfamily List$<$Boolean$>$ dominio.\+clases.\+Content\+Based.\+doub\+At\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{_content_based_8java_source_l00033}{33}} del archivo \mbox{\hyperlink{_content_based_8java_source}{Content\+Based.\+java}}.
+
+\mbox{\Hypertarget{classdominio_1_1clases_1_1_content_based_a73e0142249ad740b54efef71f2078fb0}\label{classdominio_1_1clases_1_1_content_based_a73e0142249ad740b54efef71f2078fb0}} 
+\index{dominio.clases.ContentBased@{dominio.clases.ContentBased}!dateAt@{dateAt}}
+\index{dateAt@{dateAt}!dominio.clases.ContentBased@{dominio.clases.ContentBased}}
+\doxysubsubsection{\texorpdfstring{dateAt}{dateAt}}
+{\footnotesize\ttfamily List$<$Boolean$>$ dominio.\+clases.\+Content\+Based.\+date\+At\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{_content_based_8java_source_l00034}{34}} del archivo \mbox{\hyperlink{_content_based_8java_source}{Content\+Based.\+java}}.
+
+\mbox{\Hypertarget{classdominio_1_1clases_1_1_content_based_afc96c69348d58366f6b3d868a073a01f}\label{classdominio_1_1clases_1_1_content_based_afc96c69348d58366f6b3d868a073a01f}} 
+\index{dominio.clases.ContentBased@{dominio.clases.ContentBased}!bAt@{bAt}}
+\index{bAt@{bAt}!dominio.clases.ContentBased@{dominio.clases.ContentBased}}
+\doxysubsubsection{\texorpdfstring{bAt}{bAt}}
+{\footnotesize\ttfamily List$<$Boolean$>$ dominio.\+clases.\+Content\+Based.\+b\+At\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{_content_based_8java_source_l00035}{35}} del archivo \mbox{\hyperlink{_content_based_8java_source}{Content\+Based.\+java}}.
+
+\mbox{\Hypertarget{classdominio_1_1clases_1_1_content_based_a58fc6e587f94625f55819aafddd62141}\label{classdominio_1_1clases_1_1_content_based_a58fc6e587f94625f55819aafddd62141}} 
+\index{dominio.clases.ContentBased@{dominio.clases.ContentBased}!catAt@{catAt}}
+\index{catAt@{catAt}!dominio.clases.ContentBased@{dominio.clases.ContentBased}}
+\doxysubsubsection{\texorpdfstring{catAt}{catAt}}
+{\footnotesize\ttfamily List$<$Boolean$>$ dominio.\+clases.\+Content\+Based.\+cat\+At\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{_content_based_8java_source_l00036}{36}} del archivo \mbox{\hyperlink{_content_based_8java_source}{Content\+Based.\+java}}.
+
+\mbox{\Hypertarget{classdominio_1_1clases_1_1_content_based_a78dbed395df5211421b8ecd94cce1308}\label{classdominio_1_1clases_1_1_content_based_a78dbed395df5211421b8ecd94cce1308}} 
+\index{dominio.clases.ContentBased@{dominio.clases.ContentBased}!ftAt@{ftAt}}
+\index{ftAt@{ftAt}!dominio.clases.ContentBased@{dominio.clases.ContentBased}}
+\doxysubsubsection{\texorpdfstring{ftAt}{ftAt}}
+{\footnotesize\ttfamily List$<$Boolean$>$ dominio.\+clases.\+Content\+Based.\+ft\+At\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{_content_based_8java_source_l00037}{37}} del archivo \mbox{\hyperlink{_content_based_8java_source}{Content\+Based.\+java}}.
+
+
+
+La documentación para esta clase fue generada a partir del siguiente fichero\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_content_based_8java}{Content\+Based.\+java}}\end{DoxyCompactItemize}

@@ -1,0 +1,73 @@
+Prova 1
+
+Descripció: testeig dels metodes de la classe SlopeOne i, preliminarment, del correcte funcionament del mateix
+
+Objectius: avaluar el funcionament dels metodes de SlopeOne com a classe i, a mes a mes, de manera prematura, del
+correcte funcionament de la generacio de prediccions
+
+Per la prova s'ha construit el driver DriverSlopeOne
+
+Entrada: un conjunt de 2 usuaris ==> per un, tindrem 2 valoracions; per l'altre, tindrem 1 valoracio que coincidira
+exactament amb una de les dues valoracions de l'altre usuari; fixem la valoracio maxima a 5 i la k (nº de
+prediccions) a 10
+
+Sortida: frases de confirmacio conforme s'han cridat correctament als metodes de la classe SlopeOne i, a part, la
+prediccio de la nova valoracio per l'usuari amb 1 unica valoracio (aquesta prediccio ha de coincidir exactament amb la
+valoracio adicional feta per l'altre usuari; exemple:
+Usuari 1:
+    Item 1 -> 2.0
+    Item 2 -> 3.0
+Usuari 2:
+    Item 2 -> 3.0
+L'algorisme ha de produir la prediccio:
+Usuari 2:
+    Item 1 -> 2.0
+
+Resultat de la prova: ok
+
+Operativa: s'executa de manera automatica un cop posem en funcionament el driver
+
+------------------------------------------------------------------------------------------------------------------------
+Prova 2
+
+Descripció: testeig del correcte funciomanent de la generacio de prediccions per un petit conjunt d'usuaris
+
+Objectius: avaluar, de manera sumament controlada, la correcta generacio de prediccions per un conjunt d'usuaris i
+items amb una mida petita.
+
+Per la prova s'utilitza el mateix driver DriverSlopeOne
+
+Entrada: un conjunt de 3 usuaris i de 3 items; el mateix driver mostra per pantalla les valoracions que cada usuari ha
+realitzat per cada item del conjunt; fixem la valoracio maxima a 5 i la k (nº de prediccions) a 10
+
+Sortida: en primer lloc, una taula on es mostra les valoracions realitzades per cada usuari; en segon lloc, es mostra:
+    Para el usuario X
+        (Item no valorat) --> (Prediccio de la seva valoracio)
+Aquest petit exemple ens permet comprovar a ma el resultat de les prediccions per les valoracions que falten
+
+Resultat de la prova: ok
+
+Operativa: s'executa de manera automatica un cop posem en funcionament el driver
+
+------------------------------------------------------------------------------------------------------------------------
+Prova 3
+
+Descripció: testeig de la generacio de prediccions per un conjunt de dades de mida considerable
+
+Objectius: comprovar l'aplicabilitat de l'algorisme SlopeOne sobre un conjunt de dades reals (i mes grans que les
+tractades fins ara)
+
+Per la prova s'utilitza el mateix driver DriverSlopeOne
+
+Entrada: el dataset de Movielens de mida 250 (farem us dels fitxers items.csv, ratings.db.csv i ratings.test.known.csv);
+fixem la valoracio maxima a 5 i la k (nº de prediccions) a 10
+
+Sortida: tindrem una sortida del tipus:
+    Los items recomendados para el usuario X son:
+        (Item no valorat) --> (Prediccio de la seva valoracio)
+Per questions de format, el programa sempre imprimeix per pantalla, com a maxim, 10 items (sense cap criteri
+d'ordenacio)
+
+Resultat de la prova: ok
+
+Operativa: s'executa de manera automatica un cop posem en funcionament el driver

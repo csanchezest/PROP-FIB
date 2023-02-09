@@ -1,0 +1,59 @@
+\hypertarget{_ctrl_gestio_recomanacio_8java_source}{}\doxysection{Ctrl\+Gestio\+Recomanacio.\+java}
+\label{_ctrl_gestio_recomanacio_8java_source}\index{CtrlGestioRecomanacio.java@{CtrlGestioRecomanacio.java}}
+\mbox{\hyperlink{_ctrl_gestio_recomanacio_8java}{Ir a la documentación de este archivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_ctrl_gestio_recomanacio_8java_source_l00001}00001 \textcolor{keyword}{package }dominio.controladores;}
+\DoxyCodeLine{\Hypertarget{_ctrl_gestio_recomanacio_8java_source_l00002}00002 }
+\DoxyCodeLine{\Hypertarget{_ctrl_gestio_recomanacio_8java_source_l00003}00003 \textcolor{keyword}{import} dominio.clases.*;}
+\DoxyCodeLine{\Hypertarget{_ctrl_gestio_recomanacio_8java_source_l00004}00004 }
+\DoxyCodeLine{\Hypertarget{_ctrl_gestio_recomanacio_8java_source_l00005}00005 \textcolor{keyword}{import} java.io.File;}
+\DoxyCodeLine{\Hypertarget{_ctrl_gestio_recomanacio_8java_source_l00006}00006 \textcolor{keyword}{import} java.util.HashMap;}
+\DoxyCodeLine{\Hypertarget{_ctrl_gestio_recomanacio_8java_source_l00007}00007 \textcolor{keyword}{import} java.util.LinkedHashMap;}
+\DoxyCodeLine{\Hypertarget{_ctrl_gestio_recomanacio_8java_source_l00008}00008 \textcolor{keyword}{import} java.util.List;}
+\DoxyCodeLine{\Hypertarget{_ctrl_gestio_recomanacio_8java_source_l00009}00009 }
+\DoxyCodeLine{\Hypertarget{_ctrl_gestio_recomanacio_8java_source_l00015}\mbox{\hyperlink{classdominio_1_1controladores_1_1_ctrl_gestio_recomanacio}{00015}} \textcolor{keyword}{public} \textcolor{keyword}{class }\mbox{\hyperlink{classdominio_1_1controladores_1_1_ctrl_gestio_recomanacio}{CtrlGestioRecomanacio}} \{}
+\DoxyCodeLine{\Hypertarget{_ctrl_gestio_recomanacio_8java_source_l00016}00016 }
+\DoxyCodeLine{\Hypertarget{_ctrl_gestio_recomanacio_8java_source_l00020}\mbox{\hyperlink{classdominio_1_1controladores_1_1_ctrl_gestio_recomanacio_a151bacf64acd5934e90c494d4c91ee1c}{00020}}     \textcolor{keyword}{private} \textcolor{keywordtype}{int} \mbox{\hyperlink{classdominio_1_1controladores_1_1_ctrl_gestio_recomanacio_a151bacf64acd5934e90c494d4c91ee1c}{k}};}
+\DoxyCodeLine{\Hypertarget{_ctrl_gestio_recomanacio_8java_source_l00024}\mbox{\hyperlink{classdominio_1_1controladores_1_1_ctrl_gestio_recomanacio_a585138303ff3193cc1d31512908e4ffe}{00024}}     \textcolor{keyword}{private} HashMap<Item, Double> \mbox{\hyperlink{classdominio_1_1controladores_1_1_ctrl_gestio_recomanacio_a585138303ff3193cc1d31512908e4ffe}{valoraciones}};}
+\DoxyCodeLine{\Hypertarget{_ctrl_gestio_recomanacio_8java_source_l00025}00025 }
+\DoxyCodeLine{\Hypertarget{_ctrl_gestio_recomanacio_8java_source_l00029}\mbox{\hyperlink{classdominio_1_1controladores_1_1_ctrl_gestio_recomanacio_ad055d8fe6718df14d65adf48c7e9e373}{00029}}     \textcolor{keyword}{public} \mbox{\hyperlink{classdominio_1_1controladores_1_1_ctrl_gestio_recomanacio_ad055d8fe6718df14d65adf48c7e9e373}{CtrlGestioRecomanacio}}() \{}
+\DoxyCodeLine{\Hypertarget{_ctrl_gestio_recomanacio_8java_source_l00030}00030         \mbox{\hyperlink{classdominio_1_1controladores_1_1_ctrl_gestio_recomanacio_a585138303ff3193cc1d31512908e4ffe}{valoraciones}} = \textcolor{keyword}{new} LinkedHashMap<>();}
+\DoxyCodeLine{\Hypertarget{_ctrl_gestio_recomanacio_8java_source_l00031}00031         \mbox{\hyperlink{classdominio_1_1controladores_1_1_ctrl_gestio_recomanacio_a151bacf64acd5934e90c494d4c91ee1c}{k}} = 0;}
+\DoxyCodeLine{\Hypertarget{_ctrl_gestio_recomanacio_8java_source_l00032}00032     \}}
+\DoxyCodeLine{\Hypertarget{_ctrl_gestio_recomanacio_8java_source_l00033}00033 }
+\DoxyCodeLine{\Hypertarget{_ctrl_gestio_recomanacio_8java_source_l00048}\mbox{\hyperlink{classdominio_1_1controladores_1_1_ctrl_gestio_recomanacio_ac04ae71a3c35216ef3d135607b89cc80}{00048}}     \textcolor{keyword}{public} HashMap<String, Double> \mbox{\hyperlink{classdominio_1_1controladores_1_1_ctrl_gestio_recomanacio_ac04ae71a3c35216ef3d135607b89cc80}{makeRecomendation}}(\textcolor{keywordtype}{int} n, \mbox{\hyperlink{classdominio_1_1clases_1_1_usuari}{Usuari}} u, \mbox{\hyperlink{classdominio_1_1clases_1_1_cjt__items}{Cjt\_items}} dataset, Datos vals, List<Boolean> intAt,}
+\DoxyCodeLine{\Hypertarget{_ctrl_gestio_recomanacio_8java_source_l00049}00049                                                      List<Boolean> doubAt,List<Boolean> dateAt,List<Boolean> bAt,}
+\DoxyCodeLine{\Hypertarget{_ctrl_gestio_recomanacio_8java_source_l00050}00050                                                      List<Boolean> catAt,List<Boolean> ftAt) \{}
+\DoxyCodeLine{\Hypertarget{_ctrl_gestio_recomanacio_8java_source_l00051}00051         HashMap<String, Double> recommendation = \textcolor{keyword}{new} LinkedHashMap<>();}
+\DoxyCodeLine{\Hypertarget{_ctrl_gestio_recomanacio_8java_source_l00052}00052         \textcolor{keywordflow}{if} (n == 0)}
+\DoxyCodeLine{\Hypertarget{_ctrl_gestio_recomanacio_8java_source_l00053}00053             \mbox{\hyperlink{classdominio_1_1controladores_1_1_ctrl_gestio_recomanacio_a585138303ff3193cc1d31512908e4ffe}{valoraciones}} = \textcolor{keyword}{new} \mbox{\hyperlink{classdominio_1_1clases_1_1_recomendacion}{Recomendacion}}(u, dataset, vals.getRatings(), vals.getMaxRating(), vals.getUsers(), \mbox{\hyperlink{classdominio_1_1controladores_1_1_ctrl_gestio_recomanacio_a151bacf64acd5934e90c494d4c91ee1c}{k}}, intAt,}
+\DoxyCodeLine{\Hypertarget{_ctrl_gestio_recomanacio_8java_source_l00054}00054                     doubAt,dateAt,bAt,catAt,ftAt).\mbox{\hyperlink{classdominio_1_1clases_1_1_recomendacion_a3be966ef490d35e911fec0b7e500777d}{Collaborative}}();}
+\DoxyCodeLine{\Hypertarget{_ctrl_gestio_recomanacio_8java_source_l00055}00055         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (n == 1)}
+\DoxyCodeLine{\Hypertarget{_ctrl_gestio_recomanacio_8java_source_l00056}00056             \mbox{\hyperlink{classdominio_1_1controladores_1_1_ctrl_gestio_recomanacio_a585138303ff3193cc1d31512908e4ffe}{valoraciones}} = \textcolor{keyword}{new} \mbox{\hyperlink{classdominio_1_1clases_1_1_recomendacion}{Recomendacion}}(u, dataset, vals.getRatings(), vals.getMaxRating(), vals.getUsers(), \mbox{\hyperlink{classdominio_1_1controladores_1_1_ctrl_gestio_recomanacio_a151bacf64acd5934e90c494d4c91ee1c}{k}}, intAt,}
+\DoxyCodeLine{\Hypertarget{_ctrl_gestio_recomanacio_8java_source_l00057}00057                     doubAt,dateAt,bAt,catAt,ftAt).\mbox{\hyperlink{classdominio_1_1clases_1_1_recomendacion_a9b2713889edae9988375c874ca4096b0}{Content}}();}
+\DoxyCodeLine{\Hypertarget{_ctrl_gestio_recomanacio_8java_source_l00058}00058         \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{_ctrl_gestio_recomanacio_8java_source_l00059}00059             \mbox{\hyperlink{classdominio_1_1controladores_1_1_ctrl_gestio_recomanacio_a585138303ff3193cc1d31512908e4ffe}{valoraciones}} = \textcolor{keyword}{new} \mbox{\hyperlink{classdominio_1_1clases_1_1_recomendacion}{Recomendacion}}(u, dataset, vals.getRatings(), vals.getMaxRating(), vals.getUsers(), \mbox{\hyperlink{classdominio_1_1controladores_1_1_ctrl_gestio_recomanacio_a151bacf64acd5934e90c494d4c91ee1c}{k}}, intAt,}
+\DoxyCodeLine{\Hypertarget{_ctrl_gestio_recomanacio_8java_source_l00060}00060                     doubAt,dateAt,bAt,catAt,ftAt).\mbox{\hyperlink{classdominio_1_1clases_1_1_recomendacion_ac4ac3a1e3275bed35491f1609928aa8f}{Hybrid}}();}
+\DoxyCodeLine{\Hypertarget{_ctrl_gestio_recomanacio_8java_source_l00061}00061 }
+\DoxyCodeLine{\Hypertarget{_ctrl_gestio_recomanacio_8java_source_l00062}00062         \textcolor{keywordflow}{for} (\mbox{\hyperlink{classdominio_1_1clases_1_1_item}{Item}} i : \mbox{\hyperlink{classdominio_1_1controladores_1_1_ctrl_gestio_recomanacio_a585138303ff3193cc1d31512908e4ffe}{valoraciones}}.keySet()) recommendation.put(i.getId(), \mbox{\hyperlink{classdominio_1_1controladores_1_1_ctrl_gestio_recomanacio_a585138303ff3193cc1d31512908e4ffe}{valoraciones}}.get(i));}
+\DoxyCodeLine{\Hypertarget{_ctrl_gestio_recomanacio_8java_source_l00063}00063 }
+\DoxyCodeLine{\Hypertarget{_ctrl_gestio_recomanacio_8java_source_l00064}00064         \textcolor{keywordflow}{return} recommendation;}
+\DoxyCodeLine{\Hypertarget{_ctrl_gestio_recomanacio_8java_source_l00065}00065     \}}
+\DoxyCodeLine{\Hypertarget{_ctrl_gestio_recomanacio_8java_source_l00066}00066 }
+\DoxyCodeLine{\Hypertarget{_ctrl_gestio_recomanacio_8java_source_l00074}\mbox{\hyperlink{classdominio_1_1controladores_1_1_ctrl_gestio_recomanacio_a29eb6bda7d4304d20c25971ca99b7a8b}{00074}}     \textcolor{keyword}{public} String \mbox{\hyperlink{classdominio_1_1controladores_1_1_ctrl_gestio_recomanacio_a29eb6bda7d4304d20c25971ca99b7a8b}{getRecomendacion}}(\mbox{\hyperlink{classdominio_1_1clases_1_1_cjt__items}{Cjt\_items}} dataset, File unknown, \mbox{\hyperlink{classdominio_1_1clases_1_1_usuari}{Usuari}} u) \{}
+\DoxyCodeLine{\Hypertarget{_ctrl_gestio_recomanacio_8java_source_l00075}00075         Datos unknownVals = \textcolor{keyword}{new} Datos(unknown.getAbsolutePath(), dataset);}
+\DoxyCodeLine{\Hypertarget{_ctrl_gestio_recomanacio_8java_source_l00076}00076         \textcolor{keywordflow}{if} (!unknownVals.getUsers().contains(u))}
+\DoxyCodeLine{\Hypertarget{_ctrl_gestio_recomanacio_8java_source_l00077}00077             \textcolor{keywordflow}{return} \textcolor{stringliteral}{"{}No hay datos suficientes para evaluar la calidad de la prediccion realizada"{}};}
+\DoxyCodeLine{\Hypertarget{_ctrl_gestio_recomanacio_8java_source_l00078}00078         String s = \textcolor{stringliteral}{"{}El valor de la recomendacion realizada es: "{}};}
+\DoxyCodeLine{\Hypertarget{_ctrl_gestio_recomanacio_8java_source_l00079}00079         List<Usuari> users = unknownVals.getUsers();}
+\DoxyCodeLine{\Hypertarget{_ctrl_gestio_recomanacio_8java_source_l00080}00080         \mbox{\hyperlink{classdominio_1_1clases_1_1_usuari}{Usuari}} us = users.get(users.indexOf(u));}
+\DoxyCodeLine{\Hypertarget{_ctrl_gestio_recomanacio_8java_source_l00081}00081         s += \mbox{\hyperlink{classdominio_1_1clases_1_1_avaluacio}{Avaluacio}}.\mbox{\hyperlink{classdominio_1_1clases_1_1_avaluacio_a6097e0538c2f66438f1d09f8f6585cec}{DCG}}(us, u);}
+\DoxyCodeLine{\Hypertarget{_ctrl_gestio_recomanacio_8java_source_l00082}00082         \textcolor{keywordflow}{return} s;}
+\DoxyCodeLine{\Hypertarget{_ctrl_gestio_recomanacio_8java_source_l00083}00083     \}}
+\DoxyCodeLine{\Hypertarget{_ctrl_gestio_recomanacio_8java_source_l00084}00084 }
+\DoxyCodeLine{\Hypertarget{_ctrl_gestio_recomanacio_8java_source_l00085}\mbox{\hyperlink{classdominio_1_1controladores_1_1_ctrl_gestio_recomanacio_ab5033ae2f4032642530f2804bbb4bb05}{00085}}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classdominio_1_1controladores_1_1_ctrl_gestio_recomanacio_ab5033ae2f4032642530f2804bbb4bb05}{setK}}(\textcolor{keywordtype}{int} n) \{}
+\DoxyCodeLine{\Hypertarget{_ctrl_gestio_recomanacio_8java_source_l00086}00086         \mbox{\hyperlink{classdominio_1_1controladores_1_1_ctrl_gestio_recomanacio_a151bacf64acd5934e90c494d4c91ee1c}{k}} = n;}
+\DoxyCodeLine{\Hypertarget{_ctrl_gestio_recomanacio_8java_source_l00087}00087     \}}
+\DoxyCodeLine{\Hypertarget{_ctrl_gestio_recomanacio_8java_source_l00088}00088 \}}
+
+\end{DoxyCode}

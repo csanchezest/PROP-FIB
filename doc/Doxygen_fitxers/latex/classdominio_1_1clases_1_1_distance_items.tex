@@ -1,0 +1,624 @@
+\hypertarget{classdominio_1_1clases_1_1_distance_items}{}\doxysection{Referencia de la Clase dominio.\+clases.\+Distance\+Items}
+\label{classdominio_1_1clases_1_1_distance_items}\index{dominio.clases.DistanceItems@{dominio.clases.DistanceItems}}
+
+
+Clase que calcula la distancia entre un par de items. Para ello se calcula la distancia entre cada par de atributos de los items en funcion del tipo que sean, y luego se usa la distancia euclidiana para obtener la distancia total. Se hace una ponderacion de forma que se da mas peso a los atributos tipo categorico, luego los de tipo int, double y date por igual y finalmente los de tipo boolean, al hacer el computo de la distancia.  
+
+
+\doxysubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_a6de7f2f69702140ee86ae2d79a58e5b8}{Distance\+Items}} (\mbox{\hyperlink{classdominio_1_1clases_1_1_item}{Item}} \mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_ab349ffb7fc18489710b44569cccb298c}{a}}, \mbox{\hyperlink{classdominio_1_1clases_1_1_item}{Item}} \mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_ad95d8d84592b10909e2296b159c2a384}{b}}, Collection \mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_a45ccd8bd535f7c59f570446dc320ad4d}{Max\+Val\+Integers}}, Collection \mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_a1d6c54692e9c5f8eb76510872d9f5e8a}{Min\+Val\+Integers}}, Collection \mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_ad826d36205ef1ba4a5aec95a463d80b9}{Max\+Val\+Doubles}}, Collection \mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_a2f9c2fb0d088ef0c6fe5239b3d57620f}{Min\+Val\+Doubles}}, Collection Max\+Val\+Date, Collection Min\+Val\+Date, List$<$ Boolean $>$ \mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_a3f750fb281f4e67a8fa6a5bf84a88640}{int\+At}}, List$<$ Boolean $>$ \mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_a1b3007336c7ff85e39f821b0d5b15887}{doub\+At}}, List$<$ Boolean $>$ \mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_abf3ccc78946f2ab97326949c1c172fe7}{date\+At}}, List$<$ Boolean $>$ \mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_a80892aaf007ba663185d75b5e397cd1d}{b\+At}}, List$<$ Boolean $>$ \mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_a11c7b0ff87dd0a5073d8bf7f739bb0e4}{cat\+At}}, List$<$ Boolean $>$ \mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_ab3bd08effaf5fd173aa4dc658e60e5e3}{ft\+At}})
+\begin{DoxyCompactList}\small\item\em Constructora de la clase \mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items}{Distance\+Items}}. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_aca356202d8536db9ef6b55cfd44b1a4e}{get\+\_\+distance}} ()
+\begin{DoxyCompactList}\small\item\em Metodo que devuelve la distancia entre los items a y b. La distancia siempre sera un numero entre 0 y 1 donde 0 significa que son ítems exacatamente iguales y 1 significa que son completamente opuestos. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Métodos privados}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_ab6305114ffcc1ce0438d2eaca4c028f6}{dist\+Between\+Category}} ()
+\begin{DoxyCompactList}\small\item\em Metodo que calcula la similitud entre dos atributos de tipo categorico. Entre cada par de atributos categoricos la similitud se obtiene haciendo el cardinal de la interseccion entre el cardinal de la union. Para la similitud global entre los atributos categoricos de los dos items se calcula la distancia euclidiana normalizada para que el resultado sea entre 0 y 1. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_ae119f4dc0e73a4a9aa11b19e1b521781}{dist\+Between\+Date}} ()
+\begin{DoxyCompactList}\small\item\em Metodo que calcula la similitud entre dos atributos de tipo date. Entre cada par de datas la similitud se obtiene haciendo la diferencia entre los años dividido por la máxima diferencia que puede haber. Para la similitud global entre las datas de los dos items se calcula la distancia euclidiana normalizada para que el resultado sea entre 0 y 1. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_a63e34fa55e68f6198cd5d589b2a7f070}{dist\+Between\+Bool}} ()
+\begin{DoxyCompactList}\small\item\em Metodo que calcula la similitud entre dos atributos de tipo boolean. Entre cada par de bools la similitud puede ser 1 si son diferentes o 0 si son iguales. Para la similitud global entre los bools de los dos items se calcula la distancia euclidiana normalizada para que el resultado sea entre 0 y 1. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_a69e4e193ba4de312ddfb2e3c0475497d}{dist\+Between\+Double}} ()
+\begin{DoxyCompactList}\small\item\em Metodo que calcula la similitud entre dos atributos de tipo double. Entre cada par de doubles la similitud se obtiene haciendo la diferencia dividido por la maxima diferencia que puede haber. Para la similitud global entre los doubles de los dos items se calcula la distancia euclidiana normalizada para que el resultado sea entre 0 y 1. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_a4ef0c1870132ad8ac1081c8305af8281}{dist\+Between\+Int}} ()
+\begin{DoxyCompactList}\small\item\em Metodo que calcula la similitud entre dos atributos de tipo integer. Entre cada par de integers la similitud se obtiene haciendo la diferencia dividido por la maxima diferencia que puede haber. Para la similitud global entre los integers de los dos items se calcula la distancia euclidiana normalizada para que el resultado sea entre 0 y 1. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_a116b7b8812944dac7d6be4f9f67de584}{dist\+Between\+String}} ()
+\begin{DoxyCompactList}\small\item\em Metodo que calcula la similitud entre dos atributos de tipo texto libre. Los textos se reciben ya mapeados con la frecuencia por palabra y sin stopwords. Dados dos maps primero se hace la union entre ellos con ello se obtienen las palabras distintas entre los dos textos. Se obtiene por cada texto un vector de frecuencias de las palabras distintas y se computa la distancia coseno entre los dos vectors obtenidos. Para la similitud global entre los textos de los dos items se calcula la distancia euclidiana normalizada para que el resultado sea entre 0 y 1. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Atributos privados}
+\begin{DoxyCompactItemize}
+\item 
+final \mbox{\hyperlink{classdominio_1_1clases_1_1_item}{Item}} \mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_ab349ffb7fc18489710b44569cccb298c}{a}}
+\begin{DoxyCompactList}\small\item\em Primer item en el computo de la distancia. \end{DoxyCompactList}\item 
+final \mbox{\hyperlink{classdominio_1_1clases_1_1_item}{Item}} \mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_ad95d8d84592b10909e2296b159c2a384}{b}}
+\begin{DoxyCompactList}\small\item\em Segundo item en el computo de la distancia. \end{DoxyCompactList}\item 
+final Array\+List$<$ Long $>$ \mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_a45ccd8bd535f7c59f570446dc320ad4d}{Max\+Val\+Integers}}
+\begin{DoxyCompactList}\small\item\em Array\+List con los valores maximos que tienen los atributos de tipo integer, en el mismo orden que aparecen a las columnas del dataset. \end{DoxyCompactList}\item 
+final Array\+List$<$ Long $>$ \mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_a1d6c54692e9c5f8eb76510872d9f5e8a}{Min\+Val\+Integers}}
+\begin{DoxyCompactList}\small\item\em Array\+List con los valores minimos que tienen los atributos de tipo integer, en el mismo orden que aparecen a las columnas del dataset. \end{DoxyCompactList}\item 
+final Array\+List$<$ Double $>$ \mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_ad826d36205ef1ba4a5aec95a463d80b9}{Max\+Val\+Doubles}}
+\begin{DoxyCompactList}\small\item\em Array\+List con los valores maximos que tienen los atributos de tipo double, en el mismo orden que aparecen a las columnas del dataset. \end{DoxyCompactList}\item 
+final Array\+List$<$ Double $>$ \mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_a2f9c2fb0d088ef0c6fe5239b3d57620f}{Min\+Val\+Doubles}}
+\begin{DoxyCompactList}\small\item\em Array\+List con los valores minimos que tienen los atributos de tipo double, en el mismo orden que aparecen a las columnas del dataset. \end{DoxyCompactList}\item 
+final Array\+List$<$ Local\+Date $>$ \mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_aa92aecb17d318dc7fa6c54f775029e27}{Max\+Dates}}
+\begin{DoxyCompactList}\small\item\em Array\+List con los valores maximos que tienen los atributos de tipo date, en el mismo orden que aparecen a las columnas del dataset. \end{DoxyCompactList}\item 
+final Array\+List$<$ Local\+Date $>$ \mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_a4706783a73b4d8a1f1befb70322dd915}{Min\+Dates}}
+\begin{DoxyCompactList}\small\item\em Array\+List con los valores minimos que tienen los atributos de tipo date, en el mismo orden que aparecen a las columnas del dataset. \end{DoxyCompactList}\item 
+List$<$ Boolean $>$ \mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_a3f750fb281f4e67a8fa6a5bf84a88640}{int\+At}}
+\item 
+List$<$ Boolean $>$ \mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_a1b3007336c7ff85e39f821b0d5b15887}{doub\+At}}
+\item 
+List$<$ Boolean $>$ \mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_abf3ccc78946f2ab97326949c1c172fe7}{date\+At}}
+\item 
+List$<$ Boolean $>$ \mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_a80892aaf007ba663185d75b5e397cd1d}{b\+At}}
+\item 
+List$<$ Boolean $>$ \mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_a11c7b0ff87dd0a5073d8bf7f739bb0e4}{cat\+At}}
+\item 
+List$<$ Boolean $>$ \mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_ab3bd08effaf5fd173aa4dc658e60e5e3}{ft\+At}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Clase que calcula la distancia entre un par de items. Para ello se calcula la distancia entre cada par de atributos de los items en funcion del tipo que sean, y luego se usa la distancia euclidiana para obtener la distancia total. Se hace una ponderacion de forma que se da mas peso a los atributos tipo categorico, luego los de tipo int, double y date por igual y finalmente los de tipo boolean, al hacer el computo de la distancia. 
+
+\begin{DoxyAuthor}{Autor}
+Jordi Elgueta Serra 
+\end{DoxyAuthor}
+
+
+Definición en la línea \mbox{\hyperlink{_distance_items_8java_source_l00020}{20}} del archivo \mbox{\hyperlink{_distance_items_8java_source}{Distance\+Items.\+java}}.
+
+
+
+\doxysubsection{Documentación del constructor y destructor}
+\mbox{\Hypertarget{classdominio_1_1clases_1_1_distance_items_a6de7f2f69702140ee86ae2d79a58e5b8}\label{classdominio_1_1clases_1_1_distance_items_a6de7f2f69702140ee86ae2d79a58e5b8}} 
+\index{dominio.clases.DistanceItems@{dominio.clases.DistanceItems}!DistanceItems@{DistanceItems}}
+\index{DistanceItems@{DistanceItems}!dominio.clases.DistanceItems@{dominio.clases.DistanceItems}}
+\doxysubsubsection{\texorpdfstring{DistanceItems()}{DistanceItems()}}
+{\footnotesize\ttfamily dominio.\+clases.\+Distance\+Items.\+Distance\+Items (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classdominio_1_1clases_1_1_item}{Item}}}]{a,  }\item[{\mbox{\hyperlink{classdominio_1_1clases_1_1_item}{Item}}}]{b,  }\item[{Collection}]{Max\+Val\+Integers,  }\item[{Collection}]{Min\+Val\+Integers,  }\item[{Collection}]{Max\+Val\+Doubles,  }\item[{Collection}]{Min\+Val\+Doubles,  }\item[{Collection}]{Max\+Val\+Date,  }\item[{Collection}]{Min\+Val\+Date,  }\item[{List$<$ Boolean $>$}]{int\+At,  }\item[{List$<$ Boolean $>$}]{doub\+At,  }\item[{List$<$ Boolean $>$}]{date\+At,  }\item[{List$<$ Boolean $>$}]{b\+At,  }\item[{List$<$ Boolean $>$}]{cat\+At,  }\item[{List$<$ Boolean $>$}]{ft\+At }\end{DoxyParamCaption})}
+
+
+
+Constructora de la clase \mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items}{Distance\+Items}}. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em a} & Primer item en el computo de la distancia \\
+\hline
+{\em b} & Segundo item en el computo de la distancia \\
+\hline
+{\em Max\+Val\+Integers} & Lista con los valores maximos que tienen los atributos de tipo integer, en el mismo orden que aparecen
+\begin{DoxyItemize}
+\item a las columnas del dataset 
+\end{DoxyItemize}\\
+\hline
+{\em Min\+Val\+Integers} & Lista con los valores minimos que tienen los atributos de tipo integer, en el mismo orden que aparecen
+\begin{DoxyItemize}
+\item a las columnas del dataset 
+\end{DoxyItemize}\\
+\hline
+{\em Max\+Val\+Doubles} & Lista con los valores minimos que tienen los atributos de tipo double, en el mismo orden que aparecen
+\begin{DoxyItemize}
+\item a las columnas del dataset 
+\end{DoxyItemize}\\
+\hline
+{\em Min\+Val\+Doubles} & Lista con los valores minimos que tienen los atributos de tipo double, en el mismo orden que aparecen a las columnas del dataset \\
+\hline
+{\em Max\+Val\+Date} & Lista con los valores maximos que tienen los atributos de tipo date, en el mismo orden que aparecen
+\begin{DoxyItemize}
+\item a las columnas del dataset 
+\end{DoxyItemize}\\
+\hline
+{\em Min\+Val\+Date} & Lista con los valores minimos que tienen los atributos de tipo date, en el mismo orden que aparecen
+\begin{DoxyItemize}
+\item a las columnas del dataset 
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{_distance_items_8java_source_l00085}{85}} del archivo \mbox{\hyperlink{_distance_items_8java_source}{Distance\+Items.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00087                                                                                                                               \{}
+\DoxyCodeLine{00088         this.\mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_ab349ffb7fc18489710b44569cccb298c}{a}} = \mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_ab349ffb7fc18489710b44569cccb298c}{a}};}
+\DoxyCodeLine{00089         this.\mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_ad95d8d84592b10909e2296b159c2a384}{b}} = \mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_ad95d8d84592b10909e2296b159c2a384}{b}};}
+\DoxyCodeLine{00090         this.\mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_a45ccd8bd535f7c59f570446dc320ad4d}{MaxValIntegers}} = \textcolor{keyword}{new} ArrayList<>(\mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_a45ccd8bd535f7c59f570446dc320ad4d}{MaxValIntegers}});}
+\DoxyCodeLine{00091         this.\mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_a1d6c54692e9c5f8eb76510872d9f5e8a}{MinValIntegers}} = \textcolor{keyword}{new} ArrayList<>(\mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_a1d6c54692e9c5f8eb76510872d9f5e8a}{MinValIntegers}});}
+\DoxyCodeLine{00092         this.\mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_ad826d36205ef1ba4a5aec95a463d80b9}{MaxValDoubles}} = \textcolor{keyword}{new} ArrayList<>(\mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_ad826d36205ef1ba4a5aec95a463d80b9}{MaxValDoubles}});}
+\DoxyCodeLine{00093         this.\mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_a2f9c2fb0d088ef0c6fe5239b3d57620f}{MinValDoubles}} = \textcolor{keyword}{new} ArrayList<>(\mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_a2f9c2fb0d088ef0c6fe5239b3d57620f}{MinValDoubles}});}
+\DoxyCodeLine{00094         this.\mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_aa92aecb17d318dc7fa6c54f775029e27}{MaxDates}} = \textcolor{keyword}{new} ArrayList<>(MaxValDate);}
+\DoxyCodeLine{00095         this.\mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_a4706783a73b4d8a1f1befb70322dd915}{MinDates}} = \textcolor{keyword}{new} ArrayList<>(MinValDate);}
+\DoxyCodeLine{00096         this.\mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_abf3ccc78946f2ab97326949c1c172fe7}{dateAt}} = \mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_abf3ccc78946f2ab97326949c1c172fe7}{dateAt}};}
+\DoxyCodeLine{00097         this.\mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_a80892aaf007ba663185d75b5e397cd1d}{bAt}} = \mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_a80892aaf007ba663185d75b5e397cd1d}{bAt}};}
+\DoxyCodeLine{00098         this.\mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_a11c7b0ff87dd0a5073d8bf7f739bb0e4}{catAt}} = \mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_a11c7b0ff87dd0a5073d8bf7f739bb0e4}{catAt}};}
+\DoxyCodeLine{00099         this.\mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_ab3bd08effaf5fd173aa4dc658e60e5e3}{ftAt}} = \mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_ab3bd08effaf5fd173aa4dc658e60e5e3}{ftAt}};}
+\DoxyCodeLine{00100         this.\mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_a3f750fb281f4e67a8fa6a5bf84a88640}{intAt}} = \mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_a3f750fb281f4e67a8fa6a5bf84a88640}{intAt}};}
+\DoxyCodeLine{00101         this.\mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_a1b3007336c7ff85e39f821b0d5b15887}{doubAt}} = \mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_a1b3007336c7ff85e39f821b0d5b15887}{doubAt}};}
+\DoxyCodeLine{00102     \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Documentación de las funciones miembro}
+\mbox{\Hypertarget{classdominio_1_1clases_1_1_distance_items_aca356202d8536db9ef6b55cfd44b1a4e}\label{classdominio_1_1clases_1_1_distance_items_aca356202d8536db9ef6b55cfd44b1a4e}} 
+\index{dominio.clases.DistanceItems@{dominio.clases.DistanceItems}!get\_distance@{get\_distance}}
+\index{get\_distance@{get\_distance}!dominio.clases.DistanceItems@{dominio.clases.DistanceItems}}
+\doxysubsubsection{\texorpdfstring{get\_distance()}{get\_distance()}}
+{\footnotesize\ttfamily double dominio.\+clases.\+Distance\+Items.\+get\+\_\+distance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Metodo que devuelve la distancia entre los items a y b. La distancia siempre sera un numero entre 0 y 1 donde 0 significa que son ítems exacatamente iguales y 1 significa que son completamente opuestos. 
+
+\begin{DoxyReturn}{Devuelve}
+Devuelve el valor de la distancia, un double entre 0 y 1 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{_distance_items_8java_source_l00109}{109}} del archivo \mbox{\hyperlink{_distance_items_8java_source}{Distance\+Items.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00109                                  \{}
+\DoxyCodeLine{00110         \textcolor{keywordtype}{double} distInt = \mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_a4ef0c1870132ad8ac1081c8305af8281}{distBetweenInt}}();}
+\DoxyCodeLine{00111         \textcolor{keywordtype}{double} distBool = \mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_a63e34fa55e68f6198cd5d589b2a7f070}{distBetweenBool}}();}
+\DoxyCodeLine{00112         \textcolor{keywordtype}{double} distDate = \mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_ae119f4dc0e73a4a9aa11b19e1b521781}{distBetweenDate}}();}
+\DoxyCodeLine{00113         \textcolor{keywordtype}{double} distDouble = \mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_a69e4e193ba4de312ddfb2e3c0475497d}{distBetweenDouble}}();}
+\DoxyCodeLine{00114         \textcolor{keywordtype}{double} distString = \mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_a116b7b8812944dac7d6be4f9f67de584}{distBetweenString}}();}
+\DoxyCodeLine{00115         \textcolor{keywordtype}{double} distBS = \mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_ab6305114ffcc1ce0438d2eaca4c028f6}{distBetweenCategory}}();}
+\DoxyCodeLine{00116         \textcolor{keywordflow}{return} 0.15*distInt + 0.15*distDouble + 0.15*distDate + 0.05*distBool + 0.3*distBS + 0.2*distString;}
+\DoxyCodeLine{00117     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdominio_1_1clases_1_1_distance_items_ab6305114ffcc1ce0438d2eaca4c028f6}\label{classdominio_1_1clases_1_1_distance_items_ab6305114ffcc1ce0438d2eaca4c028f6}} 
+\index{dominio.clases.DistanceItems@{dominio.clases.DistanceItems}!distBetweenCategory@{distBetweenCategory}}
+\index{distBetweenCategory@{distBetweenCategory}!dominio.clases.DistanceItems@{dominio.clases.DistanceItems}}
+\doxysubsubsection{\texorpdfstring{distBetweenCategory()}{distBetweenCategory()}}
+{\footnotesize\ttfamily double dominio.\+clases.\+Distance\+Items.\+dist\+Between\+Category (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Metodo que calcula la similitud entre dos atributos de tipo categorico. Entre cada par de atributos categoricos la similitud se obtiene haciendo el cardinal de la interseccion entre el cardinal de la union. Para la similitud global entre los atributos categoricos de los dos items se calcula la distancia euclidiana normalizada para que el resultado sea entre 0 y 1. 
+
+\begin{DoxyReturn}{Devuelve}
+Devuelve la distancia entre los dos items teniendo solo en cuenta los atributos categoricos 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{_distance_items_8java_source_l00125}{125}} del archivo \mbox{\hyperlink{_distance_items_8java_source}{Distance\+Items.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00125                                          \{}
+\DoxyCodeLine{00126         ArrayList<BitSet> c1 = \mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_ab349ffb7fc18489710b44569cccb298c}{a}}.\mbox{\hyperlink{classdominio_1_1clases_1_1_item_ac180dfac8c5187f1273944953621230c}{getCategoryPscBits}}();}
+\DoxyCodeLine{00127         ArrayList<BitSet> c2 = \mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_ad95d8d84592b10909e2296b159c2a384}{b}}.\mbox{\hyperlink{classdominio_1_1clases_1_1_item_ac180dfac8c5187f1273944953621230c}{getCategoryPscBits}}();}
+\DoxyCodeLine{00128         \textcolor{keywordtype}{int} n = c1.size();}
+\DoxyCodeLine{00129         \textcolor{keywordflow}{if} (n==0) \textcolor{keywordflow}{return} 0.0;}
+\DoxyCodeLine{00130         \textcolor{keywordtype}{double} dist = 0.0;}
+\DoxyCodeLine{00131         \textcolor{keywordtype}{int} n1 = 0;}
+\DoxyCodeLine{00132         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < n; ++i) \{}
+\DoxyCodeLine{00133             \textcolor{keywordflow}{if} (c1.get(i) != \textcolor{keyword}{null}) \{}
+\DoxyCodeLine{00134                 \textcolor{keywordflow}{if} (\mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_a11c7b0ff87dd0a5073d8bf7f739bb0e4}{catAt}}.get(i)) \{}
+\DoxyCodeLine{00135                     ++n1;}
+\DoxyCodeLine{00136                     BitSet unio = (BitSet) c1.get(i).clone();}
+\DoxyCodeLine{00137                     BitSet interseccio = (BitSet) c1.get(i).clone();}
+\DoxyCodeLine{00138                     unio.or(c2.get(i));}
+\DoxyCodeLine{00139                     interseccio.and(c2.get(i));}
+\DoxyCodeLine{00140                     \textcolor{keywordflow}{if} (unio.cardinality() != 0)}
+\DoxyCodeLine{00141                         dist += Math.pow(1 -\/ (\textcolor{keywordtype}{double}) interseccio.cardinality() / unio.cardinality(), 2);}
+\DoxyCodeLine{00142                 \}}
+\DoxyCodeLine{00143             \}}
+\DoxyCodeLine{00144         \}}
+\DoxyCodeLine{00145         \textcolor{keywordflow}{if}(n1 != 0)}
+\DoxyCodeLine{00146             \textcolor{keywordflow}{return} Math.sqrt(dist/n1);}
+\DoxyCodeLine{00147         \textcolor{keywordflow}{else} \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{00148     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdominio_1_1clases_1_1_distance_items_ae119f4dc0e73a4a9aa11b19e1b521781}\label{classdominio_1_1clases_1_1_distance_items_ae119f4dc0e73a4a9aa11b19e1b521781}} 
+\index{dominio.clases.DistanceItems@{dominio.clases.DistanceItems}!distBetweenDate@{distBetweenDate}}
+\index{distBetweenDate@{distBetweenDate}!dominio.clases.DistanceItems@{dominio.clases.DistanceItems}}
+\doxysubsubsection{\texorpdfstring{distBetweenDate()}{distBetweenDate()}}
+{\footnotesize\ttfamily double dominio.\+clases.\+Distance\+Items.\+dist\+Between\+Date (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Metodo que calcula la similitud entre dos atributos de tipo date. Entre cada par de datas la similitud se obtiene haciendo la diferencia entre los años dividido por la máxima diferencia que puede haber. Para la similitud global entre las datas de los dos items se calcula la distancia euclidiana normalizada para que el resultado sea entre 0 y 1. 
+
+\begin{DoxyReturn}{Devuelve}
+Devuelve la distancia entre los dos items teniendo solo en cuenta los atributos de tipo date 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{_distance_items_8java_source_l00156}{156}} del archivo \mbox{\hyperlink{_distance_items_8java_source}{Distance\+Items.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00156                                      \{}
+\DoxyCodeLine{00157         ArrayList<LocalDate> ld1 = \mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_ab349ffb7fc18489710b44569cccb298c}{a}}.\mbox{\hyperlink{classdominio_1_1clases_1_1_item_adcc53eecefedc021e3be30a8a3438901}{getDateAttributes}}();}
+\DoxyCodeLine{00158         ArrayList<LocalDate> ld2 = \mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_ad95d8d84592b10909e2296b159c2a384}{b}}.\mbox{\hyperlink{classdominio_1_1clases_1_1_item_adcc53eecefedc021e3be30a8a3438901}{getDateAttributes}}();}
+\DoxyCodeLine{00159         \textcolor{keywordtype}{int} n = ld1.size();}
+\DoxyCodeLine{00160         \textcolor{keywordflow}{if} (n == 0) \textcolor{keywordflow}{return} 0.0;}
+\DoxyCodeLine{00161         \textcolor{keywordtype}{double} dist = 0.0;}
+\DoxyCodeLine{00162         \textcolor{keywordtype}{int} n1 = 0;}
+\DoxyCodeLine{00163         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < n; ++i) \{}
+\DoxyCodeLine{00164             \textcolor{keywordflow}{if}(\mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_abf3ccc78946f2ab97326949c1c172fe7}{dateAt}}.get(i)) \{}
+\DoxyCodeLine{00165                 ++n1;}
+\DoxyCodeLine{00166                 \textcolor{keywordtype}{int} maxDif = \mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_aa92aecb17d318dc7fa6c54f775029e27}{MaxDates}}.get(i).getYear() -\/ \mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_a4706783a73b4d8a1f1befb70322dd915}{MinDates}}.get(i).getYear();}
+\DoxyCodeLine{00167                 \textcolor{keywordflow}{if} (maxDif != 0)}
+\DoxyCodeLine{00168                     dist += Math.pow((\textcolor{keywordtype}{double}) (ld1.get(i).getYear() -\/ ld2.get(i).getYear()) / maxDif, 2);}
+\DoxyCodeLine{00169             \}}
+\DoxyCodeLine{00170         \}}
+\DoxyCodeLine{00171         \textcolor{keywordflow}{if}(n1 != 0)}
+\DoxyCodeLine{00172             \textcolor{keywordflow}{return} Math.sqrt(dist/n1);}
+\DoxyCodeLine{00173         \textcolor{keywordflow}{else} \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{00174     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdominio_1_1clases_1_1_distance_items_a63e34fa55e68f6198cd5d589b2a7f070}\label{classdominio_1_1clases_1_1_distance_items_a63e34fa55e68f6198cd5d589b2a7f070}} 
+\index{dominio.clases.DistanceItems@{dominio.clases.DistanceItems}!distBetweenBool@{distBetweenBool}}
+\index{distBetweenBool@{distBetweenBool}!dominio.clases.DistanceItems@{dominio.clases.DistanceItems}}
+\doxysubsubsection{\texorpdfstring{distBetweenBool()}{distBetweenBool()}}
+{\footnotesize\ttfamily double dominio.\+clases.\+Distance\+Items.\+dist\+Between\+Bool (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Metodo que calcula la similitud entre dos atributos de tipo boolean. Entre cada par de bools la similitud puede ser 1 si son diferentes o 0 si son iguales. Para la similitud global entre los bools de los dos items se calcula la distancia euclidiana normalizada para que el resultado sea entre 0 y 1. 
+
+\begin{DoxyReturn}{Devuelve}
+Devuelve la distancia entre los dos items teniendo solo en cuenta los atributos de tipo boolean 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{_distance_items_8java_source_l00182}{182}} del archivo \mbox{\hyperlink{_distance_items_8java_source}{Distance\+Items.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00182                                      \{}
+\DoxyCodeLine{00183         ArrayList<String> b1 = \mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_ab349ffb7fc18489710b44569cccb298c}{a}}.\mbox{\hyperlink{classdominio_1_1clases_1_1_item_a134319074fbe3059a14668a9b3028e66}{getBooleanAttributes}}();}
+\DoxyCodeLine{00184         ArrayList<String> b2 = \mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_ad95d8d84592b10909e2296b159c2a384}{b}}.\mbox{\hyperlink{classdominio_1_1clases_1_1_item_a134319074fbe3059a14668a9b3028e66}{getBooleanAttributes}}();}
+\DoxyCodeLine{00185 }
+\DoxyCodeLine{00186         \textcolor{keywordtype}{int} n = b1.size();}
+\DoxyCodeLine{00187         \textcolor{keywordflow}{if} (n==0) \textcolor{keywordflow}{return} 0.0;}
+\DoxyCodeLine{00188         \textcolor{keywordtype}{double} dist = 0.0;}
+\DoxyCodeLine{00189         \textcolor{keywordtype}{int} n1 = 0;}
+\DoxyCodeLine{00190         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < n; ++i) \{}
+\DoxyCodeLine{00191             \textcolor{keywordflow}{if} (\mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_a80892aaf007ba663185d75b5e397cd1d}{bAt}}.get(i)) \{}
+\DoxyCodeLine{00192                 n1++;}
+\DoxyCodeLine{00193                 dist += (b1.get(i).equals(b2.get(i))) ? 0 : 1;}
+\DoxyCodeLine{00194             \}}
+\DoxyCodeLine{00195         \}}
+\DoxyCodeLine{00196         \textcolor{keywordflow}{if}(n1 != 0)}
+\DoxyCodeLine{00197             \textcolor{keywordflow}{return} Math.sqrt(dist/n1);}
+\DoxyCodeLine{00198         \textcolor{keywordflow}{else} \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{00199     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdominio_1_1clases_1_1_distance_items_a69e4e193ba4de312ddfb2e3c0475497d}\label{classdominio_1_1clases_1_1_distance_items_a69e4e193ba4de312ddfb2e3c0475497d}} 
+\index{dominio.clases.DistanceItems@{dominio.clases.DistanceItems}!distBetweenDouble@{distBetweenDouble}}
+\index{distBetweenDouble@{distBetweenDouble}!dominio.clases.DistanceItems@{dominio.clases.DistanceItems}}
+\doxysubsubsection{\texorpdfstring{distBetweenDouble()}{distBetweenDouble()}}
+{\footnotesize\ttfamily double dominio.\+clases.\+Distance\+Items.\+dist\+Between\+Double (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Metodo que calcula la similitud entre dos atributos de tipo double. Entre cada par de doubles la similitud se obtiene haciendo la diferencia dividido por la maxima diferencia que puede haber. Para la similitud global entre los doubles de los dos items se calcula la distancia euclidiana normalizada para que el resultado sea entre 0 y 1. 
+
+\begin{DoxyReturn}{Devuelve}
+Devuelve la distancia entre los dos items teniendo solo en cuenta los atributos de tipo double. 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{_distance_items_8java_source_l00207}{207}} del archivo \mbox{\hyperlink{_distance_items_8java_source}{Distance\+Items.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00207                                        \{}
+\DoxyCodeLine{00208         ArrayList<Double> d1 = \mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_ab349ffb7fc18489710b44569cccb298c}{a}}.\mbox{\hyperlink{classdominio_1_1clases_1_1_item_afa418979ae70f3a964590a1590a807b6}{getDoubleAttributes}}();}
+\DoxyCodeLine{00209         ArrayList<Double> d2 = \mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_ad95d8d84592b10909e2296b159c2a384}{b}}.\mbox{\hyperlink{classdominio_1_1clases_1_1_item_afa418979ae70f3a964590a1590a807b6}{getDoubleAttributes}}();}
+\DoxyCodeLine{00210         \textcolor{keywordtype}{int} n = d1.size();}
+\DoxyCodeLine{00211         \textcolor{keywordflow}{if} (n==0) \textcolor{keywordflow}{return} 0.0;}
+\DoxyCodeLine{00212         \textcolor{keywordtype}{double} dist = 0.0;}
+\DoxyCodeLine{00213         \textcolor{keywordtype}{int} n1 = 0;}
+\DoxyCodeLine{00214         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < n; ++i) \{}
+\DoxyCodeLine{00215             \textcolor{keywordflow}{if}(\mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_a1b3007336c7ff85e39f821b0d5b15887}{doubAt}}.get(i)) \{}
+\DoxyCodeLine{00216                 n1++;}
+\DoxyCodeLine{00217                 \textcolor{keywordtype}{double} maxDif = \mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_ad826d36205ef1ba4a5aec95a463d80b9}{MaxValDoubles}}.get(i) -\/ \mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_a2f9c2fb0d088ef0c6fe5239b3d57620f}{MinValDoubles}}.get(i);}
+\DoxyCodeLine{00218                 \textcolor{keywordflow}{if} (maxDif != 0)}
+\DoxyCodeLine{00219                     dist += Math.pow((d1.get(i) -\/ d2.get(i)) / maxDif, 2);}
+\DoxyCodeLine{00220             \}}
+\DoxyCodeLine{00221         \}}
+\DoxyCodeLine{00222         \textcolor{keywordflow}{if}(n1 != 0)}
+\DoxyCodeLine{00223             \textcolor{keywordflow}{return} Math.sqrt(dist/n1);}
+\DoxyCodeLine{00224         \textcolor{keywordflow}{else} \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{00225     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdominio_1_1clases_1_1_distance_items_a4ef0c1870132ad8ac1081c8305af8281}\label{classdominio_1_1clases_1_1_distance_items_a4ef0c1870132ad8ac1081c8305af8281}} 
+\index{dominio.clases.DistanceItems@{dominio.clases.DistanceItems}!distBetweenInt@{distBetweenInt}}
+\index{distBetweenInt@{distBetweenInt}!dominio.clases.DistanceItems@{dominio.clases.DistanceItems}}
+\doxysubsubsection{\texorpdfstring{distBetweenInt()}{distBetweenInt()}}
+{\footnotesize\ttfamily double dominio.\+clases.\+Distance\+Items.\+dist\+Between\+Int (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Metodo que calcula la similitud entre dos atributos de tipo integer. Entre cada par de integers la similitud se obtiene haciendo la diferencia dividido por la maxima diferencia que puede haber. Para la similitud global entre los integers de los dos items se calcula la distancia euclidiana normalizada para que el resultado sea entre 0 y 1. 
+
+\begin{DoxyReturn}{Devuelve}
+Devuelve la distancia entre los dos items teniendo solo en cuenta los atributos de tipo integer. 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{_distance_items_8java_source_l00233}{233}} del archivo \mbox{\hyperlink{_distance_items_8java_source}{Distance\+Items.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00233                                     \{}
+\DoxyCodeLine{00234 }
+\DoxyCodeLine{00235         ArrayList<Long> i1 = \mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_ab349ffb7fc18489710b44569cccb298c}{a}}.\mbox{\hyperlink{classdominio_1_1clases_1_1_item_a7f4f0a001b2a9612dbc34f0630491d82}{getIntAttributes}}();}
+\DoxyCodeLine{00236         ArrayList<Long> i2 = \mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_ad95d8d84592b10909e2296b159c2a384}{b}}.\mbox{\hyperlink{classdominio_1_1clases_1_1_item_a7f4f0a001b2a9612dbc34f0630491d82}{getIntAttributes}}();}
+\DoxyCodeLine{00237         \textcolor{keywordtype}{int} n = i1.size();}
+\DoxyCodeLine{00238         \textcolor{keywordflow}{if} (n==0) \textcolor{keywordflow}{return} 0.0;}
+\DoxyCodeLine{00239         \textcolor{keywordtype}{int} n1 = 0;}
+\DoxyCodeLine{00240         \textcolor{keywordtype}{double} dist = 0.0;}
+\DoxyCodeLine{00241         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < n \&\& \mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_a3f750fb281f4e67a8fa6a5bf84a88640}{intAt}}.get(i); ++i) \{}
+\DoxyCodeLine{00242             ++n1;}
+\DoxyCodeLine{00243             Long maxDif = \mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_a45ccd8bd535f7c59f570446dc320ad4d}{MaxValIntegers}}.get(i) -\/ \mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_a1d6c54692e9c5f8eb76510872d9f5e8a}{MinValIntegers}}.get(i);}
+\DoxyCodeLine{00244             \textcolor{keywordflow}{if} (maxDif != 0)}
+\DoxyCodeLine{00245                 dist += Math.pow((\textcolor{keywordtype}{double}) (i1.get(i) -\/ i2.get(i)) / maxDif, 2);}
+\DoxyCodeLine{00246         \}}
+\DoxyCodeLine{00247         \textcolor{keywordflow}{if}(n1 != 0)}
+\DoxyCodeLine{00248             \textcolor{keywordflow}{return} Math.sqrt(dist/n1);}
+\DoxyCodeLine{00249         \textcolor{keywordflow}{else} \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{00250     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdominio_1_1clases_1_1_distance_items_a116b7b8812944dac7d6be4f9f67de584}\label{classdominio_1_1clases_1_1_distance_items_a116b7b8812944dac7d6be4f9f67de584}} 
+\index{dominio.clases.DistanceItems@{dominio.clases.DistanceItems}!distBetweenString@{distBetweenString}}
+\index{distBetweenString@{distBetweenString}!dominio.clases.DistanceItems@{dominio.clases.DistanceItems}}
+\doxysubsubsection{\texorpdfstring{distBetweenString()}{distBetweenString()}}
+{\footnotesize\ttfamily double dominio.\+clases.\+Distance\+Items.\+dist\+Between\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Metodo que calcula la similitud entre dos atributos de tipo texto libre. Los textos se reciben ya mapeados con la frecuencia por palabra y sin stopwords. Dados dos maps primero se hace la union entre ellos con ello se obtienen las palabras distintas entre los dos textos. Se obtiene por cada texto un vector de frecuencias de las palabras distintas y se computa la distancia coseno entre los dos vectors obtenidos. Para la similitud global entre los textos de los dos items se calcula la distancia euclidiana normalizada para que el resultado sea entre 0 y 1. 
+
+\begin{DoxyReturn}{Devuelve}
+Devuelve la distancia entre los dos items teniendo solo en cuenta los atributos de tipo texto. 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{_distance_items_8java_source_l00260}{260}} del archivo \mbox{\hyperlink{_distance_items_8java_source}{Distance\+Items.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00260                                        \{}
+\DoxyCodeLine{00261         LinkedHashMap<Integer, HashMap<String,Integer>> s1 = \mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_ab349ffb7fc18489710b44569cccb298c}{a}}.\mbox{\hyperlink{classdominio_1_1clases_1_1_item_a2897c66f7356fcc8e6eda6d02f30d92f}{getWordFrequencies}}();}
+\DoxyCodeLine{00262         LinkedHashMap<Integer, HashMap<String,Integer>> s2 = \mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_ad95d8d84592b10909e2296b159c2a384}{b}}.\mbox{\hyperlink{classdominio_1_1clases_1_1_item_a2897c66f7356fcc8e6eda6d02f30d92f}{getWordFrequencies}}();}
+\DoxyCodeLine{00263         \textcolor{keywordtype}{int} n = s1.size();}
+\DoxyCodeLine{00264         \textcolor{keywordflow}{if} (n == 0) \textcolor{keywordflow}{return} 0.0;}
+\DoxyCodeLine{00265         \textcolor{keywordtype}{double} dist = 0.0;}
+\DoxyCodeLine{00266         \textcolor{keywordtype}{int} aux = 0;}
+\DoxyCodeLine{00267         \textcolor{keywordtype}{int} n1 = 0;}
+\DoxyCodeLine{00268         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i : s1.keySet()) \{}
+\DoxyCodeLine{00269             \textcolor{keywordflow}{if} (\mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_ab3bd08effaf5fd173aa4dc658e60e5e3}{ftAt}}.get(aux)) \{}
+\DoxyCodeLine{00270                 ++n1;}
+\DoxyCodeLine{00271                 LinkedHashMap<String, Integer> difWords = \textcolor{keyword}{new} LinkedHashMap<>();}
+\DoxyCodeLine{00272                 \textcolor{keywordflow}{for} (String s : s1.get(i).keySet())}
+\DoxyCodeLine{00273                     difWords.put(s, 0);}
+\DoxyCodeLine{00274                 \textcolor{keywordflow}{for} (String s : s2.get(i).keySet())}
+\DoxyCodeLine{00275                     difWords.put(s, 0);}
+\DoxyCodeLine{00276                 ArrayList<Integer> v1 = \textcolor{keyword}{new} ArrayList<>();}
+\DoxyCodeLine{00277                 ArrayList<Integer> v2 = \textcolor{keyword}{new} ArrayList<>();}
+\DoxyCodeLine{00278                 \textcolor{keywordflow}{for} (String w : difWords.keySet()) \{}
+\DoxyCodeLine{00279                     \textcolor{keywordflow}{if} (s1.get(i).containsKey(w)) \{}
+\DoxyCodeLine{00280                         v1.add(s1.get(i).get(w));}
+\DoxyCodeLine{00281                     \} \textcolor{keywordflow}{else} v1.add(0);}
+\DoxyCodeLine{00282                     \textcolor{keywordflow}{if} (s2.get(i).containsKey(w)) \{}
+\DoxyCodeLine{00283                         v2.add(s2.get(i).get(w));}
+\DoxyCodeLine{00284                     \} \textcolor{keywordflow}{else} v2.add(0);}
+\DoxyCodeLine{00285                 \}}
+\DoxyCodeLine{00286                 \textcolor{keywordtype}{double} sumProduct = 0;}
+\DoxyCodeLine{00287                 \textcolor{keywordtype}{double} sum1Sq = 0;}
+\DoxyCodeLine{00288                 \textcolor{keywordtype}{double} sum2Sq = 0;}
+\DoxyCodeLine{00289                 \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = 0; j < v1.size(); j++) \{}
+\DoxyCodeLine{00290                     sumProduct += v1.get(j) * v2.get(j);}
+\DoxyCodeLine{00291                     sum1Sq += v1.get(j) * v1.get(j);}
+\DoxyCodeLine{00292                     sum2Sq += v2.get(j) * v2.get(j);}
+\DoxyCodeLine{00293                 \}}
+\DoxyCodeLine{00294                 \textcolor{keywordflow}{if} (sum1Sq != 0 || sum2Sq != 0) \{}
+\DoxyCodeLine{00295                     dist += Math.pow(1 -\/ (sumProduct / (Math.sqrt(sum1Sq) * Math.sqrt(sum2Sq))), 2);}
+\DoxyCodeLine{00296                 \} \textcolor{keywordflow}{else} dist += 1;}
+\DoxyCodeLine{00297             \}}
+\DoxyCodeLine{00298             ++aux;}
+\DoxyCodeLine{00299         \}}
+\DoxyCodeLine{00300         \textcolor{keywordflow}{if}(n1 != 0)}
+\DoxyCodeLine{00301             \textcolor{keywordflow}{return} Math.sqrt(dist/n1);}
+\DoxyCodeLine{00302         \textcolor{keywordflow}{else} \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{00303     \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Documentación de los datos miembro}
+\mbox{\Hypertarget{classdominio_1_1clases_1_1_distance_items_ab349ffb7fc18489710b44569cccb298c}\label{classdominio_1_1clases_1_1_distance_items_ab349ffb7fc18489710b44569cccb298c}} 
+\index{dominio.clases.DistanceItems@{dominio.clases.DistanceItems}!a@{a}}
+\index{a@{a}!dominio.clases.DistanceItems@{dominio.clases.DistanceItems}}
+\doxysubsubsection{\texorpdfstring{a}{a}}
+{\footnotesize\ttfamily final \mbox{\hyperlink{classdominio_1_1clases_1_1_item}{Item}} dominio.\+clases.\+Distance\+Items.\+a\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Primer item en el computo de la distancia. 
+
+
+
+Definición en la línea \mbox{\hyperlink{_distance_items_8java_source_l00025}{25}} del archivo \mbox{\hyperlink{_distance_items_8java_source}{Distance\+Items.\+java}}.
+
+\mbox{\Hypertarget{classdominio_1_1clases_1_1_distance_items_ad95d8d84592b10909e2296b159c2a384}\label{classdominio_1_1clases_1_1_distance_items_ad95d8d84592b10909e2296b159c2a384}} 
+\index{dominio.clases.DistanceItems@{dominio.clases.DistanceItems}!b@{b}}
+\index{b@{b}!dominio.clases.DistanceItems@{dominio.clases.DistanceItems}}
+\doxysubsubsection{\texorpdfstring{b}{b}}
+{\footnotesize\ttfamily final \mbox{\hyperlink{classdominio_1_1clases_1_1_item}{Item}} dominio.\+clases.\+Distance\+Items.\+b\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Segundo item en el computo de la distancia. 
+
+
+
+Definición en la línea \mbox{\hyperlink{_distance_items_8java_source_l00029}{29}} del archivo \mbox{\hyperlink{_distance_items_8java_source}{Distance\+Items.\+java}}.
+
+\mbox{\Hypertarget{classdominio_1_1clases_1_1_distance_items_a45ccd8bd535f7c59f570446dc320ad4d}\label{classdominio_1_1clases_1_1_distance_items_a45ccd8bd535f7c59f570446dc320ad4d}} 
+\index{dominio.clases.DistanceItems@{dominio.clases.DistanceItems}!MaxValIntegers@{MaxValIntegers}}
+\index{MaxValIntegers@{MaxValIntegers}!dominio.clases.DistanceItems@{dominio.clases.DistanceItems}}
+\doxysubsubsection{\texorpdfstring{MaxValIntegers}{MaxValIntegers}}
+{\footnotesize\ttfamily final Array\+List$<$Long$>$ dominio.\+clases.\+Distance\+Items.\+Max\+Val\+Integers\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Array\+List con los valores maximos que tienen los atributos de tipo integer, en el mismo orden que aparecen a las columnas del dataset. 
+
+
+
+Definición en la línea \mbox{\hyperlink{_distance_items_8java_source_l00034}{34}} del archivo \mbox{\hyperlink{_distance_items_8java_source}{Distance\+Items.\+java}}.
+
+\mbox{\Hypertarget{classdominio_1_1clases_1_1_distance_items_a1d6c54692e9c5f8eb76510872d9f5e8a}\label{classdominio_1_1clases_1_1_distance_items_a1d6c54692e9c5f8eb76510872d9f5e8a}} 
+\index{dominio.clases.DistanceItems@{dominio.clases.DistanceItems}!MinValIntegers@{MinValIntegers}}
+\index{MinValIntegers@{MinValIntegers}!dominio.clases.DistanceItems@{dominio.clases.DistanceItems}}
+\doxysubsubsection{\texorpdfstring{MinValIntegers}{MinValIntegers}}
+{\footnotesize\ttfamily final Array\+List$<$Long$>$ dominio.\+clases.\+Distance\+Items.\+Min\+Val\+Integers\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Array\+List con los valores minimos que tienen los atributos de tipo integer, en el mismo orden que aparecen a las columnas del dataset. 
+
+
+
+Definición en la línea \mbox{\hyperlink{_distance_items_8java_source_l00039}{39}} del archivo \mbox{\hyperlink{_distance_items_8java_source}{Distance\+Items.\+java}}.
+
+\mbox{\Hypertarget{classdominio_1_1clases_1_1_distance_items_ad826d36205ef1ba4a5aec95a463d80b9}\label{classdominio_1_1clases_1_1_distance_items_ad826d36205ef1ba4a5aec95a463d80b9}} 
+\index{dominio.clases.DistanceItems@{dominio.clases.DistanceItems}!MaxValDoubles@{MaxValDoubles}}
+\index{MaxValDoubles@{MaxValDoubles}!dominio.clases.DistanceItems@{dominio.clases.DistanceItems}}
+\doxysubsubsection{\texorpdfstring{MaxValDoubles}{MaxValDoubles}}
+{\footnotesize\ttfamily final Array\+List$<$Double$>$ dominio.\+clases.\+Distance\+Items.\+Max\+Val\+Doubles\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Array\+List con los valores maximos que tienen los atributos de tipo double, en el mismo orden que aparecen a las columnas del dataset. 
+
+
+
+Definición en la línea \mbox{\hyperlink{_distance_items_8java_source_l00044}{44}} del archivo \mbox{\hyperlink{_distance_items_8java_source}{Distance\+Items.\+java}}.
+
+\mbox{\Hypertarget{classdominio_1_1clases_1_1_distance_items_a2f9c2fb0d088ef0c6fe5239b3d57620f}\label{classdominio_1_1clases_1_1_distance_items_a2f9c2fb0d088ef0c6fe5239b3d57620f}} 
+\index{dominio.clases.DistanceItems@{dominio.clases.DistanceItems}!MinValDoubles@{MinValDoubles}}
+\index{MinValDoubles@{MinValDoubles}!dominio.clases.DistanceItems@{dominio.clases.DistanceItems}}
+\doxysubsubsection{\texorpdfstring{MinValDoubles}{MinValDoubles}}
+{\footnotesize\ttfamily final Array\+List$<$Double$>$ dominio.\+clases.\+Distance\+Items.\+Min\+Val\+Doubles\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Array\+List con los valores minimos que tienen los atributos de tipo double, en el mismo orden que aparecen a las columnas del dataset. 
+
+
+
+Definición en la línea \mbox{\hyperlink{_distance_items_8java_source_l00049}{49}} del archivo \mbox{\hyperlink{_distance_items_8java_source}{Distance\+Items.\+java}}.
+
+\mbox{\Hypertarget{classdominio_1_1clases_1_1_distance_items_aa92aecb17d318dc7fa6c54f775029e27}\label{classdominio_1_1clases_1_1_distance_items_aa92aecb17d318dc7fa6c54f775029e27}} 
+\index{dominio.clases.DistanceItems@{dominio.clases.DistanceItems}!MaxDates@{MaxDates}}
+\index{MaxDates@{MaxDates}!dominio.clases.DistanceItems@{dominio.clases.DistanceItems}}
+\doxysubsubsection{\texorpdfstring{MaxDates}{MaxDates}}
+{\footnotesize\ttfamily final Array\+List$<$Local\+Date$>$ dominio.\+clases.\+Distance\+Items.\+Max\+Dates\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Array\+List con los valores maximos que tienen los atributos de tipo date, en el mismo orden que aparecen a las columnas del dataset. 
+
+
+
+Definición en la línea \mbox{\hyperlink{_distance_items_8java_source_l00054}{54}} del archivo \mbox{\hyperlink{_distance_items_8java_source}{Distance\+Items.\+java}}.
+
+\mbox{\Hypertarget{classdominio_1_1clases_1_1_distance_items_a4706783a73b4d8a1f1befb70322dd915}\label{classdominio_1_1clases_1_1_distance_items_a4706783a73b4d8a1f1befb70322dd915}} 
+\index{dominio.clases.DistanceItems@{dominio.clases.DistanceItems}!MinDates@{MinDates}}
+\index{MinDates@{MinDates}!dominio.clases.DistanceItems@{dominio.clases.DistanceItems}}
+\doxysubsubsection{\texorpdfstring{MinDates}{MinDates}}
+{\footnotesize\ttfamily final Array\+List$<$Local\+Date$>$ dominio.\+clases.\+Distance\+Items.\+Min\+Dates\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Array\+List con los valores minimos que tienen los atributos de tipo date, en el mismo orden que aparecen a las columnas del dataset. 
+
+
+
+Definición en la línea \mbox{\hyperlink{_distance_items_8java_source_l00059}{59}} del archivo \mbox{\hyperlink{_distance_items_8java_source}{Distance\+Items.\+java}}.
+
+\mbox{\Hypertarget{classdominio_1_1clases_1_1_distance_items_a3f750fb281f4e67a8fa6a5bf84a88640}\label{classdominio_1_1clases_1_1_distance_items_a3f750fb281f4e67a8fa6a5bf84a88640}} 
+\index{dominio.clases.DistanceItems@{dominio.clases.DistanceItems}!intAt@{intAt}}
+\index{intAt@{intAt}!dominio.clases.DistanceItems@{dominio.clases.DistanceItems}}
+\doxysubsubsection{\texorpdfstring{intAt}{intAt}}
+{\footnotesize\ttfamily List$<$Boolean$>$ dominio.\+clases.\+Distance\+Items.\+int\+At\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{_distance_items_8java_source_l00060}{60}} del archivo \mbox{\hyperlink{_distance_items_8java_source}{Distance\+Items.\+java}}.
+
+\mbox{\Hypertarget{classdominio_1_1clases_1_1_distance_items_a1b3007336c7ff85e39f821b0d5b15887}\label{classdominio_1_1clases_1_1_distance_items_a1b3007336c7ff85e39f821b0d5b15887}} 
+\index{dominio.clases.DistanceItems@{dominio.clases.DistanceItems}!doubAt@{doubAt}}
+\index{doubAt@{doubAt}!dominio.clases.DistanceItems@{dominio.clases.DistanceItems}}
+\doxysubsubsection{\texorpdfstring{doubAt}{doubAt}}
+{\footnotesize\ttfamily List$<$Boolean$>$ dominio.\+clases.\+Distance\+Items.\+doub\+At\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{_distance_items_8java_source_l00061}{61}} del archivo \mbox{\hyperlink{_distance_items_8java_source}{Distance\+Items.\+java}}.
+
+\mbox{\Hypertarget{classdominio_1_1clases_1_1_distance_items_abf3ccc78946f2ab97326949c1c172fe7}\label{classdominio_1_1clases_1_1_distance_items_abf3ccc78946f2ab97326949c1c172fe7}} 
+\index{dominio.clases.DistanceItems@{dominio.clases.DistanceItems}!dateAt@{dateAt}}
+\index{dateAt@{dateAt}!dominio.clases.DistanceItems@{dominio.clases.DistanceItems}}
+\doxysubsubsection{\texorpdfstring{dateAt}{dateAt}}
+{\footnotesize\ttfamily List$<$Boolean$>$ dominio.\+clases.\+Distance\+Items.\+date\+At\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{_distance_items_8java_source_l00062}{62}} del archivo \mbox{\hyperlink{_distance_items_8java_source}{Distance\+Items.\+java}}.
+
+\mbox{\Hypertarget{classdominio_1_1clases_1_1_distance_items_a80892aaf007ba663185d75b5e397cd1d}\label{classdominio_1_1clases_1_1_distance_items_a80892aaf007ba663185d75b5e397cd1d}} 
+\index{dominio.clases.DistanceItems@{dominio.clases.DistanceItems}!bAt@{bAt}}
+\index{bAt@{bAt}!dominio.clases.DistanceItems@{dominio.clases.DistanceItems}}
+\doxysubsubsection{\texorpdfstring{bAt}{bAt}}
+{\footnotesize\ttfamily List$<$Boolean$>$ dominio.\+clases.\+Distance\+Items.\+b\+At\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{_distance_items_8java_source_l00063}{63}} del archivo \mbox{\hyperlink{_distance_items_8java_source}{Distance\+Items.\+java}}.
+
+\mbox{\Hypertarget{classdominio_1_1clases_1_1_distance_items_a11c7b0ff87dd0a5073d8bf7f739bb0e4}\label{classdominio_1_1clases_1_1_distance_items_a11c7b0ff87dd0a5073d8bf7f739bb0e4}} 
+\index{dominio.clases.DistanceItems@{dominio.clases.DistanceItems}!catAt@{catAt}}
+\index{catAt@{catAt}!dominio.clases.DistanceItems@{dominio.clases.DistanceItems}}
+\doxysubsubsection{\texorpdfstring{catAt}{catAt}}
+{\footnotesize\ttfamily List$<$Boolean$>$ dominio.\+clases.\+Distance\+Items.\+cat\+At\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{_distance_items_8java_source_l00064}{64}} del archivo \mbox{\hyperlink{_distance_items_8java_source}{Distance\+Items.\+java}}.
+
+\mbox{\Hypertarget{classdominio_1_1clases_1_1_distance_items_ab3bd08effaf5fd173aa4dc658e60e5e3}\label{classdominio_1_1clases_1_1_distance_items_ab3bd08effaf5fd173aa4dc658e60e5e3}} 
+\index{dominio.clases.DistanceItems@{dominio.clases.DistanceItems}!ftAt@{ftAt}}
+\index{ftAt@{ftAt}!dominio.clases.DistanceItems@{dominio.clases.DistanceItems}}
+\doxysubsubsection{\texorpdfstring{ftAt}{ftAt}}
+{\footnotesize\ttfamily List$<$Boolean$>$ dominio.\+clases.\+Distance\+Items.\+ft\+At\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{_distance_items_8java_source_l00065}{65}} del archivo \mbox{\hyperlink{_distance_items_8java_source}{Distance\+Items.\+java}}.
+
+
+
+La documentación para esta clase fue generada a partir del siguiente fichero\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_distance_items_8java}{Distance\+Items.\+java}}\end{DoxyCompactItemize}

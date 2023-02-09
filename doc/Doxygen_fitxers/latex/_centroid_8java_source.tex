@@ -1,0 +1,78 @@
+\hypertarget{_centroid_8java_source}{}\doxysection{Centroid.\+java}
+\label{_centroid_8java_source}\index{Centroid.java@{Centroid.java}}
+\mbox{\hyperlink{_centroid_8java}{Ir a la documentación de este archivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_centroid_8java_source_l00001}00001 }
+\DoxyCodeLine{\Hypertarget{_centroid_8java_source_l00006}00006 \textcolor{keyword}{package }dominio.clases;}
+\DoxyCodeLine{\Hypertarget{_centroid_8java_source_l00007}00007 }
+\DoxyCodeLine{\Hypertarget{_centroid_8java_source_l00008}00008 \textcolor{keyword}{import} java.util.*;}
+\DoxyCodeLine{\Hypertarget{_centroid_8java_source_l00015}\mbox{\hyperlink{classdominio_1_1clases_1_1_centroid}{00015}} \textcolor{keyword}{public} \textcolor{keyword}{class }\mbox{\hyperlink{classdominio_1_1clases_1_1_centroid}{Centroid}} \{}
+\DoxyCodeLine{\Hypertarget{_centroid_8java_source_l00016}00016 }
+\DoxyCodeLine{\Hypertarget{_centroid_8java_source_l00017}00017     HashSet<Usuari>users = \textcolor{keyword}{new} HashSet<>();}
+\DoxyCodeLine{\Hypertarget{_centroid_8java_source_l00018}00018 }
+\DoxyCodeLine{\Hypertarget{_centroid_8java_source_l00022}\mbox{\hyperlink{classdominio_1_1clases_1_1_centroid_a5dee63e80fedc858e13c72c1f8733611}{00022}}     \textcolor{keyword}{private} \textcolor{keywordtype}{int} \mbox{\hyperlink{classdominio_1_1clases_1_1_centroid_a5dee63e80fedc858e13c72c1f8733611}{centroid\_number}};}
+\DoxyCodeLine{\Hypertarget{_centroid_8java_source_l00023}00023 }
+\DoxyCodeLine{\Hypertarget{_centroid_8java_source_l00027}\mbox{\hyperlink{classdominio_1_1clases_1_1_centroid_a76017c3be2e6bec371118caee0862667}{00027}}     \textcolor{keyword}{private} \textcolor{keywordtype}{int} \mbox{\hyperlink{classdominio_1_1clases_1_1_centroid_a76017c3be2e6bec371118caee0862667}{centroid\_user\_id}};}
+\DoxyCodeLine{\Hypertarget{_centroid_8java_source_l00028}00028 }
+\DoxyCodeLine{\Hypertarget{_centroid_8java_source_l00032}\mbox{\hyperlink{classdominio_1_1clases_1_1_centroid_a4491f8b97812b71de75bf68a33aea36a}{00032}}     \textcolor{keyword}{private} HashMap<Item, Double> \mbox{\hyperlink{classdominio_1_1clases_1_1_centroid_a4491f8b97812b71de75bf68a33aea36a}{centroid}} = \textcolor{keyword}{new} HashMap<>();}
+\DoxyCodeLine{\Hypertarget{_centroid_8java_source_l00033}00033 }
+\DoxyCodeLine{\Hypertarget{_centroid_8java_source_l00037}\mbox{\hyperlink{classdominio_1_1clases_1_1_centroid_af5ac5c4fad0ee750fe732f5f6ececef0}{00037}}     \textcolor{keyword}{private} HashMap<Item,Double> \mbox{\hyperlink{classdominio_1_1clases_1_1_centroid_af5ac5c4fad0ee750fe732f5f6ececef0}{valoraciones}} = \textcolor{keyword}{new} HashMap<>();}
+\DoxyCodeLine{\Hypertarget{_centroid_8java_source_l00038}00038 }
+\DoxyCodeLine{\Hypertarget{_centroid_8java_source_l00042}\mbox{\hyperlink{classdominio_1_1clases_1_1_centroid_aef41c2eaff0f0280ff9c6bae3aafec88}{00042}}     \textcolor{keyword}{private} HashMap<Item,Integer> \mbox{\hyperlink{classdominio_1_1clases_1_1_centroid_aef41c2eaff0f0280ff9c6bae3aafec88}{times}} = \textcolor{keyword}{new} HashMap<>();}
+\DoxyCodeLine{\Hypertarget{_centroid_8java_source_l00047}\mbox{\hyperlink{classdominio_1_1clases_1_1_centroid_a7552ecd5388c2d3045fb1cd13a4318b1}{00047}}     \textcolor{keyword}{public} HashMap<Item, Double> \mbox{\hyperlink{classdominio_1_1clases_1_1_centroid_a7552ecd5388c2d3045fb1cd13a4318b1}{getCentroid}}() \{}
+\DoxyCodeLine{\Hypertarget{_centroid_8java_source_l00048}00048         \textcolor{keywordflow}{return} \mbox{\hyperlink{classdominio_1_1clases_1_1_centroid_a4491f8b97812b71de75bf68a33aea36a}{centroid}};}
+\DoxyCodeLine{\Hypertarget{_centroid_8java_source_l00049}00049     \}}
+\DoxyCodeLine{\Hypertarget{_centroid_8java_source_l00050}00050 }
+\DoxyCodeLine{\Hypertarget{_centroid_8java_source_l00055}\mbox{\hyperlink{classdominio_1_1clases_1_1_centroid_a60cc5351e6d640c03e76743abdb02682}{00055}}     \textcolor{keyword}{public} \textcolor{keywordtype}{int} \mbox{\hyperlink{classdominio_1_1clases_1_1_centroid_a60cc5351e6d640c03e76743abdb02682}{getCentroid\_number}}() \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{classdominio_1_1clases_1_1_centroid_a5dee63e80fedc858e13c72c1f8733611}{centroid\_number}};\}}
+\DoxyCodeLine{\Hypertarget{_centroid_8java_source_l00056}00056 }
+\DoxyCodeLine{\Hypertarget{_centroid_8java_source_l00061}\mbox{\hyperlink{classdominio_1_1clases_1_1_centroid_a4c4f26d82b78884146156288d0524ac7}{00061}}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classdominio_1_1clases_1_1_centroid_a4c4f26d82b78884146156288d0524ac7}{setCentroid\_number}}(\textcolor{keywordtype}{int} \mbox{\hyperlink{classdominio_1_1clases_1_1_centroid_a5dee63e80fedc858e13c72c1f8733611}{centroid\_number}}) \{}
+\DoxyCodeLine{\Hypertarget{_centroid_8java_source_l00062}00062         this.centroid\_number = \mbox{\hyperlink{classdominio_1_1clases_1_1_centroid_a5dee63e80fedc858e13c72c1f8733611}{centroid\_number}};}
+\DoxyCodeLine{\Hypertarget{_centroid_8java_source_l00063}00063     \}}
+\DoxyCodeLine{\Hypertarget{_centroid_8java_source_l00064}00064 }
+\DoxyCodeLine{\Hypertarget{_centroid_8java_source_l00069}\mbox{\hyperlink{classdominio_1_1clases_1_1_centroid_a5521932ec18fc4699555dae945398a75}{00069}}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classdominio_1_1clases_1_1_centroid_a5521932ec18fc4699555dae945398a75}{setCentroid}}(HashMap<Item, Double> \mbox{\hyperlink{classdominio_1_1clases_1_1_centroid_a4491f8b97812b71de75bf68a33aea36a}{centroid}}) \{}
+\DoxyCodeLine{\Hypertarget{_centroid_8java_source_l00070}00070 }
+\DoxyCodeLine{\Hypertarget{_centroid_8java_source_l00071}00071         this.centroid = \mbox{\hyperlink{classdominio_1_1clases_1_1_centroid_a4491f8b97812b71de75bf68a33aea36a}{centroid}};}
+\DoxyCodeLine{\Hypertarget{_centroid_8java_source_l00072}00072     \}}
+\DoxyCodeLine{\Hypertarget{_centroid_8java_source_l00073}00073 }
+\DoxyCodeLine{\Hypertarget{_centroid_8java_source_l00078}\mbox{\hyperlink{classdominio_1_1clases_1_1_centroid_a2a82449acb307b9cf06d140f76f025ec}{00078}}     \textcolor{keyword}{public} \textcolor{keywordtype}{int} \mbox{\hyperlink{classdominio_1_1clases_1_1_centroid_a2a82449acb307b9cf06d140f76f025ec}{getCentroid\_user\_id}}() \{}
+\DoxyCodeLine{\Hypertarget{_centroid_8java_source_l00079}00079         \textcolor{keywordflow}{return} \mbox{\hyperlink{classdominio_1_1clases_1_1_centroid_a76017c3be2e6bec371118caee0862667}{centroid\_user\_id}};}
+\DoxyCodeLine{\Hypertarget{_centroid_8java_source_l00080}00080     \}}
+\DoxyCodeLine{\Hypertarget{_centroid_8java_source_l00081}00081 }
+\DoxyCodeLine{\Hypertarget{_centroid_8java_source_l00086}\mbox{\hyperlink{classdominio_1_1clases_1_1_centroid_a912d24adbeea1ed779aa516b90396242}{00086}}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classdominio_1_1clases_1_1_centroid_a912d24adbeea1ed779aa516b90396242}{setCentroid\_user\_id}}(\textcolor{keywordtype}{int} \mbox{\hyperlink{classdominio_1_1clases_1_1_centroid_a76017c3be2e6bec371118caee0862667}{centroid\_user\_id}}) \{}
+\DoxyCodeLine{\Hypertarget{_centroid_8java_source_l00087}00087         this.centroid\_user\_id = \mbox{\hyperlink{classdominio_1_1clases_1_1_centroid_a76017c3be2e6bec371118caee0862667}{centroid\_user\_id}};}
+\DoxyCodeLine{\Hypertarget{_centroid_8java_source_l00088}00088     \}}
+\DoxyCodeLine{\Hypertarget{_centroid_8java_source_l00089}00089 }
+\DoxyCodeLine{\Hypertarget{_centroid_8java_source_l00094}\mbox{\hyperlink{classdominio_1_1clases_1_1_centroid_a5787d49d784ab4ed714d35cb94c7de03}{00094}}     \textcolor{keyword}{public} HashMap<Item, Double> \mbox{\hyperlink{classdominio_1_1clases_1_1_centroid_a5787d49d784ab4ed714d35cb94c7de03}{getValoraciones}}() \{}
+\DoxyCodeLine{\Hypertarget{_centroid_8java_source_l00095}00095         \textcolor{keywordflow}{return} \mbox{\hyperlink{classdominio_1_1clases_1_1_centroid_af5ac5c4fad0ee750fe732f5f6ececef0}{valoraciones}};}
+\DoxyCodeLine{\Hypertarget{_centroid_8java_source_l00096}00096     \}}
+\DoxyCodeLine{\Hypertarget{_centroid_8java_source_l00097}00097 }
+\DoxyCodeLine{\Hypertarget{_centroid_8java_source_l00102}\mbox{\hyperlink{classdominio_1_1clases_1_1_centroid_abe0e24976019addcc13908a15d6d1e4a}{00102}}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classdominio_1_1clases_1_1_centroid_abe0e24976019addcc13908a15d6d1e4a}{setValoraciones}}(HashMap<Item, Double> \mbox{\hyperlink{classdominio_1_1clases_1_1_centroid_af5ac5c4fad0ee750fe732f5f6ececef0}{valoraciones}}) \{}
+\DoxyCodeLine{\Hypertarget{_centroid_8java_source_l00103}00103         this.valoraciones = \mbox{\hyperlink{classdominio_1_1clases_1_1_centroid_af5ac5c4fad0ee750fe732f5f6ececef0}{valoraciones}};}
+\DoxyCodeLine{\Hypertarget{_centroid_8java_source_l00104}00104     \}}
+\DoxyCodeLine{\Hypertarget{_centroid_8java_source_l00105}00105 }
+\DoxyCodeLine{\Hypertarget{_centroid_8java_source_l00110}\mbox{\hyperlink{classdominio_1_1clases_1_1_centroid_a6f48ac0624159d16ddac3ca2e347b509}{00110}}     \textcolor{keyword}{public} HashMap<Item, Integer> \mbox{\hyperlink{classdominio_1_1clases_1_1_centroid_a6f48ac0624159d16ddac3ca2e347b509}{getTimes}}() \{}
+\DoxyCodeLine{\Hypertarget{_centroid_8java_source_l00111}00111         \textcolor{keywordflow}{return} \mbox{\hyperlink{classdominio_1_1clases_1_1_centroid_aef41c2eaff0f0280ff9c6bae3aafec88}{times}};}
+\DoxyCodeLine{\Hypertarget{_centroid_8java_source_l00112}00112     \}}
+\DoxyCodeLine{\Hypertarget{_centroid_8java_source_l00113}00113 }
+\DoxyCodeLine{\Hypertarget{_centroid_8java_source_l00118}\mbox{\hyperlink{classdominio_1_1clases_1_1_centroid_a2a00352d2537a1cca5958b997543a7fd}{00118}}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classdominio_1_1clases_1_1_centroid_a2a00352d2537a1cca5958b997543a7fd}{setTimes}}(HashMap<Item, Integer> \mbox{\hyperlink{classdominio_1_1clases_1_1_centroid_aef41c2eaff0f0280ff9c6bae3aafec88}{times}}) \{}
+\DoxyCodeLine{\Hypertarget{_centroid_8java_source_l00119}00119         this.times = \mbox{\hyperlink{classdominio_1_1clases_1_1_centroid_aef41c2eaff0f0280ff9c6bae3aafec88}{times}};}
+\DoxyCodeLine{\Hypertarget{_centroid_8java_source_l00120}00120     \}}
+\DoxyCodeLine{\Hypertarget{_centroid_8java_source_l00121}00121 }
+\DoxyCodeLine{\Hypertarget{_centroid_8java_source_l00126}\mbox{\hyperlink{classdominio_1_1clases_1_1_centroid_abbf5337fa6de3789052b00b4897993a7}{00126}}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classdominio_1_1clases_1_1_centroid_abbf5337fa6de3789052b00b4897993a7}{recolocar}}(\mbox{\hyperlink{classdominio_1_1clases_1_1_usuari}{Usuari}} \mbox{\hyperlink{classdominio_1_1clases_1_1_usuari}{Usuari}}) \{}
+\DoxyCodeLine{\Hypertarget{_centroid_8java_source_l00127}00127         \textcolor{keywordflow}{for} (\mbox{\hyperlink{classdominio_1_1clases_1_1_item}{Item}} key : \mbox{\hyperlink{classdominio_1_1clases_1_1_usuari}{Usuari}}.\mbox{\hyperlink{classdominio_1_1clases_1_1_usuari_a5f2f72c56d755b0785792c34622f419d}{getRatedItems}}().keySet()) \{}
+\DoxyCodeLine{\Hypertarget{_centroid_8java_source_l00128}00128             \textcolor{keywordflow}{if} (\mbox{\hyperlink{classdominio_1_1clases_1_1_centroid_af5ac5c4fad0ee750fe732f5f6ececef0}{valoraciones}}.containsKey(key)) \mbox{\hyperlink{classdominio_1_1clases_1_1_centroid_af5ac5c4fad0ee750fe732f5f6ececef0}{valoraciones}}.put(key, \mbox{\hyperlink{classdominio_1_1clases_1_1_centroid_af5ac5c4fad0ee750fe732f5f6ececef0}{valoraciones}}.get(key)+\mbox{\hyperlink{classdominio_1_1clases_1_1_usuari}{Usuari}}.\mbox{\hyperlink{classdominio_1_1clases_1_1_usuari_a5f2f72c56d755b0785792c34622f419d}{getRatedItems}}().get(key));}
+\DoxyCodeLine{\Hypertarget{_centroid_8java_source_l00129}00129             \textcolor{keywordflow}{else} \mbox{\hyperlink{classdominio_1_1clases_1_1_centroid_af5ac5c4fad0ee750fe732f5f6ececef0}{valoraciones}}.put(key, \mbox{\hyperlink{classdominio_1_1clases_1_1_usuari}{Usuari}}.\mbox{\hyperlink{classdominio_1_1clases_1_1_usuari_a5f2f72c56d755b0785792c34622f419d}{getRatedItems}}().get(key));}
+\DoxyCodeLine{\Hypertarget{_centroid_8java_source_l00130}00130             \textcolor{keywordflow}{if} (!\mbox{\hyperlink{classdominio_1_1clases_1_1_centroid_aef41c2eaff0f0280ff9c6bae3aafec88}{times}}.containsKey(key)) \mbox{\hyperlink{classdominio_1_1clases_1_1_centroid_aef41c2eaff0f0280ff9c6bae3aafec88}{times}}.put(key,1);}
+\DoxyCodeLine{\Hypertarget{_centroid_8java_source_l00131}00131             \textcolor{keywordflow}{else} \mbox{\hyperlink{classdominio_1_1clases_1_1_centroid_aef41c2eaff0f0280ff9c6bae3aafec88}{times}}.put(key,\mbox{\hyperlink{classdominio_1_1clases_1_1_centroid_aef41c2eaff0f0280ff9c6bae3aafec88}{times}}.get(key)+1);}
+\DoxyCodeLine{\Hypertarget{_centroid_8java_source_l00132}00132         \}}
+\DoxyCodeLine{\Hypertarget{_centroid_8java_source_l00133}00133     \}}
+\DoxyCodeLine{\Hypertarget{_centroid_8java_source_l00138}\mbox{\hyperlink{classdominio_1_1clases_1_1_centroid_a9f13b81d164983cbd93eb9ed51929bb6}{00138}}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classdominio_1_1clases_1_1_centroid_a9f13b81d164983cbd93eb9ed51929bb6}{eliminar}} (\mbox{\hyperlink{classdominio_1_1clases_1_1_usuari}{Usuari}} \mbox{\hyperlink{classdominio_1_1clases_1_1_usuari}{Usuari}}) \{}
+\DoxyCodeLine{\Hypertarget{_centroid_8java_source_l00139}00139         \textcolor{keywordflow}{for} (\mbox{\hyperlink{classdominio_1_1clases_1_1_item}{Item}} key : \mbox{\hyperlink{classdominio_1_1clases_1_1_usuari}{Usuari}}.\mbox{\hyperlink{classdominio_1_1clases_1_1_usuari_a5f2f72c56d755b0785792c34622f419d}{getRatedItems}}().keySet()) \{}
+\DoxyCodeLine{\Hypertarget{_centroid_8java_source_l00140}00140             \mbox{\hyperlink{classdominio_1_1clases_1_1_centroid_af5ac5c4fad0ee750fe732f5f6ececef0}{valoraciones}}.put(key, \mbox{\hyperlink{classdominio_1_1clases_1_1_centroid_af5ac5c4fad0ee750fe732f5f6ececef0}{valoraciones}}.get(key) -\/ \mbox{\hyperlink{classdominio_1_1clases_1_1_usuari}{Usuari}}.\mbox{\hyperlink{classdominio_1_1clases_1_1_usuari_a5f2f72c56d755b0785792c34622f419d}{getRatedItems}}().get(key));}
+\DoxyCodeLine{\Hypertarget{_centroid_8java_source_l00141}00141             \mbox{\hyperlink{classdominio_1_1clases_1_1_centroid_aef41c2eaff0f0280ff9c6bae3aafec88}{times}}.put(key, \mbox{\hyperlink{classdominio_1_1clases_1_1_centroid_aef41c2eaff0f0280ff9c6bae3aafec88}{times}}.get(key) -\/ 1);}
+\DoxyCodeLine{\Hypertarget{_centroid_8java_source_l00142}00142             \textcolor{keywordflow}{if} (\mbox{\hyperlink{classdominio_1_1clases_1_1_centroid_aef41c2eaff0f0280ff9c6bae3aafec88}{times}}.get(key) == 0) \mbox{\hyperlink{classdominio_1_1clases_1_1_centroid_af5ac5c4fad0ee750fe732f5f6ececef0}{valoraciones}}.remove(key);}
+\DoxyCodeLine{\Hypertarget{_centroid_8java_source_l00143}00143         \}}
+\DoxyCodeLine{\Hypertarget{_centroid_8java_source_l00144}00144     \}}
+\DoxyCodeLine{\Hypertarget{_centroid_8java_source_l00145}00145 \}}
+
+\end{DoxyCode}

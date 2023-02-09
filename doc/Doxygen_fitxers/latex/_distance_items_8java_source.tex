@@ -1,0 +1,209 @@
+\hypertarget{_distance_items_8java_source}{}\doxysection{Distance\+Items.\+java}
+\label{_distance_items_8java_source}\index{DistanceItems.java@{DistanceItems.java}}
+\mbox{\hyperlink{_distance_items_8java}{Ir a la documentación de este archivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00001}00001 }
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00006}00006 \textcolor{keyword}{package }dominio.clases;}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00007}00007 }
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00008}00008 \textcolor{keyword}{import} java.time.LocalDate;}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00009}00009 \textcolor{keyword}{import} java.time.ZoneId;}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00010}00010 \textcolor{keyword}{import} java.util.*;}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00011}00011 }
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00020}\mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items}{00020}} \textcolor{keyword}{public} \textcolor{keyword}{class }\mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items}{DistanceItems}} \{}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00021}00021 }
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00025}\mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_ab349ffb7fc18489710b44569cccb298c}{00025}}     \textcolor{keyword}{private} \textcolor{keyword}{final} \mbox{\hyperlink{classdominio_1_1clases_1_1_item}{Item}} \mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_ab349ffb7fc18489710b44569cccb298c}{a}};}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00029}\mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_ad95d8d84592b10909e2296b159c2a384}{00029}}     \textcolor{keyword}{private} \textcolor{keyword}{final} \mbox{\hyperlink{classdominio_1_1clases_1_1_item}{Item}} \mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_ad95d8d84592b10909e2296b159c2a384}{b}};}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00034}\mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_a45ccd8bd535f7c59f570446dc320ad4d}{00034}}     \textcolor{keyword}{private} \textcolor{keyword}{final} ArrayList<Long> \mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_a45ccd8bd535f7c59f570446dc320ad4d}{MaxValIntegers}};}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00039}\mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_a1d6c54692e9c5f8eb76510872d9f5e8a}{00039}}     \textcolor{keyword}{private} \textcolor{keyword}{final} ArrayList<Long> \mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_a1d6c54692e9c5f8eb76510872d9f5e8a}{MinValIntegers}};}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00044}\mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_ad826d36205ef1ba4a5aec95a463d80b9}{00044}}     \textcolor{keyword}{private} \textcolor{keyword}{final} ArrayList<Double> \mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_ad826d36205ef1ba4a5aec95a463d80b9}{MaxValDoubles}};}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00049}\mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_a2f9c2fb0d088ef0c6fe5239b3d57620f}{00049}}     \textcolor{keyword}{private} \textcolor{keyword}{final} ArrayList<Double> \mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_a2f9c2fb0d088ef0c6fe5239b3d57620f}{MinValDoubles}};}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00054}\mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_aa92aecb17d318dc7fa6c54f775029e27}{00054}}     \textcolor{keyword}{private} \textcolor{keyword}{final} ArrayList<LocalDate> \mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_aa92aecb17d318dc7fa6c54f775029e27}{MaxDates}};}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00059}\mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_a4706783a73b4d8a1f1befb70322dd915}{00059}}     \textcolor{keyword}{private} \textcolor{keyword}{final} ArrayList<LocalDate> \mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_a4706783a73b4d8a1f1befb70322dd915}{MinDates}};}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00060}\mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_a3f750fb281f4e67a8fa6a5bf84a88640}{00060}}     \textcolor{keyword}{private} List<Boolean> \mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_a3f750fb281f4e67a8fa6a5bf84a88640}{intAt}};}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00061}\mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_a1b3007336c7ff85e39f821b0d5b15887}{00061}}     \textcolor{keyword}{private} List<Boolean> \mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_a1b3007336c7ff85e39f821b0d5b15887}{doubAt}};}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00062}\mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_abf3ccc78946f2ab97326949c1c172fe7}{00062}}     \textcolor{keyword}{private} List<Boolean> \mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_abf3ccc78946f2ab97326949c1c172fe7}{dateAt}};}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00063}\mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_a80892aaf007ba663185d75b5e397cd1d}{00063}}     \textcolor{keyword}{private} List<Boolean> \mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_a80892aaf007ba663185d75b5e397cd1d}{bAt}};}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00064}\mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_a11c7b0ff87dd0a5073d8bf7f739bb0e4}{00064}}     \textcolor{keyword}{private} List<Boolean> \mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_a11c7b0ff87dd0a5073d8bf7f739bb0e4}{catAt}};}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00065}\mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_ab3bd08effaf5fd173aa4dc658e60e5e3}{00065}}     \textcolor{keyword}{private} List<Boolean> \mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_ab3bd08effaf5fd173aa4dc658e60e5e3}{ftAt}};}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00066}00066 }
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00067}00067 }
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00085}\mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_a6de7f2f69702140ee86ae2d79a58e5b8}{00085}}     \textcolor{keyword}{public} \mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_a6de7f2f69702140ee86ae2d79a58e5b8}{DistanceItems}}(\mbox{\hyperlink{classdominio_1_1clases_1_1_item}{Item}} \mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_ab349ffb7fc18489710b44569cccb298c}{a}}, \mbox{\hyperlink{classdominio_1_1clases_1_1_item}{Item}} \mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_ad95d8d84592b10909e2296b159c2a384}{b}}, Collection \mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_a45ccd8bd535f7c59f570446dc320ad4d}{MaxValIntegers}}, Collection \mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_a1d6c54692e9c5f8eb76510872d9f5e8a}{MinValIntegers}}, Collection \mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_ad826d36205ef1ba4a5aec95a463d80b9}{MaxValDoubles}},}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00086}00086                          Collection \mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_a2f9c2fb0d088ef0c6fe5239b3d57620f}{MinValDoubles}}, Collection MaxValDate, Collection MinValDate, List<Boolean> \mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_a3f750fb281f4e67a8fa6a5bf84a88640}{intAt}},}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00087}00087                          List<Boolean> \mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_a1b3007336c7ff85e39f821b0d5b15887}{doubAt}},List<Boolean> \mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_abf3ccc78946f2ab97326949c1c172fe7}{dateAt}},List<Boolean> \mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_a80892aaf007ba663185d75b5e397cd1d}{bAt}}, List<Boolean> \mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_a11c7b0ff87dd0a5073d8bf7f739bb0e4}{catAt}},List<Boolean> \mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_ab3bd08effaf5fd173aa4dc658e60e5e3}{ftAt}}) \{}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00088}00088         this.a = \mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_ab349ffb7fc18489710b44569cccb298c}{a}};}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00089}00089         this.b = \mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_ad95d8d84592b10909e2296b159c2a384}{b}};}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00090}00090         this.MaxValIntegers = \textcolor{keyword}{new} ArrayList<>(\mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_a45ccd8bd535f7c59f570446dc320ad4d}{MaxValIntegers}});}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00091}00091         this.MinValIntegers = \textcolor{keyword}{new} ArrayList<>(\mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_a1d6c54692e9c5f8eb76510872d9f5e8a}{MinValIntegers}});}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00092}00092         this.MaxValDoubles = \textcolor{keyword}{new} ArrayList<>(\mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_ad826d36205ef1ba4a5aec95a463d80b9}{MaxValDoubles}});}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00093}00093         this.MinValDoubles = \textcolor{keyword}{new} ArrayList<>(\mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_a2f9c2fb0d088ef0c6fe5239b3d57620f}{MinValDoubles}});}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00094}00094         this.MaxDates = \textcolor{keyword}{new} ArrayList<>(MaxValDate);}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00095}00095         this.MinDates = \textcolor{keyword}{new} ArrayList<>(MinValDate);}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00096}00096         this.dateAt = \mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_abf3ccc78946f2ab97326949c1c172fe7}{dateAt}};}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00097}00097         this.bAt = \mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_a80892aaf007ba663185d75b5e397cd1d}{bAt}};}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00098}00098         this.catAt = \mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_a11c7b0ff87dd0a5073d8bf7f739bb0e4}{catAt}};}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00099}00099         this.ftAt = \mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_ab3bd08effaf5fd173aa4dc658e60e5e3}{ftAt}};}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00100}00100         this.intAt = \mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_a3f750fb281f4e67a8fa6a5bf84a88640}{intAt}};}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00101}00101         this.doubAt = \mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_a1b3007336c7ff85e39f821b0d5b15887}{doubAt}};}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00102}00102     \}}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00103}00103 }
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00109}\mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_aca356202d8536db9ef6b55cfd44b1a4e}{00109}}     \textcolor{keyword}{public} \textcolor{keywordtype}{double} \mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_aca356202d8536db9ef6b55cfd44b1a4e}{get\_distance}}() \{}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00110}00110         \textcolor{keywordtype}{double} distInt = \mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_a4ef0c1870132ad8ac1081c8305af8281}{distBetweenInt}}();}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00111}00111         \textcolor{keywordtype}{double} distBool = \mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_a63e34fa55e68f6198cd5d589b2a7f070}{distBetweenBool}}();}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00112}00112         \textcolor{keywordtype}{double} distDate = \mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_ae119f4dc0e73a4a9aa11b19e1b521781}{distBetweenDate}}();}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00113}00113         \textcolor{keywordtype}{double} distDouble = \mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_a69e4e193ba4de312ddfb2e3c0475497d}{distBetweenDouble}}();}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00114}00114         \textcolor{keywordtype}{double} distString = \mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_a116b7b8812944dac7d6be4f9f67de584}{distBetweenString}}();}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00115}00115         \textcolor{keywordtype}{double} distBS = \mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_ab6305114ffcc1ce0438d2eaca4c028f6}{distBetweenCategory}}();}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00116}00116         \textcolor{keywordflow}{return} 0.15*distInt + 0.15*distDouble + 0.15*distDate + 0.05*distBool + 0.3*distBS + 0.2*distString;}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00117}00117     \}}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00118}00118 }
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00125}\mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_ab6305114ffcc1ce0438d2eaca4c028f6}{00125}}     \textcolor{keyword}{private} \textcolor{keywordtype}{double} \mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_ab6305114ffcc1ce0438d2eaca4c028f6}{distBetweenCategory}}() \{}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00126}00126         ArrayList<BitSet> c1 = \mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_ab349ffb7fc18489710b44569cccb298c}{a}}.\mbox{\hyperlink{classdominio_1_1clases_1_1_item_ac180dfac8c5187f1273944953621230c}{getCategoryPscBits}}();}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00127}00127         ArrayList<BitSet> c2 = \mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_ad95d8d84592b10909e2296b159c2a384}{b}}.\mbox{\hyperlink{classdominio_1_1clases_1_1_item_ac180dfac8c5187f1273944953621230c}{getCategoryPscBits}}();}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00128}00128         \textcolor{keywordtype}{int} n = c1.size();}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00129}00129         \textcolor{keywordflow}{if} (n==0) \textcolor{keywordflow}{return} 0.0;}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00130}00130         \textcolor{keywordtype}{double} dist = 0.0;}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00131}00131         \textcolor{keywordtype}{int} n1 = 0;}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00132}00132         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < n; ++i) \{}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00133}00133             \textcolor{keywordflow}{if} (c1.get(i) != \textcolor{keyword}{null}) \{}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00134}00134                 \textcolor{keywordflow}{if} (\mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_a11c7b0ff87dd0a5073d8bf7f739bb0e4}{catAt}}.get(i)) \{}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00135}00135                     ++n1;}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00136}00136                     BitSet unio = (BitSet) c1.get(i).clone();}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00137}00137                     BitSet interseccio = (BitSet) c1.get(i).clone();}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00138}00138                     unio.or(c2.get(i));}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00139}00139                     interseccio.and(c2.get(i));}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00140}00140                     \textcolor{keywordflow}{if} (unio.cardinality() != 0)}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00141}00141                         dist += Math.pow(1 -\/ (\textcolor{keywordtype}{double}) interseccio.cardinality() / unio.cardinality(), 2);}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00142}00142                 \}}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00143}00143             \}}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00144}00144         \}}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00145}00145         \textcolor{keywordflow}{if}(n1 != 0)}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00146}00146             \textcolor{keywordflow}{return} Math.sqrt(dist/n1);}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00147}00147         \textcolor{keywordflow}{else} \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00148}00148     \}}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00149}00149 }
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00156}\mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_ae119f4dc0e73a4a9aa11b19e1b521781}{00156}}     \textcolor{keyword}{private} \textcolor{keywordtype}{double} \mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_ae119f4dc0e73a4a9aa11b19e1b521781}{distBetweenDate}}() \{}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00157}00157         ArrayList<LocalDate> ld1 = \mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_ab349ffb7fc18489710b44569cccb298c}{a}}.\mbox{\hyperlink{classdominio_1_1clases_1_1_item_adcc53eecefedc021e3be30a8a3438901}{getDateAttributes}}();}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00158}00158         ArrayList<LocalDate> ld2 = \mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_ad95d8d84592b10909e2296b159c2a384}{b}}.\mbox{\hyperlink{classdominio_1_1clases_1_1_item_adcc53eecefedc021e3be30a8a3438901}{getDateAttributes}}();}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00159}00159         \textcolor{keywordtype}{int} n = ld1.size();}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00160}00160         \textcolor{keywordflow}{if} (n == 0) \textcolor{keywordflow}{return} 0.0;}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00161}00161         \textcolor{keywordtype}{double} dist = 0.0;}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00162}00162         \textcolor{keywordtype}{int} n1 = 0;}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00163}00163         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < n; ++i) \{}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00164}00164             \textcolor{keywordflow}{if}(\mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_abf3ccc78946f2ab97326949c1c172fe7}{dateAt}}.get(i)) \{}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00165}00165                 ++n1;}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00166}00166                 \textcolor{keywordtype}{int} maxDif = \mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_aa92aecb17d318dc7fa6c54f775029e27}{MaxDates}}.get(i).getYear() -\/ \mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_a4706783a73b4d8a1f1befb70322dd915}{MinDates}}.get(i).getYear();}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00167}00167                 \textcolor{keywordflow}{if} (maxDif != 0)}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00168}00168                     dist += Math.pow((\textcolor{keywordtype}{double}) (ld1.get(i).getYear() -\/ ld2.get(i).getYear()) / maxDif, 2);}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00169}00169             \}}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00170}00170         \}}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00171}00171         \textcolor{keywordflow}{if}(n1 != 0)}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00172}00172             \textcolor{keywordflow}{return} Math.sqrt(dist/n1);}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00173}00173         \textcolor{keywordflow}{else} \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00174}00174     \}}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00175}00175 }
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00182}\mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_a63e34fa55e68f6198cd5d589b2a7f070}{00182}}     \textcolor{keyword}{private} \textcolor{keywordtype}{double} \mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_a63e34fa55e68f6198cd5d589b2a7f070}{distBetweenBool}}() \{}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00183}00183         ArrayList<String> b1 = \mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_ab349ffb7fc18489710b44569cccb298c}{a}}.\mbox{\hyperlink{classdominio_1_1clases_1_1_item_a134319074fbe3059a14668a9b3028e66}{getBooleanAttributes}}();}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00184}00184         ArrayList<String> b2 = \mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_ad95d8d84592b10909e2296b159c2a384}{b}}.\mbox{\hyperlink{classdominio_1_1clases_1_1_item_a134319074fbe3059a14668a9b3028e66}{getBooleanAttributes}}();}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00185}00185 }
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00186}00186         \textcolor{keywordtype}{int} n = b1.size();}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00187}00187         \textcolor{keywordflow}{if} (n==0) \textcolor{keywordflow}{return} 0.0;}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00188}00188         \textcolor{keywordtype}{double} dist = 0.0;}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00189}00189         \textcolor{keywordtype}{int} n1 = 0;}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00190}00190         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < n; ++i) \{}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00191}00191             \textcolor{keywordflow}{if} (\mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_a80892aaf007ba663185d75b5e397cd1d}{bAt}}.get(i)) \{}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00192}00192                 n1++;}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00193}00193                 dist += (b1.get(i).equals(b2.get(i))) ? 0 : 1;}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00194}00194             \}}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00195}00195         \}}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00196}00196         \textcolor{keywordflow}{if}(n1 != 0)}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00197}00197             \textcolor{keywordflow}{return} Math.sqrt(dist/n1);}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00198}00198         \textcolor{keywordflow}{else} \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00199}00199     \}}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00200}00200 }
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00207}\mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_a69e4e193ba4de312ddfb2e3c0475497d}{00207}}     \textcolor{keyword}{private} \textcolor{keywordtype}{double} \mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_a69e4e193ba4de312ddfb2e3c0475497d}{distBetweenDouble}}() \{}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00208}00208         ArrayList<Double> d1 = \mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_ab349ffb7fc18489710b44569cccb298c}{a}}.\mbox{\hyperlink{classdominio_1_1clases_1_1_item_afa418979ae70f3a964590a1590a807b6}{getDoubleAttributes}}();}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00209}00209         ArrayList<Double> d2 = \mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_ad95d8d84592b10909e2296b159c2a384}{b}}.\mbox{\hyperlink{classdominio_1_1clases_1_1_item_afa418979ae70f3a964590a1590a807b6}{getDoubleAttributes}}();}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00210}00210         \textcolor{keywordtype}{int} n = d1.size();}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00211}00211         \textcolor{keywordflow}{if} (n==0) \textcolor{keywordflow}{return} 0.0;}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00212}00212         \textcolor{keywordtype}{double} dist = 0.0;}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00213}00213         \textcolor{keywordtype}{int} n1 = 0;}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00214}00214         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < n; ++i) \{}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00215}00215             \textcolor{keywordflow}{if}(\mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_a1b3007336c7ff85e39f821b0d5b15887}{doubAt}}.get(i)) \{}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00216}00216                 n1++;}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00217}00217                 \textcolor{keywordtype}{double} maxDif = \mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_ad826d36205ef1ba4a5aec95a463d80b9}{MaxValDoubles}}.get(i) -\/ \mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_a2f9c2fb0d088ef0c6fe5239b3d57620f}{MinValDoubles}}.get(i);}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00218}00218                 \textcolor{keywordflow}{if} (maxDif != 0)}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00219}00219                     dist += Math.pow((d1.get(i) -\/ d2.get(i)) / maxDif, 2);}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00220}00220             \}}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00221}00221         \}}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00222}00222         \textcolor{keywordflow}{if}(n1 != 0)}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00223}00223             \textcolor{keywordflow}{return} Math.sqrt(dist/n1);}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00224}00224         \textcolor{keywordflow}{else} \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00225}00225     \}}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00226}00226 }
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00233}\mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_a4ef0c1870132ad8ac1081c8305af8281}{00233}}     \textcolor{keyword}{private} \textcolor{keywordtype}{double} \mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_a4ef0c1870132ad8ac1081c8305af8281}{distBetweenInt}}() \{}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00234}00234 }
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00235}00235         ArrayList<Long> i1 = \mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_ab349ffb7fc18489710b44569cccb298c}{a}}.\mbox{\hyperlink{classdominio_1_1clases_1_1_item_a7f4f0a001b2a9612dbc34f0630491d82}{getIntAttributes}}();}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00236}00236         ArrayList<Long> i2 = \mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_ad95d8d84592b10909e2296b159c2a384}{b}}.\mbox{\hyperlink{classdominio_1_1clases_1_1_item_a7f4f0a001b2a9612dbc34f0630491d82}{getIntAttributes}}();}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00237}00237         \textcolor{keywordtype}{int} n = i1.size();}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00238}00238         \textcolor{keywordflow}{if} (n==0) \textcolor{keywordflow}{return} 0.0;}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00239}00239         \textcolor{keywordtype}{int} n1 = 0;}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00240}00240         \textcolor{keywordtype}{double} dist = 0.0;}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00241}00241         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < n \&\& \mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_a3f750fb281f4e67a8fa6a5bf84a88640}{intAt}}.get(i); ++i) \{}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00242}00242             ++n1;}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00243}00243             Long maxDif = \mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_a45ccd8bd535f7c59f570446dc320ad4d}{MaxValIntegers}}.get(i) -\/ \mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_a1d6c54692e9c5f8eb76510872d9f5e8a}{MinValIntegers}}.get(i);}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00244}00244             \textcolor{keywordflow}{if} (maxDif != 0)}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00245}00245                 dist += Math.pow((\textcolor{keywordtype}{double}) (i1.get(i) -\/ i2.get(i)) / maxDif, 2);}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00246}00246         \}}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00247}00247         \textcolor{keywordflow}{if}(n1 != 0)}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00248}00248             \textcolor{keywordflow}{return} Math.sqrt(dist/n1);}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00249}00249         \textcolor{keywordflow}{else} \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00250}00250     \}}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00251}00251 }
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00260}\mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_a116b7b8812944dac7d6be4f9f67de584}{00260}}     \textcolor{keyword}{private} \textcolor{keywordtype}{double} \mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_a116b7b8812944dac7d6be4f9f67de584}{distBetweenString}}() \{}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00261}00261         LinkedHashMap<Integer, HashMap<String,Integer>> s1 = \mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_ab349ffb7fc18489710b44569cccb298c}{a}}.\mbox{\hyperlink{classdominio_1_1clases_1_1_item_a2897c66f7356fcc8e6eda6d02f30d92f}{getWordFrequencies}}();}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00262}00262         LinkedHashMap<Integer, HashMap<String,Integer>> s2 = \mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_ad95d8d84592b10909e2296b159c2a384}{b}}.\mbox{\hyperlink{classdominio_1_1clases_1_1_item_a2897c66f7356fcc8e6eda6d02f30d92f}{getWordFrequencies}}();}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00263}00263         \textcolor{keywordtype}{int} n = s1.size();}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00264}00264         \textcolor{keywordflow}{if} (n == 0) \textcolor{keywordflow}{return} 0.0;}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00265}00265         \textcolor{keywordtype}{double} dist = 0.0;}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00266}00266         \textcolor{keywordtype}{int} aux = 0;}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00267}00267         \textcolor{keywordtype}{int} n1 = 0;}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00268}00268         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i : s1.keySet()) \{}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00269}00269             \textcolor{keywordflow}{if} (\mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_ab3bd08effaf5fd173aa4dc658e60e5e3}{ftAt}}.get(aux)) \{}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00270}00270                 ++n1;}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00271}00271                 LinkedHashMap<String, Integer> difWords = \textcolor{keyword}{new} LinkedHashMap<>();}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00272}00272                 \textcolor{keywordflow}{for} (String s : s1.get(i).keySet())}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00273}00273                     difWords.put(s, 0);}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00274}00274                 \textcolor{keywordflow}{for} (String s : s2.get(i).keySet())}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00275}00275                     difWords.put(s, 0);}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00276}00276                 ArrayList<Integer> v1 = \textcolor{keyword}{new} ArrayList<>();}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00277}00277                 ArrayList<Integer> v2 = \textcolor{keyword}{new} ArrayList<>();}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00278}00278                 \textcolor{keywordflow}{for} (String w : difWords.keySet()) \{}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00279}00279                     \textcolor{keywordflow}{if} (s1.get(i).containsKey(w)) \{}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00280}00280                         v1.add(s1.get(i).get(w));}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00281}00281                     \} \textcolor{keywordflow}{else} v1.add(0);}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00282}00282                     \textcolor{keywordflow}{if} (s2.get(i).containsKey(w)) \{}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00283}00283                         v2.add(s2.get(i).get(w));}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00284}00284                     \} \textcolor{keywordflow}{else} v2.add(0);}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00285}00285                 \}}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00286}00286                 \textcolor{keywordtype}{double} sumProduct = 0;}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00287}00287                 \textcolor{keywordtype}{double} sum1Sq = 0;}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00288}00288                 \textcolor{keywordtype}{double} sum2Sq = 0;}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00289}00289                 \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = 0; j < v1.size(); j++) \{}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00290}00290                     sumProduct += v1.get(j) * v2.get(j);}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00291}00291                     sum1Sq += v1.get(j) * v1.get(j);}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00292}00292                     sum2Sq += v2.get(j) * v2.get(j);}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00293}00293                 \}}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00294}00294                 \textcolor{keywordflow}{if} (sum1Sq != 0 || sum2Sq != 0) \{}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00295}00295                     dist += Math.pow(1 -\/ (sumProduct / (Math.sqrt(sum1Sq) * Math.sqrt(sum2Sq))), 2);}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00296}00296                 \} \textcolor{keywordflow}{else} dist += 1;}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00297}00297             \}}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00298}00298             ++aux;}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00299}00299         \}}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00300}00300         \textcolor{keywordflow}{if}(n1 != 0)}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00301}00301             \textcolor{keywordflow}{return} Math.sqrt(dist/n1);}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00302}00302         \textcolor{keywordflow}{else} \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00303}00303     \}}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00304}00304 \}}
+\DoxyCodeLine{\Hypertarget{_distance_items_8java_source_l00305}00305 }
+
+\end{DoxyCode}

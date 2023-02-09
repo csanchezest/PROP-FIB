@@ -1,0 +1,60 @@
+\hypertarget{classdominio_1_1controladores_1_1_my_distance_test_runner}{}\doxysection{Referencia de la Clase dominio.\+controladores.\+My\+Distance\+Test\+Runner}
+\label{classdominio_1_1controladores_1_1_my_distance_test_runner}\index{dominio.controladores.drivers.MyDistanceTestRunner@{dominio.controladores.drivers.MyDistanceTestRunner}}
+
+
+Clase para ejecutar todos los tests de j\+Unit.  
+
+
+\doxysubsection*{Métodos públicos estáticos}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{classdominio_1_1controladores_1_1_my_distance_test_runner_a4bd3e388b731d2c3e0be301f8df8c261}{main}} (String\mbox{[}$\,$\mbox{]} args)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Clase para ejecutar todos los tests de j\+Unit. 
+
+\begin{DoxyAuthor}{Autor}
+Cristian Sanchez Estape y Jordi Elgueta Serra 
+\end{DoxyAuthor}
+
+
+Definición en la línea \mbox{\hyperlink{_my_distance_test_runner_8java_source_l00019}{19}} del archivo \mbox{\hyperlink{_my_distance_test_runner_8java_source}{My\+Distance\+Test\+Runner.\+java}}.
+
+
+
+\doxysubsection{Documentación de las funciones miembro}
+\mbox{\Hypertarget{classdominio_1_1controladores_1_1_my_distance_test_runner_a4bd3e388b731d2c3e0be301f8df8c261}\label{classdominio_1_1controladores_1_1_my_distance_test_runner_a4bd3e388b731d2c3e0be301f8df8c261}} 
+\index{dominio.controladores.drivers.MyDistanceTestRunner@{dominio.controladores.drivers.MyDistanceTestRunner}!main@{main}}
+\index{main@{main}!dominio.controladores.drivers.MyDistanceTestRunner@{dominio.controladores.drivers.MyDistanceTestRunner}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily static void dominio.\+controladores.\+My\+Distance\+Test\+Runner.\+main (\begin{DoxyParamCaption}\item[{String\mbox{[}$\,$\mbox{]}}]{args }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{_my_distance_test_runner_8java_source_l00020}{20}} del archivo \mbox{\hyperlink{_my_distance_test_runner_8java_source}{My\+Distance\+Test\+Runner.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00020                                            \{}
+\DoxyCodeLine{00021         Result result = JUnitCore.runClasses(DistanceItemsUnitTest.class);}
+\DoxyCodeLine{00022         \textcolor{keywordflow}{if}(result.getFailures().size()>0) \{}
+\DoxyCodeLine{00023             \textcolor{keywordflow}{for} (Failure failure : result.getFailures()) \{}
+\DoxyCodeLine{00024                 System.out.println(failure.toString());}
+\DoxyCodeLine{00025             \}}
+\DoxyCodeLine{00026         \} \textcolor{keywordflow}{else} System.out.println(\textcolor{stringliteral}{"{}All tests succesful"{}});}
+\DoxyCodeLine{00027         result = JUnitCore.runClasses(DistanceUsersTest.class);}
+\DoxyCodeLine{00028         \textcolor{keywordflow}{if}(result.getFailures().size()>0) \{}
+\DoxyCodeLine{00029             \textcolor{keywordflow}{for} (Failure failure : result.getFailures()) \{}
+\DoxyCodeLine{00030                 System.out.println(failure.toString());}
+\DoxyCodeLine{00031             \}}
+\DoxyCodeLine{00032         \} \textcolor{keywordflow}{else} System.out.println(\textcolor{stringliteral}{"{}All tests succesful"{}});}
+\DoxyCodeLine{00033     \}}
+
+\end{DoxyCode}
+
+
+La documentación para esta clase fue generada a partir del siguiente fichero\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_my_distance_test_runner_8java}{My\+Distance\+Test\+Runner.\+java}}\end{DoxyCompactItemize}

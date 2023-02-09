@@ -1,0 +1,118 @@
+\hypertarget{_content_based_8java_source}{}\doxysection{Content\+Based.\+java}
+\label{_content_based_8java_source}\index{ContentBased.java@{ContentBased.java}}
+\mbox{\hyperlink{_content_based_8java}{Ir a la documentación de este archivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_content_based_8java_source_l00001}00001 }
+\DoxyCodeLine{\Hypertarget{_content_based_8java_source_l00006}00006 \textcolor{keyword}{package }dominio.clases;}
+\DoxyCodeLine{\Hypertarget{_content_based_8java_source_l00007}00007 }
+\DoxyCodeLine{\Hypertarget{_content_based_8java_source_l00008}00008 }
+\DoxyCodeLine{\Hypertarget{_content_based_8java_source_l00009}00009 \textcolor{keyword}{import} java.util.*;}
+\DoxyCodeLine{\Hypertarget{_content_based_8java_source_l00010}00010 }
+\DoxyCodeLine{\Hypertarget{_content_based_8java_source_l00017}\mbox{\hyperlink{classdominio_1_1clases_1_1_content_based}{00017}} \textcolor{keyword}{public} \textcolor{keyword}{class }\mbox{\hyperlink{classdominio_1_1clases_1_1_content_based}{ContentBased}} \textcolor{keyword}{extends} \mbox{\hyperlink{classdominio_1_1clases_1_1_algorisme}{Algorisme}} \{}
+\DoxyCodeLine{\Hypertarget{_content_based_8java_source_l00018}00018 }
+\DoxyCodeLine{\Hypertarget{_content_based_8java_source_l00022}\mbox{\hyperlink{classdominio_1_1clases_1_1_content_based_a81aee2992403d63aa5c1aeda9d55cb8b}{00022}}     \textcolor{keyword}{private} \textcolor{keyword}{static} \textcolor{keywordtype}{int} \mbox{\hyperlink{classdominio_1_1clases_1_1_content_based_a81aee2992403d63aa5c1aeda9d55cb8b}{k}};}
+\DoxyCodeLine{\Hypertarget{_content_based_8java_source_l00026}\mbox{\hyperlink{classdominio_1_1clases_1_1_content_based_ac79c5546f6c70b0f5fa5edcd529c38ca}{00026}}     \textcolor{keyword}{private} HashMap<Item,Double> \mbox{\hyperlink{classdominio_1_1clases_1_1_content_based_ac79c5546f6c70b0f5fa5edcd529c38ca}{ratedItems}};}
+\DoxyCodeLine{\Hypertarget{_content_based_8java_source_l00030}\mbox{\hyperlink{classdominio_1_1clases_1_1_content_based_af2be76954b698d6f016461ab3cee7516}{00030}}     \textcolor{keyword}{private} \textcolor{keywordtype}{double} \mbox{\hyperlink{classdominio_1_1clases_1_1_content_based_af2be76954b698d6f016461ab3cee7516}{maxRating}};}
+\DoxyCodeLine{\Hypertarget{_content_based_8java_source_l00031}00031 }
+\DoxyCodeLine{\Hypertarget{_content_based_8java_source_l00032}\mbox{\hyperlink{classdominio_1_1clases_1_1_content_based_afc91adb39d697089490568895be285af}{00032}}     \textcolor{keyword}{private} List<Boolean> \mbox{\hyperlink{classdominio_1_1clases_1_1_content_based_afc91adb39d697089490568895be285af}{intAt}};}
+\DoxyCodeLine{\Hypertarget{_content_based_8java_source_l00033}\mbox{\hyperlink{classdominio_1_1clases_1_1_content_based_a6340ab091377a0d056cfd20119370b2b}{00033}}     \textcolor{keyword}{private} List<Boolean> \mbox{\hyperlink{classdominio_1_1clases_1_1_content_based_a6340ab091377a0d056cfd20119370b2b}{doubAt}};}
+\DoxyCodeLine{\Hypertarget{_content_based_8java_source_l00034}\mbox{\hyperlink{classdominio_1_1clases_1_1_content_based_a73e0142249ad740b54efef71f2078fb0}{00034}}     \textcolor{keyword}{private} List<Boolean> \mbox{\hyperlink{classdominio_1_1clases_1_1_content_based_a73e0142249ad740b54efef71f2078fb0}{dateAt}};}
+\DoxyCodeLine{\Hypertarget{_content_based_8java_source_l00035}\mbox{\hyperlink{classdominio_1_1clases_1_1_content_based_afc96c69348d58366f6b3d868a073a01f}{00035}}     \textcolor{keyword}{private} List<Boolean> \mbox{\hyperlink{classdominio_1_1clases_1_1_content_based_afc96c69348d58366f6b3d868a073a01f}{bAt}};}
+\DoxyCodeLine{\Hypertarget{_content_based_8java_source_l00036}\mbox{\hyperlink{classdominio_1_1clases_1_1_content_based_a58fc6e587f94625f55819aafddd62141}{00036}}     \textcolor{keyword}{private} List<Boolean> \mbox{\hyperlink{classdominio_1_1clases_1_1_content_based_a58fc6e587f94625f55819aafddd62141}{catAt}};}
+\DoxyCodeLine{\Hypertarget{_content_based_8java_source_l00037}\mbox{\hyperlink{classdominio_1_1clases_1_1_content_based_a78dbed395df5211421b8ecd94cce1308}{00037}}     \textcolor{keyword}{private} List<Boolean> \mbox{\hyperlink{classdominio_1_1clases_1_1_content_based_a78dbed395df5211421b8ecd94cce1308}{ftAt}};}
+\DoxyCodeLine{\Hypertarget{_content_based_8java_source_l00038}00038 }
+\DoxyCodeLine{\Hypertarget{_content_based_8java_source_l00046}\mbox{\hyperlink{classdominio_1_1clases_1_1_content_based_a9377b3601359575e470216472884cd12}{00046}}     \textcolor{keyword}{public} \mbox{\hyperlink{classdominio_1_1clases_1_1_content_based_a9377b3601359575e470216472884cd12}{ContentBased}}(\mbox{\hyperlink{classdominio_1_1clases_1_1_usuari}{Usuari}} \mbox{\hyperlink{classdominio_1_1clases_1_1_algorisme_aee088dc070748fe366f2068b0a512981}{user}}, \mbox{\hyperlink{classdominio_1_1clases_1_1_cjt__items}{Cjt\_items}} \mbox{\hyperlink{classdominio_1_1clases_1_1_algorisme_a966a79e4751cb23c2f8a0537511cd94e}{dataset}}, HashMap<\mbox{\hyperlink{classdominio_1_1clases_1_1_item}{Item}}, ArrayList<Double>> \mbox{\hyperlink{classdominio_1_1clases_1_1_algorisme_a9c9055131097eeb0052bc6da89a59475}{ratings}}, \textcolor{keywordtype}{double} \mbox{\hyperlink{classdominio_1_1clases_1_1_content_based_af2be76954b698d6f016461ab3cee7516}{maxRating}},}
+\DoxyCodeLine{\Hypertarget{_content_based_8java_source_l00047}00047                         List<Boolean> \mbox{\hyperlink{classdominio_1_1clases_1_1_content_based_afc91adb39d697089490568895be285af}{intAt}}, List<Boolean> \mbox{\hyperlink{classdominio_1_1clases_1_1_content_based_a6340ab091377a0d056cfd20119370b2b}{doubAt}},List<Boolean> \mbox{\hyperlink{classdominio_1_1clases_1_1_content_based_a73e0142249ad740b54efef71f2078fb0}{dateAt}},List<Boolean> \mbox{\hyperlink{classdominio_1_1clases_1_1_content_based_afc96c69348d58366f6b3d868a073a01f}{bAt}},}
+\DoxyCodeLine{\Hypertarget{_content_based_8java_source_l00048}00048                         List<Boolean> \mbox{\hyperlink{classdominio_1_1clases_1_1_content_based_a58fc6e587f94625f55819aafddd62141}{catAt}},List<Boolean> \mbox{\hyperlink{classdominio_1_1clases_1_1_content_based_a78dbed395df5211421b8ecd94cce1308}{ftAt}}) \{}
+\DoxyCodeLine{\Hypertarget{_content_based_8java_source_l00049}00049         super(\mbox{\hyperlink{classdominio_1_1clases_1_1_algorisme_aee088dc070748fe366f2068b0a512981}{user}},\mbox{\hyperlink{classdominio_1_1clases_1_1_algorisme_a966a79e4751cb23c2f8a0537511cd94e}{dataset}}, \mbox{\hyperlink{classdominio_1_1clases_1_1_algorisme_a9c9055131097eeb0052bc6da89a59475}{ratings}});}
+\DoxyCodeLine{\Hypertarget{_content_based_8java_source_l00050}00050         \mbox{\hyperlink{classdominio_1_1clases_1_1_content_based_ac79c5546f6c70b0f5fa5edcd529c38ca}{ratedItems}} = \mbox{\hyperlink{classdominio_1_1clases_1_1_algorisme_aee088dc070748fe366f2068b0a512981}{user}}.\mbox{\hyperlink{classdominio_1_1clases_1_1_usuari_a5f2f72c56d755b0785792c34622f419d}{getRatedItems}}();}
+\DoxyCodeLine{\Hypertarget{_content_based_8java_source_l00051}00051         this.maxRating = \mbox{\hyperlink{classdominio_1_1clases_1_1_content_based_af2be76954b698d6f016461ab3cee7516}{maxRating}};}
+\DoxyCodeLine{\Hypertarget{_content_based_8java_source_l00052}00052         this.dateAt = \mbox{\hyperlink{classdominio_1_1clases_1_1_content_based_a73e0142249ad740b54efef71f2078fb0}{dateAt}};}
+\DoxyCodeLine{\Hypertarget{_content_based_8java_source_l00053}00053         this.bAt = \mbox{\hyperlink{classdominio_1_1clases_1_1_content_based_afc96c69348d58366f6b3d868a073a01f}{bAt}};}
+\DoxyCodeLine{\Hypertarget{_content_based_8java_source_l00054}00054         this.catAt = \mbox{\hyperlink{classdominio_1_1clases_1_1_content_based_a58fc6e587f94625f55819aafddd62141}{catAt}};}
+\DoxyCodeLine{\Hypertarget{_content_based_8java_source_l00055}00055         this.ftAt = \mbox{\hyperlink{classdominio_1_1clases_1_1_content_based_a78dbed395df5211421b8ecd94cce1308}{ftAt}};}
+\DoxyCodeLine{\Hypertarget{_content_based_8java_source_l00056}00056         this.intAt = \mbox{\hyperlink{classdominio_1_1clases_1_1_content_based_afc91adb39d697089490568895be285af}{intAt}};}
+\DoxyCodeLine{\Hypertarget{_content_based_8java_source_l00057}00057         this.doubAt = \mbox{\hyperlink{classdominio_1_1clases_1_1_content_based_a6340ab091377a0d056cfd20119370b2b}{doubAt}};}
+\DoxyCodeLine{\Hypertarget{_content_based_8java_source_l00058}00058     \}}
+\DoxyCodeLine{\Hypertarget{_content_based_8java_source_l00059}00059 }
+\DoxyCodeLine{\Hypertarget{_content_based_8java_source_l00064}\mbox{\hyperlink{classdominio_1_1clases_1_1_content_based_a672f34661a60a5596ae6d64f7e30f641}{00064}}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classdominio_1_1clases_1_1_content_based_a672f34661a60a5596ae6d64f7e30f641}{setK}} (\textcolor{keywordtype}{int} \mbox{\hyperlink{classdominio_1_1clases_1_1_content_based_a81aee2992403d63aa5c1aeda9d55cb8b}{k}}) \{}
+\DoxyCodeLine{\Hypertarget{_content_based_8java_source_l00065}00065         this.k = \mbox{\hyperlink{classdominio_1_1clases_1_1_content_based_a81aee2992403d63aa5c1aeda9d55cb8b}{k}};}
+\DoxyCodeLine{\Hypertarget{_content_based_8java_source_l00066}00066     \}}
+\DoxyCodeLine{\Hypertarget{_content_based_8java_source_l00067}00067 }
+\DoxyCodeLine{\Hypertarget{_content_based_8java_source_l00073}\mbox{\hyperlink{classdominio_1_1clases_1_1_content_based_a85943724cd710fd0ab3d14159604589a}{00073}}     \textcolor{keyword}{public} HashMap<Item, Double> \mbox{\hyperlink{classdominio_1_1clases_1_1_content_based_a85943724cd710fd0ab3d14159604589a}{recommended\_items}}() \{}
+\DoxyCodeLine{\Hypertarget{_content_based_8java_source_l00074}00074         HashMap<Item, Double> predictions = \textcolor{keyword}{new} HashMap<>();}
+\DoxyCodeLine{\Hypertarget{_content_based_8java_source_l00075}00075         \mbox{\hyperlink{classdominio_1_1clases_1_1_item}{Item}} minimum = \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{_content_based_8java_source_l00076}00076         \textcolor{keywordflow}{for} (\mbox{\hyperlink{classdominio_1_1clases_1_1_item}{Item}} item : \mbox{\hyperlink{classdominio_1_1clases_1_1_content_based_ac79c5546f6c70b0f5fa5edcd529c38ca}{ratedItems}}.keySet()) \{}
+\DoxyCodeLine{\Hypertarget{_content_based_8java_source_l00077}00077             \textcolor{keywordtype}{double} rating = \mbox{\hyperlink{classdominio_1_1clases_1_1_content_based_ac79c5546f6c70b0f5fa5edcd529c38ca}{ratedItems}}.get(item);}
+\DoxyCodeLine{\Hypertarget{_content_based_8java_source_l00078}00078             HashMap<Item, Double> knn = \mbox{\hyperlink{classdominio_1_1clases_1_1_content_based_a75b4c034a8b60bc1c267d700787c11ad}{get\_KNN}}(item, rating);}
+\DoxyCodeLine{\Hypertarget{_content_based_8java_source_l00079}00079             \textcolor{keywordflow}{for} (\mbox{\hyperlink{classdominio_1_1clases_1_1_item}{Item}} key : knn.keySet()) \{}
+\DoxyCodeLine{\Hypertarget{_content_based_8java_source_l00080}00080                 \textcolor{keywordflow}{if} (minimum == \textcolor{keyword}{null}) \{}
+\DoxyCodeLine{\Hypertarget{_content_based_8java_source_l00081}00081                     minimum = key;}
+\DoxyCodeLine{\Hypertarget{_content_based_8java_source_l00082}00082                     predictions.put(key, knn.get(key));}
+\DoxyCodeLine{\Hypertarget{_content_based_8java_source_l00083}00083                 \}}
+\DoxyCodeLine{\Hypertarget{_content_based_8java_source_l00084}00084                 \textcolor{comment}{//If item already in the map take the greatest rating prediction}}
+\DoxyCodeLine{\Hypertarget{_content_based_8java_source_l00085}00085                 \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (predictions.containsKey(key)) \{}
+\DoxyCodeLine{\Hypertarget{_content_based_8java_source_l00086}00086                     \textcolor{keywordflow}{if} (predictions.get(key) < knn.get(key))}
+\DoxyCodeLine{\Hypertarget{_content_based_8java_source_l00087}00087                         predictions.replace(key, knn.get(key));}
+\DoxyCodeLine{\Hypertarget{_content_based_8java_source_l00088}00088                 \}}
+\DoxyCodeLine{\Hypertarget{_content_based_8java_source_l00089}00089                 \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (predictions.size() < \mbox{\hyperlink{classdominio_1_1clases_1_1_content_based_a81aee2992403d63aa5c1aeda9d55cb8b}{k}}) \{}
+\DoxyCodeLine{\Hypertarget{_content_based_8java_source_l00090}00090                     \textcolor{keywordflow}{if} (predictions.get(minimum) > knn.get(key))}
+\DoxyCodeLine{\Hypertarget{_content_based_8java_source_l00091}00091                         minimum = key;}
+\DoxyCodeLine{\Hypertarget{_content_based_8java_source_l00092}00092                     predictions.put(key, knn.get(key));}
+\DoxyCodeLine{\Hypertarget{_content_based_8java_source_l00093}00093                 \}}
+\DoxyCodeLine{\Hypertarget{_content_based_8java_source_l00094}00094                 \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (predictions.get(minimum) < knn.get(key)) \{}
+\DoxyCodeLine{\Hypertarget{_content_based_8java_source_l00095}00095                     predictions.remove(minimum);}
+\DoxyCodeLine{\Hypertarget{_content_based_8java_source_l00096}00096                     predictions.put(key, knn.get(key));}
+\DoxyCodeLine{\Hypertarget{_content_based_8java_source_l00097}00097                     minimum = Collections.min(predictions.entrySet(), Map.Entry.comparingByValue()).getKey();}
+\DoxyCodeLine{\Hypertarget{_content_based_8java_source_l00098}00098                 \}}
+\DoxyCodeLine{\Hypertarget{_content_based_8java_source_l00099}00099             \}}
+\DoxyCodeLine{\Hypertarget{_content_based_8java_source_l00100}00100         \}}
+\DoxyCodeLine{\Hypertarget{_content_based_8java_source_l00101}00101         \textcolor{keywordflow}{return} predictions;}
+\DoxyCodeLine{\Hypertarget{_content_based_8java_source_l00102}00102     \}}
+\DoxyCodeLine{\Hypertarget{_content_based_8java_source_l00103}00103 }
+\DoxyCodeLine{\Hypertarget{_content_based_8java_source_l00114}\mbox{\hyperlink{classdominio_1_1clases_1_1_content_based_a75b4c034a8b60bc1c267d700787c11ad}{00114}}     \textcolor{keyword}{private} HashMap<Item, Double> \mbox{\hyperlink{classdominio_1_1clases_1_1_content_based_a75b4c034a8b60bc1c267d700787c11ad}{get\_KNN}}(\mbox{\hyperlink{classdominio_1_1clases_1_1_item}{Item}} a, \textcolor{keywordtype}{double} rating) \{}
+\DoxyCodeLine{\Hypertarget{_content_based_8java_source_l00115}00115         SortedMap<Double, List<Item>> maxPred = \textcolor{keyword}{new} TreeMap<>();}
+\DoxyCodeLine{\Hypertarget{_content_based_8java_source_l00116}00116         HashMap<String,Item> data = super.dataset.getItems();}
+\DoxyCodeLine{\Hypertarget{_content_based_8java_source_l00117}00117         \textcolor{keywordflow}{for} (\mbox{\hyperlink{classdominio_1_1clases_1_1_item}{Item}} dItem : data.values()) \{}
+\DoxyCodeLine{\Hypertarget{_content_based_8java_source_l00118}00118             \textcolor{keywordflow}{if} (!\mbox{\hyperlink{classdominio_1_1clases_1_1_content_based_ac79c5546f6c70b0f5fa5edcd529c38ca}{ratedItems}}.containsKey(dItem)) \{}
+\DoxyCodeLine{\Hypertarget{_content_based_8java_source_l00119}00119                 \mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items}{DistanceItems}} d = \textcolor{keyword}{new} \mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items}{DistanceItems}}(a, dItem, \mbox{\hyperlink{classdominio_1_1clases_1_1_algorisme_a966a79e4751cb23c2f8a0537511cd94e}{dataset}}.\mbox{\hyperlink{classdominio_1_1clases_1_1_cjt__items_a45da1fed3bd533038cac61d85d6c2bca}{getMaxValIntegers}}().values(), \mbox{\hyperlink{classdominio_1_1clases_1_1_algorisme_a966a79e4751cb23c2f8a0537511cd94e}{dataset}}.\mbox{\hyperlink{classdominio_1_1clases_1_1_cjt__items_a21af1ffbfe2964edf597b979c0731a94}{getMinValIntegers}}().values(),}
+\DoxyCodeLine{\Hypertarget{_content_based_8java_source_l00120}00120                         \mbox{\hyperlink{classdominio_1_1clases_1_1_algorisme_a966a79e4751cb23c2f8a0537511cd94e}{dataset}}.\mbox{\hyperlink{classdominio_1_1clases_1_1_cjt__items_ae850e287ca41c2994f877b1e00b53d85}{getMaxValDoubles}}().values(), \mbox{\hyperlink{classdominio_1_1clases_1_1_algorisme_a966a79e4751cb23c2f8a0537511cd94e}{dataset}}.\mbox{\hyperlink{classdominio_1_1clases_1_1_cjt__items_a8f50eb1411d7e506234ae0674be726ea}{getMinValDoubles}}().values(), \mbox{\hyperlink{classdominio_1_1clases_1_1_algorisme_a966a79e4751cb23c2f8a0537511cd94e}{dataset}}.\mbox{\hyperlink{classdominio_1_1clases_1_1_cjt__items_a5c36693e47cffb9da13c1aaeeb191df0}{getMaxDates}}().values(),}
+\DoxyCodeLine{\Hypertarget{_content_based_8java_source_l00121}00121                         \mbox{\hyperlink{classdominio_1_1clases_1_1_algorisme_a966a79e4751cb23c2f8a0537511cd94e}{dataset}}.\mbox{\hyperlink{classdominio_1_1clases_1_1_cjt__items_a71ed2c367bb59ec18a6e4b3a430a4e3b}{getMinDates}}().values(), \mbox{\hyperlink{classdominio_1_1clases_1_1_content_based_afc91adb39d697089490568895be285af}{intAt}}, \mbox{\hyperlink{classdominio_1_1clases_1_1_content_based_a6340ab091377a0d056cfd20119370b2b}{doubAt}}, \mbox{\hyperlink{classdominio_1_1clases_1_1_content_based_a73e0142249ad740b54efef71f2078fb0}{dateAt}}, \mbox{\hyperlink{classdominio_1_1clases_1_1_content_based_afc96c69348d58366f6b3d868a073a01f}{bAt}}, \mbox{\hyperlink{classdominio_1_1clases_1_1_content_based_a58fc6e587f94625f55819aafddd62141}{catAt}}, \mbox{\hyperlink{classdominio_1_1clases_1_1_content_based_a78dbed395df5211421b8ecd94cce1308}{ftAt}});}
+\DoxyCodeLine{\Hypertarget{_content_based_8java_source_l00122}00122                 \textcolor{keywordtype}{double} prediction = (1 -\/ d.\mbox{\hyperlink{classdominio_1_1clases_1_1_distance_items_aca356202d8536db9ef6b55cfd44b1a4e}{get\_distance}}()) * \mbox{\hyperlink{classdominio_1_1clases_1_1_content_based_af2be76954b698d6f016461ab3cee7516}{maxRating}} -\/ (\mbox{\hyperlink{classdominio_1_1clases_1_1_content_based_af2be76954b698d6f016461ab3cee7516}{maxRating}} -\/ rating) / (2*\mbox{\hyperlink{classdominio_1_1clases_1_1_content_based_af2be76954b698d6f016461ab3cee7516}{maxRating}});}
+\DoxyCodeLine{\Hypertarget{_content_based_8java_source_l00123}00123                 \textcolor{keywordflow}{if} (super.ratings.containsKey((dItem))) \{}
+\DoxyCodeLine{\Hypertarget{_content_based_8java_source_l00124}00124                     \textcolor{keywordtype}{double} meanRating = 0;}
+\DoxyCodeLine{\Hypertarget{_content_based_8java_source_l00125}00125                     ArrayList<Double> stars = super.ratings.get(dItem);}
+\DoxyCodeLine{\Hypertarget{_content_based_8java_source_l00126}00126                     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{double} rate : stars)}
+\DoxyCodeLine{\Hypertarget{_content_based_8java_source_l00127}00127                         meanRating += rate;}
+\DoxyCodeLine{\Hypertarget{_content_based_8java_source_l00128}00128                     meanRating /= stars.size();}
+\DoxyCodeLine{\Hypertarget{_content_based_8java_source_l00129}00129                     prediction -\/= (\mbox{\hyperlink{classdominio_1_1clases_1_1_content_based_af2be76954b698d6f016461ab3cee7516}{maxRating}} -\/ meanRating) / (2*\mbox{\hyperlink{classdominio_1_1clases_1_1_content_based_af2be76954b698d6f016461ab3cee7516}{maxRating}});}
+\DoxyCodeLine{\Hypertarget{_content_based_8java_source_l00130}00130 }
+\DoxyCodeLine{\Hypertarget{_content_based_8java_source_l00131}00131                 \}}
+\DoxyCodeLine{\Hypertarget{_content_based_8java_source_l00132}00132                 \textcolor{keywordflow}{if} (prediction < 0) prediction = 0.0;}
+\DoxyCodeLine{\Hypertarget{_content_based_8java_source_l00133}00133                 \textcolor{keywordflow}{if}(maxPred.containsKey(prediction)) \{}
+\DoxyCodeLine{\Hypertarget{_content_based_8java_source_l00134}00134                     maxPred.get(prediction).add(dItem);}
+\DoxyCodeLine{\Hypertarget{_content_based_8java_source_l00135}00135                 \}}
+\DoxyCodeLine{\Hypertarget{_content_based_8java_source_l00136}00136                 \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{\Hypertarget{_content_based_8java_source_l00137}00137                     List<Item> value = \textcolor{keyword}{new} ArrayList<>(List.of(dItem));}
+\DoxyCodeLine{\Hypertarget{_content_based_8java_source_l00138}00138                     \textcolor{keywordflow}{if} (maxPred.size() < \mbox{\hyperlink{classdominio_1_1clases_1_1_content_based_a81aee2992403d63aa5c1aeda9d55cb8b}{k}})}
+\DoxyCodeLine{\Hypertarget{_content_based_8java_source_l00139}00139                         maxPred.put(prediction, value);}
+\DoxyCodeLine{\Hypertarget{_content_based_8java_source_l00140}00140                     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (maxPred.firstKey() < prediction) \{}
+\DoxyCodeLine{\Hypertarget{_content_based_8java_source_l00141}00141                         maxPred.remove(maxPred.firstKey());}
+\DoxyCodeLine{\Hypertarget{_content_based_8java_source_l00142}00142                         maxPred.put(prediction, value);}
+\DoxyCodeLine{\Hypertarget{_content_based_8java_source_l00143}00143                     \}}
+\DoxyCodeLine{\Hypertarget{_content_based_8java_source_l00144}00144                 \}}
+\DoxyCodeLine{\Hypertarget{_content_based_8java_source_l00145}00145             \}}
+\DoxyCodeLine{\Hypertarget{_content_based_8java_source_l00146}00146         \}}
+\DoxyCodeLine{\Hypertarget{_content_based_8java_source_l00147}00147         HashMap<Item, Double> knn = \textcolor{keyword}{new} HashMap<>();}
+\DoxyCodeLine{\Hypertarget{_content_based_8java_source_l00148}00148         \textcolor{keywordtype}{int} itemCounter = 0;}
+\DoxyCodeLine{\Hypertarget{_content_based_8java_source_l00149}00149         \textcolor{keywordflow}{for} (Double d : maxPred.keySet()) \{}
+\DoxyCodeLine{\Hypertarget{_content_based_8java_source_l00150}00150             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < maxPred.get(d).size() \&\& itemCounter < \mbox{\hyperlink{classdominio_1_1clases_1_1_content_based_a81aee2992403d63aa5c1aeda9d55cb8b}{k}}; ++i, ++itemCounter) \{}
+\DoxyCodeLine{\Hypertarget{_content_based_8java_source_l00151}00151                 knn.put(maxPred.get(d).get(i), d);}
+\DoxyCodeLine{\Hypertarget{_content_based_8java_source_l00152}00152             \}}
+\DoxyCodeLine{\Hypertarget{_content_based_8java_source_l00153}00153             \textcolor{keywordflow}{if} (itemCounter == \mbox{\hyperlink{classdominio_1_1clases_1_1_content_based_a81aee2992403d63aa5c1aeda9d55cb8b}{k}}) \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_content_based_8java_source_l00154}00154         \}}
+\DoxyCodeLine{\Hypertarget{_content_based_8java_source_l00155}00155         \textcolor{keywordflow}{return} knn;}
+\DoxyCodeLine{\Hypertarget{_content_based_8java_source_l00156}00156     \}}
+\DoxyCodeLine{\Hypertarget{_content_based_8java_source_l00157}00157 \}}
+
+\end{DoxyCode}

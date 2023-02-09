@@ -1,0 +1,284 @@
+\hypertarget{classdominio_1_1controladores_1_1_ctrl_gestio_usuaris}{}\doxysection{Referencia de la Clase dominio.\+controladores.\+Ctrl\+Gestio\+Usuaris}
+\label{classdominio_1_1controladores_1_1_ctrl_gestio_usuaris}\index{dominio.controladores.CtrlGestioUsuaris@{dominio.controladores.CtrlGestioUsuaris}}
+
+
+Controlador que gestiona toda la parte de gestion de usuarios.  
+
+
+\doxysubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classdominio_1_1controladores_1_1_ctrl_gestio_usuaris_a4918a978e9c61f5e4dd4ad608e41a301}{Ctrl\+Gestio\+Usuaris}} ()
+\begin{DoxyCompactList}\small\item\em Metodo constructor del controlador de gestion de usuarios. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classdominio_1_1controladores_1_1_ctrl_gestio_usuaris_aaa119678b0dc10c1f1f9edcae95a2703}{set\+Users}} (List$<$ \mbox{\hyperlink{classdominio_1_1clases_1_1_usuari}{Usuari}} $>$ \mbox{\hyperlink{classdominio_1_1controladores_1_1_ctrl_gestio_usuaris_a05f1521131e1fcf09b8842ddbc5384e7}{users}})
+\item 
+Hash\+Map$<$ String, Double $>$ \mbox{\hyperlink{classdominio_1_1controladores_1_1_ctrl_gestio_usuaris_a73a7fbe8d94caa8b112c0fe4ef9ae1f7}{get\+Rated\+Items}} (int id)
+\item 
+void \mbox{\hyperlink{classdominio_1_1controladores_1_1_ctrl_gestio_usuaris_ab072b13309e77c51739964886d26a8a9}{set\+User}} (\mbox{\hyperlink{classdominio_1_1clases_1_1_usuari}{Usuari}} \mbox{\hyperlink{classdominio_1_1controladores_1_1_ctrl_gestio_usuaris_a3f20184edb608c74c561f586c8b4d65b}{u}})
+\item 
+void \mbox{\hyperlink{classdominio_1_1controladores_1_1_ctrl_gestio_usuaris_a950974fc5cc0348d6dec859eec74ab27}{set\+User\+Id}} (int id)
+\item 
+\mbox{\hyperlink{classdominio_1_1clases_1_1_usuari}{Usuari}} \mbox{\hyperlink{classdominio_1_1controladores_1_1_ctrl_gestio_usuaris_a6580b494cccaf54cdcceff461589b6ff}{get\+Usuari}} ()
+\item 
+int \mbox{\hyperlink{classdominio_1_1controladores_1_1_ctrl_gestio_usuaris_a1ea1c51fa82fe70f636eb97d6311ffe2}{get\+User\+Id}} ()
+\item 
+void \mbox{\hyperlink{classdominio_1_1controladores_1_1_ctrl_gestio_usuaris_a83c46c6d57f4b3f6fa3aa37e9d055181}{search\+User}} (String text)
+\item 
+boolean \mbox{\hyperlink{classdominio_1_1controladores_1_1_ctrl_gestio_usuaris_ab03d620f033477d6bb928226d11f33b1}{existe\+Usuario}} (int id)
+\begin{DoxyCompactList}\small\item\em Metodo que comprueba si existe un usuario en el dataset cargado. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Atributos privados}
+\begin{DoxyCompactItemize}
+\item 
+String \mbox{\hyperlink{classdominio_1_1controladores_1_1_ctrl_gestio_usuaris_ab7f06c34e3e6cf92c96e419f3990f6fb}{user}}
+\begin{DoxyCompactList}\small\item\em String que almacena el identificador del usuario logeado en el sistema. \end{DoxyCompactList}\item 
+List$<$ \mbox{\hyperlink{classdominio_1_1clases_1_1_usuari}{Usuari}} $>$ \mbox{\hyperlink{classdominio_1_1controladores_1_1_ctrl_gestio_usuaris_a05f1521131e1fcf09b8842ddbc5384e7}{users}}
+\begin{DoxyCompactList}\small\item\em Lista con todos los usuarios presentes en el dataset cargado en el sistema. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classdominio_1_1clases_1_1_usuari}{Usuari}} \mbox{\hyperlink{classdominio_1_1controladores_1_1_ctrl_gestio_usuaris_a3f20184edb608c74c561f586c8b4d65b}{u}}
+\begin{DoxyCompactList}\small\item\em Objeto que almacena la informacion asociada al usuario logeado en el sistema. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classdominio_1_1controladores_1_1_ctrl_gestio_usuaris_a13076b71af8a47fb6c4e9c01bd8dd841}{user\+Id}}
+\begin{DoxyCompactList}\small\item\em Entero que almacena el identificador asociado al usuario logeado en el sistema. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Controlador que gestiona toda la parte de gestion de usuarios. 
+
+Definición en la línea \mbox{\hyperlink{_ctrl_gestio_usuaris_8java_source_l00016}{16}} del archivo \mbox{\hyperlink{_ctrl_gestio_usuaris_8java_source}{Ctrl\+Gestio\+Usuaris.\+java}}.
+
+
+
+\doxysubsection{Documentación del constructor y destructor}
+\mbox{\Hypertarget{classdominio_1_1controladores_1_1_ctrl_gestio_usuaris_a4918a978e9c61f5e4dd4ad608e41a301}\label{classdominio_1_1controladores_1_1_ctrl_gestio_usuaris_a4918a978e9c61f5e4dd4ad608e41a301}} 
+\index{dominio.controladores.CtrlGestioUsuaris@{dominio.controladores.CtrlGestioUsuaris}!CtrlGestioUsuaris@{CtrlGestioUsuaris}}
+\index{CtrlGestioUsuaris@{CtrlGestioUsuaris}!dominio.controladores.CtrlGestioUsuaris@{dominio.controladores.CtrlGestioUsuaris}}
+\doxysubsubsection{\texorpdfstring{CtrlGestioUsuaris()}{CtrlGestioUsuaris()}}
+{\footnotesize\ttfamily dominio.\+controladores.\+Ctrl\+Gestio\+Usuaris.\+Ctrl\+Gestio\+Usuaris (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Metodo constructor del controlador de gestion de usuarios. 
+
+
+
+Definición en la línea \mbox{\hyperlink{_ctrl_gestio_usuaris_8java_source_l00045}{45}} del archivo \mbox{\hyperlink{_ctrl_gestio_usuaris_8java_source}{Ctrl\+Gestio\+Usuaris.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00045                                \{}
+\DoxyCodeLine{00046         \mbox{\hyperlink{classdominio_1_1controladores_1_1_ctrl_gestio_usuaris_ab7f06c34e3e6cf92c96e419f3990f6fb}{user}} = \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{00047         \mbox{\hyperlink{classdominio_1_1controladores_1_1_ctrl_gestio_usuaris_a13076b71af8a47fb6c4e9c01bd8dd841}{userId}} = -\/1;}
+\DoxyCodeLine{00048         \mbox{\hyperlink{classdominio_1_1controladores_1_1_ctrl_gestio_usuaris_a3f20184edb608c74c561f586c8b4d65b}{u}} = \textcolor{keyword}{null};}
+\DoxyCodeLine{00049     \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Documentación de las funciones miembro}
+\mbox{\Hypertarget{classdominio_1_1controladores_1_1_ctrl_gestio_usuaris_aaa119678b0dc10c1f1f9edcae95a2703}\label{classdominio_1_1controladores_1_1_ctrl_gestio_usuaris_aaa119678b0dc10c1f1f9edcae95a2703}} 
+\index{dominio.controladores.CtrlGestioUsuaris@{dominio.controladores.CtrlGestioUsuaris}!setUsers@{setUsers}}
+\index{setUsers@{setUsers}!dominio.controladores.CtrlGestioUsuaris@{dominio.controladores.CtrlGestioUsuaris}}
+\doxysubsubsection{\texorpdfstring{setUsers()}{setUsers()}}
+{\footnotesize\ttfamily void dominio.\+controladores.\+Ctrl\+Gestio\+Usuaris.\+set\+Users (\begin{DoxyParamCaption}\item[{List$<$ \mbox{\hyperlink{classdominio_1_1clases_1_1_usuari}{Usuari}} $>$}]{users }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea \mbox{\hyperlink{_ctrl_gestio_usuaris_8java_source_l00051}{51}} del archivo \mbox{\hyperlink{_ctrl_gestio_usuaris_8java_source}{Ctrl\+Gestio\+Usuaris.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00051                                              \{}
+\DoxyCodeLine{00052         this.\mbox{\hyperlink{classdominio_1_1controladores_1_1_ctrl_gestio_usuaris_a05f1521131e1fcf09b8842ddbc5384e7}{users}} = \textcolor{keyword}{new} ArrayList<>(\mbox{\hyperlink{classdominio_1_1controladores_1_1_ctrl_gestio_usuaris_a05f1521131e1fcf09b8842ddbc5384e7}{users}});}
+\DoxyCodeLine{00053     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdominio_1_1controladores_1_1_ctrl_gestio_usuaris_a73a7fbe8d94caa8b112c0fe4ef9ae1f7}\label{classdominio_1_1controladores_1_1_ctrl_gestio_usuaris_a73a7fbe8d94caa8b112c0fe4ef9ae1f7}} 
+\index{dominio.controladores.CtrlGestioUsuaris@{dominio.controladores.CtrlGestioUsuaris}!getRatedItems@{getRatedItems}}
+\index{getRatedItems@{getRatedItems}!dominio.controladores.CtrlGestioUsuaris@{dominio.controladores.CtrlGestioUsuaris}}
+\doxysubsubsection{\texorpdfstring{getRatedItems()}{getRatedItems()}}
+{\footnotesize\ttfamily Hash\+Map$<$ String, Double $>$ dominio.\+controladores.\+Ctrl\+Gestio\+Usuaris.\+get\+Rated\+Items (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea \mbox{\hyperlink{_ctrl_gestio_usuaris_8java_source_l00055}{55}} del archivo \mbox{\hyperlink{_ctrl_gestio_usuaris_8java_source}{Ctrl\+Gestio\+Usuaris.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00055                                                          \{}
+\DoxyCodeLine{00056         Usuari aux = \textcolor{keyword}{new} Usuari(\textcolor{keywordtype}{id});}
+\DoxyCodeLine{00057         \textcolor{keywordflow}{for} (Usuari us : \mbox{\hyperlink{classdominio_1_1controladores_1_1_ctrl_gestio_usuaris_a05f1521131e1fcf09b8842ddbc5384e7}{users}}) \{}
+\DoxyCodeLine{00058             \textcolor{keywordflow}{if} (us.getUserId() == \textcolor{keywordtype}{id}) aux = us;}
+\DoxyCodeLine{00059         \}}
+\DoxyCodeLine{00060         HashMap<String, Double> \mbox{\hyperlink{classdominio_1_1controladores_1_1_ctrl_gestio_usuaris_a3f20184edb608c74c561f586c8b4d65b}{u}} = \textcolor{keyword}{new} HashMap<>();}
+\DoxyCodeLine{00061         HashMap<Item,Double> rated = aux.getRatedItems();}
+\DoxyCodeLine{00062         \textcolor{keywordflow}{for} (Item i: rated.keySet()) \mbox{\hyperlink{classdominio_1_1controladores_1_1_ctrl_gestio_usuaris_a3f20184edb608c74c561f586c8b4d65b}{u}}.put(i.getId(),rated.get(i));}
+\DoxyCodeLine{00063         \textcolor{keywordflow}{return} \mbox{\hyperlink{classdominio_1_1controladores_1_1_ctrl_gestio_usuaris_a3f20184edb608c74c561f586c8b4d65b}{u}};}
+\DoxyCodeLine{00064     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdominio_1_1controladores_1_1_ctrl_gestio_usuaris_ab072b13309e77c51739964886d26a8a9}\label{classdominio_1_1controladores_1_1_ctrl_gestio_usuaris_ab072b13309e77c51739964886d26a8a9}} 
+\index{dominio.controladores.CtrlGestioUsuaris@{dominio.controladores.CtrlGestioUsuaris}!setUser@{setUser}}
+\index{setUser@{setUser}!dominio.controladores.CtrlGestioUsuaris@{dominio.controladores.CtrlGestioUsuaris}}
+\doxysubsubsection{\texorpdfstring{setUser()}{setUser()}}
+{\footnotesize\ttfamily void dominio.\+controladores.\+Ctrl\+Gestio\+Usuaris.\+set\+User (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classdominio_1_1clases_1_1_usuari}{Usuari}}}]{u }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea \mbox{\hyperlink{_ctrl_gestio_usuaris_8java_source_l00066}{66}} del archivo \mbox{\hyperlink{_ctrl_gestio_usuaris_8java_source}{Ctrl\+Gestio\+Usuaris.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00066 \{ this.\mbox{\hyperlink{classdominio_1_1controladores_1_1_ctrl_gestio_usuaris_a3f20184edb608c74c561f586c8b4d65b}{u}}=\mbox{\hyperlink{classdominio_1_1controladores_1_1_ctrl_gestio_usuaris_a3f20184edb608c74c561f586c8b4d65b}{u}}; \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdominio_1_1controladores_1_1_ctrl_gestio_usuaris_a950974fc5cc0348d6dec859eec74ab27}\label{classdominio_1_1controladores_1_1_ctrl_gestio_usuaris_a950974fc5cc0348d6dec859eec74ab27}} 
+\index{dominio.controladores.CtrlGestioUsuaris@{dominio.controladores.CtrlGestioUsuaris}!setUserId@{setUserId}}
+\index{setUserId@{setUserId}!dominio.controladores.CtrlGestioUsuaris@{dominio.controladores.CtrlGestioUsuaris}}
+\doxysubsubsection{\texorpdfstring{setUserId()}{setUserId()}}
+{\footnotesize\ttfamily void dominio.\+controladores.\+Ctrl\+Gestio\+Usuaris.\+set\+User\+Id (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea \mbox{\hyperlink{_ctrl_gestio_usuaris_8java_source_l00068}{68}} del archivo \mbox{\hyperlink{_ctrl_gestio_usuaris_8java_source}{Ctrl\+Gestio\+Usuaris.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00068 \{ \mbox{\hyperlink{classdominio_1_1controladores_1_1_ctrl_gestio_usuaris_a13076b71af8a47fb6c4e9c01bd8dd841}{userId}}=id; \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdominio_1_1controladores_1_1_ctrl_gestio_usuaris_a6580b494cccaf54cdcceff461589b6ff}\label{classdominio_1_1controladores_1_1_ctrl_gestio_usuaris_a6580b494cccaf54cdcceff461589b6ff}} 
+\index{dominio.controladores.CtrlGestioUsuaris@{dominio.controladores.CtrlGestioUsuaris}!getUsuari@{getUsuari}}
+\index{getUsuari@{getUsuari}!dominio.controladores.CtrlGestioUsuaris@{dominio.controladores.CtrlGestioUsuaris}}
+\doxysubsubsection{\texorpdfstring{getUsuari()}{getUsuari()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classdominio_1_1clases_1_1_usuari}{Usuari}} dominio.\+controladores.\+Ctrl\+Gestio\+Usuaris.\+get\+Usuari (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea \mbox{\hyperlink{_ctrl_gestio_usuaris_8java_source_l00070}{70}} del archivo \mbox{\hyperlink{_ctrl_gestio_usuaris_8java_source}{Ctrl\+Gestio\+Usuaris.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00070 \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{classdominio_1_1controladores_1_1_ctrl_gestio_usuaris_a3f20184edb608c74c561f586c8b4d65b}{u}}; \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdominio_1_1controladores_1_1_ctrl_gestio_usuaris_a1ea1c51fa82fe70f636eb97d6311ffe2}\label{classdominio_1_1controladores_1_1_ctrl_gestio_usuaris_a1ea1c51fa82fe70f636eb97d6311ffe2}} 
+\index{dominio.controladores.CtrlGestioUsuaris@{dominio.controladores.CtrlGestioUsuaris}!getUserId@{getUserId}}
+\index{getUserId@{getUserId}!dominio.controladores.CtrlGestioUsuaris@{dominio.controladores.CtrlGestioUsuaris}}
+\doxysubsubsection{\texorpdfstring{getUserId()}{getUserId()}}
+{\footnotesize\ttfamily int dominio.\+controladores.\+Ctrl\+Gestio\+Usuaris.\+get\+User\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea \mbox{\hyperlink{_ctrl_gestio_usuaris_8java_source_l00072}{72}} del archivo \mbox{\hyperlink{_ctrl_gestio_usuaris_8java_source}{Ctrl\+Gestio\+Usuaris.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00072 \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{classdominio_1_1controladores_1_1_ctrl_gestio_usuaris_a13076b71af8a47fb6c4e9c01bd8dd841}{userId}}; \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdominio_1_1controladores_1_1_ctrl_gestio_usuaris_a83c46c6d57f4b3f6fa3aa37e9d055181}\label{classdominio_1_1controladores_1_1_ctrl_gestio_usuaris_a83c46c6d57f4b3f6fa3aa37e9d055181}} 
+\index{dominio.controladores.CtrlGestioUsuaris@{dominio.controladores.CtrlGestioUsuaris}!searchUser@{searchUser}}
+\index{searchUser@{searchUser}!dominio.controladores.CtrlGestioUsuaris@{dominio.controladores.CtrlGestioUsuaris}}
+\doxysubsubsection{\texorpdfstring{searchUser()}{searchUser()}}
+{\footnotesize\ttfamily void dominio.\+controladores.\+Ctrl\+Gestio\+Usuaris.\+search\+User (\begin{DoxyParamCaption}\item[{String}]{text }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea \mbox{\hyperlink{_ctrl_gestio_usuaris_8java_source_l00074}{74}} del archivo \mbox{\hyperlink{_ctrl_gestio_usuaris_8java_source}{Ctrl\+Gestio\+Usuaris.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00074 \{ \mbox{\hyperlink{classdominio_1_1controladores_1_1_ctrl_gestio_usuaris_ab7f06c34e3e6cf92c96e419f3990f6fb}{user}} = text; \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdominio_1_1controladores_1_1_ctrl_gestio_usuaris_ab03d620f033477d6bb928226d11f33b1}\label{classdominio_1_1controladores_1_1_ctrl_gestio_usuaris_ab03d620f033477d6bb928226d11f33b1}} 
+\index{dominio.controladores.CtrlGestioUsuaris@{dominio.controladores.CtrlGestioUsuaris}!existeUsuario@{existeUsuario}}
+\index{existeUsuario@{existeUsuario}!dominio.controladores.CtrlGestioUsuaris@{dominio.controladores.CtrlGestioUsuaris}}
+\doxysubsubsection{\texorpdfstring{existeUsuario()}{existeUsuario()}}
+{\footnotesize\ttfamily boolean dominio.\+controladores.\+Ctrl\+Gestio\+Usuaris.\+existe\+Usuario (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})}
+
+
+
+Metodo que comprueba si existe un usuario en el dataset cargado. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em id} & Entero con el identificador del usuario de interes \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+Booleano cierto o falso segun la condicion aqui descrita 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{_ctrl_gestio_usuaris_8java_source_l00082}{82}} del archivo \mbox{\hyperlink{_ctrl_gestio_usuaris_8java_source}{Ctrl\+Gestio\+Usuaris.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00082                                          \{}
+\DoxyCodeLine{00083         \textcolor{keywordflow}{return} \mbox{\hyperlink{classdominio_1_1controladores_1_1_ctrl_gestio_usuaris_a05f1521131e1fcf09b8842ddbc5384e7}{users}}.contains(\textcolor{keyword}{new} Usuari(\textcolor{keywordtype}{id}));}
+\DoxyCodeLine{00084     \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Documentación de los datos miembro}
+\mbox{\Hypertarget{classdominio_1_1controladores_1_1_ctrl_gestio_usuaris_ab7f06c34e3e6cf92c96e419f3990f6fb}\label{classdominio_1_1controladores_1_1_ctrl_gestio_usuaris_ab7f06c34e3e6cf92c96e419f3990f6fb}} 
+\index{dominio.controladores.CtrlGestioUsuaris@{dominio.controladores.CtrlGestioUsuaris}!user@{user}}
+\index{user@{user}!dominio.controladores.CtrlGestioUsuaris@{dominio.controladores.CtrlGestioUsuaris}}
+\doxysubsubsection{\texorpdfstring{user}{user}}
+{\footnotesize\ttfamily String dominio.\+controladores.\+Ctrl\+Gestio\+Usuaris.\+user\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+String que almacena el identificador del usuario logeado en el sistema. 
+
+
+
+Definición en la línea \mbox{\hyperlink{_ctrl_gestio_usuaris_8java_source_l00022}{22}} del archivo \mbox{\hyperlink{_ctrl_gestio_usuaris_8java_source}{Ctrl\+Gestio\+Usuaris.\+java}}.
+
+\mbox{\Hypertarget{classdominio_1_1controladores_1_1_ctrl_gestio_usuaris_a05f1521131e1fcf09b8842ddbc5384e7}\label{classdominio_1_1controladores_1_1_ctrl_gestio_usuaris_a05f1521131e1fcf09b8842ddbc5384e7}} 
+\index{dominio.controladores.CtrlGestioUsuaris@{dominio.controladores.CtrlGestioUsuaris}!users@{users}}
+\index{users@{users}!dominio.controladores.CtrlGestioUsuaris@{dominio.controladores.CtrlGestioUsuaris}}
+\doxysubsubsection{\texorpdfstring{users}{users}}
+{\footnotesize\ttfamily List$<$\mbox{\hyperlink{classdominio_1_1clases_1_1_usuari}{Usuari}}$>$ dominio.\+controladores.\+Ctrl\+Gestio\+Usuaris.\+users\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Lista con todos los usuarios presentes en el dataset cargado en el sistema. 
+
+
+
+Definición en la línea \mbox{\hyperlink{_ctrl_gestio_usuaris_8java_source_l00028}{28}} del archivo \mbox{\hyperlink{_ctrl_gestio_usuaris_8java_source}{Ctrl\+Gestio\+Usuaris.\+java}}.
+
+\mbox{\Hypertarget{classdominio_1_1controladores_1_1_ctrl_gestio_usuaris_a3f20184edb608c74c561f586c8b4d65b}\label{classdominio_1_1controladores_1_1_ctrl_gestio_usuaris_a3f20184edb608c74c561f586c8b4d65b}} 
+\index{dominio.controladores.CtrlGestioUsuaris@{dominio.controladores.CtrlGestioUsuaris}!u@{u}}
+\index{u@{u}!dominio.controladores.CtrlGestioUsuaris@{dominio.controladores.CtrlGestioUsuaris}}
+\doxysubsubsection{\texorpdfstring{u}{u}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classdominio_1_1clases_1_1_usuari}{Usuari}} dominio.\+controladores.\+Ctrl\+Gestio\+Usuaris.\+u\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Objeto que almacena la informacion asociada al usuario logeado en el sistema. 
+
+
+
+Definición en la línea \mbox{\hyperlink{_ctrl_gestio_usuaris_8java_source_l00033}{33}} del archivo \mbox{\hyperlink{_ctrl_gestio_usuaris_8java_source}{Ctrl\+Gestio\+Usuaris.\+java}}.
+
+\mbox{\Hypertarget{classdominio_1_1controladores_1_1_ctrl_gestio_usuaris_a13076b71af8a47fb6c4e9c01bd8dd841}\label{classdominio_1_1controladores_1_1_ctrl_gestio_usuaris_a13076b71af8a47fb6c4e9c01bd8dd841}} 
+\index{dominio.controladores.CtrlGestioUsuaris@{dominio.controladores.CtrlGestioUsuaris}!userId@{userId}}
+\index{userId@{userId}!dominio.controladores.CtrlGestioUsuaris@{dominio.controladores.CtrlGestioUsuaris}}
+\doxysubsubsection{\texorpdfstring{userId}{userId}}
+{\footnotesize\ttfamily int dominio.\+controladores.\+Ctrl\+Gestio\+Usuaris.\+user\+Id\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Entero que almacena el identificador asociado al usuario logeado en el sistema. 
+
+
+
+Definición en la línea \mbox{\hyperlink{_ctrl_gestio_usuaris_8java_source_l00039}{39}} del archivo \mbox{\hyperlink{_ctrl_gestio_usuaris_8java_source}{Ctrl\+Gestio\+Usuaris.\+java}}.
+
+
+
+La documentación para esta clase fue generada a partir del siguiente fichero\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_ctrl_gestio_usuaris_8java}{Ctrl\+Gestio\+Usuaris.\+java}}\end{DoxyCompactItemize}

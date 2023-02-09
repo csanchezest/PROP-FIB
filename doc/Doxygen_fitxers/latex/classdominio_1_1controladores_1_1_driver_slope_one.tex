@@ -1,0 +1,106 @@
+\hypertarget{classdominio_1_1controladores_1_1_driver_slope_one}{}\doxysection{Referencia de la Clase dominio.\+controladores.\+Driver\+Slope\+One}
+\label{classdominio_1_1controladores_1_1_driver_slope_one}\index{dominio.controladores.drivers.DriverSlopeOne@{dominio.controladores.drivers.DriverSlopeOne}}
+
+
+Driver representativo de un ejemplo de ejecucion del algoritmo de prediccion Slope\+One.  
+
+
+\doxysubsection*{Métodos públicos estáticos}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{classdominio_1_1controladores_1_1_driver_slope_one_aac68c34835f2d605cd3d2d885047cbd5}{main}} (String\mbox{[}$\,$\mbox{]} args)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Driver representativo de un ejemplo de ejecucion del algoritmo de prediccion Slope\+One. 
+
+\begin{DoxyAuthor}{Autor}
+Cristian Sanchez Estape 
+\end{DoxyAuthor}
+
+
+Definición en la línea \mbox{\hyperlink{_driver_slope_one_8java_source_l00018}{18}} del archivo \mbox{\hyperlink{_driver_slope_one_8java_source}{Driver\+Slope\+One.\+java}}.
+
+
+
+\doxysubsection{Documentación de las funciones miembro}
+\mbox{\Hypertarget{classdominio_1_1controladores_1_1_driver_slope_one_aac68c34835f2d605cd3d2d885047cbd5}\label{classdominio_1_1controladores_1_1_driver_slope_one_aac68c34835f2d605cd3d2d885047cbd5}} 
+\index{dominio.controladores.drivers.DriverSlopeOne@{dominio.controladores.drivers.DriverSlopeOne}!main@{main}}
+\index{main@{main}!dominio.controladores.drivers.DriverSlopeOne@{dominio.controladores.drivers.DriverSlopeOne}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily static void dominio.\+controladores.\+Driver\+Slope\+One.\+main (\begin{DoxyParamCaption}\item[{String\mbox{[}$\,$\mbox{]}}]{args }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{_driver_slope_one_8java_source_l00020}{20}} del archivo \mbox{\hyperlink{_driver_slope_one_8java_source}{Driver\+Slope\+One.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00020                                            \{}
+\DoxyCodeLine{00021         System.out.println(\textcolor{stringliteral}{"{}Test 1"{}});}
+\DoxyCodeLine{00022         HashMap<Item, Double> valoracions = \textcolor{keyword}{new} HashMap<>();}
+\DoxyCodeLine{00023         valoracions.put(\textcolor{keyword}{new} \mbox{\hyperlink{classdominio_1_1clases_1_1_item}{Item}}(\textcolor{stringliteral}{"{}232"{}}), 2.);}
+\DoxyCodeLine{00024         valoracions.put(\textcolor{keyword}{new} \mbox{\hyperlink{classdominio_1_1clases_1_1_item}{Item}}(\textcolor{stringliteral}{"{}233"{}}), 3.);}
+\DoxyCodeLine{00025         List<Usuari> users = \textcolor{keyword}{new} LinkedList<>();}
+\DoxyCodeLine{00026         \mbox{\hyperlink{classdominio_1_1clases_1_1_usuari}{Usuari}} u = \textcolor{keyword}{new} \mbox{\hyperlink{classdominio_1_1clases_1_1_usuari}{Usuari}}(1);}
+\DoxyCodeLine{00027         u.\mbox{\hyperlink{classdominio_1_1clases_1_1_usuari_af2dba3454343b9615ebaacc71848e595}{setRatedItems}}(\textcolor{keyword}{new} HashMap<>(valoracions));}
+\DoxyCodeLine{00028         users.add(u);}
+\DoxyCodeLine{00029         u = \textcolor{keyword}{new} \mbox{\hyperlink{classdominio_1_1clases_1_1_usuari}{Usuari}}(2);}
+\DoxyCodeLine{00030         valoracions.clear();}
+\DoxyCodeLine{00031         valoracions.put(\textcolor{keyword}{new} \mbox{\hyperlink{classdominio_1_1clases_1_1_item}{Item}}(\textcolor{stringliteral}{"{}232"{}}), 2.);}
+\DoxyCodeLine{00032         users.add(u);}
+\DoxyCodeLine{00033         u.\mbox{\hyperlink{classdominio_1_1clases_1_1_usuari_af2dba3454343b9615ebaacc71848e595}{setRatedItems}}(\textcolor{keyword}{new} HashMap<>(valoracions));}
+\DoxyCodeLine{00034         \mbox{\hyperlink{classdominio_1_1clases_1_1_slope_one}{SlopeOne}} sp = \textcolor{keyword}{new} \mbox{\hyperlink{classdominio_1_1clases_1_1_slope_one}{SlopeOne}}();}
+\DoxyCodeLine{00035         sp.\mbox{\hyperlink{classdominio_1_1clases_1_1_slope_one_a30e9ff9b4901d657847fa305c6911300}{slopeOne}}(users, u, 5.);}
+\DoxyCodeLine{00036         HashMap<Item, Double> preds = sp.\mbox{\hyperlink{classdominio_1_1clases_1_1_slope_one_a667af6b9487f6b406d5b7b0a32f9d7b3}{getPredictions}}();}
+\DoxyCodeLine{00037         \mbox{\hyperlink{classdominio_1_1clases_1_1_algorisme}{Algorisme}}.\mbox{\hyperlink{classdominio_1_1clases_1_1_algorisme_aca5be8bf5ae18ceaa31e09fea41db9e9}{print}}(preds);}
+\DoxyCodeLine{00038         System.out.println(\textcolor{stringliteral}{"{}-\/-\/-\/-\/-\/-\/"{}});}
+\DoxyCodeLine{00039         System.out.println(\textcolor{stringliteral}{"{}Test 2"{}});}
+\DoxyCodeLine{00040         \mbox{\hyperlink{classdominio_1_1clases_1_1_item}{Item}} a = \textcolor{keyword}{new} \mbox{\hyperlink{classdominio_1_1clases_1_1_item}{Item}}(\textcolor{stringliteral}{"{}1"{}}), b = \textcolor{keyword}{new} \mbox{\hyperlink{classdominio_1_1clases_1_1_item}{Item}}(\textcolor{stringliteral}{"{}2"{}}), c = \textcolor{keyword}{new} \mbox{\hyperlink{classdominio_1_1clases_1_1_item}{Item}}(\textcolor{stringliteral}{"{}3"{}});}
+\DoxyCodeLine{00041         \mbox{\hyperlink{classdominio_1_1clases_1_1_usuari}{Usuari}} f = \textcolor{keyword}{new} \mbox{\hyperlink{classdominio_1_1clases_1_1_usuari}{Usuari}}(1), g = \textcolor{keyword}{new} \mbox{\hyperlink{classdominio_1_1clases_1_1_usuari}{Usuari}}(2), h = \textcolor{keyword}{new} \mbox{\hyperlink{classdominio_1_1clases_1_1_usuari}{Usuari}}(3);}
+\DoxyCodeLine{00042         valoracions.clear();}
+\DoxyCodeLine{00043         valoracions.put(a, 5.);}
+\DoxyCodeLine{00044         valoracions.put(b, 3.);}
+\DoxyCodeLine{00045         valoracions.put(c, 2.);}
+\DoxyCodeLine{00046         f.\mbox{\hyperlink{classdominio_1_1clases_1_1_usuari_af2dba3454343b9615ebaacc71848e595}{setRatedItems}}(\textcolor{keyword}{new} HashMap<>(valoracions));}
+\DoxyCodeLine{00047         valoracions.clear();}
+\DoxyCodeLine{00048         valoracions.put(a, 3.);}
+\DoxyCodeLine{00049         valoracions.put(b, 4.);}
+\DoxyCodeLine{00050         g.setRatedItems(\textcolor{keyword}{new} HashMap<>(valoracions));}
+\DoxyCodeLine{00051         valoracions.clear();}
+\DoxyCodeLine{00052         valoracions.put(b, 2.);}
+\DoxyCodeLine{00053         valoracions.put(c, 5.);}
+\DoxyCodeLine{00054         h.setRatedItems(\textcolor{keyword}{new} HashMap<>(valoracions));}
+\DoxyCodeLine{00055         valoracions.clear();}
+\DoxyCodeLine{00056         users.clear();}
+\DoxyCodeLine{00057         users = Arrays.asList(f, g, h);}
+\DoxyCodeLine{00058         sp = \textcolor{keyword}{new} \mbox{\hyperlink{classdominio_1_1clases_1_1_slope_one}{SlopeOne}}();}
+\DoxyCodeLine{00059         sp.\mbox{\hyperlink{classdominio_1_1clases_1_1_slope_one_a30e9ff9b4901d657847fa305c6911300}{slopeOne}}(users, g,5.);}
+\DoxyCodeLine{00060         \mbox{\hyperlink{classdominio_1_1clases_1_1_algorisme}{Algorisme}}.\mbox{\hyperlink{classdominio_1_1clases_1_1_algorisme_aca5be8bf5ae18ceaa31e09fea41db9e9}{print}}(sp.\mbox{\hyperlink{classdominio_1_1clases_1_1_slope_one_a667af6b9487f6b406d5b7b0a32f9d7b3}{getPredictions}}());}
+\DoxyCodeLine{00061         sp = \textcolor{keyword}{new} \mbox{\hyperlink{classdominio_1_1clases_1_1_slope_one}{SlopeOne}}();}
+\DoxyCodeLine{00062         System.out.println(\textcolor{stringliteral}{"{}-\/-\/"{}});}
+\DoxyCodeLine{00063         sp.\mbox{\hyperlink{classdominio_1_1clases_1_1_slope_one_a30e9ff9b4901d657847fa305c6911300}{slopeOne}}(users, h,5.);}
+\DoxyCodeLine{00064         \mbox{\hyperlink{classdominio_1_1clases_1_1_algorisme}{Algorisme}}.\mbox{\hyperlink{classdominio_1_1clases_1_1_algorisme_aca5be8bf5ae18ceaa31e09fea41db9e9}{print}}(sp.\mbox{\hyperlink{classdominio_1_1clases_1_1_slope_one_a667af6b9487f6b406d5b7b0a32f9d7b3}{getPredictions}}());}
+\DoxyCodeLine{00065         System.out.println(\textcolor{stringliteral}{"{}-\/-\/-\/-\/-\/-\/"{}});}
+\DoxyCodeLine{00066         System.out.println(\textcolor{stringliteral}{"{}Test 3"{}});}
+\DoxyCodeLine{00067         String path = \textcolor{stringliteral}{"{}/persistencia/data/datasets/Movielens/6750/"{}};}
+\DoxyCodeLine{00068         \mbox{\hyperlink{classdominio_1_1clases_1_1_cjt__items}{Cjt\_items}} dataset = \textcolor{keyword}{new} \mbox{\hyperlink{classdominio_1_1clases_1_1_cjt__items}{Cjt\_items}}(path + \textcolor{stringliteral}{"{}items.csv"{}}, \textcolor{stringliteral}{"{}"{}});}
+\DoxyCodeLine{00069         Valoracio ratings = \textcolor{keyword}{new} Valoracio(path + \textcolor{stringliteral}{"{}ratings.db.csv"{}}, dataset);}
+\DoxyCodeLine{00070         Valoracio ratingsKnown = \textcolor{keyword}{new} Valoracio(path + \textcolor{stringliteral}{"{}ratings.test.known.csv"{}}, dataset);}
+\DoxyCodeLine{00071         users = ratings.getUsers();}
+\DoxyCodeLine{00072         \textcolor{keywordflow}{for} (\mbox{\hyperlink{classdominio_1_1clases_1_1_usuari}{Usuari}} us : ratingsKnown.getUsers()) \{}
+\DoxyCodeLine{00073             sp = \textcolor{keyword}{new} \mbox{\hyperlink{classdominio_1_1clases_1_1_slope_one}{SlopeOne}}();}
+\DoxyCodeLine{00074             System.out.println(\textcolor{stringliteral}{"{}Los ítems que recomendamos para el usuario "{}} + us.getUserId() + \textcolor{stringliteral}{"{} son: "{}});}
+\DoxyCodeLine{00075             sp.\mbox{\hyperlink{classdominio_1_1clases_1_1_slope_one_a30e9ff9b4901d657847fa305c6911300}{slopeOne}}(users, us,5.);}
+\DoxyCodeLine{00076             preds = sp.\mbox{\hyperlink{classdominio_1_1clases_1_1_slope_one_a667af6b9487f6b406d5b7b0a32f9d7b3}{getPredictions}}();}
+\DoxyCodeLine{00077             \mbox{\hyperlink{classdominio_1_1clases_1_1_algorisme}{Algorisme}}.\mbox{\hyperlink{classdominio_1_1clases_1_1_algorisme_aca5be8bf5ae18ceaa31e09fea41db9e9}{print}}(preds,10);}
+\DoxyCodeLine{00078         \}}
+\DoxyCodeLine{00079     \}}
+
+\end{DoxyCode}
+
+
+La documentación para esta clase fue generada a partir del siguiente fichero\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_driver_slope_one_8java}{Driver\+Slope\+One.\+java}}\end{DoxyCompactItemize}

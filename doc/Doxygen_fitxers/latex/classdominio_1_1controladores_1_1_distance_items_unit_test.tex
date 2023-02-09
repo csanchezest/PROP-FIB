@@ -1,0 +1,100 @@
+\hypertarget{classdominio_1_1controladores_1_1_distance_items_unit_test}{}\doxysection{Referencia de la Clase dominio.\+controladores.\+Distance\+Items\+Unit\+Test}
+\label{classdominio_1_1controladores_1_1_distance_items_unit_test}\index{dominio.controladores.DistanceItemsUnitTest@{dominio.controladores.DistanceItemsUnitTest}}
+
+
+JUnit para testear la funcionalidad de distancia entre atributos de texto libre implementada en la clase \mbox{\hyperlink{classdominio_1_1controladores_1_1_distance_items_unit_test}{Distance\+Items\+Unit\+Test}}.  
+
+
+\doxysubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classdominio_1_1controladores_1_1_distance_items_unit_test_afb4058ff580a6bb533f77cb07640e45e}{dist\+Between\+Text\+Test}} ()
+\begin{DoxyCompactList}\small\item\em Metodo que testea la funcion de calculo de la distancia entre dos variables de tipo texto libre. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+JUnit para testear la funcionalidad de distancia entre atributos de texto libre implementada en la clase \mbox{\hyperlink{classdominio_1_1controladores_1_1_distance_items_unit_test}{Distance\+Items\+Unit\+Test}}. 
+
+\begin{DoxyAuthor}{Autor}
+Jordi Elgueta Serra 
+\end{DoxyAuthor}
+
+
+Definición en la línea \mbox{\hyperlink{_distance_items_unit_test_8java_source_l00026}{26}} del archivo \mbox{\hyperlink{_distance_items_unit_test_8java_source}{Distance\+Items\+Unit\+Test.\+java}}.
+
+
+
+\doxysubsection{Documentación de las funciones miembro}
+\mbox{\Hypertarget{classdominio_1_1controladores_1_1_distance_items_unit_test_afb4058ff580a6bb533f77cb07640e45e}\label{classdominio_1_1controladores_1_1_distance_items_unit_test_afb4058ff580a6bb533f77cb07640e45e}} 
+\index{dominio.controladores.DistanceItemsUnitTest@{dominio.controladores.DistanceItemsUnitTest}!distBetweenTextTest@{distBetweenTextTest}}
+\index{distBetweenTextTest@{distBetweenTextTest}!dominio.controladores.DistanceItemsUnitTest@{dominio.controladores.DistanceItemsUnitTest}}
+\doxysubsubsection{\texorpdfstring{distBetweenTextTest()}{distBetweenTextTest()}}
+{\footnotesize\ttfamily void dominio.\+controladores.\+Distance\+Items\+Unit\+Test.\+dist\+Between\+Text\+Test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Metodo que testea la funcion de calculo de la distancia entre dos variables de tipo texto libre. 
+
+
+
+Definición en la línea \mbox{\hyperlink{_distance_items_unit_test_8java_source_l00033}{33}} del archivo \mbox{\hyperlink{_distance_items_unit_test_8java_source}{Distance\+Items\+Unit\+Test.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00033                                       \{}
+\DoxyCodeLine{00034         DecimalFormatSymbols decimalSymbols = DecimalFormatSymbols.getInstance();}
+\DoxyCodeLine{00035         decimalSymbols.setDecimalSeparator(\textcolor{charliteral}{'.'});}
+\DoxyCodeLine{00036         Item a = \textcolor{keyword}{new} Item(\textcolor{stringliteral}{"{}123"{}});}
+\DoxyCodeLine{00037         Item b = \textcolor{keyword}{new} Item(\textcolor{stringliteral}{"{}456"{}});}
+\DoxyCodeLine{00038         HashMap<String, Integer> m1 = \textcolor{keyword}{new} HashMap<>();}
+\DoxyCodeLine{00039         HashMap<String, Integer> m2 = \textcolor{keyword}{new} HashMap<>();}
+\DoxyCodeLine{00040         HashMap<String, Integer> m3 = \textcolor{keyword}{new} HashMap<>();}
+\DoxyCodeLine{00041         HashMap<String, Integer> m4 = \textcolor{keyword}{new} HashMap<>();}
+\DoxyCodeLine{00042         m1.put(\textcolor{stringliteral}{"{}love"{}}, 1);}
+\DoxyCodeLine{00043         m1.put(\textcolor{stringliteral}{"{}jacket"{}}, 1);}
+\DoxyCodeLine{00044         m1.put(\textcolor{stringliteral}{"{}blue"{}}, 1);}
+\DoxyCodeLine{00045         m2.put(\textcolor{stringliteral}{"{}walking"{}}, 1);}
+\DoxyCodeLine{00046         m2.put(\textcolor{stringliteral}{"{}road"{}}, 1);}
+\DoxyCodeLine{00047         m2.put(\textcolor{stringliteral}{"{}saw"{}}, 1);}
+\DoxyCodeLine{00048         m2.put(\textcolor{stringliteral}{"{}lion"{}}, 1);}
+\DoxyCodeLine{00049         m2.put(\textcolor{stringliteral}{"{}amazed"{}}, 1);}
+\DoxyCodeLine{00050         m2.put(\textcolor{stringliteral}{"{}beauty"{}}, 1);}
+\DoxyCodeLine{00051         m3.put(\textcolor{stringliteral}{"{}love"{}}, 1);}
+\DoxyCodeLine{00052         m3.put(\textcolor{stringliteral}{"{}Paris"{}}, 1);}
+\DoxyCodeLine{00053         m4.put(\textcolor{stringliteral}{"{}movie"{}}, 2);}
+\DoxyCodeLine{00054         m4.put(\textcolor{stringliteral}{"{}lion"{}}, 1);}
+\DoxyCodeLine{00055         m4.put(\textcolor{stringliteral}{"{}pride"{}}, 1);}
+\DoxyCodeLine{00056         m4.put(\textcolor{stringliteral}{"{}boss"{}}, 1);}
+\DoxyCodeLine{00057         m4.put(\textcolor{stringliteral}{"{}dream"{}}, 1);}
+\DoxyCodeLine{00058         m4.put(\textcolor{stringliteral}{"{}saw"{}}, 1);}
+\DoxyCodeLine{00059         m4.put(\textcolor{stringliteral}{"{}future"{}}, 1);}
+\DoxyCodeLine{00060         m4.put(\textcolor{stringliteral}{"{}animals"{}}, 1);}
+\DoxyCodeLine{00061         m4.put(\textcolor{stringliteral}{"{}sad"{}}, 1);}
+\DoxyCodeLine{00062         LinkedHashMap<Integer, HashMap<String, Integer>> aux1 = \textcolor{keyword}{new} LinkedHashMap<>();}
+\DoxyCodeLine{00063         aux1.put(1, m1);}
+\DoxyCodeLine{00064         aux1.put(2, m2);}
+\DoxyCodeLine{00065         LinkedHashMap<Integer, HashMap<String, Integer>> aux2 = \textcolor{keyword}{new} LinkedHashMap<>();}
+\DoxyCodeLine{00066         aux2.put(1, m3);}
+\DoxyCodeLine{00067         aux2.put(2, m4);}
+\DoxyCodeLine{00068         a.setWordFrequencies(aux1);}
+\DoxyCodeLine{00069         b.setWordFrequencies(aux2);}
+\DoxyCodeLine{00070         DistanceItems di = \textcolor{keyword}{new} DistanceItems(a, b, \textcolor{keyword}{new} ArrayList<>(), \textcolor{keyword}{new} ArrayList<>(), \textcolor{keyword}{new} ArrayList<>(),}
+\DoxyCodeLine{00071                 \textcolor{keyword}{new} ArrayList<>(), \textcolor{keyword}{new} ArrayList<>(), \textcolor{keyword}{new} ArrayList<>(),\textcolor{keyword}{new} ArrayList<>(), \textcolor{keyword}{new} ArrayList<>(), \textcolor{keyword}{new} ArrayList<>(),}
+\DoxyCodeLine{00072                 \textcolor{keyword}{new} ArrayList<>(),\textcolor{keyword}{new} ArrayList<>(),\textcolor{keyword}{new} ArrayList<>(List.of(\textcolor{keyword}{true},\textcolor{keyword}{true})));}
+\DoxyCodeLine{00073         Method TextDist;}
+\DoxyCodeLine{00074         \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{00075             TextDist = di.getClass().getDeclaredMethod(\textcolor{stringliteral}{"{}distBetweenString"{}});}
+\DoxyCodeLine{00076             TextDist.setAccessible(\textcolor{keyword}{true});}
+\DoxyCodeLine{00077             assertEquals(\textcolor{stringliteral}{"{}0.683"{}}, \textcolor{keyword}{new} DecimalFormat(\textcolor{stringliteral}{"{}0.000"{}}, decimalSymbols).format(TextDist.invoke(di)));}
+\DoxyCodeLine{00078         \} \textcolor{keywordflow}{catch} (Exception e) \{}
+\DoxyCodeLine{00079             e.printStackTrace();}
+\DoxyCodeLine{00080             System.exit(-\/1);}
+\DoxyCodeLine{00081         \}}
+\DoxyCodeLine{00082     \}}
+
+\end{DoxyCode}
+
+
+La documentación para esta clase fue generada a partir del siguiente fichero\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_distance_items_unit_test_8java}{Distance\+Items\+Unit\+Test.\+java}}\end{DoxyCompactItemize}

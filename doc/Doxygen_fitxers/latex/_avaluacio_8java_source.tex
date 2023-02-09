@@ -1,0 +1,58 @@
+\hypertarget{_avaluacio_8java_source}{}\doxysection{Avaluacio.\+java}
+\label{_avaluacio_8java_source}\index{Avaluacio.java@{Avaluacio.java}}
+\mbox{\hyperlink{_avaluacio_8java}{Ir a la documentación de este archivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_avaluacio_8java_source_l00001}00001 }
+\DoxyCodeLine{\Hypertarget{_avaluacio_8java_source_l00005}00005 \textcolor{keyword}{package }dominio.clases;}
+\DoxyCodeLine{\Hypertarget{_avaluacio_8java_source_l00006}00006 }
+\DoxyCodeLine{\Hypertarget{_avaluacio_8java_source_l00007}00007 \textcolor{keyword}{import} java.util.*;}
+\DoxyCodeLine{\Hypertarget{_avaluacio_8java_source_l00008}00008 }
+\DoxyCodeLine{\Hypertarget{_avaluacio_8java_source_l00015}\mbox{\hyperlink{classdominio_1_1clases_1_1_avaluacio}{00015}} \textcolor{keyword}{public} \textcolor{keyword}{class }\mbox{\hyperlink{classdominio_1_1clases_1_1_avaluacio}{Avaluacio}} \{}
+\DoxyCodeLine{\Hypertarget{_avaluacio_8java_source_l00016}00016 }
+\DoxyCodeLine{\Hypertarget{_avaluacio_8java_source_l00023}\mbox{\hyperlink{classdominio_1_1clases_1_1_avaluacio_a6097e0538c2f66438f1d09f8f6585cec}{00023}}     \textcolor{keyword}{public} \textcolor{keyword}{static} String \mbox{\hyperlink{classdominio_1_1clases_1_1_avaluacio_a6097e0538c2f66438f1d09f8f6585cec}{DCG}}(\mbox{\hyperlink{classdominio_1_1clases_1_1_usuari}{Usuari}} LR, \mbox{\hyperlink{classdominio_1_1clases_1_1_usuari}{Usuari}} LT) \{}
+\DoxyCodeLine{\Hypertarget{_avaluacio_8java_source_l00024}00024         HashMap<Item, Double> copyLR = LR.\mbox{\hyperlink{classdominio_1_1clases_1_1_usuari_a5f2f72c56d755b0785792c34622f419d}{getRatedItems}}();}
+\DoxyCodeLine{\Hypertarget{_avaluacio_8java_source_l00025}00025         HashMap<Item, Double> copyLT = LT.\mbox{\hyperlink{classdominio_1_1clases_1_1_usuari_a5f2f72c56d755b0785792c34622f419d}{getRatedItems}}();}
+\DoxyCodeLine{\Hypertarget{_avaluacio_8java_source_l00026}00026         HashMap<Item, Double> valueHolder = \textcolor{keyword}{new} HashMap<>(copyLR);}
+\DoxyCodeLine{\Hypertarget{_avaluacio_8java_source_l00027}00027         \textcolor{keywordtype}{double} \mbox{\hyperlink{classdominio_1_1clases_1_1_avaluacio_a6097e0538c2f66438f1d09f8f6585cec}{DCG}}, iDCG;}
+\DoxyCodeLine{\Hypertarget{_avaluacio_8java_source_l00028}00028         iDCG = \mbox{\hyperlink{classdominio_1_1clases_1_1_avaluacio_a10c705e9b4bb3d549f7a47ccd918c7e9}{computeIdealDCG}}(\mbox{\hyperlink{classdominio_1_1clases_1_1_avaluacio_a6d7fb87ff65af489726e43e652c6effb}{sortByValue}}(valueHolder));}
+\DoxyCodeLine{\Hypertarget{_avaluacio_8java_source_l00029}00029         \textcolor{keywordtype}{int} i;}
+\DoxyCodeLine{\Hypertarget{_avaluacio_8java_source_l00030}00030         i = 1;}
+\DoxyCodeLine{\Hypertarget{_avaluacio_8java_source_l00031}00031         \mbox{\hyperlink{classdominio_1_1clases_1_1_avaluacio_a6097e0538c2f66438f1d09f8f6585cec}{DCG}} = 0.;}
+\DoxyCodeLine{\Hypertarget{_avaluacio_8java_source_l00032}00032         \textcolor{keywordflow}{for} (\mbox{\hyperlink{classdominio_1_1clases_1_1_item}{Item}} item : copyLR.keySet()) \{}
+\DoxyCodeLine{\Hypertarget{_avaluacio_8java_source_l00033}00033             \textcolor{keywordflow}{if} (copyLT.get(item) != \textcolor{keyword}{null}) \{}
+\DoxyCodeLine{\Hypertarget{_avaluacio_8java_source_l00034}00034                 \mbox{\hyperlink{classdominio_1_1clases_1_1_avaluacio_a6097e0538c2f66438f1d09f8f6585cec}{DCG}} += (Math.pow(2, copyLR.get(item)) -\/ 1) / \mbox{\hyperlink{classdominio_1_1clases_1_1_avaluacio_a6c3beb045b7f416a0494eac6127db2bf}{log}}(i + 1, 2);}
+\DoxyCodeLine{\Hypertarget{_avaluacio_8java_source_l00035}00035             \} \textcolor{keywordflow}{else} \mbox{\hyperlink{classdominio_1_1clases_1_1_avaluacio_a6097e0538c2f66438f1d09f8f6585cec}{DCG}} += (Math.pow(2, 0) -\/ 1) / \mbox{\hyperlink{classdominio_1_1clases_1_1_avaluacio_a6c3beb045b7f416a0494eac6127db2bf}{log}}(i + 1, 2);}
+\DoxyCodeLine{\Hypertarget{_avaluacio_8java_source_l00036}00036             i++;}
+\DoxyCodeLine{\Hypertarget{_avaluacio_8java_source_l00037}00037         \}}
+\DoxyCodeLine{\Hypertarget{_avaluacio_8java_source_l00038}00038         \textcolor{keywordflow}{return} \textcolor{stringliteral}{"{}"{}} + \mbox{\hyperlink{classdominio_1_1clases_1_1_avaluacio_a6097e0538c2f66438f1d09f8f6585cec}{DCG}}/iDCG;}
+\DoxyCodeLine{\Hypertarget{_avaluacio_8java_source_l00039}00039     \}}
+\DoxyCodeLine{\Hypertarget{_avaluacio_8java_source_l00040}00040 }
+\DoxyCodeLine{\Hypertarget{_avaluacio_8java_source_l00047}\mbox{\hyperlink{classdominio_1_1clases_1_1_avaluacio_a10c705e9b4bb3d549f7a47ccd918c7e9}{00047}}     \textcolor{keyword}{private} \textcolor{keyword}{static} \textcolor{keywordtype}{double} \mbox{\hyperlink{classdominio_1_1clases_1_1_avaluacio_a10c705e9b4bb3d549f7a47ccd918c7e9}{computeIdealDCG}}(HashMap<Item, Double> LR) \{}
+\DoxyCodeLine{\Hypertarget{_avaluacio_8java_source_l00048}00048         \textcolor{keywordtype}{int} i = 1;}
+\DoxyCodeLine{\Hypertarget{_avaluacio_8java_source_l00049}00049         \textcolor{keywordtype}{double} iDCG = 0.;}
+\DoxyCodeLine{\Hypertarget{_avaluacio_8java_source_l00050}00050         \textcolor{keywordflow}{for} (\mbox{\hyperlink{classdominio_1_1clases_1_1_item}{Item}} item : LR.keySet()) \{}
+\DoxyCodeLine{\Hypertarget{_avaluacio_8java_source_l00051}00051             iDCG += (Math.pow(2, LR.get(item)) -\/ 1) / \mbox{\hyperlink{classdominio_1_1clases_1_1_avaluacio_a6c3beb045b7f416a0494eac6127db2bf}{log}}(i + 1, 2);}
+\DoxyCodeLine{\Hypertarget{_avaluacio_8java_source_l00052}00052             i++;}
+\DoxyCodeLine{\Hypertarget{_avaluacio_8java_source_l00053}00053         \}}
+\DoxyCodeLine{\Hypertarget{_avaluacio_8java_source_l00054}00054         \textcolor{keywordflow}{return} iDCG;}
+\DoxyCodeLine{\Hypertarget{_avaluacio_8java_source_l00055}00055     \}}
+\DoxyCodeLine{\Hypertarget{_avaluacio_8java_source_l00056}00056 }
+\DoxyCodeLine{\Hypertarget{_avaluacio_8java_source_l00063}\mbox{\hyperlink{classdominio_1_1clases_1_1_avaluacio_a6d7fb87ff65af489726e43e652c6effb}{00063}}     \textcolor{keyword}{public} \textcolor{keyword}{static} HashMap<Item, Double> \mbox{\hyperlink{classdominio_1_1clases_1_1_avaluacio_a6d7fb87ff65af489726e43e652c6effb}{sortByValue}}(HashMap<Item, Double> data) \{}
+\DoxyCodeLine{\Hypertarget{_avaluacio_8java_source_l00064}00064         List<Map.Entry<\mbox{\hyperlink{classdominio_1_1clases_1_1_item}{Item}}, Double>> list = \textcolor{keyword}{new} LinkedList<>(data.entrySet());}
+\DoxyCodeLine{\Hypertarget{_avaluacio_8java_source_l00065}00065         Collections.sort(list, (o1, o2) -\/> \{}
+\DoxyCodeLine{\Hypertarget{_avaluacio_8java_source_l00066}00066             \textcolor{keywordtype}{int} cmp = o2.getValue().compareTo(o1.getValue());}
+\DoxyCodeLine{\Hypertarget{_avaluacio_8java_source_l00067}00067             if (cmp == 0) \textcolor{keywordflow}{return} o2.getKey().getId().compareTo(o1.getKey().getId());}
+\DoxyCodeLine{\Hypertarget{_avaluacio_8java_source_l00068}00068             \textcolor{keywordflow}{return} cmp;}
+\DoxyCodeLine{\Hypertarget{_avaluacio_8java_source_l00069}00069         \});}
+\DoxyCodeLine{\Hypertarget{_avaluacio_8java_source_l00070}00070         HashMap<Item, Double> sortedMap = \textcolor{keyword}{new} LinkedHashMap<>();}
+\DoxyCodeLine{\Hypertarget{_avaluacio_8java_source_l00071}00071         \textcolor{keywordflow}{for} (Map.Entry<\mbox{\hyperlink{classdominio_1_1clases_1_1_item}{Item}}, Double> entry : list) sortedMap.put(entry.getKey(), entry.getValue());}
+\DoxyCodeLine{\Hypertarget{_avaluacio_8java_source_l00072}00072         \textcolor{keywordflow}{return} sortedMap;}
+\DoxyCodeLine{\Hypertarget{_avaluacio_8java_source_l00073}00073     \}}
+\DoxyCodeLine{\Hypertarget{_avaluacio_8java_source_l00074}00074 }
+\DoxyCodeLine{\Hypertarget{_avaluacio_8java_source_l00082}\mbox{\hyperlink{classdominio_1_1clases_1_1_avaluacio_a6c3beb045b7f416a0494eac6127db2bf}{00082}}     \textcolor{keyword}{private} \textcolor{keyword}{static} \textcolor{keywordtype}{double} \mbox{\hyperlink{classdominio_1_1clases_1_1_avaluacio_a6c3beb045b7f416a0494eac6127db2bf}{log}}(\textcolor{keywordtype}{int} x, \textcolor{keywordtype}{int} b) \{}
+\DoxyCodeLine{\Hypertarget{_avaluacio_8java_source_l00083}00083         \textcolor{keywordflow}{return} (Math.log(x) / Math.log(b));}
+\DoxyCodeLine{\Hypertarget{_avaluacio_8java_source_l00084}00084     \}}
+\DoxyCodeLine{\Hypertarget{_avaluacio_8java_source_l00085}00085 }
+\DoxyCodeLine{\Hypertarget{_avaluacio_8java_source_l00086}00086 \}}
+
+\end{DoxyCode}

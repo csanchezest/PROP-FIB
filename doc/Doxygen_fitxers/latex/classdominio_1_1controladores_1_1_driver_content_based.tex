@@ -1,0 +1,255 @@
+\hypertarget{classdominio_1_1controladores_1_1_driver_content_based}{}\doxysection{Referencia de la Clase dominio.\+controladores.\+Driver\+Content\+Based}
+\label{classdominio_1_1controladores_1_1_driver_content_based}\index{dominio.controladores.drivers.DriverContentBased@{dominio.controladores.drivers.DriverContentBased}}
+
+
+Driver de la clase Content based.  
+
+
+\doxysubsection*{Métodos públicos estáticos}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classdominio_1_1clases_1_1_content_based}{Content\+Based}} \mbox{\hyperlink{classdominio_1_1controladores_1_1_driver_content_based_a1413acd85b0ee82e8c252ca4d23bd206}{test\+Content\+Based}} (\mbox{\hyperlink{classdominio_1_1clases_1_1_usuari}{Usuari}} u, \mbox{\hyperlink{classdominio_1_1clases_1_1_cjt__items}{Cjt\+\_\+items}} dataset, Hash\+Map$<$ \mbox{\hyperlink{classdominio_1_1clases_1_1_item}{Item}}, Array\+List$<$ Double $>$ $>$ rated\+Items, double mR)
+\begin{DoxyCompactList}\small\item\em Metodo de testeo de la constructora de la clase. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classdominio_1_1controladores_1_1_driver_content_based_a982a34f99b6a1f77a6668d994bccdafd}{test\+SetK}} (\mbox{\hyperlink{classdominio_1_1clases_1_1_content_based}{Content\+Based}} cb, int k)
+\begin{DoxyCompactList}\small\item\em Metodo de testeo del setter del parametro k de la clase Content Based. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classdominio_1_1controladores_1_1_driver_content_based_a5974893e2514f93a9349636954bb9289}{test\+Recommended\+\_\+items}} (\mbox{\hyperlink{classdominio_1_1clases_1_1_content_based}{Content\+Based}} cb)
+\begin{DoxyCompactList}\small\item\em Metodo de testeo de la funcion de recomendacion de items. Escribe por pantalla los items recomendados, junto con la prediccion de su valoracion. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classdominio_1_1controladores_1_1_driver_content_based_a7e81e17cd40e6ce6bee5b6930ce88c85}{test\+Get\+\_\+\+KNN}} (\mbox{\hyperlink{classdominio_1_1clases_1_1_content_based}{Content\+Based}} cb, \mbox{\hyperlink{classdominio_1_1clases_1_1_item}{Item}} a, double rating)
+\begin{DoxyCompactList}\small\item\em Metodo de testeo de la funcion para obtener los k-\/\+NN. Escribe por pantalla los k items a los que se da una prediccion de valoracion mas alta segun la valoracion del item que se le pasa por parametro. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classdominio_1_1controladores_1_1_driver_content_based_aa84a0c0069be6f9912f5dedece3db873}{main}} (String\mbox{[}$\,$\mbox{]}args)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Driver de la clase Content based. 
+
+\begin{DoxyAuthor}{Autor}
+Jordi Elgueta Serra 
+\end{DoxyAuthor}
+
+
+Definición en la línea \mbox{\hyperlink{_driver_content_based_8java_source_l00023}{23}} del archivo \mbox{\hyperlink{_driver_content_based_8java_source}{Driver\+Content\+Based.\+java}}.
+
+
+
+\doxysubsection{Documentación de las funciones miembro}
+\mbox{\Hypertarget{classdominio_1_1controladores_1_1_driver_content_based_a1413acd85b0ee82e8c252ca4d23bd206}\label{classdominio_1_1controladores_1_1_driver_content_based_a1413acd85b0ee82e8c252ca4d23bd206}} 
+\index{dominio.controladores.drivers.DriverContentBased@{dominio.controladores.drivers.DriverContentBased}!testContentBased@{testContentBased}}
+\index{testContentBased@{testContentBased}!dominio.controladores.drivers.DriverContentBased@{dominio.controladores.drivers.DriverContentBased}}
+\doxysubsubsection{\texorpdfstring{testContentBased()}{testContentBased()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{classdominio_1_1clases_1_1_content_based}{Content\+Based}} dominio.\+controladores.\+Driver\+Content\+Based.\+test\+Content\+Based (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classdominio_1_1clases_1_1_usuari}{Usuari}}}]{u,  }\item[{\mbox{\hyperlink{classdominio_1_1clases_1_1_cjt__items}{Cjt\+\_\+items}}}]{dataset,  }\item[{Hash\+Map$<$ \mbox{\hyperlink{classdominio_1_1clases_1_1_item}{Item}}, Array\+List$<$ Double $>$ $>$}]{rated\+Items,  }\item[{double}]{mR }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Metodo de testeo de la constructora de la clase. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em u} & Usuario que pide la recomendacion \\
+\hline
+{\em dataset} & Dataset sobre el cual se quiere aplicar la recomendacion \\
+\hline
+{\em rated\+Items} & Diccionario con todos los items del dataset que guarda, para cada uno, todas las valoraciones que tiene \\
+\hline
+{\em mR} & Valor maximo que puede tomar una valoracion \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+Devuelve una instancia de la clase Content Based 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{_driver_content_based_8java_source_l00033}{33}} del archivo \mbox{\hyperlink{_driver_content_based_8java_source}{Driver\+Content\+Based.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00033                                                                                                                                      \{}
+\DoxyCodeLine{00034         System.out.println(\textcolor{stringliteral}{"{}Se ha creado una instancia de la clase content based."{}});}
+\DoxyCodeLine{00035         \textcolor{keywordflow}{return} \textcolor{keyword}{new} \mbox{\hyperlink{classdominio_1_1clases_1_1_content_based}{ContentBased}}(u,dataset,ratedItems,mR);}
+\DoxyCodeLine{00036     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdominio_1_1controladores_1_1_driver_content_based_a982a34f99b6a1f77a6668d994bccdafd}\label{classdominio_1_1controladores_1_1_driver_content_based_a982a34f99b6a1f77a6668d994bccdafd}} 
+\index{dominio.controladores.drivers.DriverContentBased@{dominio.controladores.drivers.DriverContentBased}!testSetK@{testSetK}}
+\index{testSetK@{testSetK}!dominio.controladores.drivers.DriverContentBased@{dominio.controladores.drivers.DriverContentBased}}
+\doxysubsubsection{\texorpdfstring{testSetK()}{testSetK()}}
+{\footnotesize\ttfamily static void dominio.\+controladores.\+Driver\+Content\+Based.\+test\+SetK (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classdominio_1_1clases_1_1_content_based}{Content\+Based}}}]{cb,  }\item[{int}]{k }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Metodo de testeo del setter del parametro k de la clase Content Based. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em cb} & Instancia de la clase Content Based, necesaria para las llamadas a los metodos de la clase \\
+\hline
+{\em k} & Valor que se asignara al parametro k \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{_driver_content_based_8java_source_l00043}{43}} del archivo \mbox{\hyperlink{_driver_content_based_8java_source}{Driver\+Content\+Based.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00043                                                         \{}
+\DoxyCodeLine{00044         System.out.println(\textcolor{stringliteral}{"{}Se ha fijado el valor de la k para el algoritmo k-\/NN."{}});}
+\DoxyCodeLine{00045         cb.\mbox{\hyperlink{classdominio_1_1clases_1_1_content_based_a672f34661a60a5596ae6d64f7e30f641}{setK}}(k);}
+\DoxyCodeLine{00046     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdominio_1_1controladores_1_1_driver_content_based_a5974893e2514f93a9349636954bb9289}\label{classdominio_1_1controladores_1_1_driver_content_based_a5974893e2514f93a9349636954bb9289}} 
+\index{dominio.controladores.drivers.DriverContentBased@{dominio.controladores.drivers.DriverContentBased}!testRecommended\_items@{testRecommended\_items}}
+\index{testRecommended\_items@{testRecommended\_items}!dominio.controladores.drivers.DriverContentBased@{dominio.controladores.drivers.DriverContentBased}}
+\doxysubsubsection{\texorpdfstring{testRecommended\_items()}{testRecommended\_items()}}
+{\footnotesize\ttfamily static void dominio.\+controladores.\+Driver\+Content\+Based.\+test\+Recommended\+\_\+items (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classdominio_1_1clases_1_1_content_based}{Content\+Based}}}]{cb }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Metodo de testeo de la funcion de recomendacion de items. Escribe por pantalla los items recomendados, junto con la prediccion de su valoracion. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em cb} & Instancia de la clase Content Based, necesaria para las llamadas a los metodos de la clase \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{_driver_content_based_8java_source_l00053}{53}} del archivo \mbox{\hyperlink{_driver_content_based_8java_source}{Driver\+Content\+Based.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00053                                                               \{}
+\DoxyCodeLine{00054         System.out.println(\textcolor{stringliteral}{"{}Los k items con mayores ratings predidos para el usuario son: "{}});}
+\DoxyCodeLine{00055         HashMap<Item, Double> ratings = cb.\mbox{\hyperlink{classdominio_1_1clases_1_1_content_based_a85943724cd710fd0ab3d14159604589a}{recommended\_items}}();}
+\DoxyCodeLine{00056         HashMap<Item,Double> recommendations = cb.\mbox{\hyperlink{classdominio_1_1clases_1_1_content_based_a85943724cd710fd0ab3d14159604589a}{recommended\_items}}();}
+\DoxyCodeLine{00057         NumberFormat formatter = \textcolor{keyword}{new} DecimalFormat(\textcolor{stringliteral}{"{}\#0.000"{}});}
+\DoxyCodeLine{00058         \textcolor{keywordflow}{for} (\mbox{\hyperlink{classdominio_1_1clases_1_1_item}{Item}} i : ratings.keySet()) \{}
+\DoxyCodeLine{00059             \textcolor{keywordflow}{if}(ratings.get(i)!=-\/1) System.out.println(\textcolor{stringliteral}{"{} "{}} + i.getId() + \textcolor{stringliteral}{"{} -\/-\/> "{}} + formatter.format(recommendations.get(i).doubleValue()));}
+\DoxyCodeLine{00060         \}}
+\DoxyCodeLine{00061     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdominio_1_1controladores_1_1_driver_content_based_a7e81e17cd40e6ce6bee5b6930ce88c85}\label{classdominio_1_1controladores_1_1_driver_content_based_a7e81e17cd40e6ce6bee5b6930ce88c85}} 
+\index{dominio.controladores.drivers.DriverContentBased@{dominio.controladores.drivers.DriverContentBased}!testGet\_KNN@{testGet\_KNN}}
+\index{testGet\_KNN@{testGet\_KNN}!dominio.controladores.drivers.DriverContentBased@{dominio.controladores.drivers.DriverContentBased}}
+\doxysubsubsection{\texorpdfstring{testGet\_KNN()}{testGet\_KNN()}}
+{\footnotesize\ttfamily static void dominio.\+controladores.\+Driver\+Content\+Based.\+test\+Get\+\_\+\+KNN (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classdominio_1_1clases_1_1_content_based}{Content\+Based}}}]{cb,  }\item[{\mbox{\hyperlink{classdominio_1_1clases_1_1_item}{Item}}}]{a,  }\item[{double}]{rating }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Metodo de testeo de la funcion para obtener los k-\/\+NN. Escribe por pantalla los k items a los que se da una prediccion de valoracion mas alta segun la valoracion del item que se le pasa por parametro. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em cb} & Instancia de la clase Content Based, necesaria para las llamadas a los metodos de la clase \\
+\hline
+{\em a} & Item que el usuario ha valorado y sobre el que se calculan los k-\/\+NN \\
+\hline
+{\em rating} & Valoracion dada por el usuario del item a \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{_driver_content_based_8java_source_l00070}{70}} del archivo \mbox{\hyperlink{_driver_content_based_8java_source}{Driver\+Content\+Based.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00070                                                                            \{}
+\DoxyCodeLine{00071         System.out.println(\textcolor{stringliteral}{"{}Los k items con mayores ratings predidos para el item "{}} + a.\mbox{\hyperlink{classdominio_1_1clases_1_1_item_a9d4f8f9352f3c2d95b18c211eba9051b}{getId}}() + \textcolor{stringliteral}{"{} son: "{}});}
+\DoxyCodeLine{00072         Method getKNN = \textcolor{keyword}{null};}
+\DoxyCodeLine{00073         HashMap<Item, Double> knn = \textcolor{keyword}{null};}
+\DoxyCodeLine{00074         \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{00075             getKNN = cb.getClass().getDeclaredMethod(\textcolor{stringliteral}{"{}get\_KNN"{}}, \mbox{\hyperlink{classdominio_1_1clases_1_1_item}{Item}}.class, \textcolor{keywordtype}{double}.class);}
+\DoxyCodeLine{00076             getKNN.setAccessible(\textcolor{keyword}{true});}
+\DoxyCodeLine{00077             knn = (HashMap<Item, Double>) getKNN.invoke(cb,a,rating);}
+\DoxyCodeLine{00078         \} \textcolor{keywordflow}{catch}(Exception e)\{}
+\DoxyCodeLine{00079             e.printStackTrace();}
+\DoxyCodeLine{00080             System.exit(-\/1);}
+\DoxyCodeLine{00081         \}}
+\DoxyCodeLine{00082         NumberFormat formatter = \textcolor{keyword}{new} DecimalFormat(\textcolor{stringliteral}{"{}\#0.000"{}});}
+\DoxyCodeLine{00083         \textcolor{keywordflow}{for} (\mbox{\hyperlink{classdominio_1_1clases_1_1_item}{Item}} i : knn.keySet()) \{}
+\DoxyCodeLine{00084             \textcolor{keywordflow}{if}(knn.get(i)!=-\/1) System.out.println(\textcolor{stringliteral}{"{} "{}} + i.getId() + \textcolor{stringliteral}{"{} -\/-\/> "{}} + formatter.format(knn.get(i).doubleValue()));}
+\DoxyCodeLine{00085         \}}
+\DoxyCodeLine{00086     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdominio_1_1controladores_1_1_driver_content_based_aa84a0c0069be6f9912f5dedece3db873}\label{classdominio_1_1controladores_1_1_driver_content_based_aa84a0c0069be6f9912f5dedece3db873}} 
+\index{dominio.controladores.drivers.DriverContentBased@{dominio.controladores.drivers.DriverContentBased}!main@{main}}
+\index{main@{main}!dominio.controladores.drivers.DriverContentBased@{dominio.controladores.drivers.DriverContentBased}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily static void dominio.\+controladores.\+Driver\+Content\+Based.\+main (\begin{DoxyParamCaption}\item[{String\mbox{[}$\,$\mbox{]}}]{args }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{_driver_content_based_8java_source_l00088}{88}} del archivo \mbox{\hyperlink{_driver_content_based_8java_source}{Driver\+Content\+Based.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00088                                           \{}
+\DoxyCodeLine{00089         \textcolor{keywordtype}{int} n;}
+\DoxyCodeLine{00090         System.out.print(\textcolor{stringliteral}{"{}Elige el juego de pruebas con el que quieres ejecutar el driver (0 -\/ pequeño, 1 -\/ grande): "{}});}
+\DoxyCodeLine{00091         Scanner sc = \textcolor{keyword}{new} Scanner(System.in);}
+\DoxyCodeLine{00092         n = sc.nextInt();}
+\DoxyCodeLine{00093         \textcolor{keywordflow}{while} (n != 0 \&\& n != 1) \{}
+\DoxyCodeLine{00094             System.out.print(\textcolor{stringliteral}{"{}Número incorrecto, inténtalo de nuevo:"{}});}
+\DoxyCodeLine{00095             n = sc.nextInt();}
+\DoxyCodeLine{00096         \}}
+\DoxyCodeLine{00097         String pathToCsv;}
+\DoxyCodeLine{00098         \textcolor{keywordflow}{switch} (n) \{}
+\DoxyCodeLine{00099             \textcolor{keywordflow}{case} 0:}
+\DoxyCodeLine{00100                 pathToCsv = \textcolor{stringliteral}{"{}/persistencia/data/DriversData/ContentBasedTestSets/SmallSizeTest/"{}};}
+\DoxyCodeLine{00101                 \mbox{\hyperlink{classdominio_1_1clases_1_1_cjt__items}{Cjt\_items}} dataset = \textcolor{keyword}{new} \mbox{\hyperlink{classdominio_1_1clases_1_1_cjt__items}{Cjt\_items}}(pathToCsv + \textcolor{stringliteral}{"{}smallTestItems.csv"{}});}
+\DoxyCodeLine{00102                 Valoracio ratings = \textcolor{keyword}{new} Valoracio(pathToCsv + \textcolor{stringliteral}{"{}smallTestRatings.csv"{}}, dataset);}
+\DoxyCodeLine{00103                 Valoracio ratingsKnown = \textcolor{keyword}{new} Valoracio(pathToCsv + \textcolor{stringliteral}{"{}smallTestRatingsKnown.csv"{}}, dataset);}
+\DoxyCodeLine{00104                 \textcolor{keywordtype}{double} maxRating = ratings.getMaxRating();}
+\DoxyCodeLine{00105                 \textcolor{keywordtype}{int} k = 2;}
+\DoxyCodeLine{00106                 \textcolor{keywordflow}{for} (\mbox{\hyperlink{classdominio_1_1clases_1_1_usuari}{Usuari}} us : ratingsKnown.getUsers()) \{}
+\DoxyCodeLine{00107                     System.out.println(\textcolor{stringliteral}{"{}Usuario "{}} + us.getUserId());}
+\DoxyCodeLine{00108                     System.out.println();}
+\DoxyCodeLine{00109                     \mbox{\hyperlink{classdominio_1_1clases_1_1_content_based}{ContentBased}} cb = \mbox{\hyperlink{classdominio_1_1controladores_1_1_driver_content_based_a1413acd85b0ee82e8c252ca4d23bd206}{testContentBased}}(us, dataset, ratings.getRatings(), maxRating);}
+\DoxyCodeLine{00110                     \mbox{\hyperlink{classdominio_1_1controladores_1_1_driver_content_based_a982a34f99b6a1f77a6668d994bccdafd}{testSetK}}(cb, k);}
+\DoxyCodeLine{00111                     System.out.println(\textcolor{stringliteral}{"{}-\/-\/-\/-\/-\/"{}});}
+\DoxyCodeLine{00112                     \textcolor{keywordflow}{for} (\mbox{\hyperlink{classdominio_1_1clases_1_1_item}{Item}} i : us.getRatedItems().keySet())\{}
+\DoxyCodeLine{00113                         \mbox{\hyperlink{classdominio_1_1controladores_1_1_driver_content_based_a7e81e17cd40e6ce6bee5b6930ce88c85}{testGet\_KNN}}(cb, i, us.getRatedItems().get(i));}
+\DoxyCodeLine{00114                         System.out.println(\textcolor{stringliteral}{"{}-\/-\/-\/-\/-\/"{}});}
+\DoxyCodeLine{00115 }
+\DoxyCodeLine{00116                     \}}
+\DoxyCodeLine{00117                     System.out.println(\textcolor{stringliteral}{"{}-\/-\/-\/-\/-\/"{}});}
+\DoxyCodeLine{00118                     \mbox{\hyperlink{classdominio_1_1controladores_1_1_driver_content_based_a5974893e2514f93a9349636954bb9289}{testRecommended\_items}}(cb);}
+\DoxyCodeLine{00119                     System.out.println(\textcolor{stringliteral}{"{}-\/-\/-\/-\/-\/"{}});}
+\DoxyCodeLine{00120                 \}}
+\DoxyCodeLine{00121                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00122             \textcolor{keywordflow}{case} 1:}
+\DoxyCodeLine{00123                 pathToCsv = \textcolor{stringliteral}{"{}/persistencia/data/datasets/Movielens/250/"{}};}
+\DoxyCodeLine{00124                 \mbox{\hyperlink{classdominio_1_1clases_1_1_cjt__items}{Cjt\_items}} dataset2 = \textcolor{keyword}{new} \mbox{\hyperlink{classdominio_1_1clases_1_1_cjt__items}{Cjt\_items}}(pathToCsv + \textcolor{stringliteral}{"{}itemsBigTest.csv"{}});}
+\DoxyCodeLine{00125                 Valoracio ratings2 = \textcolor{keyword}{new} Valoracio(pathToCsv + \textcolor{stringliteral}{"{}ratings.db.csv"{}}, dataset2);}
+\DoxyCodeLine{00126                 Valoracio ratingsKnown2 = \textcolor{keyword}{new} Valoracio(pathToCsv + \textcolor{stringliteral}{"{}ratings.test.known.csv"{}}, dataset2);}
+\DoxyCodeLine{00127                 \textcolor{keywordtype}{double} maxRating2 = ratings2.getMaxRating();}
+\DoxyCodeLine{00128                 \textcolor{keywordtype}{int} k2 = 20;}
+\DoxyCodeLine{00129                 \textcolor{keywordflow}{for} (\mbox{\hyperlink{classdominio_1_1clases_1_1_usuari}{Usuari}} us : ratingsKnown2.getUsers()) \{}
+\DoxyCodeLine{00130                     System.out.println(\textcolor{stringliteral}{"{}Usuario "{}} + us.getUserId());}
+\DoxyCodeLine{00131                     System.out.println();}
+\DoxyCodeLine{00132                     \mbox{\hyperlink{classdominio_1_1clases_1_1_content_based}{ContentBased}} cb = \mbox{\hyperlink{classdominio_1_1controladores_1_1_driver_content_based_a1413acd85b0ee82e8c252ca4d23bd206}{testContentBased}}(us, dataset2, ratings2.getRatings(), maxRating2);}
+\DoxyCodeLine{00133                     \mbox{\hyperlink{classdominio_1_1controladores_1_1_driver_content_based_a982a34f99b6a1f77a6668d994bccdafd}{testSetK}}(cb, k2);}
+\DoxyCodeLine{00134                     System.out.println(\textcolor{stringliteral}{"{}-\/-\/-\/-\/-\/"{}});}
+\DoxyCodeLine{00135                     \textcolor{keywordflow}{for} (\mbox{\hyperlink{classdominio_1_1clases_1_1_item}{Item}} i : us.getRatedItems().keySet())\{}
+\DoxyCodeLine{00136                         \mbox{\hyperlink{classdominio_1_1controladores_1_1_driver_content_based_a7e81e17cd40e6ce6bee5b6930ce88c85}{testGet\_KNN}}(cb, i, us.getRatedItems().get(i));}
+\DoxyCodeLine{00137                         System.out.println(\textcolor{stringliteral}{"{}-\/-\/-\/-\/-\/"{}});}
+\DoxyCodeLine{00138 }
+\DoxyCodeLine{00139                     \}}
+\DoxyCodeLine{00140                     System.out.println(\textcolor{stringliteral}{"{}-\/-\/-\/-\/-\/"{}});}
+\DoxyCodeLine{00141                     \mbox{\hyperlink{classdominio_1_1controladores_1_1_driver_content_based_a5974893e2514f93a9349636954bb9289}{testRecommended\_items}}(cb);}
+\DoxyCodeLine{00142                     System.out.println(\textcolor{stringliteral}{"{}-\/-\/-\/-\/-\/"{}});}
+\DoxyCodeLine{00143                 \}}
+\DoxyCodeLine{00144                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00145         \}}
+\DoxyCodeLine{00146 }
+\DoxyCodeLine{00147     \}}
+
+\end{DoxyCode}
+
+
+La documentación para esta clase fue generada a partir del siguiente fichero\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_driver_content_based_8java}{Driver\+Content\+Based.\+java}}\end{DoxyCompactItemize}

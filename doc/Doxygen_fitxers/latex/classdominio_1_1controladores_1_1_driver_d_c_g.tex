@@ -1,0 +1,338 @@
+\hypertarget{classdominio_1_1controladores_1_1_driver_d_c_g}{}\doxysection{Referencia de la Clase dominio.\+controladores.\+Driver\+DCG}
+\label{classdominio_1_1controladores_1_1_driver_d_c_g}\index{dominio.controladores.drivers.DriverDCG@{dominio.controladores.drivers.DriverDCG}}
+
+
+Driver representativo de un ejemplo de ejecucion del algoritmo de evaluacion de recomendaciones DCG.  
+
+
+\doxysubsection*{Métodos públicos estáticos}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{classdominio_1_1controladores_1_1_driver_d_c_g_a7aac0da65cab40f00320c46dd54d31d0}{main}} (String\mbox{[}$\,$\mbox{]} args)
+\end{DoxyCompactItemize}
+\doxysubsection*{Métodos privados estáticos}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{classdominio_1_1controladores_1_1_driver_d_c_g_a6199cc8988323d655ecfef3ad2e00567}{test\+DCG}} (Hash\+Map$<$ Integer, Hash\+Map$<$ \mbox{\hyperlink{classdominio_1_1clases_1_1_item}{Item}}, Double $>$ $>$ LR, Hash\+Map$<$ Integer, Hash\+Map$<$ \mbox{\hyperlink{classdominio_1_1clases_1_1_item}{Item}}, Double $>$ $>$ LT)
+\begin{DoxyCompactList}\small\item\em Metodo de testeo del DCG. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classdominio_1_1controladores_1_1_driver_d_c_g_a1a9dd4e441cb9d27aedeec34ca3ee93d}{test\+Print\+DCG}} (Hash\+Map$<$ Integer, Double $>$ vals, int i)
+\begin{DoxyCompactList}\small\item\em Metodo de impresion del DCG para un usuario dado. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classdominio_1_1controladores_1_1_driver_d_c_g_a562e609fe2b3b4f0ad648ca89a1917ba}{test\+Sort\+By\+Value}} (Hash\+Map$<$ \mbox{\hyperlink{classdominio_1_1clases_1_1_item}{Item}}, Double $>$ vals)
+\begin{DoxyCompactList}\small\item\em Metodo de ordenacion de las valoraciones de un item segun su valor. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classdominio_1_1controladores_1_1_driver_d_c_g_afca71b027b8429225e13b6dabd0a5da1}{test\+Log}} ()
+\begin{DoxyCompactList}\small\item\em Metodo de testeo de la funcion logaritmo. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classdominio_1_1controladores_1_1_driver_d_c_g_a6b4ab8c8682d208be78076c586641fa4}{select\+Data}} (Hash\+Map$<$ Integer, Hash\+Map$<$ \mbox{\hyperlink{classdominio_1_1clases_1_1_item}{Item}}, Double $>$ $>$ data, int dataset)
+\begin{DoxyCompactList}\small\item\em Metodo local de preparacion de las valoraciones asociadas a cada usuario a tratar. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Atributos privados estáticos}
+\begin{DoxyCompactItemize}
+\item 
+static final List$<$ \mbox{\hyperlink{classdominio_1_1clases_1_1_item}{Item}} $>$ \mbox{\hyperlink{classdominio_1_1controladores_1_1_driver_d_c_g_af3e5bf96945af52624639747d79bcc51}{DCGtest}}
+\item 
+static List$<$ Double $>$ \mbox{\hyperlink{classdominio_1_1controladores_1_1_driver_d_c_g_a603ccb0e356b9ed89d14475f84bd0b80}{setA}} = Arrays.\+as\+List(3., 1., 2., 3., 2., 0.)
+\item 
+static List$<$ Double $>$ \mbox{\hyperlink{classdominio_1_1controladores_1_1_driver_d_c_g_ad752eef9f588d2463b1f0fe5fe642ada}{setB}} = Arrays.\+as\+List(3., 3., 2., 2., 1., 0.)
+\item 
+static int \mbox{\hyperlink{classdominio_1_1controladores_1_1_driver_d_c_g_a28ec1415f998ea5f53b6288da97fd634}{user\+Id}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Driver representativo de un ejemplo de ejecucion del algoritmo de evaluacion de recomendaciones DCG. 
+
+\begin{DoxyAuthor}{Autor}
+Cristian Sanchez Estape 
+\end{DoxyAuthor}
+
+
+Definición en la línea \mbox{\hyperlink{_driver_d_c_g_8java_source_l00021}{21}} del archivo \mbox{\hyperlink{_driver_d_c_g_8java_source}{Driver\+DCG.\+java}}.
+
+
+
+\doxysubsection{Documentación de las funciones miembro}
+\mbox{\Hypertarget{classdominio_1_1controladores_1_1_driver_d_c_g_a6199cc8988323d655ecfef3ad2e00567}\label{classdominio_1_1controladores_1_1_driver_d_c_g_a6199cc8988323d655ecfef3ad2e00567}} 
+\index{dominio.controladores.drivers.DriverDCG@{dominio.controladores.drivers.DriverDCG}!testDCG@{testDCG}}
+\index{testDCG@{testDCG}!dominio.controladores.drivers.DriverDCG@{dominio.controladores.drivers.DriverDCG}}
+\doxysubsubsection{\texorpdfstring{testDCG()}{testDCG()}}
+{\footnotesize\ttfamily static void dominio.\+controladores.\+Driver\+DCG.\+test\+DCG (\begin{DoxyParamCaption}\item[{Hash\+Map$<$ Integer, Hash\+Map$<$ \mbox{\hyperlink{classdominio_1_1clases_1_1_item}{Item}}, Double $>$ $>$}]{LR,  }\item[{Hash\+Map$<$ Integer, Hash\+Map$<$ \mbox{\hyperlink{classdominio_1_1clases_1_1_item}{Item}}, Double $>$ $>$}]{LT }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Metodo de testeo del DCG. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em LR} & Mapa de usuarios con las valoraciones predecidas para un conjunto de items \\
+\hline
+{\em LT} & Mapa de usuarios con las valoraciones predecidas correctamente para un conjunto de items \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{_driver_d_c_g_8java_source_l00035}{35}} del archivo \mbox{\hyperlink{_driver_d_c_g_8java_source}{Driver\+DCG.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00035                                                                                                                         \{}
+\DoxyCodeLine{00036         System.out.println(\textcolor{stringliteral}{"{}Metodo de computo del DCG para un conjunto de valoraciones realizadas por un"{}} +}
+\DoxyCodeLine{00037                 \textcolor{stringliteral}{"{} mismo usuario"{}});}
+\DoxyCodeLine{00038         \mbox{\hyperlink{classdominio_1_1clases_1_1_avaluacio}{Avaluacio}}.\mbox{\hyperlink{classdominio_1_1clases_1_1_avaluacio_a882f7035680a3273984ab00f78aa3be6}{DCG}}(LR, LT, \mbox{\hyperlink{classdominio_1_1controladores_1_1_driver_d_c_g_a28ec1415f998ea5f53b6288da97fd634}{userId}});}
+\DoxyCodeLine{00039     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdominio_1_1controladores_1_1_driver_d_c_g_a1a9dd4e441cb9d27aedeec34ca3ee93d}\label{classdominio_1_1controladores_1_1_driver_d_c_g_a1a9dd4e441cb9d27aedeec34ca3ee93d}} 
+\index{dominio.controladores.drivers.DriverDCG@{dominio.controladores.drivers.DriverDCG}!testPrintDCG@{testPrintDCG}}
+\index{testPrintDCG@{testPrintDCG}!dominio.controladores.drivers.DriverDCG@{dominio.controladores.drivers.DriverDCG}}
+\doxysubsubsection{\texorpdfstring{testPrintDCG()}{testPrintDCG()}}
+{\footnotesize\ttfamily static void dominio.\+controladores.\+Driver\+DCG.\+test\+Print\+DCG (\begin{DoxyParamCaption}\item[{Hash\+Map$<$ Integer, Double $>$}]{vals,  }\item[{int}]{i }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Metodo de impresion del DCG para un usuario dado. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em vals} & Estructura de datos con los usuarios tratados y sus DCGs asociados \\
+\hline
+{\em i} & Id del usuario sobre el cual hay que imprimir el DCG \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{_driver_d_c_g_8java_source_l00047}{47}} del archivo \mbox{\hyperlink{_driver_d_c_g_8java_source}{Driver\+DCG.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00047                                                                           \{}
+\DoxyCodeLine{00048         System.out.println(\textcolor{stringliteral}{"{}Metodo que imprime el DCG de un usuario"{}});}
+\DoxyCodeLine{00049         \mbox{\hyperlink{classdominio_1_1clases_1_1_avaluacio}{Avaluacio}} instance = \textcolor{keyword}{new} \mbox{\hyperlink{classdominio_1_1clases_1_1_avaluacio}{Avaluacio}}();}
+\DoxyCodeLine{00050         Method printDCG = \textcolor{keyword}{null};}
+\DoxyCodeLine{00051         \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{00052             printDCG = instance.getClass().getDeclaredMethod(\textcolor{stringliteral}{"{}printDCG"{}}, HashMap.class, \textcolor{keywordtype}{int}.class);}
+\DoxyCodeLine{00053             printDCG.setAccessible(\textcolor{keyword}{true});}
+\DoxyCodeLine{00054             printDCG.invoke(instance,vals, i);}
+\DoxyCodeLine{00055         \} \textcolor{keywordflow}{catch}(Exception e)\{}
+\DoxyCodeLine{00056             e.printStackTrace();}
+\DoxyCodeLine{00057             System.exit(-\/1);}
+\DoxyCodeLine{00058         \}}
+\DoxyCodeLine{00059     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdominio_1_1controladores_1_1_driver_d_c_g_a562e609fe2b3b4f0ad648ca89a1917ba}\label{classdominio_1_1controladores_1_1_driver_d_c_g_a562e609fe2b3b4f0ad648ca89a1917ba}} 
+\index{dominio.controladores.drivers.DriverDCG@{dominio.controladores.drivers.DriverDCG}!testSortByValue@{testSortByValue}}
+\index{testSortByValue@{testSortByValue}!dominio.controladores.drivers.DriverDCG@{dominio.controladores.drivers.DriverDCG}}
+\doxysubsubsection{\texorpdfstring{testSortByValue()}{testSortByValue()}}
+{\footnotesize\ttfamily static void dominio.\+controladores.\+Driver\+DCG.\+test\+Sort\+By\+Value (\begin{DoxyParamCaption}\item[{Hash\+Map$<$ \mbox{\hyperlink{classdominio_1_1clases_1_1_item}{Item}}, Double $>$}]{vals }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Metodo de ordenacion de las valoraciones de un item segun su valor. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em vals} & Valoracion asociada a un item \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{_driver_d_c_g_8java_source_l00066}{66}} del archivo \mbox{\hyperlink{_driver_d_c_g_8java_source}{Driver\+DCG.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00066                                                                    \{}
+\DoxyCodeLine{00067         System.out.println(\textcolor{stringliteral}{"{}Metodo que ordena las valoraciones (contenido) de un item segun su valor"{}});}
+\DoxyCodeLine{00068         \mbox{\hyperlink{classdominio_1_1clases_1_1_avaluacio}{Avaluacio}} instance = \textcolor{keyword}{new} \mbox{\hyperlink{classdominio_1_1clases_1_1_avaluacio}{Avaluacio}}();}
+\DoxyCodeLine{00069         Method sortByValue = \textcolor{keyword}{null};}
+\DoxyCodeLine{00070         \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{00071             sortByValue = instance.getClass().getDeclaredMethod(\textcolor{stringliteral}{"{}sortByValue"{}}, HashMap.class);}
+\DoxyCodeLine{00072             sortByValue.setAccessible(\textcolor{keyword}{true});}
+\DoxyCodeLine{00073             sortByValue.invoke(instance,vals);}
+\DoxyCodeLine{00074         \} \textcolor{keywordflow}{catch}(Exception e)\{}
+\DoxyCodeLine{00075             e.printStackTrace();}
+\DoxyCodeLine{00076             System.exit(-\/1);}
+\DoxyCodeLine{00077         \}}
+\DoxyCodeLine{00078     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdominio_1_1controladores_1_1_driver_d_c_g_afca71b027b8429225e13b6dabd0a5da1}\label{classdominio_1_1controladores_1_1_driver_d_c_g_afca71b027b8429225e13b6dabd0a5da1}} 
+\index{dominio.controladores.drivers.DriverDCG@{dominio.controladores.drivers.DriverDCG}!testLog@{testLog}}
+\index{testLog@{testLog}!dominio.controladores.drivers.DriverDCG@{dominio.controladores.drivers.DriverDCG}}
+\doxysubsubsection{\texorpdfstring{testLog()}{testLog()}}
+{\footnotesize\ttfamily static void dominio.\+controladores.\+Driver\+DCG.\+test\+Log (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Metodo de testeo de la funcion logaritmo. 
+
+
+
+Definición en la línea \mbox{\hyperlink{_driver_d_c_g_8java_source_l00084}{84}} del archivo \mbox{\hyperlink{_driver_d_c_g_8java_source}{Driver\+DCG.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00084                                   \{}
+\DoxyCodeLine{00085         System.out.println(\textcolor{stringliteral}{"{}Metodo que prueba la funcion de logaritmo"{}});}
+\DoxyCodeLine{00086         \textcolor{keywordtype}{int} i=16,b=2;}
+\DoxyCodeLine{00087         \mbox{\hyperlink{classdominio_1_1clases_1_1_avaluacio}{Avaluacio}} instance = \textcolor{keyword}{new} \mbox{\hyperlink{classdominio_1_1clases_1_1_avaluacio}{Avaluacio}}();}
+\DoxyCodeLine{00088         Method log = \textcolor{keyword}{null};}
+\DoxyCodeLine{00089         \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{00090             log = instance.getClass().getDeclaredMethod(\textcolor{stringliteral}{"{}log"{}}, \textcolor{keywordtype}{int}.\textcolor{keyword}{class}, \textcolor{keywordtype}{int}.\textcolor{keyword}{class});}
+\DoxyCodeLine{00091             log.setAccessible(\textcolor{keyword}{true});}
+\DoxyCodeLine{00092             System.out.println(log.invoke(instance,i,b));}
+\DoxyCodeLine{00093         \} \textcolor{keywordflow}{catch}(Exception e)\{}
+\DoxyCodeLine{00094             e.printStackTrace();}
+\DoxyCodeLine{00095             System.exit(-\/1);}
+\DoxyCodeLine{00096         \}}
+\DoxyCodeLine{00097     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdominio_1_1controladores_1_1_driver_d_c_g_a7aac0da65cab40f00320c46dd54d31d0}\label{classdominio_1_1controladores_1_1_driver_d_c_g_a7aac0da65cab40f00320c46dd54d31d0}} 
+\index{dominio.controladores.drivers.DriverDCG@{dominio.controladores.drivers.DriverDCG}!main@{main}}
+\index{main@{main}!dominio.controladores.drivers.DriverDCG@{dominio.controladores.drivers.DriverDCG}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily static void dominio.\+controladores.\+Driver\+DCG.\+main (\begin{DoxyParamCaption}\item[{String\mbox{[}$\,$\mbox{]}}]{args }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{_driver_d_c_g_8java_source_l00099}{99}} del archivo \mbox{\hyperlink{_driver_d_c_g_8java_source}{Driver\+DCG.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00099                                            \{}
+\DoxyCodeLine{00100         System.out.println(\textcolor{stringliteral}{"{}-\/-\/-\/-\/-\/ Testeo local -\/-\/-\/-\/-\/"{}});}
+\DoxyCodeLine{00101         \mbox{\hyperlink{classdominio_1_1controladores_1_1_driver_d_c_g_a28ec1415f998ea5f53b6288da97fd634}{userId}} = 2232;}
+\DoxyCodeLine{00102         HashMap<Integer, HashMap<Item, Double>> LR = \textcolor{keyword}{new} HashMap<>(), LT = \textcolor{keyword}{new} HashMap<>();}
+\DoxyCodeLine{00103         System.out.println(\textcolor{stringliteral}{"{}Testeo previo"{}});}
+\DoxyCodeLine{00104         System.out.println(\textcolor{stringliteral}{"{}-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/"{}});}
+\DoxyCodeLine{00105         HashMap<Integer,Double> vals = \textcolor{keyword}{new} HashMap<>();}
+\DoxyCodeLine{00106         vals.put(0,3.);}
+\DoxyCodeLine{00107         vals.put(1,2.9);}
+\DoxyCodeLine{00108         vals.put(1,3.2);}
+\DoxyCodeLine{00109         vals.put(1,4.5);}
+\DoxyCodeLine{00110         vals.put(2,1.6);}
+\DoxyCodeLine{00111         \mbox{\hyperlink{classdominio_1_1controladores_1_1_driver_d_c_g_a1a9dd4e441cb9d27aedeec34ca3ee93d}{testPrintDCG}}(vals,1);}
+\DoxyCodeLine{00112         HashMap<Item,Double> items = \textcolor{keyword}{new} HashMap<>();}
+\DoxyCodeLine{00113         items.put(\textcolor{keyword}{new} \mbox{\hyperlink{classdominio_1_1clases_1_1_item}{Item}}(\textcolor{stringliteral}{"{}123"{}}),0.5);}
+\DoxyCodeLine{00114         items.put(\textcolor{keyword}{new} \mbox{\hyperlink{classdominio_1_1clases_1_1_item}{Item}}(\textcolor{stringliteral}{"{}124"{}}),4.9);}
+\DoxyCodeLine{00115         items.put(\textcolor{keyword}{new} \mbox{\hyperlink{classdominio_1_1clases_1_1_item}{Item}}(\textcolor{stringliteral}{"{}125"{}}),3.7);}
+\DoxyCodeLine{00116         \mbox{\hyperlink{classdominio_1_1controladores_1_1_driver_d_c_g_a562e609fe2b3b4f0ad648ca89a1917ba}{testSortByValue}}(items);}
+\DoxyCodeLine{00117         \mbox{\hyperlink{classdominio_1_1controladores_1_1_driver_d_c_g_afca71b027b8429225e13b6dabd0a5da1}{testLog}}();}
+\DoxyCodeLine{00118         System.out.println(\textcolor{stringliteral}{"{}Test principal"{}});}
+\DoxyCodeLine{00119         System.out.println(\textcolor{stringliteral}{"{}-\/-\/-\/-\/-\/-\/"{}});}
+\DoxyCodeLine{00120         \mbox{\hyperlink{classdominio_1_1controladores_1_1_driver_d_c_g_a6b4ab8c8682d208be78076c586641fa4}{selectData}}(LR, 1);}
+\DoxyCodeLine{00121         \mbox{\hyperlink{classdominio_1_1controladores_1_1_driver_d_c_g_a6b4ab8c8682d208be78076c586641fa4}{selectData}}(LT, 2);}
+\DoxyCodeLine{00122         \mbox{\hyperlink{classdominio_1_1clases_1_1_algorisme}{Algorisme}}.\mbox{\hyperlink{classdominio_1_1clases_1_1_algorisme_a1cebe59280d945e4de04fbbe0543e80b}{printData}}(LR);}
+\DoxyCodeLine{00123         \mbox{\hyperlink{classdominio_1_1controladores_1_1_driver_d_c_g_a6199cc8988323d655ecfef3ad2e00567}{testDCG}}(LR, LT);}
+\DoxyCodeLine{00124         System.out.println(\textcolor{stringliteral}{"{}-\/-\/-\/-\/-\/ Testeo sobre archivo -\/-\/-\/-\/-\/"{}});}
+\DoxyCodeLine{00125         System.out.println(\textcolor{stringliteral}{"{}Testeo sobre dataset de 5 usuarios"{}});}
+\DoxyCodeLine{00126         \mbox{\hyperlink{classdominio_1_1clases_1_1_cjt__items}{Cjt\_items}} c = \textcolor{keyword}{new} \mbox{\hyperlink{classdominio_1_1clases_1_1_cjt__items}{Cjt\_items}}(\textcolor{stringliteral}{"{}/persistencia/data/DriversData/DCGTestSets/itemsSmallTest.csv"{}});}
+\DoxyCodeLine{00127         Valoracio ratingsKnown =  \textcolor{keyword}{new} Valoracio(\textcolor{stringliteral}{"{}/persistencia/data/DriversData/DCGTestSets/smallTestKnown.csv"{}}, c);}
+\DoxyCodeLine{00128         Valoracio ratingsUnknown =  \textcolor{keyword}{new} Valoracio(\textcolor{stringliteral}{"{}/persistencia/data/DriversData/DCGTestSets/smallTestUnknown.csv"{}}, c);}
+\DoxyCodeLine{00129         LR = ratingsKnown.getUserRatings();}
+\DoxyCodeLine{00130         LT = ratingsUnknown.getUserRatings();}
+\DoxyCodeLine{00131         System.out.println(\textcolor{stringliteral}{"{}Valor de la recomendacion para cada usuario "{}});}
+\DoxyCodeLine{00132         \textcolor{keywordflow}{for} (Integer user : LR.keySet()) \{}
+\DoxyCodeLine{00133             System.out.print(\textcolor{stringliteral}{"{}User "{}} + user + \textcolor{stringliteral}{"{} -\/-\/> "{}});}
+\DoxyCodeLine{00134             \mbox{\hyperlink{classdominio_1_1clases_1_1_avaluacio}{Avaluacio}}.\mbox{\hyperlink{classdominio_1_1clases_1_1_avaluacio_a882f7035680a3273984ab00f78aa3be6}{DCG}}(LR,LT,user);}
+\DoxyCodeLine{00135         \}}
+\DoxyCodeLine{00136         System.out.println(\textcolor{stringliteral}{"{}-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/"{}});}
+\DoxyCodeLine{00137         System.out.println(\textcolor{stringliteral}{"{}Testeo sobre dataset de 10 usuarios"{}});}
+\DoxyCodeLine{00138         c = \textcolor{keyword}{new} \mbox{\hyperlink{classdominio_1_1clases_1_1_cjt__items}{Cjt\_items}}(\textcolor{stringliteral}{"{}/persistencia/data/DriversData/DCGTestSets/itemsBigTest.csv"{}});}
+\DoxyCodeLine{00139         ratingsKnown =  \textcolor{keyword}{new} Valoracio(\textcolor{stringliteral}{"{}/persistencia/data/DriversData/DCGTestSets/bigTestKnown.csv"{}}, c);}
+\DoxyCodeLine{00140         ratingsUnknown =  \textcolor{keyword}{new} Valoracio(\textcolor{stringliteral}{"{}/persistencia/data/DriversData/DCGTestSets/bigTestUnknown.csv"{}}, c);}
+\DoxyCodeLine{00141         LR = ratingsKnown.getUserRatings();}
+\DoxyCodeLine{00142         LT = ratingsUnknown.getUserRatings();}
+\DoxyCodeLine{00143         System.out.println(\textcolor{stringliteral}{"{}Valor de la recomendacion  "{}});}
+\DoxyCodeLine{00144         \textcolor{keywordflow}{for} (Integer user : LR.keySet()) \{}
+\DoxyCodeLine{00145             System.out.print(\textcolor{stringliteral}{"{}User "{}} + user + \textcolor{stringliteral}{"{} -\/-\/> "{}});}
+\DoxyCodeLine{00146             \mbox{\hyperlink{classdominio_1_1clases_1_1_avaluacio}{Avaluacio}}.\mbox{\hyperlink{classdominio_1_1clases_1_1_avaluacio_a882f7035680a3273984ab00f78aa3be6}{DCG}}(LR,LT,user);}
+\DoxyCodeLine{00147         \}}
+\DoxyCodeLine{00148     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdominio_1_1controladores_1_1_driver_d_c_g_a6b4ab8c8682d208be78076c586641fa4}\label{classdominio_1_1controladores_1_1_driver_d_c_g_a6b4ab8c8682d208be78076c586641fa4}} 
+\index{dominio.controladores.drivers.DriverDCG@{dominio.controladores.drivers.DriverDCG}!selectData@{selectData}}
+\index{selectData@{selectData}!dominio.controladores.drivers.DriverDCG@{dominio.controladores.drivers.DriverDCG}}
+\doxysubsubsection{\texorpdfstring{selectData()}{selectData()}}
+{\footnotesize\ttfamily static void dominio.\+controladores.\+Driver\+DCG.\+select\+Data (\begin{DoxyParamCaption}\item[{Hash\+Map$<$ Integer, Hash\+Map$<$ \mbox{\hyperlink{classdominio_1_1clases_1_1_item}{Item}}, Double $>$ $>$}]{data,  }\item[{int}]{dataset }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Metodo local de preparacion de las valoraciones asociadas a cada usuario a tratar. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em data} & Estructura de datos que contiene las asignaciones de los items y sus valoraciones para cada usuario \\
+\hline
+{\em dataset} & Entero identificador del conjunto de datos de muestra que se deben tomar \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{_driver_d_c_g_8java_source_l00156}{156}} del archivo \mbox{\hyperlink{_driver_d_c_g_8java_source}{Driver\+DCG.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00156                                                                                               \{}
+\DoxyCodeLine{00157         HashMap<Item, Double> items = \textcolor{keyword}{new} HashMap<>();}
+\DoxyCodeLine{00158         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < \mbox{\hyperlink{classdominio_1_1controladores_1_1_driver_d_c_g_af3e5bf96945af52624639747d79bcc51}{DCGtest}}.size(); i++) \{}
+\DoxyCodeLine{00159             \textcolor{keywordflow}{if} (dataset == 1) items.put(\mbox{\hyperlink{classdominio_1_1controladores_1_1_driver_d_c_g_af3e5bf96945af52624639747d79bcc51}{DCGtest}}.get(i), \mbox{\hyperlink{classdominio_1_1controladores_1_1_driver_d_c_g_a603ccb0e356b9ed89d14475f84bd0b80}{setA}}.get(i));}
+\DoxyCodeLine{00160             \textcolor{keywordflow}{else} items.put(\mbox{\hyperlink{classdominio_1_1controladores_1_1_driver_d_c_g_af3e5bf96945af52624639747d79bcc51}{DCGtest}}.get(i), \mbox{\hyperlink{classdominio_1_1controladores_1_1_driver_d_c_g_ad752eef9f588d2463b1f0fe5fe642ada}{setB}}.get(i));}
+\DoxyCodeLine{00161         \}}
+\DoxyCodeLine{00162         data.put(\mbox{\hyperlink{classdominio_1_1controladores_1_1_driver_d_c_g_a28ec1415f998ea5f53b6288da97fd634}{userId}}, items);}
+\DoxyCodeLine{00163     \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Documentación de los datos miembro}
+\mbox{\Hypertarget{classdominio_1_1controladores_1_1_driver_d_c_g_af3e5bf96945af52624639747d79bcc51}\label{classdominio_1_1controladores_1_1_driver_d_c_g_af3e5bf96945af52624639747d79bcc51}} 
+\index{dominio.controladores.drivers.DriverDCG@{dominio.controladores.drivers.DriverDCG}!DCGtest@{DCGtest}}
+\index{DCGtest@{DCGtest}!dominio.controladores.drivers.DriverDCG@{dominio.controladores.drivers.DriverDCG}}
+\doxysubsubsection{\texorpdfstring{DCGtest}{DCGtest}}
+{\footnotesize\ttfamily final List$<$\mbox{\hyperlink{classdominio_1_1clases_1_1_item}{Item}}$>$ dominio.\+controladores.\+Driver\+DCG.\+DCGtest\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+{\bfseries Valor inicial\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= Arrays.asList(\textcolor{keyword}{new} Item(\textcolor{stringliteral}{"{}Doc1"{}}), \textcolor{keyword}{new} Item(\textcolor{stringliteral}{"{}Doc2"{}}),}
+\DoxyCodeLine{            \textcolor{keyword}{new} Item(\textcolor{stringliteral}{"{}Doc3"{}}), \textcolor{keyword}{new} Item(\textcolor{stringliteral}{"{}Doc4"{}}), \textcolor{keyword}{new} Item(\textcolor{stringliteral}{"{}Doc5"{}}), \textcolor{keyword}{new} Item(\textcolor{stringliteral}{"{}Doc6"{}}))}
+
+\end{DoxyCode}
+
+
+Definición en la línea \mbox{\hyperlink{_driver_d_c_g_8java_source_l00023}{23}} del archivo \mbox{\hyperlink{_driver_d_c_g_8java_source}{Driver\+DCG.\+java}}.
+
+\mbox{\Hypertarget{classdominio_1_1controladores_1_1_driver_d_c_g_a603ccb0e356b9ed89d14475f84bd0b80}\label{classdominio_1_1controladores_1_1_driver_d_c_g_a603ccb0e356b9ed89d14475f84bd0b80}} 
+\index{dominio.controladores.drivers.DriverDCG@{dominio.controladores.drivers.DriverDCG}!setA@{setA}}
+\index{setA@{setA}!dominio.controladores.drivers.DriverDCG@{dominio.controladores.drivers.DriverDCG}}
+\doxysubsubsection{\texorpdfstring{setA}{setA}}
+{\footnotesize\ttfamily List$<$Double$>$ dominio.\+controladores.\+Driver\+DCG.\+setA = Arrays.\+as\+List(3., 1., 2., 3., 2., 0.)\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{_driver_d_c_g_8java_source_l00025}{25}} del archivo \mbox{\hyperlink{_driver_d_c_g_8java_source}{Driver\+DCG.\+java}}.
+
+\mbox{\Hypertarget{classdominio_1_1controladores_1_1_driver_d_c_g_ad752eef9f588d2463b1f0fe5fe642ada}\label{classdominio_1_1controladores_1_1_driver_d_c_g_ad752eef9f588d2463b1f0fe5fe642ada}} 
+\index{dominio.controladores.drivers.DriverDCG@{dominio.controladores.drivers.DriverDCG}!setB@{setB}}
+\index{setB@{setB}!dominio.controladores.drivers.DriverDCG@{dominio.controladores.drivers.DriverDCG}}
+\doxysubsubsection{\texorpdfstring{setB}{setB}}
+{\footnotesize\ttfamily List$<$Double$>$ dominio.\+controladores.\+Driver\+DCG.\+setB = Arrays.\+as\+List(3., 3., 2., 2., 1., 0.)\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{_driver_d_c_g_8java_source_l00026}{26}} del archivo \mbox{\hyperlink{_driver_d_c_g_8java_source}{Driver\+DCG.\+java}}.
+
+\mbox{\Hypertarget{classdominio_1_1controladores_1_1_driver_d_c_g_a28ec1415f998ea5f53b6288da97fd634}\label{classdominio_1_1controladores_1_1_driver_d_c_g_a28ec1415f998ea5f53b6288da97fd634}} 
+\index{dominio.controladores.drivers.DriverDCG@{dominio.controladores.drivers.DriverDCG}!userId@{userId}}
+\index{userId@{userId}!dominio.controladores.drivers.DriverDCG@{dominio.controladores.drivers.DriverDCG}}
+\doxysubsubsection{\texorpdfstring{userId}{userId}}
+{\footnotesize\ttfamily int dominio.\+controladores.\+Driver\+DCG.\+user\+Id\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{_driver_d_c_g_8java_source_l00027}{27}} del archivo \mbox{\hyperlink{_driver_d_c_g_8java_source}{Driver\+DCG.\+java}}.
+
+
+
+La documentación para esta clase fue generada a partir del siguiente fichero\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_driver_d_c_g_8java}{Driver\+DCG.\+java}}\end{DoxyCompactItemize}

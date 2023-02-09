@@ -1,0 +1,177 @@
+\hypertarget{classdominio_1_1clases_1_1_hybrid}{}\doxysection{Referencia de la Clase dominio.\+clases.\+Hybrid}
+\label{classdominio_1_1clases_1_1_hybrid}\index{dominio.clases.Hybrid@{dominio.clases.Hybrid}}
+
+
+Clase que implementa el sistema de recomendacion con el metodo Hibrido.  
+
+
+\doxysubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classdominio_1_1clases_1_1_hybrid_a2d58a16b774675d52ad4afe0f360b206}{Hybrid}} (Hash\+Map$<$ \mbox{\hyperlink{classdominio_1_1clases_1_1_item}{Item}}, Double $>$ \mbox{\hyperlink{classdominio_1_1clases_1_1_hybrid_a27b71d32b89eaf0db4187dae5d4265ec}{collaborative}}, Hash\+Map$<$ \mbox{\hyperlink{classdominio_1_1clases_1_1_item}{Item}}, Double $>$ \mbox{\hyperlink{classdominio_1_1clases_1_1_hybrid_afe7d7217c1937b73cac0aefe99cbb0ce}{content}})
+\begin{DoxyCompactList}\small\item\em Constructora de la clase \mbox{\hyperlink{classdominio_1_1clases_1_1_hybrid}{Hybrid}}. \end{DoxyCompactList}\item 
+Hash\+Map$<$ \mbox{\hyperlink{classdominio_1_1clases_1_1_item}{Item}}, Double $>$ \mbox{\hyperlink{classdominio_1_1clases_1_1_hybrid_a7e9feca1edf15f6368e1fa25f9590335}{recommended\+\_\+items}} ()
+\begin{DoxyCompactList}\small\item\em Metodo para generar una recomendacion con el \mbox{\hyperlink{classdominio_1_1clases_1_1_hybrid}{Hybrid}} Recommender. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Atributos privados}
+\begin{DoxyCompactItemize}
+\item 
+Hash\+Map$<$ \mbox{\hyperlink{classdominio_1_1clases_1_1_item}{Item}}, Double $>$ \mbox{\hyperlink{classdominio_1_1clases_1_1_hybrid_a27b71d32b89eaf0db4187dae5d4265ec}{collaborative}}
+\begin{DoxyCompactList}\small\item\em Map que almacena los items recomendados por el metodo \mbox{\hyperlink{classdominio_1_1clases_1_1_collaborative}{Collaborative}}. \end{DoxyCompactList}\item 
+Hash\+Map$<$ \mbox{\hyperlink{classdominio_1_1clases_1_1_item}{Item}}, Double $>$ \mbox{\hyperlink{classdominio_1_1clases_1_1_hybrid_afe7d7217c1937b73cac0aefe99cbb0ce}{content}}
+\begin{DoxyCompactList}\small\item\em Map que almacena los items recomendados por el metodo \mbox{\hyperlink{classdominio_1_1clases_1_1_content_based}{Content\+Based}}. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classdominio_1_1clases_1_1_hybrid_a16c9cd77d10a92ce266a8c2497f6ac49}{k}}
+\begin{DoxyCompactList}\small\item\em Parametro k que indica el numero de items que se recomendaran. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Clase que implementa el sistema de recomendacion con el metodo Hibrido. 
+
+\begin{DoxyAuthor}{Autor}
+Jordi Elgueta Serra 
+\end{DoxyAuthor}
+
+
+Definición en la línea \mbox{\hyperlink{_hybrid_8java_source_l00013}{13}} del archivo \mbox{\hyperlink{_hybrid_8java_source}{Hybrid.\+java}}.
+
+
+
+\doxysubsection{Documentación del constructor y destructor}
+\mbox{\Hypertarget{classdominio_1_1clases_1_1_hybrid_a2d58a16b774675d52ad4afe0f360b206}\label{classdominio_1_1clases_1_1_hybrid_a2d58a16b774675d52ad4afe0f360b206}} 
+\index{dominio.clases.Hybrid@{dominio.clases.Hybrid}!Hybrid@{Hybrid}}
+\index{Hybrid@{Hybrid}!dominio.clases.Hybrid@{dominio.clases.Hybrid}}
+\doxysubsubsection{\texorpdfstring{Hybrid()}{Hybrid()}}
+{\footnotesize\ttfamily dominio.\+clases.\+Hybrid.\+Hybrid (\begin{DoxyParamCaption}\item[{Hash\+Map$<$ \mbox{\hyperlink{classdominio_1_1clases_1_1_item}{Item}}, Double $>$}]{collaborative,  }\item[{Hash\+Map$<$ \mbox{\hyperlink{classdominio_1_1clases_1_1_item}{Item}}, Double $>$}]{content }\end{DoxyParamCaption})}
+
+
+
+Constructora de la clase \mbox{\hyperlink{classdominio_1_1clases_1_1_hybrid}{Hybrid}}. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em collaborative} & Map con los items recomendados por el metodo \mbox{\hyperlink{classdominio_1_1clases_1_1_collaborative}{Collaborative}} como key y sus predicciones como value \\
+\hline
+{\em content} & Map con los items recomendados por el metodo \mbox{\hyperlink{classdominio_1_1clases_1_1_content_based}{Content\+Based}} como key y sus predicciones como value \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{_hybrid_8java_source_l00032}{32}} del archivo \mbox{\hyperlink{_hybrid_8java_source}{Hybrid.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00032                                                                                       \{}
+\DoxyCodeLine{00033         this.\mbox{\hyperlink{classdominio_1_1clases_1_1_hybrid_a27b71d32b89eaf0db4187dae5d4265ec}{collaborative}} = \textcolor{keyword}{new} HashMap<>(\mbox{\hyperlink{classdominio_1_1clases_1_1_hybrid_a27b71d32b89eaf0db4187dae5d4265ec}{collaborative}});}
+\DoxyCodeLine{00034         this.\mbox{\hyperlink{classdominio_1_1clases_1_1_hybrid_afe7d7217c1937b73cac0aefe99cbb0ce}{content}} = \textcolor{keyword}{new} HashMap<>(\mbox{\hyperlink{classdominio_1_1clases_1_1_hybrid_afe7d7217c1937b73cac0aefe99cbb0ce}{content}});}
+\DoxyCodeLine{00035         this.\mbox{\hyperlink{classdominio_1_1clases_1_1_hybrid_a16c9cd77d10a92ce266a8c2497f6ac49}{k}} = \mbox{\hyperlink{classdominio_1_1clases_1_1_hybrid_afe7d7217c1937b73cac0aefe99cbb0ce}{content}}.size();}
+\DoxyCodeLine{00036     \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Documentación de las funciones miembro}
+\mbox{\Hypertarget{classdominio_1_1clases_1_1_hybrid_a7e9feca1edf15f6368e1fa25f9590335}\label{classdominio_1_1clases_1_1_hybrid_a7e9feca1edf15f6368e1fa25f9590335}} 
+\index{dominio.clases.Hybrid@{dominio.clases.Hybrid}!recommended\_items@{recommended\_items}}
+\index{recommended\_items@{recommended\_items}!dominio.clases.Hybrid@{dominio.clases.Hybrid}}
+\doxysubsubsection{\texorpdfstring{recommended\_items()}{recommended\_items()}}
+{\footnotesize\ttfamily Hash\+Map$<$ \mbox{\hyperlink{classdominio_1_1clases_1_1_item}{Item}}, Double $>$ dominio.\+clases.\+Hybrid.\+recommended\+\_\+items (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Metodo para generar una recomendacion con el \mbox{\hyperlink{classdominio_1_1clases_1_1_hybrid}{Hybrid}} Recommender. 
+
+\begin{DoxyReturn}{Devuelve}
+Map con los items recomendados como keys y las predicciones de la valoracion como values 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{_hybrid_8java_source_l00042}{42}} del archivo \mbox{\hyperlink{_hybrid_8java_source}{Hybrid.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00042                                                      \{}
+\DoxyCodeLine{00043         HashMap<Item, Double> \mbox{\hyperlink{classdominio_1_1clases_1_1_hybrid_a7e9feca1edf15f6368e1fa25f9590335}{recommended\_items}} = \textcolor{keyword}{new} HashMap<>();}
+\DoxyCodeLine{00044         ArrayList<Item> deletedItems = \textcolor{keyword}{new} ArrayList<>();}
+\DoxyCodeLine{00045         \textcolor{keywordflow}{for} (Item i : \mbox{\hyperlink{classdominio_1_1clases_1_1_hybrid_afe7d7217c1937b73cac0aefe99cbb0ce}{content}}.keySet()) \{}
+\DoxyCodeLine{00046             \textcolor{keywordflow}{if} (\mbox{\hyperlink{classdominio_1_1clases_1_1_hybrid_a27b71d32b89eaf0db4187dae5d4265ec}{collaborative}}.containsKey(i)) \{}
+\DoxyCodeLine{00047                 \mbox{\hyperlink{classdominio_1_1clases_1_1_hybrid_a7e9feca1edf15f6368e1fa25f9590335}{recommended\_items}}.put(i, (\mbox{\hyperlink{classdominio_1_1clases_1_1_hybrid_a27b71d32b89eaf0db4187dae5d4265ec}{collaborative}}.get(i) + \mbox{\hyperlink{classdominio_1_1clases_1_1_hybrid_afe7d7217c1937b73cac0aefe99cbb0ce}{content}}.get(i)) / 2);}
+\DoxyCodeLine{00048                 deletedItems.add(i);}
+\DoxyCodeLine{00049             \}}
+\DoxyCodeLine{00050         \}}
+\DoxyCodeLine{00051         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classdominio_1_1clases_1_1_hybrid_a7e9feca1edf15f6368e1fa25f9590335}{recommended\_items}}.size() < \mbox{\hyperlink{classdominio_1_1clases_1_1_hybrid_a16c9cd77d10a92ce266a8c2497f6ac49}{k}}) \{}
+\DoxyCodeLine{00052             \textcolor{keywordflow}{for}(Item i : deletedItems)\{}
+\DoxyCodeLine{00053                 \mbox{\hyperlink{classdominio_1_1clases_1_1_hybrid_a27b71d32b89eaf0db4187dae5d4265ec}{collaborative}}.remove(i);}
+\DoxyCodeLine{00054                 \mbox{\hyperlink{classdominio_1_1clases_1_1_hybrid_afe7d7217c1937b73cac0aefe99cbb0ce}{content}}.remove(i);}
+\DoxyCodeLine{00055             \}}
+\DoxyCodeLine{00056             LinkedHashMap<Item, Double> sortedCol = (LinkedHashMap) sortByValue(\mbox{\hyperlink{classdominio_1_1clases_1_1_hybrid_a27b71d32b89eaf0db4187dae5d4265ec}{collaborative}});}
+\DoxyCodeLine{00057             LinkedHashMap<Item, Double> sortContent = (LinkedHashMap) sortByValue(\mbox{\hyperlink{classdominio_1_1clases_1_1_hybrid_afe7d7217c1937b73cac0aefe99cbb0ce}{content}});}
+\DoxyCodeLine{00058 }
+\DoxyCodeLine{00059             Iterator it1 = sortedCol.entrySet().iterator();}
+\DoxyCodeLine{00060             Iterator it2 = sortContent.entrySet().iterator();}
+\DoxyCodeLine{00061             Map.Entry pair1 = (Map.Entry) it1.next();}
+\DoxyCodeLine{00062             Map.Entry pair2 = (Map.Entry) it2.next();}
+\DoxyCodeLine{00063             \textcolor{keywordflow}{while} (\mbox{\hyperlink{classdominio_1_1clases_1_1_hybrid_a7e9feca1edf15f6368e1fa25f9590335}{recommended\_items}}.size() < \mbox{\hyperlink{classdominio_1_1clases_1_1_hybrid_a16c9cd77d10a92ce266a8c2497f6ac49}{k}}) \{}
+\DoxyCodeLine{00064                 \textcolor{keywordflow}{if} ((Double) pair1.getValue() > (Double) pair2.getValue()) \{}
+\DoxyCodeLine{00065                     \mbox{\hyperlink{classdominio_1_1clases_1_1_hybrid_a7e9feca1edf15f6368e1fa25f9590335}{recommended\_items}}.put((Item) pair1.getKey(), (Double) pair1.getValue());}
+\DoxyCodeLine{00066                     \textcolor{keywordflow}{if} (it1.hasNext())}
+\DoxyCodeLine{00067                         pair1 = (Map.Entry) it1.next();}
+\DoxyCodeLine{00068                 \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{00069                     \mbox{\hyperlink{classdominio_1_1clases_1_1_hybrid_a7e9feca1edf15f6368e1fa25f9590335}{recommended\_items}}.put((Item) pair2.getKey(), (Double) pair2.getValue());}
+\DoxyCodeLine{00070                     \textcolor{keywordflow}{if} (it2.hasNext())}
+\DoxyCodeLine{00071                         pair2 = (Map.Entry) it2.next();}
+\DoxyCodeLine{00072                 \}}
+\DoxyCodeLine{00073             \}}
+\DoxyCodeLine{00074         \}}
+\DoxyCodeLine{00075         \textcolor{keywordflow}{return} \mbox{\hyperlink{classdominio_1_1clases_1_1_hybrid_a7e9feca1edf15f6368e1fa25f9590335}{recommended\_items}};}
+\DoxyCodeLine{00076     \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Documentación de los datos miembro}
+\mbox{\Hypertarget{classdominio_1_1clases_1_1_hybrid_a27b71d32b89eaf0db4187dae5d4265ec}\label{classdominio_1_1clases_1_1_hybrid_a27b71d32b89eaf0db4187dae5d4265ec}} 
+\index{dominio.clases.Hybrid@{dominio.clases.Hybrid}!collaborative@{collaborative}}
+\index{collaborative@{collaborative}!dominio.clases.Hybrid@{dominio.clases.Hybrid}}
+\doxysubsubsection{\texorpdfstring{collaborative}{collaborative}}
+{\footnotesize\ttfamily Hash\+Map$<$\mbox{\hyperlink{classdominio_1_1clases_1_1_item}{Item}}, Double$>$ dominio.\+clases.\+Hybrid.\+collaborative\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Map que almacena los items recomendados por el metodo \mbox{\hyperlink{classdominio_1_1clases_1_1_collaborative}{Collaborative}}. 
+
+
+
+Definición en la línea \mbox{\hyperlink{_hybrid_8java_source_l00017}{17}} del archivo \mbox{\hyperlink{_hybrid_8java_source}{Hybrid.\+java}}.
+
+\mbox{\Hypertarget{classdominio_1_1clases_1_1_hybrid_afe7d7217c1937b73cac0aefe99cbb0ce}\label{classdominio_1_1clases_1_1_hybrid_afe7d7217c1937b73cac0aefe99cbb0ce}} 
+\index{dominio.clases.Hybrid@{dominio.clases.Hybrid}!content@{content}}
+\index{content@{content}!dominio.clases.Hybrid@{dominio.clases.Hybrid}}
+\doxysubsubsection{\texorpdfstring{content}{content}}
+{\footnotesize\ttfamily Hash\+Map$<$\mbox{\hyperlink{classdominio_1_1clases_1_1_item}{Item}}, Double$>$ dominio.\+clases.\+Hybrid.\+content\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Map que almacena los items recomendados por el metodo \mbox{\hyperlink{classdominio_1_1clases_1_1_content_based}{Content\+Based}}. 
+
+
+
+Definición en la línea \mbox{\hyperlink{_hybrid_8java_source_l00021}{21}} del archivo \mbox{\hyperlink{_hybrid_8java_source}{Hybrid.\+java}}.
+
+\mbox{\Hypertarget{classdominio_1_1clases_1_1_hybrid_a16c9cd77d10a92ce266a8c2497f6ac49}\label{classdominio_1_1clases_1_1_hybrid_a16c9cd77d10a92ce266a8c2497f6ac49}} 
+\index{dominio.clases.Hybrid@{dominio.clases.Hybrid}!k@{k}}
+\index{k@{k}!dominio.clases.Hybrid@{dominio.clases.Hybrid}}
+\doxysubsubsection{\texorpdfstring{k}{k}}
+{\footnotesize\ttfamily int dominio.\+clases.\+Hybrid.\+k\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Parametro k que indica el numero de items que se recomendaran. 
+
+
+
+Definición en la línea \mbox{\hyperlink{_hybrid_8java_source_l00025}{25}} del archivo \mbox{\hyperlink{_hybrid_8java_source}{Hybrid.\+java}}.
+
+
+
+La documentación para esta clase fue generada a partir del siguiente fichero\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_hybrid_8java}{Hybrid.\+java}}\end{DoxyCompactItemize}

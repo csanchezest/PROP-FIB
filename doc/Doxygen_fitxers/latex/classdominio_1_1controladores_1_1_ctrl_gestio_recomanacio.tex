@@ -1,0 +1,218 @@
+\hypertarget{classdominio_1_1controladores_1_1_ctrl_gestio_recomanacio}{}\doxysection{Referencia de la Clase dominio.\+controladores.\+Ctrl\+Gestio\+Recomanacio}
+\label{classdominio_1_1controladores_1_1_ctrl_gestio_recomanacio}\index{dominio.controladores.CtrlGestioRecomanacio@{dominio.controladores.CtrlGestioRecomanacio}}
+
+
+Controlador que se encarga de todas las funcionalidades de gestion de las recomendaciones.  
+
+
+\doxysubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classdominio_1_1controladores_1_1_ctrl_gestio_recomanacio_ad055d8fe6718df14d65adf48c7e9e373}{Ctrl\+Gestio\+Recomanacio}} ()
+\begin{DoxyCompactList}\small\item\em Contructora de la clase. \end{DoxyCompactList}\item 
+Hash\+Map$<$ String, Double $>$ \mbox{\hyperlink{classdominio_1_1controladores_1_1_ctrl_gestio_recomanacio_ac04ae71a3c35216ef3d135607b89cc80}{make\+Recomendation}} (int n, \mbox{\hyperlink{classdominio_1_1clases_1_1_usuari}{Usuari}} u, \mbox{\hyperlink{classdominio_1_1clases_1_1_cjt__items}{Cjt\+\_\+items}} dataset, Datos vals, List$<$ Boolean $>$ int\+At, List$<$ Boolean $>$ doub\+At, List$<$ Boolean $>$ date\+At, List$<$ Boolean $>$ b\+At, List$<$ Boolean $>$ cat\+At, List$<$ Boolean $>$ ft\+At)
+\begin{DoxyCompactList}\small\item\em Metodo para hacer una recomendacion con cualquiera de los tres algortimos. \end{DoxyCompactList}\item 
+String \mbox{\hyperlink{classdominio_1_1controladores_1_1_ctrl_gestio_recomanacio_a29eb6bda7d4304d20c25971ca99b7a8b}{get\+Recomendacion}} (\mbox{\hyperlink{classdominio_1_1clases_1_1_cjt__items}{Cjt\+\_\+items}} dataset, File unknown, \mbox{\hyperlink{classdominio_1_1clases_1_1_usuari}{Usuari}} u)
+\begin{DoxyCompactList}\small\item\em Metodo que devuelve en formato string una recomendacion para poder printearla. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classdominio_1_1controladores_1_1_ctrl_gestio_recomanacio_ab5033ae2f4032642530f2804bbb4bb05}{setK}} (int n)
+\end{DoxyCompactItemize}
+\doxysubsection*{Atributos privados}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classdominio_1_1controladores_1_1_ctrl_gestio_recomanacio_a151bacf64acd5934e90c494d4c91ee1c}{k}}
+\begin{DoxyCompactList}\small\item\em Numero de items que se recomendaran. \end{DoxyCompactList}\item 
+Hash\+Map$<$ \mbox{\hyperlink{classdominio_1_1clases_1_1_item}{Item}}, Double $>$ \mbox{\hyperlink{classdominio_1_1controladores_1_1_ctrl_gestio_recomanacio_a585138303ff3193cc1d31512908e4ffe}{valoraciones}}
+\begin{DoxyCompactList}\small\item\em Map con las valoraciones hechas por el usuario. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Controlador que se encarga de todas las funcionalidades de gestion de las recomendaciones. 
+
+\begin{DoxyAuthor}{Autor}
+Jordi Elgueta Serra 
+\end{DoxyAuthor}
+
+
+Definición en la línea \mbox{\hyperlink{_ctrl_gestio_recomanacio_8java_source_l00015}{15}} del archivo \mbox{\hyperlink{_ctrl_gestio_recomanacio_8java_source}{Ctrl\+Gestio\+Recomanacio.\+java}}.
+
+
+
+\doxysubsection{Documentación del constructor y destructor}
+\mbox{\Hypertarget{classdominio_1_1controladores_1_1_ctrl_gestio_recomanacio_ad055d8fe6718df14d65adf48c7e9e373}\label{classdominio_1_1controladores_1_1_ctrl_gestio_recomanacio_ad055d8fe6718df14d65adf48c7e9e373}} 
+\index{dominio.controladores.CtrlGestioRecomanacio@{dominio.controladores.CtrlGestioRecomanacio}!CtrlGestioRecomanacio@{CtrlGestioRecomanacio}}
+\index{CtrlGestioRecomanacio@{CtrlGestioRecomanacio}!dominio.controladores.CtrlGestioRecomanacio@{dominio.controladores.CtrlGestioRecomanacio}}
+\doxysubsubsection{\texorpdfstring{CtrlGestioRecomanacio()}{CtrlGestioRecomanacio()}}
+{\footnotesize\ttfamily dominio.\+controladores.\+Ctrl\+Gestio\+Recomanacio.\+Ctrl\+Gestio\+Recomanacio (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Contructora de la clase. 
+
+
+
+Definición en la línea \mbox{\hyperlink{_ctrl_gestio_recomanacio_8java_source_l00029}{29}} del archivo \mbox{\hyperlink{_ctrl_gestio_recomanacio_8java_source}{Ctrl\+Gestio\+Recomanacio.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00029                                    \{}
+\DoxyCodeLine{00030         \mbox{\hyperlink{classdominio_1_1controladores_1_1_ctrl_gestio_recomanacio_a585138303ff3193cc1d31512908e4ffe}{valoraciones}} = \textcolor{keyword}{new} LinkedHashMap<>();}
+\DoxyCodeLine{00031         \mbox{\hyperlink{classdominio_1_1controladores_1_1_ctrl_gestio_recomanacio_a151bacf64acd5934e90c494d4c91ee1c}{k}} = 0;}
+\DoxyCodeLine{00032     \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Documentación de las funciones miembro}
+\mbox{\Hypertarget{classdominio_1_1controladores_1_1_ctrl_gestio_recomanacio_ac04ae71a3c35216ef3d135607b89cc80}\label{classdominio_1_1controladores_1_1_ctrl_gestio_recomanacio_ac04ae71a3c35216ef3d135607b89cc80}} 
+\index{dominio.controladores.CtrlGestioRecomanacio@{dominio.controladores.CtrlGestioRecomanacio}!makeRecomendation@{makeRecomendation}}
+\index{makeRecomendation@{makeRecomendation}!dominio.controladores.CtrlGestioRecomanacio@{dominio.controladores.CtrlGestioRecomanacio}}
+\doxysubsubsection{\texorpdfstring{makeRecomendation()}{makeRecomendation()}}
+{\footnotesize\ttfamily Hash\+Map$<$ String, Double $>$ dominio.\+controladores.\+Ctrl\+Gestio\+Recomanacio.\+make\+Recomendation (\begin{DoxyParamCaption}\item[{int}]{n,  }\item[{\mbox{\hyperlink{classdominio_1_1clases_1_1_usuari}{Usuari}}}]{u,  }\item[{\mbox{\hyperlink{classdominio_1_1clases_1_1_cjt__items}{Cjt\+\_\+items}}}]{dataset,  }\item[{Datos}]{vals,  }\item[{List$<$ Boolean $>$}]{int\+At,  }\item[{List$<$ Boolean $>$}]{doub\+At,  }\item[{List$<$ Boolean $>$}]{date\+At,  }\item[{List$<$ Boolean $>$}]{b\+At,  }\item[{List$<$ Boolean $>$}]{cat\+At,  }\item[{List$<$ Boolean $>$}]{ft\+At }\end{DoxyParamCaption})}
+
+
+
+Metodo para hacer una recomendacion con cualquiera de los tres algortimos. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em n} & Parametro que nos indica el algortimo a usar, 0 para el Collaborative, 1 para el Content\+Based y 2 para el Hybrid \\
+\hline
+{\em u} & Usuario que pide la recomendacion \\
+\hline
+{\em dataset} & Dataset sobre el que se hará la recomendacin \\
+\hline
+{\em vals} & Ratings sobre los que se hara la recomendacion \\
+\hline
+{\em int\+At} & Lista de booleanos que indica cuales atributos de tipo enteros que hay tener en cuenta en la recomendacion \\
+\hline
+{\em doub\+At} & Lista de booleanos que indica cuales atributos de tipo double que hay tener en cuenta en la recomendacion \\
+\hline
+{\em date\+At} & Lista de booleanos que indica cuales atributos de tipo date que hay tener en cuenta en la recomendacion \\
+\hline
+{\em b\+At} & Lista de booleanos que indica cuales atributos de tipo booleano que hay tener en cuenta en la recomendacion \\
+\hline
+{\em cat\+At} & Lista de booleanos que indica cuales atributos de tipo categorico que hay tener en cuenta en la recomendacion \\
+\hline
+{\em ft\+At} & Lista de booleanos que indica cuales atributos de tipo texto libre que hay tener en cuenta en la recomendacion \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+Mapa con la recomendacion, con los identificadores de los items como key y las predicciones de valoracion como values 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{_ctrl_gestio_recomanacio_8java_source_l00048}{48}} del archivo \mbox{\hyperlink{_ctrl_gestio_recomanacio_8java_source}{Ctrl\+Gestio\+Recomanacio.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00050                                                                                              \{}
+\DoxyCodeLine{00051         HashMap<String, Double> recommendation = \textcolor{keyword}{new} LinkedHashMap<>();}
+\DoxyCodeLine{00052         \textcolor{keywordflow}{if} (n == 0)}
+\DoxyCodeLine{00053             \mbox{\hyperlink{classdominio_1_1controladores_1_1_ctrl_gestio_recomanacio_a585138303ff3193cc1d31512908e4ffe}{valoraciones}} = \textcolor{keyword}{new} \mbox{\hyperlink{classdominio_1_1clases_1_1_recomendacion}{Recomendacion}}(u, dataset, vals.getRatings(), vals.getMaxRating(), vals.getUsers(), \mbox{\hyperlink{classdominio_1_1controladores_1_1_ctrl_gestio_recomanacio_a151bacf64acd5934e90c494d4c91ee1c}{k}}, intAt,}
+\DoxyCodeLine{00054                     doubAt,dateAt,bAt,catAt,ftAt).\mbox{\hyperlink{classdominio_1_1clases_1_1_recomendacion_a3be966ef490d35e911fec0b7e500777d}{Collaborative}}();}
+\DoxyCodeLine{00055         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (n == 1)}
+\DoxyCodeLine{00056             \mbox{\hyperlink{classdominio_1_1controladores_1_1_ctrl_gestio_recomanacio_a585138303ff3193cc1d31512908e4ffe}{valoraciones}} = \textcolor{keyword}{new} \mbox{\hyperlink{classdominio_1_1clases_1_1_recomendacion}{Recomendacion}}(u, dataset, vals.getRatings(), vals.getMaxRating(), vals.getUsers(), \mbox{\hyperlink{classdominio_1_1controladores_1_1_ctrl_gestio_recomanacio_a151bacf64acd5934e90c494d4c91ee1c}{k}}, intAt,}
+\DoxyCodeLine{00057                     doubAt,dateAt,bAt,catAt,ftAt).\mbox{\hyperlink{classdominio_1_1clases_1_1_recomendacion_a9b2713889edae9988375c874ca4096b0}{Content}}();}
+\DoxyCodeLine{00058         \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00059             \mbox{\hyperlink{classdominio_1_1controladores_1_1_ctrl_gestio_recomanacio_a585138303ff3193cc1d31512908e4ffe}{valoraciones}} = \textcolor{keyword}{new} \mbox{\hyperlink{classdominio_1_1clases_1_1_recomendacion}{Recomendacion}}(u, dataset, vals.getRatings(), vals.getMaxRating(), vals.getUsers(), \mbox{\hyperlink{classdominio_1_1controladores_1_1_ctrl_gestio_recomanacio_a151bacf64acd5934e90c494d4c91ee1c}{k}}, intAt,}
+\DoxyCodeLine{00060                     doubAt,dateAt,bAt,catAt,ftAt).\mbox{\hyperlink{classdominio_1_1clases_1_1_recomendacion_ac4ac3a1e3275bed35491f1609928aa8f}{Hybrid}}();}
+\DoxyCodeLine{00061 }
+\DoxyCodeLine{00062         \textcolor{keywordflow}{for} (\mbox{\hyperlink{classdominio_1_1clases_1_1_item}{Item}} i : \mbox{\hyperlink{classdominio_1_1controladores_1_1_ctrl_gestio_recomanacio_a585138303ff3193cc1d31512908e4ffe}{valoraciones}}.keySet()) recommendation.put(i.getId(), \mbox{\hyperlink{classdominio_1_1controladores_1_1_ctrl_gestio_recomanacio_a585138303ff3193cc1d31512908e4ffe}{valoraciones}}.get(i));}
+\DoxyCodeLine{00063 }
+\DoxyCodeLine{00064         \textcolor{keywordflow}{return} recommendation;}
+\DoxyCodeLine{00065     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdominio_1_1controladores_1_1_ctrl_gestio_recomanacio_a29eb6bda7d4304d20c25971ca99b7a8b}\label{classdominio_1_1controladores_1_1_ctrl_gestio_recomanacio_a29eb6bda7d4304d20c25971ca99b7a8b}} 
+\index{dominio.controladores.CtrlGestioRecomanacio@{dominio.controladores.CtrlGestioRecomanacio}!getRecomendacion@{getRecomendacion}}
+\index{getRecomendacion@{getRecomendacion}!dominio.controladores.CtrlGestioRecomanacio@{dominio.controladores.CtrlGestioRecomanacio}}
+\doxysubsubsection{\texorpdfstring{getRecomendacion()}{getRecomendacion()}}
+{\footnotesize\ttfamily String dominio.\+controladores.\+Ctrl\+Gestio\+Recomanacio.\+get\+Recomendacion (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classdominio_1_1clases_1_1_cjt__items}{Cjt\+\_\+items}}}]{dataset,  }\item[{File}]{unknown,  }\item[{\mbox{\hyperlink{classdominio_1_1clases_1_1_usuari}{Usuari}}}]{u }\end{DoxyParamCaption})}
+
+
+
+Metodo que devuelve en formato string una recomendacion para poder printearla. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em dataset} & Dataset sobre el que se hace la recomendacion \\
+\hline
+{\em unknown} & Archivo que contiene el ratings unknown \\
+\hline
+{\em u} & usuario que pide la recomendacion \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+Devuelve el string que contiene la recomendacion 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{_ctrl_gestio_recomanacio_8java_source_l00074}{74}} del archivo \mbox{\hyperlink{_ctrl_gestio_recomanacio_8java_source}{Ctrl\+Gestio\+Recomanacio.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00074                                                                               \{}
+\DoxyCodeLine{00075         Datos unknownVals = \textcolor{keyword}{new} Datos(unknown.getAbsolutePath(), dataset);}
+\DoxyCodeLine{00076         \textcolor{keywordflow}{if} (!unknownVals.getUsers().contains(u))}
+\DoxyCodeLine{00077             \textcolor{keywordflow}{return} \textcolor{stringliteral}{"{}No hay datos suficientes para evaluar la calidad de la prediccion realizada"{}};}
+\DoxyCodeLine{00078         String s = \textcolor{stringliteral}{"{}El valor de la recomendacion realizada es: "{}};}
+\DoxyCodeLine{00079         List<Usuari> users = unknownVals.getUsers();}
+\DoxyCodeLine{00080         \mbox{\hyperlink{classdominio_1_1clases_1_1_usuari}{Usuari}} us = users.get(users.indexOf(u));}
+\DoxyCodeLine{00081         s += \mbox{\hyperlink{classdominio_1_1clases_1_1_avaluacio}{Avaluacio}}.\mbox{\hyperlink{classdominio_1_1clases_1_1_avaluacio_a6097e0538c2f66438f1d09f8f6585cec}{DCG}}(us, u);}
+\DoxyCodeLine{00082         \textcolor{keywordflow}{return} s;}
+\DoxyCodeLine{00083     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdominio_1_1controladores_1_1_ctrl_gestio_recomanacio_ab5033ae2f4032642530f2804bbb4bb05}\label{classdominio_1_1controladores_1_1_ctrl_gestio_recomanacio_ab5033ae2f4032642530f2804bbb4bb05}} 
+\index{dominio.controladores.CtrlGestioRecomanacio@{dominio.controladores.CtrlGestioRecomanacio}!setK@{setK}}
+\index{setK@{setK}!dominio.controladores.CtrlGestioRecomanacio@{dominio.controladores.CtrlGestioRecomanacio}}
+\doxysubsubsection{\texorpdfstring{setK()}{setK()}}
+{\footnotesize\ttfamily void dominio.\+controladores.\+Ctrl\+Gestio\+Recomanacio.\+setK (\begin{DoxyParamCaption}\item[{int}]{n }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea \mbox{\hyperlink{_ctrl_gestio_recomanacio_8java_source_l00085}{85}} del archivo \mbox{\hyperlink{_ctrl_gestio_recomanacio_8java_source}{Ctrl\+Gestio\+Recomanacio.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00085                             \{}
+\DoxyCodeLine{00086         \mbox{\hyperlink{classdominio_1_1controladores_1_1_ctrl_gestio_recomanacio_a151bacf64acd5934e90c494d4c91ee1c}{k}} = n;}
+\DoxyCodeLine{00087     \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Documentación de los datos miembro}
+\mbox{\Hypertarget{classdominio_1_1controladores_1_1_ctrl_gestio_recomanacio_a151bacf64acd5934e90c494d4c91ee1c}\label{classdominio_1_1controladores_1_1_ctrl_gestio_recomanacio_a151bacf64acd5934e90c494d4c91ee1c}} 
+\index{dominio.controladores.CtrlGestioRecomanacio@{dominio.controladores.CtrlGestioRecomanacio}!k@{k}}
+\index{k@{k}!dominio.controladores.CtrlGestioRecomanacio@{dominio.controladores.CtrlGestioRecomanacio}}
+\doxysubsubsection{\texorpdfstring{k}{k}}
+{\footnotesize\ttfamily int dominio.\+controladores.\+Ctrl\+Gestio\+Recomanacio.\+k\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Numero de items que se recomendaran. 
+
+
+
+Definición en la línea \mbox{\hyperlink{_ctrl_gestio_recomanacio_8java_source_l00020}{20}} del archivo \mbox{\hyperlink{_ctrl_gestio_recomanacio_8java_source}{Ctrl\+Gestio\+Recomanacio.\+java}}.
+
+\mbox{\Hypertarget{classdominio_1_1controladores_1_1_ctrl_gestio_recomanacio_a585138303ff3193cc1d31512908e4ffe}\label{classdominio_1_1controladores_1_1_ctrl_gestio_recomanacio_a585138303ff3193cc1d31512908e4ffe}} 
+\index{dominio.controladores.CtrlGestioRecomanacio@{dominio.controladores.CtrlGestioRecomanacio}!valoraciones@{valoraciones}}
+\index{valoraciones@{valoraciones}!dominio.controladores.CtrlGestioRecomanacio@{dominio.controladores.CtrlGestioRecomanacio}}
+\doxysubsubsection{\texorpdfstring{valoraciones}{valoraciones}}
+{\footnotesize\ttfamily Hash\+Map$<$\mbox{\hyperlink{classdominio_1_1clases_1_1_item}{Item}}, Double$>$ dominio.\+controladores.\+Ctrl\+Gestio\+Recomanacio.\+valoraciones\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Map con las valoraciones hechas por el usuario. 
+
+
+
+Definición en la línea \mbox{\hyperlink{_ctrl_gestio_recomanacio_8java_source_l00024}{24}} del archivo \mbox{\hyperlink{_ctrl_gestio_recomanacio_8java_source}{Ctrl\+Gestio\+Recomanacio.\+java}}.
+
+
+
+La documentación para esta clase fue generada a partir del siguiente fichero\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_ctrl_gestio_recomanacio_8java}{Ctrl\+Gestio\+Recomanacio.\+java}}\end{DoxyCompactItemize}

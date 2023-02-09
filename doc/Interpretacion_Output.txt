@@ -1,0 +1,9 @@
+El formato del output es el siguiente:
+
+Primero se imprime una frase con el id del usuario. 
+
+Seguido se imprime la lista con los id de los items recomendados al usuario junto con la valoracion que se preve que este le daria. Se imprimen tantos items por usuario como se hayan pedido al inicio de la ejecucion, y estos aparecen ordenados de mayor a menor segun su valoracion. 
+
+En el caso que se pidan las recomendaciones para todos los usuarios del fichero known, entonces se imprime tambien el valor del DCG debajo de la lista de items recomendados. Si solo se pide recomendacion por un usuario, no se aplica el DCG.
+
+Si se hacen recomendaciones por mas de un usuario se repite lo anterior por cada uno de ellos.

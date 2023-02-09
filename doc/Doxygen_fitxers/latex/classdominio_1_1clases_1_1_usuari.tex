@@ -1,0 +1,423 @@
+\hypertarget{classdominio_1_1clases_1_1_usuari}{}\doxysection{Referencia de la Clase dominio.\+clases.\+Usuari}
+\label{classdominio_1_1clases_1_1_usuari}\index{dominio.clases.Usuari@{dominio.clases.Usuari}}
+
+
+Clase que representa un Usuario.  
+
+
+\doxysubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{classdominio_1_1clases_1_1_usuari_a1f5ef8dcfa734f14de2f700fefba2af4}{get\+Nearest\+\_\+dist}} ()
+\item 
+void \mbox{\hyperlink{classdominio_1_1clases_1_1_usuari_a5d7415677c4193ad03bce948a5de2fc9}{set\+Nearest\+\_\+dist}} (double \mbox{\hyperlink{classdominio_1_1clases_1_1_usuari_a6e7d8a4717e8ebe7f008a55cd55ab2fc}{nearest\+\_\+dist}})
+\item 
+\mbox{\hyperlink{classdominio_1_1clases_1_1_centroid}{Centroid}} \mbox{\hyperlink{classdominio_1_1clases_1_1_usuari_af0cbe31c9973df8ab4d5e494808bfa02}{get\+Centroid}} ()
+\item 
+void \mbox{\hyperlink{classdominio_1_1clases_1_1_usuari_acb97a81acb22e74e5e753611e0fb5e2a}{set\+Centroid}} (\mbox{\hyperlink{classdominio_1_1clases_1_1_centroid}{Centroid}} \mbox{\hyperlink{classdominio_1_1clases_1_1_usuari_a555b1472ab3a3659e700302165e84f33}{centroid}})
+\item 
+\mbox{\hyperlink{classdominio_1_1clases_1_1_usuari_a8348aacd4be6388d766827d988961213}{Usuari}} (int \mbox{\hyperlink{classdominio_1_1clases_1_1_usuari_a92bc630088dcbac019ab4a4365241af5}{user\+Id}})
+\begin{DoxyCompactList}\small\item\em Constructora de \mbox{\hyperlink{classdominio_1_1clases_1_1_usuari}{Usuari}} con id = user\+Id. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classdominio_1_1clases_1_1_usuari_a0355163b1d1445f6e7007b2d4ec80ba7}{Usuari}} (\mbox{\hyperlink{classdominio_1_1clases_1_1_usuari}{Usuari}} u)
+\begin{DoxyCompactList}\small\item\em Constructora de un usuario a partir de una referencia a otro usuario. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classdominio_1_1clases_1_1_usuari_a6092345e3c2154f0d5858e4cfd9709e0}{Usuari}} (int \mbox{\hyperlink{classdominio_1_1clases_1_1_usuari_a92bc630088dcbac019ab4a4365241af5}{user\+Id}}, Hash\+Map$<$ \mbox{\hyperlink{classdominio_1_1clases_1_1_item}{Item}}, Double $>$ ratings)
+\begin{DoxyCompactList}\small\item\em Constructora de \mbox{\hyperlink{classdominio_1_1clases_1_1_usuari}{Usuari}} con id = user\+Id y rated\+Items = ratings. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classdominio_1_1clases_1_1_usuari_aa22633a65abe77a2c62a8388d62f9902}{get\+User\+Id}} ()
+\begin{DoxyCompactList}\small\item\em Metodo getter del ID del usuario. \end{DoxyCompactList}\item 
+Hash\+Map$<$ \mbox{\hyperlink{classdominio_1_1clases_1_1_item}{Item}}, Double $>$ \mbox{\hyperlink{classdominio_1_1clases_1_1_usuari_a5f2f72c56d755b0785792c34622f419d}{get\+Rated\+Items}} ()
+\begin{DoxyCompactList}\small\item\em Metodo getter de las valoraciones realizadas por un usuario. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classdominio_1_1clases_1_1_usuari_af2dba3454343b9615ebaacc71848e595}{set\+Rated\+Items}} (Hash\+Map$<$ \mbox{\hyperlink{classdominio_1_1clases_1_1_item}{Item}}, Double $>$ \mbox{\hyperlink{classdominio_1_1clases_1_1_usuari_ac0f1283dfef97d10842951aabbfeebce}{rated\+Items}})
+\begin{DoxyCompactList}\small\item\em Setter de rated\+Items. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classdominio_1_1clases_1_1_usuari_a7be6538c33a7ce2d5ad998032e9ff4e8}{add\+Rated\+Items}} (\mbox{\hyperlink{classdominio_1_1clases_1_1_item}{Item}} i, Double rating)
+\begin{DoxyCompactList}\small\item\em Metodo que añade una valoracion de un item en rated\+Items. \end{DoxyCompactList}\item 
+boolean \mbox{\hyperlink{classdominio_1_1clases_1_1_usuari_adbf71c35aed9a64dab52259555301b41}{equals}} (Object o)
+\begin{DoxyCompactList}\small\item\em override del metodo equals \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classdominio_1_1clases_1_1_usuari_a3d33531682f11a92a3b982aeab82cc69}{hash\+Code}} ()
+\begin{DoxyCompactList}\small\item\em override del hash\+Code \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Atributos privados}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classdominio_1_1clases_1_1_usuari_a92bc630088dcbac019ab4a4365241af5}{user\+Id}}
+\begin{DoxyCompactList}\small\item\em Identificador de un usuario. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classdominio_1_1clases_1_1_centroid}{Centroid}} \mbox{\hyperlink{classdominio_1_1clases_1_1_usuari_a555b1472ab3a3659e700302165e84f33}{centroid}} = new \mbox{\hyperlink{classdominio_1_1clases_1_1_centroid}{Centroid}}()
+\begin{DoxyCompactList}\small\item\em Centroide al cual esta asignado el usuario. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classdominio_1_1clases_1_1_usuari_a6e7d8a4717e8ebe7f008a55cd55ab2fc}{nearest\+\_\+dist}}
+\begin{DoxyCompactList}\small\item\em Distancia entre el usuario y el centroide al cual pertenece. \end{DoxyCompactList}\item 
+Hash\+Map$<$ \mbox{\hyperlink{classdominio_1_1clases_1_1_item}{Item}}, Double $>$ \mbox{\hyperlink{classdominio_1_1clases_1_1_usuari_ac0f1283dfef97d10842951aabbfeebce}{rated\+Items}} = new Hash\+Map$<$$>$()
+\begin{DoxyCompactList}\small\item\em Map que guarda los items valorados por el usuario y sus respectivas valoraciones. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Clase que representa un Usuario. 
+
+\begin{DoxyAuthor}{Autor}
+Muhammad Haris y Cristian Sanchez Estape 
+\end{DoxyAuthor}
+
+
+Definición en la línea \mbox{\hyperlink{_usuari_8java_source_l00016}{16}} del archivo \mbox{\hyperlink{_usuari_8java_source}{Usuari.\+java}}.
+
+
+
+\doxysubsection{Documentación del constructor y destructor}
+\mbox{\Hypertarget{classdominio_1_1clases_1_1_usuari_a8348aacd4be6388d766827d988961213}\label{classdominio_1_1clases_1_1_usuari_a8348aacd4be6388d766827d988961213}} 
+\index{dominio.clases.Usuari@{dominio.clases.Usuari}!Usuari@{Usuari}}
+\index{Usuari@{Usuari}!dominio.clases.Usuari@{dominio.clases.Usuari}}
+\doxysubsubsection{\texorpdfstring{Usuari()}{Usuari()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily dominio.\+clases.\+Usuari.\+Usuari (\begin{DoxyParamCaption}\item[{int}]{user\+Id }\end{DoxyParamCaption})}
+
+
+
+Constructora de \mbox{\hyperlink{classdominio_1_1clases_1_1_usuari}{Usuari}} con id = user\+Id. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em user\+Id} & Identificador del Usuario \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{_usuari_8java_source_l00059}{59}} del archivo \mbox{\hyperlink{_usuari_8java_source}{Usuari.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00059                               \{}
+\DoxyCodeLine{00060         this.\mbox{\hyperlink{classdominio_1_1clases_1_1_usuari_a92bc630088dcbac019ab4a4365241af5}{userId}} = \mbox{\hyperlink{classdominio_1_1clases_1_1_usuari_a92bc630088dcbac019ab4a4365241af5}{userId}};}
+\DoxyCodeLine{00061     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdominio_1_1clases_1_1_usuari_a0355163b1d1445f6e7007b2d4ec80ba7}\label{classdominio_1_1clases_1_1_usuari_a0355163b1d1445f6e7007b2d4ec80ba7}} 
+\index{dominio.clases.Usuari@{dominio.clases.Usuari}!Usuari@{Usuari}}
+\index{Usuari@{Usuari}!dominio.clases.Usuari@{dominio.clases.Usuari}}
+\doxysubsubsection{\texorpdfstring{Usuari()}{Usuari()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily dominio.\+clases.\+Usuari.\+Usuari (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classdominio_1_1clases_1_1_usuari}{Usuari}}}]{u }\end{DoxyParamCaption})}
+
+
+
+Constructora de un usuario a partir de una referencia a otro usuario. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em u} & Usuario sobre el cual hay que crear una nueva referencia \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{_usuari_8java_source_l00068}{68}} del archivo \mbox{\hyperlink{_usuari_8java_source}{Usuari.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00068                             \{}
+\DoxyCodeLine{00069         this.\mbox{\hyperlink{classdominio_1_1clases_1_1_usuari_a92bc630088dcbac019ab4a4365241af5}{userId}} = u.getUserId();}
+\DoxyCodeLine{00070         \mbox{\hyperlink{classdominio_1_1clases_1_1_usuari_ac0f1283dfef97d10842951aabbfeebce}{ratedItems}} = \textcolor{keyword}{new} HashMap<>(u.getRatedItems());}
+\DoxyCodeLine{00071     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdominio_1_1clases_1_1_usuari_a6092345e3c2154f0d5858e4cfd9709e0}\label{classdominio_1_1clases_1_1_usuari_a6092345e3c2154f0d5858e4cfd9709e0}} 
+\index{dominio.clases.Usuari@{dominio.clases.Usuari}!Usuari@{Usuari}}
+\index{Usuari@{Usuari}!dominio.clases.Usuari@{dominio.clases.Usuari}}
+\doxysubsubsection{\texorpdfstring{Usuari()}{Usuari()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily dominio.\+clases.\+Usuari.\+Usuari (\begin{DoxyParamCaption}\item[{int}]{user\+Id,  }\item[{Hash\+Map$<$ \mbox{\hyperlink{classdominio_1_1clases_1_1_item}{Item}}, Double $>$}]{ratings }\end{DoxyParamCaption})}
+
+
+
+Constructora de \mbox{\hyperlink{classdominio_1_1clases_1_1_usuari}{Usuari}} con id = user\+Id y rated\+Items = ratings. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em user\+Id} & Identificador del Usuario \\
+\hline
+{\em ratings} & Map de los items valorados y sus valoraciones \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{_usuari_8java_source_l00078}{78}} del archivo \mbox{\hyperlink{_usuari_8java_source}{Usuari.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00078                                                             \{}
+\DoxyCodeLine{00079         this.\mbox{\hyperlink{classdominio_1_1clases_1_1_usuari_a92bc630088dcbac019ab4a4365241af5}{userId}} = \mbox{\hyperlink{classdominio_1_1clases_1_1_usuari_a92bc630088dcbac019ab4a4365241af5}{userId}};}
+\DoxyCodeLine{00080         this.\mbox{\hyperlink{classdominio_1_1clases_1_1_usuari_ac0f1283dfef97d10842951aabbfeebce}{ratedItems}}= \textcolor{keyword}{new} HashMap<>(ratings);}
+\DoxyCodeLine{00081     \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Documentación de las funciones miembro}
+\mbox{\Hypertarget{classdominio_1_1clases_1_1_usuari_a1f5ef8dcfa734f14de2f700fefba2af4}\label{classdominio_1_1clases_1_1_usuari_a1f5ef8dcfa734f14de2f700fefba2af4}} 
+\index{dominio.clases.Usuari@{dominio.clases.Usuari}!getNearest\_dist@{getNearest\_dist}}
+\index{getNearest\_dist@{getNearest\_dist}!dominio.clases.Usuari@{dominio.clases.Usuari}}
+\doxysubsubsection{\texorpdfstring{getNearest\_dist()}{getNearest\_dist()}}
+{\footnotesize\ttfamily double dominio.\+clases.\+Usuari.\+get\+Nearest\+\_\+dist (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea \mbox{\hyperlink{_usuari_8java_source_l00034}{34}} del archivo \mbox{\hyperlink{_usuari_8java_source}{Usuari.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00034                                     \{}
+\DoxyCodeLine{00035         \textcolor{keywordflow}{return} \mbox{\hyperlink{classdominio_1_1clases_1_1_usuari_a6e7d8a4717e8ebe7f008a55cd55ab2fc}{nearest\_dist}};}
+\DoxyCodeLine{00036     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdominio_1_1clases_1_1_usuari_a5d7415677c4193ad03bce948a5de2fc9}\label{classdominio_1_1clases_1_1_usuari_a5d7415677c4193ad03bce948a5de2fc9}} 
+\index{dominio.clases.Usuari@{dominio.clases.Usuari}!setNearest\_dist@{setNearest\_dist}}
+\index{setNearest\_dist@{setNearest\_dist}!dominio.clases.Usuari@{dominio.clases.Usuari}}
+\doxysubsubsection{\texorpdfstring{setNearest\_dist()}{setNearest\_dist()}}
+{\footnotesize\ttfamily void dominio.\+clases.\+Usuari.\+set\+Nearest\+\_\+dist (\begin{DoxyParamCaption}\item[{double}]{nearest\+\_\+dist }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea \mbox{\hyperlink{_usuari_8java_source_l00038}{38}} del archivo \mbox{\hyperlink{_usuari_8java_source}{Usuari.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00038                                                      \{}
+\DoxyCodeLine{00039         this.\mbox{\hyperlink{classdominio_1_1clases_1_1_usuari_a6e7d8a4717e8ebe7f008a55cd55ab2fc}{nearest\_dist}} = \mbox{\hyperlink{classdominio_1_1clases_1_1_usuari_a6e7d8a4717e8ebe7f008a55cd55ab2fc}{nearest\_dist}};}
+\DoxyCodeLine{00040     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdominio_1_1clases_1_1_usuari_af0cbe31c9973df8ab4d5e494808bfa02}\label{classdominio_1_1clases_1_1_usuari_af0cbe31c9973df8ab4d5e494808bfa02}} 
+\index{dominio.clases.Usuari@{dominio.clases.Usuari}!getCentroid@{getCentroid}}
+\index{getCentroid@{getCentroid}!dominio.clases.Usuari@{dominio.clases.Usuari}}
+\doxysubsubsection{\texorpdfstring{getCentroid()}{getCentroid()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classdominio_1_1clases_1_1_centroid}{Centroid}} dominio.\+clases.\+Usuari.\+get\+Centroid (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea \mbox{\hyperlink{_usuari_8java_source_l00042}{42}} del archivo \mbox{\hyperlink{_usuari_8java_source}{Usuari.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00042                                   \{}
+\DoxyCodeLine{00043         \textcolor{keywordflow}{return} \mbox{\hyperlink{classdominio_1_1clases_1_1_usuari_a555b1472ab3a3659e700302165e84f33}{centroid}};}
+\DoxyCodeLine{00044     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdominio_1_1clases_1_1_usuari_acb97a81acb22e74e5e753611e0fb5e2a}\label{classdominio_1_1clases_1_1_usuari_acb97a81acb22e74e5e753611e0fb5e2a}} 
+\index{dominio.clases.Usuari@{dominio.clases.Usuari}!setCentroid@{setCentroid}}
+\index{setCentroid@{setCentroid}!dominio.clases.Usuari@{dominio.clases.Usuari}}
+\doxysubsubsection{\texorpdfstring{setCentroid()}{setCentroid()}}
+{\footnotesize\ttfamily void dominio.\+clases.\+Usuari.\+set\+Centroid (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classdominio_1_1clases_1_1_centroid}{Centroid}}}]{centroid }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea \mbox{\hyperlink{_usuari_8java_source_l00046}{46}} del archivo \mbox{\hyperlink{_usuari_8java_source}{Usuari.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00046                                                \{}
+\DoxyCodeLine{00047         this.\mbox{\hyperlink{classdominio_1_1clases_1_1_usuari_a555b1472ab3a3659e700302165e84f33}{centroid}} = \mbox{\hyperlink{classdominio_1_1clases_1_1_usuari_a555b1472ab3a3659e700302165e84f33}{centroid}};}
+\DoxyCodeLine{00048     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdominio_1_1clases_1_1_usuari_aa22633a65abe77a2c62a8388d62f9902}\label{classdominio_1_1clases_1_1_usuari_aa22633a65abe77a2c62a8388d62f9902}} 
+\index{dominio.clases.Usuari@{dominio.clases.Usuari}!getUserId@{getUserId}}
+\index{getUserId@{getUserId}!dominio.clases.Usuari@{dominio.clases.Usuari}}
+\doxysubsubsection{\texorpdfstring{getUserId()}{getUserId()}}
+{\footnotesize\ttfamily int dominio.\+clases.\+Usuari.\+get\+User\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Metodo getter del ID del usuario. 
+
+\begin{DoxyReturn}{Devuelve}
+El ID de usuario 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{_usuari_8java_source_l00088}{88}} del archivo \mbox{\hyperlink{_usuari_8java_source}{Usuari.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00088 \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{classdominio_1_1clases_1_1_usuari_a92bc630088dcbac019ab4a4365241af5}{userId}}; \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdominio_1_1clases_1_1_usuari_a5f2f72c56d755b0785792c34622f419d}\label{classdominio_1_1clases_1_1_usuari_a5f2f72c56d755b0785792c34622f419d}} 
+\index{dominio.clases.Usuari@{dominio.clases.Usuari}!getRatedItems@{getRatedItems}}
+\index{getRatedItems@{getRatedItems}!dominio.clases.Usuari@{dominio.clases.Usuari}}
+\doxysubsubsection{\texorpdfstring{getRatedItems()}{getRatedItems()}}
+{\footnotesize\ttfamily Hash\+Map$<$ \mbox{\hyperlink{classdominio_1_1clases_1_1_item}{Item}}, Double $>$ dominio.\+clases.\+Usuari.\+get\+Rated\+Items (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Metodo getter de las valoraciones realizadas por un usuario. 
+
+\begin{DoxyReturn}{Devuelve}
+Una estructura de datos que almacena las valoraciones realizdas por el usuario 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{_usuari_8java_source_l00095}{95}} del archivo \mbox{\hyperlink{_usuari_8java_source}{Usuari.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00095                                                  \{}
+\DoxyCodeLine{00096         \textcolor{keywordflow}{return} \mbox{\hyperlink{classdominio_1_1clases_1_1_usuari_ac0f1283dfef97d10842951aabbfeebce}{ratedItems}};}
+\DoxyCodeLine{00097     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdominio_1_1clases_1_1_usuari_af2dba3454343b9615ebaacc71848e595}\label{classdominio_1_1clases_1_1_usuari_af2dba3454343b9615ebaacc71848e595}} 
+\index{dominio.clases.Usuari@{dominio.clases.Usuari}!setRatedItems@{setRatedItems}}
+\index{setRatedItems@{setRatedItems}!dominio.clases.Usuari@{dominio.clases.Usuari}}
+\doxysubsubsection{\texorpdfstring{setRatedItems()}{setRatedItems()}}
+{\footnotesize\ttfamily void dominio.\+clases.\+Usuari.\+set\+Rated\+Items (\begin{DoxyParamCaption}\item[{Hash\+Map$<$ \mbox{\hyperlink{classdominio_1_1clases_1_1_item}{Item}}, Double $>$}]{rated\+Items }\end{DoxyParamCaption})}
+
+
+
+Setter de rated\+Items. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em rated\+Items} & Map de los items valorados y sus valoraciones \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{_usuari_8java_source_l00103}{103}} del archivo \mbox{\hyperlink{_usuari_8java_source}{Usuari.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00103                                                                 \{}
+\DoxyCodeLine{00104         this.\mbox{\hyperlink{classdominio_1_1clases_1_1_usuari_ac0f1283dfef97d10842951aabbfeebce}{ratedItems}} = \mbox{\hyperlink{classdominio_1_1clases_1_1_usuari_ac0f1283dfef97d10842951aabbfeebce}{ratedItems}};}
+\DoxyCodeLine{00105     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdominio_1_1clases_1_1_usuari_a7be6538c33a7ce2d5ad998032e9ff4e8}\label{classdominio_1_1clases_1_1_usuari_a7be6538c33a7ce2d5ad998032e9ff4e8}} 
+\index{dominio.clases.Usuari@{dominio.clases.Usuari}!addRatedItems@{addRatedItems}}
+\index{addRatedItems@{addRatedItems}!dominio.clases.Usuari@{dominio.clases.Usuari}}
+\doxysubsubsection{\texorpdfstring{addRatedItems()}{addRatedItems()}}
+{\footnotesize\ttfamily void dominio.\+clases.\+Usuari.\+add\+Rated\+Items (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classdominio_1_1clases_1_1_item}{Item}}}]{i,  }\item[{Double}]{rating }\end{DoxyParamCaption})}
+
+
+
+Metodo que añade una valoracion de un item en rated\+Items. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em i} & El item que se valora \\
+\hline
+{\em rating} & La valoracion del item \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{_usuari_8java_source_l00112}{112}} del archivo \mbox{\hyperlink{_usuari_8java_source}{Usuari.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00112                                                      \{}
+\DoxyCodeLine{00113         \mbox{\hyperlink{classdominio_1_1clases_1_1_usuari_ac0f1283dfef97d10842951aabbfeebce}{ratedItems}}.put(i,rating);}
+\DoxyCodeLine{00114     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdominio_1_1clases_1_1_usuari_adbf71c35aed9a64dab52259555301b41}\label{classdominio_1_1clases_1_1_usuari_adbf71c35aed9a64dab52259555301b41}} 
+\index{dominio.clases.Usuari@{dominio.clases.Usuari}!equals@{equals}}
+\index{equals@{equals}!dominio.clases.Usuari@{dominio.clases.Usuari}}
+\doxysubsubsection{\texorpdfstring{equals()}{equals()}}
+{\footnotesize\ttfamily boolean dominio.\+clases.\+Usuari.\+equals (\begin{DoxyParamCaption}\item[{Object}]{o }\end{DoxyParamCaption})}
+
+
+
+override del metodo equals 
+
+
+
+Definición en la línea \mbox{\hyperlink{_usuari_8java_source_l00118}{118}} del archivo \mbox{\hyperlink{_usuari_8java_source}{Usuari.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00118                                     \{}
+\DoxyCodeLine{00119         \textcolor{keywordflow}{if}(o==\textcolor{keyword}{null} | !(o instanceof \mbox{\hyperlink{classdominio_1_1clases_1_1_usuari_a8348aacd4be6388d766827d988961213}{Usuari}})) \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{00120         \mbox{\hyperlink{classdominio_1_1clases_1_1_usuari_a8348aacd4be6388d766827d988961213}{Usuari}} u = (\mbox{\hyperlink{classdominio_1_1clases_1_1_usuari_a8348aacd4be6388d766827d988961213}{Usuari}})o;}
+\DoxyCodeLine{00121         \textcolor{keywordflow}{return} \mbox{\hyperlink{classdominio_1_1clases_1_1_usuari_a92bc630088dcbac019ab4a4365241af5}{userId}} == u.getUserId();}
+\DoxyCodeLine{00122     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdominio_1_1clases_1_1_usuari_a3d33531682f11a92a3b982aeab82cc69}\label{classdominio_1_1clases_1_1_usuari_a3d33531682f11a92a3b982aeab82cc69}} 
+\index{dominio.clases.Usuari@{dominio.clases.Usuari}!hashCode@{hashCode}}
+\index{hashCode@{hashCode}!dominio.clases.Usuari@{dominio.clases.Usuari}}
+\doxysubsubsection{\texorpdfstring{hashCode()}{hashCode()}}
+{\footnotesize\ttfamily int dominio.\+clases.\+Usuari.\+hash\+Code (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+override del hash\+Code 
+
+
+
+Definición en la línea \mbox{\hyperlink{_usuari_8java_source_l00125}{125}} del archivo \mbox{\hyperlink{_usuari_8java_source}{Usuari.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00125                          \{}
+\DoxyCodeLine{00126         \textcolor{keywordflow}{return} \mbox{\hyperlink{classdominio_1_1clases_1_1_usuari_a92bc630088dcbac019ab4a4365241af5}{userId}};}
+\DoxyCodeLine{00127     \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Documentación de los datos miembro}
+\mbox{\Hypertarget{classdominio_1_1clases_1_1_usuari_a92bc630088dcbac019ab4a4365241af5}\label{classdominio_1_1clases_1_1_usuari_a92bc630088dcbac019ab4a4365241af5}} 
+\index{dominio.clases.Usuari@{dominio.clases.Usuari}!userId@{userId}}
+\index{userId@{userId}!dominio.clases.Usuari@{dominio.clases.Usuari}}
+\doxysubsubsection{\texorpdfstring{userId}{userId}}
+{\footnotesize\ttfamily int dominio.\+clases.\+Usuari.\+user\+Id\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Identificador de un usuario. 
+
+
+
+Definición en la línea \mbox{\hyperlink{_usuari_8java_source_l00022}{22}} del archivo \mbox{\hyperlink{_usuari_8java_source}{Usuari.\+java}}.
+
+\mbox{\Hypertarget{classdominio_1_1clases_1_1_usuari_a555b1472ab3a3659e700302165e84f33}\label{classdominio_1_1clases_1_1_usuari_a555b1472ab3a3659e700302165e84f33}} 
+\index{dominio.clases.Usuari@{dominio.clases.Usuari}!centroid@{centroid}}
+\index{centroid@{centroid}!dominio.clases.Usuari@{dominio.clases.Usuari}}
+\doxysubsubsection{\texorpdfstring{centroid}{centroid}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classdominio_1_1clases_1_1_centroid}{Centroid}} dominio.\+clases.\+Usuari.\+centroid = new \mbox{\hyperlink{classdominio_1_1clases_1_1_centroid}{Centroid}}()\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Centroide al cual esta asignado el usuario. 
+
+
+
+Definición en la línea \mbox{\hyperlink{_usuari_8java_source_l00027}{27}} del archivo \mbox{\hyperlink{_usuari_8java_source}{Usuari.\+java}}.
+
+\mbox{\Hypertarget{classdominio_1_1clases_1_1_usuari_a6e7d8a4717e8ebe7f008a55cd55ab2fc}\label{classdominio_1_1clases_1_1_usuari_a6e7d8a4717e8ebe7f008a55cd55ab2fc}} 
+\index{dominio.clases.Usuari@{dominio.clases.Usuari}!nearest\_dist@{nearest\_dist}}
+\index{nearest\_dist@{nearest\_dist}!dominio.clases.Usuari@{dominio.clases.Usuari}}
+\doxysubsubsection{\texorpdfstring{nearest\_dist}{nearest\_dist}}
+{\footnotesize\ttfamily double dominio.\+clases.\+Usuari.\+nearest\+\_\+dist\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Distancia entre el usuario y el centroide al cual pertenece. 
+
+
+
+Definición en la línea \mbox{\hyperlink{_usuari_8java_source_l00032}{32}} del archivo \mbox{\hyperlink{_usuari_8java_source}{Usuari.\+java}}.
+
+\mbox{\Hypertarget{classdominio_1_1clases_1_1_usuari_ac0f1283dfef97d10842951aabbfeebce}\label{classdominio_1_1clases_1_1_usuari_ac0f1283dfef97d10842951aabbfeebce}} 
+\index{dominio.clases.Usuari@{dominio.clases.Usuari}!ratedItems@{ratedItems}}
+\index{ratedItems@{ratedItems}!dominio.clases.Usuari@{dominio.clases.Usuari}}
+\doxysubsubsection{\texorpdfstring{ratedItems}{ratedItems}}
+{\footnotesize\ttfamily Hash\+Map$<$\mbox{\hyperlink{classdominio_1_1clases_1_1_item}{Item}}, Double$>$ dominio.\+clases.\+Usuari.\+rated\+Items = new Hash\+Map$<$$>$()\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Map que guarda los items valorados por el usuario y sus respectivas valoraciones. 
+
+
+
+Definición en la línea \mbox{\hyperlink{_usuari_8java_source_l00053}{53}} del archivo \mbox{\hyperlink{_usuari_8java_source}{Usuari.\+java}}.
+
+
+
+La documentación para esta clase fue generada a partir del siguiente fichero\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_usuari_8java}{Usuari.\+java}}\end{DoxyCompactItemize}

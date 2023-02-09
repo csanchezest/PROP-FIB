@@ -1,0 +1,373 @@
+\hypertarget{classdominio_1_1clases_1_1_recomendacion}{}\doxysection{Referencia de la Clase dominio.\+clases.\+Recomendacion}
+\label{classdominio_1_1clases_1_1_recomendacion}\index{dominio.clases.Recomendacion@{dominio.clases.Recomendacion}}
+
+
+Clase que con el codigo para generar una recomendacion.  
+
+
+\doxysubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classdominio_1_1clases_1_1_recomendacion_a650c7287da0e8aa712d2fa9d9f90300f}{Recomendacion}} (\mbox{\hyperlink{classdominio_1_1clases_1_1_usuari}{Usuari}} \mbox{\hyperlink{classdominio_1_1clases_1_1_recomendacion_a4e621a2d68584fb5e13a43440207569d}{user}}, \mbox{\hyperlink{classdominio_1_1clases_1_1_cjt__items}{Cjt\+\_\+items}} \mbox{\hyperlink{classdominio_1_1clases_1_1_recomendacion_ab92c75a13f1340498ad0302bf9e65955}{dataset}}, Hash\+Map$<$ \mbox{\hyperlink{classdominio_1_1clases_1_1_item}{Item}}, Array\+List$<$ Double $>$ $>$ \mbox{\hyperlink{classdominio_1_1clases_1_1_recomendacion_ad8262d7c6c7fa7d301d2e622c7258280}{ratings}}, double mR, List$<$ \mbox{\hyperlink{classdominio_1_1clases_1_1_usuari}{Usuari}} $>$ \mbox{\hyperlink{classdominio_1_1clases_1_1_recomendacion_af0a75865b4bb1a6543ec1811caa01898}{users}}, int \mbox{\hyperlink{classdominio_1_1clases_1_1_recomendacion_a754f6747833d7138fa4a7a51932b0066}{k}}, List$<$ Boolean $>$ \mbox{\hyperlink{classdominio_1_1clases_1_1_recomendacion_a9ce6a2a003fceac0e9a69da407d60712}{int\+At}}, List$<$ Boolean $>$ \mbox{\hyperlink{classdominio_1_1clases_1_1_recomendacion_a90cd4396fde9e52425bc1935299c5d1c}{doub\+At}}, List$<$ Boolean $>$ \mbox{\hyperlink{classdominio_1_1clases_1_1_recomendacion_a2f8b33c69cf4197a2f813fedfaff666c}{date\+At}}, List$<$ Boolean $>$ \mbox{\hyperlink{classdominio_1_1clases_1_1_recomendacion_adf6d7e912a6964127009e63cba4397b8}{b\+At}}, List$<$ Boolean $>$ \mbox{\hyperlink{classdominio_1_1clases_1_1_recomendacion_a9f89371f89bded60bc6ed3e9f373d27e}{cat\+At}}, List$<$ Boolean $>$ \mbox{\hyperlink{classdominio_1_1clases_1_1_recomendacion_af74a229683857258d811d63caa7debc6}{ft\+At}})
+\begin{DoxyCompactList}\small\item\em Constructora del objeto \mbox{\hyperlink{classdominio_1_1clases_1_1_recomendacion}{Recomendacion}}. \end{DoxyCompactList}\item 
+Hash\+Map$<$ \mbox{\hyperlink{classdominio_1_1clases_1_1_item}{Item}}, Double $>$ \mbox{\hyperlink{classdominio_1_1clases_1_1_recomendacion_a3be966ef490d35e911fec0b7e500777d}{Collaborative}} ()
+\begin{DoxyCompactList}\small\item\em Metodo de generacion de recomendaciones a traves del algoritmo \mbox{\hyperlink{classdominio_1_1clases_1_1_collaborative}{Collaborative}}. \end{DoxyCompactList}\item 
+Hash\+Map$<$ \mbox{\hyperlink{classdominio_1_1clases_1_1_item}{Item}}, Double $>$ \mbox{\hyperlink{classdominio_1_1clases_1_1_recomendacion_a9b2713889edae9988375c874ca4096b0}{Content}} ()
+\begin{DoxyCompactList}\small\item\em Metodo de generacion de recomendaciones a traves del algoritmo Content-\/\+Based. \end{DoxyCompactList}\item 
+Hash\+Map$<$ \mbox{\hyperlink{classdominio_1_1clases_1_1_item}{Item}}, Double $>$ \mbox{\hyperlink{classdominio_1_1clases_1_1_recomendacion_ac4ac3a1e3275bed35491f1609928aa8f}{Hybrid}} ()
+\begin{DoxyCompactList}\small\item\em Metodo de generacion de recomendaciones a traves del algoritmo \mbox{\hyperlink{classdominio_1_1clases_1_1_hybrid}{Hybrid}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Atributos privados}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classdominio_1_1clases_1_1_usuari}{Usuari}} \mbox{\hyperlink{classdominio_1_1clases_1_1_recomendacion_a4e621a2d68584fb5e13a43440207569d}{user}}
+\begin{DoxyCompactList}\small\item\em Usuario sobre el cual se generaran recomendaciones. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classdominio_1_1clases_1_1_cjt__items}{Cjt\+\_\+items}} \mbox{\hyperlink{classdominio_1_1clases_1_1_recomendacion_ab92c75a13f1340498ad0302bf9e65955}{dataset}}
+\begin{DoxyCompactList}\small\item\em Dataset sobre el cual se trabajara (en cuanto a items y usuarios se refiere) \end{DoxyCompactList}\item 
+Hash\+Map$<$ \mbox{\hyperlink{classdominio_1_1clases_1_1_item}{Item}}, Array\+List$<$ Double $>$ $>$ \mbox{\hyperlink{classdominio_1_1clases_1_1_recomendacion_ad8262d7c6c7fa7d301d2e622c7258280}{ratings}}
+\begin{DoxyCompactList}\small\item\em Diccionario con todos los items del dataset que guarda, para cada uno, todas las valoraciones que tiene. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classdominio_1_1clases_1_1_recomendacion_a0d2575a12235ff03a32c05efa49fea8f}{max\+Rating}}
+\begin{DoxyCompactList}\small\item\em Valoracion maxima posible para un dataset dado. \end{DoxyCompactList}\item 
+List$<$ \mbox{\hyperlink{classdominio_1_1clases_1_1_usuari}{Usuari}} $>$ \mbox{\hyperlink{classdominio_1_1clases_1_1_recomendacion_af0a75865b4bb1a6543ec1811caa01898}{users}}
+\begin{DoxyCompactList}\small\item\em Lista de los usuarios que han realizado valoraciones sobre el dataset. \end{DoxyCompactList}\item 
+List$<$ Boolean $>$ \mbox{\hyperlink{classdominio_1_1clases_1_1_recomendacion_a9ce6a2a003fceac0e9a69da407d60712}{int\+At}}
+\begin{DoxyCompactList}\small\item\em Lista de booleanos que indica cuales atributos de tipo enteros que hay tener en cuenta en la recomendacion. \end{DoxyCompactList}\item 
+List$<$ Boolean $>$ \mbox{\hyperlink{classdominio_1_1clases_1_1_recomendacion_a90cd4396fde9e52425bc1935299c5d1c}{doub\+At}}
+\begin{DoxyCompactList}\small\item\em Lista de booleanos que indica cuales atributos de tipo double que hay tener en cuenta en la recomendacion. \end{DoxyCompactList}\item 
+List$<$ Boolean $>$ \mbox{\hyperlink{classdominio_1_1clases_1_1_recomendacion_a2f8b33c69cf4197a2f813fedfaff666c}{date\+At}}
+\begin{DoxyCompactList}\small\item\em Lista de booleanos que indica cuales atributos de tipo date que hay tener en cuenta en la recomendacion. \end{DoxyCompactList}\item 
+List$<$ Boolean $>$ \mbox{\hyperlink{classdominio_1_1clases_1_1_recomendacion_adf6d7e912a6964127009e63cba4397b8}{b\+At}}
+\begin{DoxyCompactList}\small\item\em Lista de booleanos que indica cuales atributos de tipo booleano que hay tener en cuenta en la recomendacion. \end{DoxyCompactList}\item 
+List$<$ Boolean $>$ \mbox{\hyperlink{classdominio_1_1clases_1_1_recomendacion_a9f89371f89bded60bc6ed3e9f373d27e}{cat\+At}}
+\begin{DoxyCompactList}\small\item\em Lista de booleanos que indica cuales atributos de tipo categorico que hay tener en cuenta en la recomendacion. \end{DoxyCompactList}\item 
+List$<$ Boolean $>$ \mbox{\hyperlink{classdominio_1_1clases_1_1_recomendacion_af74a229683857258d811d63caa7debc6}{ft\+At}}
+\begin{DoxyCompactList}\small\item\em Lista de booleanos que indica cuales atributos de tipo texto libre que hay tener en cuenta en la recomendacion. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classdominio_1_1clases_1_1_recomendacion_a754f6747833d7138fa4a7a51932b0066}{k}}
+\begin{DoxyCompactList}\small\item\em Numero de atributos que se tienen que recomendar. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Clase que con el codigo para generar una recomendacion. 
+
+\begin{DoxyAuthor}{Autor}
+Jordi Elgueta Serra 
+\end{DoxyAuthor}
+
+
+Definición en la línea \mbox{\hyperlink{_recomendacion_8java_source_l00011}{11}} del archivo \mbox{\hyperlink{_recomendacion_8java_source}{Recomendacion.\+java}}.
+
+
+
+\doxysubsection{Documentación del constructor y destructor}
+\mbox{\Hypertarget{classdominio_1_1clases_1_1_recomendacion_a650c7287da0e8aa712d2fa9d9f90300f}\label{classdominio_1_1clases_1_1_recomendacion_a650c7287da0e8aa712d2fa9d9f90300f}} 
+\index{dominio.clases.Recomendacion@{dominio.clases.Recomendacion}!Recomendacion@{Recomendacion}}
+\index{Recomendacion@{Recomendacion}!dominio.clases.Recomendacion@{dominio.clases.Recomendacion}}
+\doxysubsubsection{\texorpdfstring{Recomendacion()}{Recomendacion()}}
+{\footnotesize\ttfamily dominio.\+clases.\+Recomendacion.\+Recomendacion (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classdominio_1_1clases_1_1_usuari}{Usuari}}}]{user,  }\item[{\mbox{\hyperlink{classdominio_1_1clases_1_1_cjt__items}{Cjt\+\_\+items}}}]{dataset,  }\item[{Hash\+Map$<$ \mbox{\hyperlink{classdominio_1_1clases_1_1_item}{Item}}, Array\+List$<$ Double $>$ $>$}]{ratings,  }\item[{double}]{mR,  }\item[{List$<$ \mbox{\hyperlink{classdominio_1_1clases_1_1_usuari}{Usuari}} $>$}]{users,  }\item[{int}]{k,  }\item[{List$<$ Boolean $>$}]{int\+At,  }\item[{List$<$ Boolean $>$}]{doub\+At,  }\item[{List$<$ Boolean $>$}]{date\+At,  }\item[{List$<$ Boolean $>$}]{b\+At,  }\item[{List$<$ Boolean $>$}]{cat\+At,  }\item[{List$<$ Boolean $>$}]{ft\+At }\end{DoxyParamCaption})}
+
+
+
+Constructora del objeto \mbox{\hyperlink{classdominio_1_1clases_1_1_recomendacion}{Recomendacion}}. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em user} & Usuario sobre el cual se generaran recomendaciones \\
+\hline
+{\em dataset} & Dataset sobre el cual se trabajara (en cuanto a items y usuarios se refiere) \\
+\hline
+{\em ratings} & Diccionario con todos los items del dataset que guarda, para cada uno, todas las valoraciones que tiene \\
+\hline
+{\em mR} & Valoracion maxima posible para un dataset dado \\
+\hline
+{\em users} & Lista de los usuarios que han realizado valoraciones sobre el dataset \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{_recomendacion_8java_source_l00082}{82}} del archivo \mbox{\hyperlink{_recomendacion_8java_source}{Recomendacion.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00084                                                                  \{}
+\DoxyCodeLine{00085         this.\mbox{\hyperlink{classdominio_1_1clases_1_1_recomendacion_a4e621a2d68584fb5e13a43440207569d}{user}} = \mbox{\hyperlink{classdominio_1_1clases_1_1_recomendacion_a4e621a2d68584fb5e13a43440207569d}{user}};}
+\DoxyCodeLine{00086         this.\mbox{\hyperlink{classdominio_1_1clases_1_1_recomendacion_ab92c75a13f1340498ad0302bf9e65955}{dataset}} = \mbox{\hyperlink{classdominio_1_1clases_1_1_recomendacion_ab92c75a13f1340498ad0302bf9e65955}{dataset}};}
+\DoxyCodeLine{00087         this.\mbox{\hyperlink{classdominio_1_1clases_1_1_recomendacion_ad8262d7c6c7fa7d301d2e622c7258280}{ratings}} = \textcolor{keyword}{new} HashMap<>(\mbox{\hyperlink{classdominio_1_1clases_1_1_recomendacion_ad8262d7c6c7fa7d301d2e622c7258280}{ratings}});}
+\DoxyCodeLine{00088         this.\mbox{\hyperlink{classdominio_1_1clases_1_1_recomendacion_a0d2575a12235ff03a32c05efa49fea8f}{maxRating}} = mR;}
+\DoxyCodeLine{00089         this.\mbox{\hyperlink{classdominio_1_1clases_1_1_recomendacion_af0a75865b4bb1a6543ec1811caa01898}{users}} = \textcolor{keyword}{new} LinkedList<>(\mbox{\hyperlink{classdominio_1_1clases_1_1_recomendacion_af0a75865b4bb1a6543ec1811caa01898}{users}});}
+\DoxyCodeLine{00090         this.\mbox{\hyperlink{classdominio_1_1clases_1_1_recomendacion_a754f6747833d7138fa4a7a51932b0066}{k}} = \mbox{\hyperlink{classdominio_1_1clases_1_1_recomendacion_a754f6747833d7138fa4a7a51932b0066}{k}};}
+\DoxyCodeLine{00091         this.\mbox{\hyperlink{classdominio_1_1clases_1_1_recomendacion_a2f8b33c69cf4197a2f813fedfaff666c}{dateAt}} = \mbox{\hyperlink{classdominio_1_1clases_1_1_recomendacion_a2f8b33c69cf4197a2f813fedfaff666c}{dateAt}};}
+\DoxyCodeLine{00092         this.\mbox{\hyperlink{classdominio_1_1clases_1_1_recomendacion_adf6d7e912a6964127009e63cba4397b8}{bAt}} = \mbox{\hyperlink{classdominio_1_1clases_1_1_recomendacion_adf6d7e912a6964127009e63cba4397b8}{bAt}};}
+\DoxyCodeLine{00093         this.\mbox{\hyperlink{classdominio_1_1clases_1_1_recomendacion_a9f89371f89bded60bc6ed3e9f373d27e}{catAt}} = \mbox{\hyperlink{classdominio_1_1clases_1_1_recomendacion_a9f89371f89bded60bc6ed3e9f373d27e}{catAt}};}
+\DoxyCodeLine{00094         this.\mbox{\hyperlink{classdominio_1_1clases_1_1_recomendacion_af74a229683857258d811d63caa7debc6}{ftAt}} = \mbox{\hyperlink{classdominio_1_1clases_1_1_recomendacion_af74a229683857258d811d63caa7debc6}{ftAt}};}
+\DoxyCodeLine{00095         this.\mbox{\hyperlink{classdominio_1_1clases_1_1_recomendacion_a9ce6a2a003fceac0e9a69da407d60712}{intAt}} = \mbox{\hyperlink{classdominio_1_1clases_1_1_recomendacion_a9ce6a2a003fceac0e9a69da407d60712}{intAt}};}
+\DoxyCodeLine{00096         this.\mbox{\hyperlink{classdominio_1_1clases_1_1_recomendacion_a90cd4396fde9e52425bc1935299c5d1c}{doubAt}} = \mbox{\hyperlink{classdominio_1_1clases_1_1_recomendacion_a90cd4396fde9e52425bc1935299c5d1c}{doubAt}};}
+\DoxyCodeLine{00097 }
+\DoxyCodeLine{00098     \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Documentación de las funciones miembro}
+\mbox{\Hypertarget{classdominio_1_1clases_1_1_recomendacion_a3be966ef490d35e911fec0b7e500777d}\label{classdominio_1_1clases_1_1_recomendacion_a3be966ef490d35e911fec0b7e500777d}} 
+\index{dominio.clases.Recomendacion@{dominio.clases.Recomendacion}!Collaborative@{Collaborative}}
+\index{Collaborative@{Collaborative}!dominio.clases.Recomendacion@{dominio.clases.Recomendacion}}
+\doxysubsubsection{\texorpdfstring{Collaborative()}{Collaborative()}}
+{\footnotesize\ttfamily Hash\+Map$<$ \mbox{\hyperlink{classdominio_1_1clases_1_1_item}{Item}}, Double $>$ dominio.\+clases.\+Recomendacion.\+Collaborative (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Metodo de generacion de recomendaciones a traves del algoritmo \mbox{\hyperlink{classdominio_1_1clases_1_1_collaborative}{Collaborative}}. 
+
+\begin{DoxyReturn}{Devuelve}
+La prediccion de las valoraciones para cada item no valorado del usuario 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{_recomendacion_8java_source_l00105}{105}} del archivo \mbox{\hyperlink{_recomendacion_8java_source}{Recomendacion.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00105                                                  \{}
+\DoxyCodeLine{00106         \textcolor{keywordflow}{if}(!\mbox{\hyperlink{classdominio_1_1clases_1_1_recomendacion_af0a75865b4bb1a6543ec1811caa01898}{users}}.contains(\mbox{\hyperlink{classdominio_1_1clases_1_1_recomendacion_a4e621a2d68584fb5e13a43440207569d}{user}})) \mbox{\hyperlink{classdominio_1_1clases_1_1_recomendacion_af0a75865b4bb1a6543ec1811caa01898}{users}}.add(\mbox{\hyperlink{classdominio_1_1clases_1_1_recomendacion_a4e621a2d68584fb5e13a43440207569d}{user}});}
+\DoxyCodeLine{00107         ArrayList<Cluster> centroids = \textcolor{keyword}{new} \mbox{\hyperlink{classdominio_1_1clases_1_1_recomendacion_a3be966ef490d35e911fec0b7e500777d}{Collaborative}}().ejecuta\_k\_means(\mbox{\hyperlink{classdominio_1_1clases_1_1_recomendacion_af0a75865b4bb1a6543ec1811caa01898}{users}});}
+\DoxyCodeLine{00108         List<Usuari> desiredUsers = \textcolor{keyword}{null};}
+\DoxyCodeLine{00109         \textcolor{keywordflow}{for} (Cluster c : centroids) \{}
+\DoxyCodeLine{00110             HashSet<Usuari> search = c.getUsuaris();}
+\DoxyCodeLine{00111             \textcolor{keywordflow}{if} (search.contains(\mbox{\hyperlink{classdominio_1_1clases_1_1_recomendacion_a4e621a2d68584fb5e13a43440207569d}{user}})) \{}
+\DoxyCodeLine{00112                 desiredUsers = \textcolor{keyword}{new} LinkedList<>(search);}
+\DoxyCodeLine{00113                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00114             \}}
+\DoxyCodeLine{00115         \}}
+\DoxyCodeLine{00116         desiredUsers.remove(\mbox{\hyperlink{classdominio_1_1clases_1_1_recomendacion_a4e621a2d68584fb5e13a43440207569d}{user}});}
+\DoxyCodeLine{00117         SlopeOne sp = \textcolor{keyword}{new} SlopeOne(\mbox{\hyperlink{classdominio_1_1clases_1_1_recomendacion_a4e621a2d68584fb5e13a43440207569d}{user}});}
+\DoxyCodeLine{00118         sp.slopeOne(desiredUsers, \mbox{\hyperlink{classdominio_1_1clases_1_1_recomendacion_a0d2575a12235ff03a32c05efa49fea8f}{maxRating}}, \mbox{\hyperlink{classdominio_1_1clases_1_1_recomendacion_a754f6747833d7138fa4a7a51932b0066}{k}});}
+\DoxyCodeLine{00119         \textcolor{keywordflow}{return} Avaluacio.sortByValue(sp.getPredictions());}
+\DoxyCodeLine{00120     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdominio_1_1clases_1_1_recomendacion_a9b2713889edae9988375c874ca4096b0}\label{classdominio_1_1clases_1_1_recomendacion_a9b2713889edae9988375c874ca4096b0}} 
+\index{dominio.clases.Recomendacion@{dominio.clases.Recomendacion}!Content@{Content}}
+\index{Content@{Content}!dominio.clases.Recomendacion@{dominio.clases.Recomendacion}}
+\doxysubsubsection{\texorpdfstring{Content()}{Content()}}
+{\footnotesize\ttfamily Hash\+Map$<$ \mbox{\hyperlink{classdominio_1_1clases_1_1_item}{Item}}, Double $>$ dominio.\+clases.\+Recomendacion.\+Content (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Metodo de generacion de recomendaciones a traves del algoritmo Content-\/\+Based. 
+
+\begin{DoxyReturn}{Devuelve}
+La prediccion de las valoraciones para cada item no valorado del usuario 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{_recomendacion_8java_source_l00127}{127}} del archivo \mbox{\hyperlink{_recomendacion_8java_source}{Recomendacion.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00127                                            \{}
+\DoxyCodeLine{00128         ContentBased cb = \textcolor{keyword}{new} ContentBased(\mbox{\hyperlink{classdominio_1_1clases_1_1_recomendacion_a4e621a2d68584fb5e13a43440207569d}{user}}, \mbox{\hyperlink{classdominio_1_1clases_1_1_recomendacion_ab92c75a13f1340498ad0302bf9e65955}{dataset}}, \mbox{\hyperlink{classdominio_1_1clases_1_1_recomendacion_ad8262d7c6c7fa7d301d2e622c7258280}{ratings}}, \mbox{\hyperlink{classdominio_1_1clases_1_1_recomendacion_a0d2575a12235ff03a32c05efa49fea8f}{maxRating}}, \mbox{\hyperlink{classdominio_1_1clases_1_1_recomendacion_a9ce6a2a003fceac0e9a69da407d60712}{intAt}}, \mbox{\hyperlink{classdominio_1_1clases_1_1_recomendacion_a90cd4396fde9e52425bc1935299c5d1c}{doubAt}}, \mbox{\hyperlink{classdominio_1_1clases_1_1_recomendacion_a2f8b33c69cf4197a2f813fedfaff666c}{dateAt}}, \mbox{\hyperlink{classdominio_1_1clases_1_1_recomendacion_adf6d7e912a6964127009e63cba4397b8}{bAt}}, \mbox{\hyperlink{classdominio_1_1clases_1_1_recomendacion_a9f89371f89bded60bc6ed3e9f373d27e}{catAt}}, \mbox{\hyperlink{classdominio_1_1clases_1_1_recomendacion_af74a229683857258d811d63caa7debc6}{ftAt}});}
+\DoxyCodeLine{00129         cb.setK(\mbox{\hyperlink{classdominio_1_1clases_1_1_recomendacion_a754f6747833d7138fa4a7a51932b0066}{k}});}
+\DoxyCodeLine{00130         \textcolor{keywordflow}{return} Avaluacio.sortByValue(cb.recommended\_items());}
+\DoxyCodeLine{00131     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdominio_1_1clases_1_1_recomendacion_ac4ac3a1e3275bed35491f1609928aa8f}\label{classdominio_1_1clases_1_1_recomendacion_ac4ac3a1e3275bed35491f1609928aa8f}} 
+\index{dominio.clases.Recomendacion@{dominio.clases.Recomendacion}!Hybrid@{Hybrid}}
+\index{Hybrid@{Hybrid}!dominio.clases.Recomendacion@{dominio.clases.Recomendacion}}
+\doxysubsubsection{\texorpdfstring{Hybrid()}{Hybrid()}}
+{\footnotesize\ttfamily Hash\+Map$<$ \mbox{\hyperlink{classdominio_1_1clases_1_1_item}{Item}}, Double $>$ dominio.\+clases.\+Recomendacion.\+Hybrid (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Metodo de generacion de recomendaciones a traves del algoritmo \mbox{\hyperlink{classdominio_1_1clases_1_1_hybrid}{Hybrid}}. 
+
+\begin{DoxyReturn}{Devuelve}
+La prediccion de las valoraciones para cada item no valorado del usuario 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{_recomendacion_8java_source_l00138}{138}} del archivo \mbox{\hyperlink{_recomendacion_8java_source}{Recomendacion.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00138                                           \{}
+\DoxyCodeLine{00139         \mbox{\hyperlink{classdominio_1_1clases_1_1_recomendacion_ac4ac3a1e3275bed35491f1609928aa8f}{Hybrid}} h = \textcolor{keyword}{new} \mbox{\hyperlink{classdominio_1_1clases_1_1_recomendacion_ac4ac3a1e3275bed35491f1609928aa8f}{Hybrid}}(\mbox{\hyperlink{classdominio_1_1clases_1_1_recomendacion_a3be966ef490d35e911fec0b7e500777d}{Collaborative}}(), \mbox{\hyperlink{classdominio_1_1clases_1_1_recomendacion_a9b2713889edae9988375c874ca4096b0}{Content}}());}
+\DoxyCodeLine{00140         \textcolor{keywordflow}{return} Avaluacio.sortByValue(h.recommended\_items());}
+\DoxyCodeLine{00141     \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Documentación de los datos miembro}
+\mbox{\Hypertarget{classdominio_1_1clases_1_1_recomendacion_a4e621a2d68584fb5e13a43440207569d}\label{classdominio_1_1clases_1_1_recomendacion_a4e621a2d68584fb5e13a43440207569d}} 
+\index{dominio.clases.Recomendacion@{dominio.clases.Recomendacion}!user@{user}}
+\index{user@{user}!dominio.clases.Recomendacion@{dominio.clases.Recomendacion}}
+\doxysubsubsection{\texorpdfstring{user}{user}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classdominio_1_1clases_1_1_usuari}{Usuari}} dominio.\+clases.\+Recomendacion.\+user\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Usuario sobre el cual se generaran recomendaciones. 
+
+
+
+Definición en la línea \mbox{\hyperlink{_recomendacion_8java_source_l00017}{17}} del archivo \mbox{\hyperlink{_recomendacion_8java_source}{Recomendacion.\+java}}.
+
+\mbox{\Hypertarget{classdominio_1_1clases_1_1_recomendacion_ab92c75a13f1340498ad0302bf9e65955}\label{classdominio_1_1clases_1_1_recomendacion_ab92c75a13f1340498ad0302bf9e65955}} 
+\index{dominio.clases.Recomendacion@{dominio.clases.Recomendacion}!dataset@{dataset}}
+\index{dataset@{dataset}!dominio.clases.Recomendacion@{dominio.clases.Recomendacion}}
+\doxysubsubsection{\texorpdfstring{dataset}{dataset}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classdominio_1_1clases_1_1_cjt__items}{Cjt\+\_\+items}} dominio.\+clases.\+Recomendacion.\+dataset\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Dataset sobre el cual se trabajara (en cuanto a items y usuarios se refiere) 
+
+
+
+Definición en la línea \mbox{\hyperlink{_recomendacion_8java_source_l00023}{23}} del archivo \mbox{\hyperlink{_recomendacion_8java_source}{Recomendacion.\+java}}.
+
+\mbox{\Hypertarget{classdominio_1_1clases_1_1_recomendacion_ad8262d7c6c7fa7d301d2e622c7258280}\label{classdominio_1_1clases_1_1_recomendacion_ad8262d7c6c7fa7d301d2e622c7258280}} 
+\index{dominio.clases.Recomendacion@{dominio.clases.Recomendacion}!ratings@{ratings}}
+\index{ratings@{ratings}!dominio.clases.Recomendacion@{dominio.clases.Recomendacion}}
+\doxysubsubsection{\texorpdfstring{ratings}{ratings}}
+{\footnotesize\ttfamily Hash\+Map$<$\mbox{\hyperlink{classdominio_1_1clases_1_1_item}{Item}}, Array\+List$<$Double$>$ $>$ dominio.\+clases.\+Recomendacion.\+ratings\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Diccionario con todos los items del dataset que guarda, para cada uno, todas las valoraciones que tiene. 
+
+
+
+Definición en la línea \mbox{\hyperlink{_recomendacion_8java_source_l00029}{29}} del archivo \mbox{\hyperlink{_recomendacion_8java_source}{Recomendacion.\+java}}.
+
+\mbox{\Hypertarget{classdominio_1_1clases_1_1_recomendacion_a0d2575a12235ff03a32c05efa49fea8f}\label{classdominio_1_1clases_1_1_recomendacion_a0d2575a12235ff03a32c05efa49fea8f}} 
+\index{dominio.clases.Recomendacion@{dominio.clases.Recomendacion}!maxRating@{maxRating}}
+\index{maxRating@{maxRating}!dominio.clases.Recomendacion@{dominio.clases.Recomendacion}}
+\doxysubsubsection{\texorpdfstring{maxRating}{maxRating}}
+{\footnotesize\ttfamily double dominio.\+clases.\+Recomendacion.\+max\+Rating\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Valoracion maxima posible para un dataset dado. 
+
+
+
+Definición en la línea \mbox{\hyperlink{_recomendacion_8java_source_l00035}{35}} del archivo \mbox{\hyperlink{_recomendacion_8java_source}{Recomendacion.\+java}}.
+
+\mbox{\Hypertarget{classdominio_1_1clases_1_1_recomendacion_af0a75865b4bb1a6543ec1811caa01898}\label{classdominio_1_1clases_1_1_recomendacion_af0a75865b4bb1a6543ec1811caa01898}} 
+\index{dominio.clases.Recomendacion@{dominio.clases.Recomendacion}!users@{users}}
+\index{users@{users}!dominio.clases.Recomendacion@{dominio.clases.Recomendacion}}
+\doxysubsubsection{\texorpdfstring{users}{users}}
+{\footnotesize\ttfamily List$<$\mbox{\hyperlink{classdominio_1_1clases_1_1_usuari}{Usuari}}$>$ dominio.\+clases.\+Recomendacion.\+users\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Lista de los usuarios que han realizado valoraciones sobre el dataset. 
+
+
+
+Definición en la línea \mbox{\hyperlink{_recomendacion_8java_source_l00041}{41}} del archivo \mbox{\hyperlink{_recomendacion_8java_source}{Recomendacion.\+java}}.
+
+\mbox{\Hypertarget{classdominio_1_1clases_1_1_recomendacion_a9ce6a2a003fceac0e9a69da407d60712}\label{classdominio_1_1clases_1_1_recomendacion_a9ce6a2a003fceac0e9a69da407d60712}} 
+\index{dominio.clases.Recomendacion@{dominio.clases.Recomendacion}!intAt@{intAt}}
+\index{intAt@{intAt}!dominio.clases.Recomendacion@{dominio.clases.Recomendacion}}
+\doxysubsubsection{\texorpdfstring{intAt}{intAt}}
+{\footnotesize\ttfamily List$<$Boolean$>$ dominio.\+clases.\+Recomendacion.\+int\+At\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Lista de booleanos que indica cuales atributos de tipo enteros que hay tener en cuenta en la recomendacion. 
+
+
+
+Definición en la línea \mbox{\hyperlink{_recomendacion_8java_source_l00046}{46}} del archivo \mbox{\hyperlink{_recomendacion_8java_source}{Recomendacion.\+java}}.
+
+\mbox{\Hypertarget{classdominio_1_1clases_1_1_recomendacion_a90cd4396fde9e52425bc1935299c5d1c}\label{classdominio_1_1clases_1_1_recomendacion_a90cd4396fde9e52425bc1935299c5d1c}} 
+\index{dominio.clases.Recomendacion@{dominio.clases.Recomendacion}!doubAt@{doubAt}}
+\index{doubAt@{doubAt}!dominio.clases.Recomendacion@{dominio.clases.Recomendacion}}
+\doxysubsubsection{\texorpdfstring{doubAt}{doubAt}}
+{\footnotesize\ttfamily List$<$Boolean$>$ dominio.\+clases.\+Recomendacion.\+doub\+At\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Lista de booleanos que indica cuales atributos de tipo double que hay tener en cuenta en la recomendacion. 
+
+
+
+Definición en la línea \mbox{\hyperlink{_recomendacion_8java_source_l00050}{50}} del archivo \mbox{\hyperlink{_recomendacion_8java_source}{Recomendacion.\+java}}.
+
+\mbox{\Hypertarget{classdominio_1_1clases_1_1_recomendacion_a2f8b33c69cf4197a2f813fedfaff666c}\label{classdominio_1_1clases_1_1_recomendacion_a2f8b33c69cf4197a2f813fedfaff666c}} 
+\index{dominio.clases.Recomendacion@{dominio.clases.Recomendacion}!dateAt@{dateAt}}
+\index{dateAt@{dateAt}!dominio.clases.Recomendacion@{dominio.clases.Recomendacion}}
+\doxysubsubsection{\texorpdfstring{dateAt}{dateAt}}
+{\footnotesize\ttfamily List$<$Boolean$>$ dominio.\+clases.\+Recomendacion.\+date\+At\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Lista de booleanos que indica cuales atributos de tipo date que hay tener en cuenta en la recomendacion. 
+
+
+
+Definición en la línea \mbox{\hyperlink{_recomendacion_8java_source_l00054}{54}} del archivo \mbox{\hyperlink{_recomendacion_8java_source}{Recomendacion.\+java}}.
+
+\mbox{\Hypertarget{classdominio_1_1clases_1_1_recomendacion_adf6d7e912a6964127009e63cba4397b8}\label{classdominio_1_1clases_1_1_recomendacion_adf6d7e912a6964127009e63cba4397b8}} 
+\index{dominio.clases.Recomendacion@{dominio.clases.Recomendacion}!bAt@{bAt}}
+\index{bAt@{bAt}!dominio.clases.Recomendacion@{dominio.clases.Recomendacion}}
+\doxysubsubsection{\texorpdfstring{bAt}{bAt}}
+{\footnotesize\ttfamily List$<$Boolean$>$ dominio.\+clases.\+Recomendacion.\+b\+At\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Lista de booleanos que indica cuales atributos de tipo booleano que hay tener en cuenta en la recomendacion. 
+
+
+
+Definición en la línea \mbox{\hyperlink{_recomendacion_8java_source_l00058}{58}} del archivo \mbox{\hyperlink{_recomendacion_8java_source}{Recomendacion.\+java}}.
+
+\mbox{\Hypertarget{classdominio_1_1clases_1_1_recomendacion_a9f89371f89bded60bc6ed3e9f373d27e}\label{classdominio_1_1clases_1_1_recomendacion_a9f89371f89bded60bc6ed3e9f373d27e}} 
+\index{dominio.clases.Recomendacion@{dominio.clases.Recomendacion}!catAt@{catAt}}
+\index{catAt@{catAt}!dominio.clases.Recomendacion@{dominio.clases.Recomendacion}}
+\doxysubsubsection{\texorpdfstring{catAt}{catAt}}
+{\footnotesize\ttfamily List$<$Boolean$>$ dominio.\+clases.\+Recomendacion.\+cat\+At\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Lista de booleanos que indica cuales atributos de tipo categorico que hay tener en cuenta en la recomendacion. 
+
+
+
+Definición en la línea \mbox{\hyperlink{_recomendacion_8java_source_l00062}{62}} del archivo \mbox{\hyperlink{_recomendacion_8java_source}{Recomendacion.\+java}}.
+
+\mbox{\Hypertarget{classdominio_1_1clases_1_1_recomendacion_af74a229683857258d811d63caa7debc6}\label{classdominio_1_1clases_1_1_recomendacion_af74a229683857258d811d63caa7debc6}} 
+\index{dominio.clases.Recomendacion@{dominio.clases.Recomendacion}!ftAt@{ftAt}}
+\index{ftAt@{ftAt}!dominio.clases.Recomendacion@{dominio.clases.Recomendacion}}
+\doxysubsubsection{\texorpdfstring{ftAt}{ftAt}}
+{\footnotesize\ttfamily List$<$Boolean$>$ dominio.\+clases.\+Recomendacion.\+ft\+At\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Lista de booleanos que indica cuales atributos de tipo texto libre que hay tener en cuenta en la recomendacion. 
+
+
+
+Definición en la línea \mbox{\hyperlink{_recomendacion_8java_source_l00066}{66}} del archivo \mbox{\hyperlink{_recomendacion_8java_source}{Recomendacion.\+java}}.
+
+\mbox{\Hypertarget{classdominio_1_1clases_1_1_recomendacion_a754f6747833d7138fa4a7a51932b0066}\label{classdominio_1_1clases_1_1_recomendacion_a754f6747833d7138fa4a7a51932b0066}} 
+\index{dominio.clases.Recomendacion@{dominio.clases.Recomendacion}!k@{k}}
+\index{k@{k}!dominio.clases.Recomendacion@{dominio.clases.Recomendacion}}
+\doxysubsubsection{\texorpdfstring{k}{k}}
+{\footnotesize\ttfamily int dominio.\+clases.\+Recomendacion.\+k\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Numero de atributos que se tienen que recomendar. 
+
+
+
+Definición en la línea \mbox{\hyperlink{_recomendacion_8java_source_l00071}{71}} del archivo \mbox{\hyperlink{_recomendacion_8java_source}{Recomendacion.\+java}}.
+
+
+
+La documentación para esta clase fue generada a partir del siguiente fichero\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_recomendacion_8java}{Recomendacion.\+java}}\end{DoxyCompactItemize}

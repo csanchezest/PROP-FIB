@@ -1,0 +1,1141 @@
+\hypertarget{classdominio_1_1controladores_1_1_controlador_dominio}{}\doxysection{Referencia de la Clase dominio.\+controladores.\+Controlador\+Dominio}
+\label{classdominio_1_1controladores_1_1_controlador_dominio}\index{dominio.controladores.ControladorDominio@{dominio.controladores.ControladorDominio}}
+
+
+Clase que implementa el controlador de dominio del sistema.  
+
+
+\doxysubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classdominio_1_1controladores_1_1_controlador_dominio_a3ca6dcfd1c52d03c0eec542b0540b4f7}{Controlador\+Dominio}} (Controlador\+Presentacion ctrl\+Presentacion)
+\begin{DoxyCompactList}\small\item\em Constructora de \mbox{\hyperlink{classdominio_1_1controladores_1_1_controlador_dominio}{Controlador\+Dominio}}. \end{DoxyCompactList}\item 
+boolean \mbox{\hyperlink{classdominio_1_1controladores_1_1_controlador_dominio_a4c1944df3939ff8f1ace89df1a0ca7e5}{existe\+Item}} (String item)
+\begin{DoxyCompactList}\small\item\em Metodo dedicado a la comprobacion de la existencia de un item determinado dentro de un dataset. \end{DoxyCompactList}\item 
+String \mbox{\hyperlink{classdominio_1_1controladores_1_1_controlador_dominio_aecfbc8a6a96fb6224357d123fd1f7b05}{get\+Header\+Info}} (String header)
+\begin{DoxyCompactList}\small\item\em Metodo dedicado a la consulta del valor asociado a una columna del dataset. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classdominio_1_1controladores_1_1_controlador_dominio_a5f25592f40255de9b4b8fbf115147df5}{setK}} (int n)
+\begin{DoxyCompactList}\small\item\em Metodo que configura el numero maximo de items que se van a tener en consideracion durante una recomendacion. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classdominio_1_1controladores_1_1_controlador_dominio_a98a0c5392f492d0788ed7cd793179a71}{set\+User}} (int id)
+\begin{DoxyCompactList}\small\item\em Metodo que fija el usuario sobre el cual se trabaja durante una sesion determinada. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classdominio_1_1controladores_1_1_controlador_dominio_aa60c2a7231fb3b46d3d6716f9da62ea1}{set\+User}} (\mbox{\hyperlink{classdominio_1_1clases_1_1_usuari}{Usuari}} u)
+\begin{DoxyCompactList}\small\item\em Metodo que fija el usuario sobre el cual se trabaja durante una sesion dada. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classdominio_1_1controladores_1_1_controlador_dominio_adb042e66e65d543f9dae92b13a934eca}{guardar\+Items}} (File file)
+\begin{DoxyCompactList}\small\item\em Metodo dedicado al almacenamiento del archivo donde se ubican los items del dataset. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classdominio_1_1controladores_1_1_controlador_dominio_a0751d1e7a1886bc3911169d0b6aeac4c}{guardar\+Auxiliares}} (File file)
+\begin{DoxyCompactList}\small\item\em Metodo dedicado al almacenamiento del archivo donde se ubica la informacion auxiliar necesaria para conocer los tipos de dato de cada columna del dataset. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classdominio_1_1controladores_1_1_controlador_dominio_ab5534c0a2e82c75f207196c30648a3ad}{guardar\+Ratings}} (File file)
+\begin{DoxyCompactList}\small\item\em Metodo dedicado al almacenamiento del archivo que alberga la informacion de los ratings generales del dataset. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classdominio_1_1controladores_1_1_controlador_dominio_aae0947d2c0ebebaebfa8495878f1a5c1}{guardar\+Unknown}} (File file)
+\begin{DoxyCompactList}\small\item\em Metodo dedicado al almacenamiento del archivo que alberga la informacion sobre las queries desconocidas (o unknown) del dataset. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classdominio_1_1controladores_1_1_controlador_dominio_abaafcd3c6df91c7555fdae9a74b55f55}{guardar\+Known}} (File file)
+\begin{DoxyCompactList}\small\item\em Metodo dedicado al almacenamiento del archivo que alberga la informacion sobre las queries conocidas (o known) del dataset. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classdominio_1_1controladores_1_1_controlador_dominio_a7707ffe21246016f3c2816816d63f772}{guardar\+Language}} (String language)
+\begin{DoxyCompactList}\small\item\em Metodo dedicado al almacenamiento del lenguaje del dataset. \end{DoxyCompactList}\item 
+boolean \mbox{\hyperlink{classdominio_1_1controladores_1_1_controlador_dominio_a5fd2e4251a3e708e5524d9180b8f6cfe}{is\+Dataset\+Cargado}} ()
+\begin{DoxyCompactList}\small\item\em Metodo dedicado a la comprovacion de si el sistema tiene algun dataset cargado. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classdominio_1_1controladores_1_1_controlador_dominio_a3cb5fcd392cb4209ee263ec9b3aba9eb}{almacenar\+Rating}} (double rating)  throws Exception 
+\begin{DoxyCompactList}\small\item\em Metodo que almacena el rating realizado por el usuario logeado en el sistema. \end{DoxyCompactList}\item 
+String \mbox{\hyperlink{classdominio_1_1controladores_1_1_controlador_dominio_afec6c37555da8cb3eb9b089e0f388990}{get\+Columna\+Actual}} (String current)  throws Exception 
+\begin{DoxyCompactList}\small\item\em Metodo dedicado a la consulta del valor asociado a una columna determinada del dataset. \end{DoxyCompactList}\item 
+Hash\+Map$<$ String, Double $>$ \mbox{\hyperlink{classdominio_1_1controladores_1_1_controlador_dominio_a6ff05c804337cead371dd26055f50685}{make\+Recomendation}} (int n, List$<$ Boolean $>$ l)
+\begin{DoxyCompactList}\small\item\em Metodo dedicado a la generacion de una recomendacion sobre un conjunto de predicciones. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classdominio_1_1controladores_1_1_controlador_dominio_a6da7d115c6c370955ffd02ee3b27412b}{load\+Dataset}} ()
+\begin{DoxyCompactList}\small\item\em Metodo dedicado a la carga del dataset. \end{DoxyCompactList}\item 
+String \mbox{\hyperlink{classdominio_1_1controladores_1_1_controlador_dominio_ab001774048eeb0312a872b5d60543844}{get\+Path\+To\+Updated\+File}} ()
+\begin{DoxyCompactList}\small\item\em Metodo dedicado a la consulta del path hasta una copia nueva del dataset; dicha copia se producira en caso de que haya errores y el usuario decida corregirlos. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classdominio_1_1controladores_1_1_controlador_dominio_a8456ccd3196acdd22ac6f7eb85f0e294}{search\+Item}} (String text)
+\begin{DoxyCompactList}\small\item\em Metodo dedicado a la comprobacion de si un determinado item pertenece al dataset cargado. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classdominio_1_1controladores_1_1_controlador_dominio_a4040cfd0b516611cb50f301f87f490b3}{search\+User}} (String text)
+\begin{DoxyCompactList}\small\item\em Metodo dedicado a la busqueda de la pertenencia de un determinado usuario al dataset cargado en el sistema. \end{DoxyCompactList}\item 
+List$<$ String $>$ \mbox{\hyperlink{classdominio_1_1controladores_1_1_controlador_dominio_aec3c5907a00fe05a8d539f3e65eaeab1}{get\+Item\+Info}} ()
+\item 
+String \mbox{\hyperlink{classdominio_1_1controladores_1_1_controlador_dominio_a910384e76bc11b450853d2ad15923b5a}{get\+Items}} ()
+\item 
+String \mbox{\hyperlink{classdominio_1_1controladores_1_1_controlador_dominio_a97b2342ab2f2a7a69d3968f9fac5c6aa}{get\+Recomendacion}} ()
+\item 
+Hash\+Map$<$ String, Double $>$ \mbox{\hyperlink{classdominio_1_1controladores_1_1_controlador_dominio_a01a8f111dc2ee8439ff055a68ff11ae3}{get\+Usuaris}} (int id)
+\item 
+Array\+List$<$ Object $>$ \mbox{\hyperlink{classdominio_1_1controladores_1_1_controlador_dominio_ab551d880a3ad829998e93ca7af3639e1}{pedir\+Input}} (int i, String attr\+Header, String id\+Item)
+\begin{DoxyCompactList}\small\item\em Metodo dedicado a la comunicacion entre Cjt\+\_\+items y el usuario con el objetivo de tratar los errores detectados en el dataset. \end{DoxyCompactList}\item 
+boolean \mbox{\hyperlink{classdominio_1_1controladores_1_1_controlador_dominio_ac6763b842b9cdc7790394ecb30da9541}{user\+Has\+Ratings}} ()
+\begin{DoxyCompactList}\small\item\em Metodo que comprueba si un usuario tiene valoraciones. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classdominio_1_1controladores_1_1_controlador_dominio_a58fa619ae73770a6d293536187e5453e}{guardar\+Recomendacion}} (String recomendation)
+\begin{DoxyCompactList}\small\item\em Metodo que almacena una recomendacion generada por alguno de los algoritmos predictores. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classdominio_1_1controladores_1_1_controlador_dominio_a55c06a7a3c65bf109bde953381304f04}{get\+User\+Id}} ()
+\item 
+List$<$ String $>$ \mbox{\hyperlink{classdominio_1_1controladores_1_1_controlador_dominio_a8c4eef3a106b4b28b0658e31605a22ed}{get\+User\+Recomendations}} ()
+\item 
+String \mbox{\hyperlink{classdominio_1_1controladores_1_1_controlador_dominio_aa6c6d832bace8e9b2db50d2b1474e1fd}{get\+Text\+Recomendacion}} (String file)
+\item 
+void \mbox{\hyperlink{classdominio_1_1controladores_1_1_controlador_dominio_a8c8e855145cb20db492f4202b89fdd21}{guardar\+Tipo\+Dataset}} (String type)
+\begin{DoxyCompactList}\small\item\em Metodo que almacena el tipo de dataset indicado por el usuario. \end{DoxyCompactList}\item 
+List$<$ String $>$ \mbox{\hyperlink{classdominio_1_1controladores_1_1_controlador_dominio_a4c886ae0f21d598f9323d7d2dbd8621e}{get\+Headers}} ()
+\item 
+void \mbox{\hyperlink{classdominio_1_1controladores_1_1_controlador_dominio_aa72bff03fa6f47ca0e85417a169b99a9}{guardar\+Datos\+Preprocesados}} ()
+\begin{DoxyCompactList}\small\item\em Metodo dedicado a la instruccion de almacenar la informacion actualmente cargada en el sistema, y de manera preprocesada. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classdominio_1_1controladores_1_1_controlador_dominio_a8f6c8ae9fc9e08f8b2519f00b2c77d5d}{reset\+Updated\+File}} ()
+\begin{DoxyCompactList}\small\item\em Metodo que reinicia el archivo sobre el cual se realizan modificaciones durante la deteccion de errores en el dataset. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classdominio_1_1controladores_1_1_controlador_dominio_a47c29b298444a7dfd108173a628cefe9}{cargar\+Datos\+Preprocesados}} (String absolute\+Path)
+\begin{DoxyCompactList}\small\item\em Metodo dedicado al ordenamiento de cargar datos ya preprocesados y almacenados. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classdominio_1_1controladores_1_1_controlador_dominio_a5dc5bc56ddfd74132a38e06f860a725a}{cargar\+Datos\+Preprocesados}} (String items, String ratings, String known, String unknown)
+\begin{DoxyCompactList}\small\item\em Metodo de ordenamiento y almacenamiento de datos preprocesados. En dicho metodo se carga el dataset preprocesado, juntamente con los ratings (generales/known/unknown) \end{DoxyCompactList}\item 
+String \mbox{\hyperlink{classdominio_1_1controladores_1_1_controlador_dominio_a6105d0606db6b3ffd9459e68bd397e74}{get\+Dataset\+Preprocesado}} ()
+\item 
+boolean \mbox{\hyperlink{classdominio_1_1controladores_1_1_controlador_dominio_a92f189b879e34147fcce9caa430eb267}{existe\+Usuario}} (int id)
+\begin{DoxyCompactList}\small\item\em Metodo dedicado a la consulta de si un usuario determinado pertenece al dataset cargado en el sistema. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classdominio_1_1controladores_1_1_controlador_dominio_a6eabf786e9313790e15156cba5a388b1}{set\+Users}} (List$<$ \mbox{\hyperlink{classdominio_1_1clases_1_1_usuari}{Usuari}} $>$ list)
+\item 
+int \mbox{\hyperlink{classdominio_1_1controladores_1_1_controlador_dominio_a18d911c6814b12ff49522b531f3693e1}{get\+Idx\+Id}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Atributos privados}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classdominio_1_1controladores_1_1_ctrl_gestio_recomanacio}{Ctrl\+Gestio\+Recomanacio}} \mbox{\hyperlink{classdominio_1_1controladores_1_1_controlador_dominio_ab6754bee9f5b4d9842b1446593d1f6e7}{ctrl\+Gestio\+Recomanacio}}
+\begin{DoxyCompactList}\small\item\em Instancia del controlador del administrador de recomendaciones. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classdominio_1_1controladores_1_1_ctrl_gestio_items}{Ctrl\+Gestio\+Items}} \mbox{\hyperlink{classdominio_1_1controladores_1_1_controlador_dominio_ab58bba57be5096151e4d4447bea5c8b6}{ctrl\+Gestio\+Items}}
+\begin{DoxyCompactList}\small\item\em Instancia del controlador del administrador de items. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classdominio_1_1controladores_1_1_ctrl_gestio_usuaris}{Ctrl\+Gestio\+Usuaris}} \mbox{\hyperlink{classdominio_1_1controladores_1_1_controlador_dominio_a1e8b7f856b6e0471cec288b9618a2737}{ctrl\+Usuaris}}
+\begin{DoxyCompactList}\small\item\em Instancia del controlador del administrador de usuarios. \end{DoxyCompactList}\item 
+Controlador\+Presentacion \mbox{\hyperlink{classdominio_1_1controladores_1_1_controlador_dominio_a6143f76ebdb7f9a025eb970428c41490}{padre}}
+\begin{DoxyCompactList}\small\item\em Instancia del controlador principal de presentacion. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Clase que implementa el controlador de dominio del sistema. 
+
+\begin{DoxyAuthor}{Autor}
+Cristian Sanchez Estape y Jordi Elgueta Serra 
+\end{DoxyAuthor}
+
+
+Definición en la línea \mbox{\hyperlink{_controlador_dominio_8java_source_l00020}{20}} del archivo \mbox{\hyperlink{_controlador_dominio_8java_source}{Controlador\+Dominio.\+java}}.
+
+
+
+\doxysubsection{Documentación del constructor y destructor}
+\mbox{\Hypertarget{classdominio_1_1controladores_1_1_controlador_dominio_a3ca6dcfd1c52d03c0eec542b0540b4f7}\label{classdominio_1_1controladores_1_1_controlador_dominio_a3ca6dcfd1c52d03c0eec542b0540b4f7}} 
+\index{dominio.controladores.ControladorDominio@{dominio.controladores.ControladorDominio}!ControladorDominio@{ControladorDominio}}
+\index{ControladorDominio@{ControladorDominio}!dominio.controladores.ControladorDominio@{dominio.controladores.ControladorDominio}}
+\doxysubsubsection{\texorpdfstring{ControladorDominio()}{ControladorDominio()}}
+{\footnotesize\ttfamily dominio.\+controladores.\+Controlador\+Dominio.\+Controlador\+Dominio (\begin{DoxyParamCaption}\item[{Controlador\+Presentacion}]{ctrl\+Presentacion }\end{DoxyParamCaption})}
+
+
+
+Constructora de \mbox{\hyperlink{classdominio_1_1controladores_1_1_controlador_dominio}{Controlador\+Dominio}}. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em ctrl\+Presentacion} & Instancia (que sera unica) del controlador de presentacion con el cual debera comunicarse siempre \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{_controlador_dominio_8java_source_l00051}{51}} del archivo \mbox{\hyperlink{_controlador_dominio_8java_source}{Controlador\+Dominio.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00051                                                                        \{}
+\DoxyCodeLine{00052         \mbox{\hyperlink{classdominio_1_1controladores_1_1_controlador_dominio_a6143f76ebdb7f9a025eb970428c41490}{padre}} = ctrlPresentacion;}
+\DoxyCodeLine{00053         \mbox{\hyperlink{classdominio_1_1controladores_1_1_controlador_dominio_ab6754bee9f5b4d9842b1446593d1f6e7}{ctrlGestioRecomanacio}} = \textcolor{keyword}{new} CtrlGestioRecomanacio();}
+\DoxyCodeLine{00054         \mbox{\hyperlink{classdominio_1_1controladores_1_1_controlador_dominio_ab58bba57be5096151e4d4447bea5c8b6}{ctrlGestioItems}} = \textcolor{keyword}{new} CtrlGestioItems(\textcolor{keyword}{this});}
+\DoxyCodeLine{00055         \mbox{\hyperlink{classdominio_1_1controladores_1_1_controlador_dominio_a1e8b7f856b6e0471cec288b9618a2737}{ctrlUsuaris}} = \textcolor{keyword}{new} CtrlGestioUsuaris();}
+\DoxyCodeLine{00056     \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Documentación de las funciones miembro}
+\mbox{\Hypertarget{classdominio_1_1controladores_1_1_controlador_dominio_a4c1944df3939ff8f1ace89df1a0ca7e5}\label{classdominio_1_1controladores_1_1_controlador_dominio_a4c1944df3939ff8f1ace89df1a0ca7e5}} 
+\index{dominio.controladores.ControladorDominio@{dominio.controladores.ControladorDominio}!existeItem@{existeItem}}
+\index{existeItem@{existeItem}!dominio.controladores.ControladorDominio@{dominio.controladores.ControladorDominio}}
+\doxysubsubsection{\texorpdfstring{existeItem()}{existeItem()}}
+{\footnotesize\ttfamily boolean dominio.\+controladores.\+Controlador\+Dominio.\+existe\+Item (\begin{DoxyParamCaption}\item[{String}]{item }\end{DoxyParamCaption})}
+
+
+
+Metodo dedicado a la comprobacion de la existencia de un item determinado dentro de un dataset. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em item} & Item sobre el que queremos determinar si existe o no \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+Valor cierto o falso en funcion de si el dataset reconoce la pertenencia de dicho item 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{_controlador_dominio_8java_source_l00064}{64}} del archivo \mbox{\hyperlink{_controlador_dominio_8java_source}{Controlador\+Dominio.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00064 \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{classdominio_1_1controladores_1_1_controlador_dominio_ab58bba57be5096151e4d4447bea5c8b6}{ctrlGestioItems}}.\mbox{\hyperlink{classdominio_1_1controladores_1_1_ctrl_gestio_items_addf1380062f663db03317b90ec59672c}{existeItem}}(item); \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdominio_1_1controladores_1_1_controlador_dominio_aecfbc8a6a96fb6224357d123fd1f7b05}\label{classdominio_1_1controladores_1_1_controlador_dominio_aecfbc8a6a96fb6224357d123fd1f7b05}} 
+\index{dominio.controladores.ControladorDominio@{dominio.controladores.ControladorDominio}!getHeaderInfo@{getHeaderInfo}}
+\index{getHeaderInfo@{getHeaderInfo}!dominio.controladores.ControladorDominio@{dominio.controladores.ControladorDominio}}
+\doxysubsubsection{\texorpdfstring{getHeaderInfo()}{getHeaderInfo()}}
+{\footnotesize\ttfamily String dominio.\+controladores.\+Controlador\+Dominio.\+get\+Header\+Info (\begin{DoxyParamCaption}\item[{String}]{header }\end{DoxyParamCaption})}
+
+
+
+Metodo dedicado a la consulta del valor asociado a una columna del dataset. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em header} & El nombre de la cabecera de una columna determinada \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+El tipo de valor asociado a la columna de la entrada 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{_controlador_dominio_8java_source_l00072}{72}} del archivo \mbox{\hyperlink{_controlador_dominio_8java_source}{Controlador\+Dominio.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00072 \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{classdominio_1_1controladores_1_1_controlador_dominio_ab58bba57be5096151e4d4447bea5c8b6}{ctrlGestioItems}}.\mbox{\hyperlink{classdominio_1_1controladores_1_1_ctrl_gestio_items_a7c62023204b3275e9a5e278a1de2b745}{getDataset}}().getTypeIndex(header).getType(); \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdominio_1_1controladores_1_1_controlador_dominio_a5f25592f40255de9b4b8fbf115147df5}\label{classdominio_1_1controladores_1_1_controlador_dominio_a5f25592f40255de9b4b8fbf115147df5}} 
+\index{dominio.controladores.ControladorDominio@{dominio.controladores.ControladorDominio}!setK@{setK}}
+\index{setK@{setK}!dominio.controladores.ControladorDominio@{dominio.controladores.ControladorDominio}}
+\doxysubsubsection{\texorpdfstring{setK()}{setK()}}
+{\footnotesize\ttfamily void dominio.\+controladores.\+Controlador\+Dominio.\+setK (\begin{DoxyParamCaption}\item[{int}]{n }\end{DoxyParamCaption})}
+
+
+
+Metodo que configura el numero maximo de items que se van a tener en consideracion durante una recomendacion. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em n} & Numero de items (deseable) y sobre los cuales deberemos generar las predicciones y recomendaciones \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{_controlador_dominio_8java_source_l00079}{79}} del archivo \mbox{\hyperlink{_controlador_dominio_8java_source}{Controlador\+Dominio.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00079                             \{}
+\DoxyCodeLine{00080         \mbox{\hyperlink{classdominio_1_1controladores_1_1_controlador_dominio_ab6754bee9f5b4d9842b1446593d1f6e7}{ctrlGestioRecomanacio}}.\mbox{\hyperlink{classdominio_1_1controladores_1_1_ctrl_gestio_recomanacio_ab5033ae2f4032642530f2804bbb4bb05}{setK}}(n);}
+\DoxyCodeLine{00081     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdominio_1_1controladores_1_1_controlador_dominio_a98a0c5392f492d0788ed7cd793179a71}\label{classdominio_1_1controladores_1_1_controlador_dominio_a98a0c5392f492d0788ed7cd793179a71}} 
+\index{dominio.controladores.ControladorDominio@{dominio.controladores.ControladorDominio}!setUser@{setUser}}
+\index{setUser@{setUser}!dominio.controladores.ControladorDominio@{dominio.controladores.ControladorDominio}}
+\doxysubsubsection{\texorpdfstring{setUser()}{setUser()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void dominio.\+controladores.\+Controlador\+Dominio.\+set\+User (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})}
+
+
+
+Metodo que fija el usuario sobre el cual se trabaja durante una sesion determinada. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em id} & El identificador del usuario sobre el cual se trabaja \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{_controlador_dominio_8java_source_l00088}{88}} del archivo \mbox{\hyperlink{_controlador_dominio_8java_source}{Controlador\+Dominio.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00088                                 \{}
+\DoxyCodeLine{00089         \mbox{\hyperlink{classdominio_1_1controladores_1_1_controlador_dominio_a1e8b7f856b6e0471cec288b9618a2737}{ctrlUsuaris}}.\mbox{\hyperlink{classdominio_1_1controladores_1_1_ctrl_gestio_usuaris_a950974fc5cc0348d6dec859eec74ab27}{setUserId}}(\textcolor{keywordtype}{id});}
+\DoxyCodeLine{00090     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdominio_1_1controladores_1_1_controlador_dominio_aa60c2a7231fb3b46d3d6716f9da62ea1}\label{classdominio_1_1controladores_1_1_controlador_dominio_aa60c2a7231fb3b46d3d6716f9da62ea1}} 
+\index{dominio.controladores.ControladorDominio@{dominio.controladores.ControladorDominio}!setUser@{setUser}}
+\index{setUser@{setUser}!dominio.controladores.ControladorDominio@{dominio.controladores.ControladorDominio}}
+\doxysubsubsection{\texorpdfstring{setUser()}{setUser()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void dominio.\+controladores.\+Controlador\+Dominio.\+set\+User (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classdominio_1_1clases_1_1_usuari}{Usuari}}}]{u }\end{DoxyParamCaption})}
+
+
+
+Metodo que fija el usuario sobre el cual se trabaja durante una sesion dada. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em u} & Objeto del usuario sobre el cual se trabaja \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{_controlador_dominio_8java_source_l00097}{97}} del archivo \mbox{\hyperlink{_controlador_dominio_8java_source}{Controlador\+Dominio.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00097                                   \{}
+\DoxyCodeLine{00098         \mbox{\hyperlink{classdominio_1_1controladores_1_1_controlador_dominio_a1e8b7f856b6e0471cec288b9618a2737}{ctrlUsuaris}}.\mbox{\hyperlink{classdominio_1_1controladores_1_1_ctrl_gestio_usuaris_ab072b13309e77c51739964886d26a8a9}{setUser}}(u);}
+\DoxyCodeLine{00099     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdominio_1_1controladores_1_1_controlador_dominio_adb042e66e65d543f9dae92b13a934eca}\label{classdominio_1_1controladores_1_1_controlador_dominio_adb042e66e65d543f9dae92b13a934eca}} 
+\index{dominio.controladores.ControladorDominio@{dominio.controladores.ControladorDominio}!guardarItems@{guardarItems}}
+\index{guardarItems@{guardarItems}!dominio.controladores.ControladorDominio@{dominio.controladores.ControladorDominio}}
+\doxysubsubsection{\texorpdfstring{guardarItems()}{guardarItems()}}
+{\footnotesize\ttfamily void dominio.\+controladores.\+Controlador\+Dominio.\+guardar\+Items (\begin{DoxyParamCaption}\item[{File}]{file }\end{DoxyParamCaption})}
+
+
+
+Metodo dedicado al almacenamiento del archivo donde se ubican los items del dataset. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em file} & Archivo donde se almacena la informacion de los items \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{_controlador_dominio_8java_source_l00106}{106}} del archivo \mbox{\hyperlink{_controlador_dominio_8java_source}{Controlador\+Dominio.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00106 \{ \mbox{\hyperlink{classdominio_1_1controladores_1_1_controlador_dominio_ab58bba57be5096151e4d4447bea5c8b6}{ctrlGestioItems}}.\mbox{\hyperlink{classdominio_1_1controladores_1_1_ctrl_gestio_items_acfa0eccd735bfc723539859f4b2650d8}{guardarItems}}(file); \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdominio_1_1controladores_1_1_controlador_dominio_a0751d1e7a1886bc3911169d0b6aeac4c}\label{classdominio_1_1controladores_1_1_controlador_dominio_a0751d1e7a1886bc3911169d0b6aeac4c}} 
+\index{dominio.controladores.ControladorDominio@{dominio.controladores.ControladorDominio}!guardarAuxiliares@{guardarAuxiliares}}
+\index{guardarAuxiliares@{guardarAuxiliares}!dominio.controladores.ControladorDominio@{dominio.controladores.ControladorDominio}}
+\doxysubsubsection{\texorpdfstring{guardarAuxiliares()}{guardarAuxiliares()}}
+{\footnotesize\ttfamily void dominio.\+controladores.\+Controlador\+Dominio.\+guardar\+Auxiliares (\begin{DoxyParamCaption}\item[{File}]{file }\end{DoxyParamCaption})}
+
+
+
+Metodo dedicado al almacenamiento del archivo donde se ubica la informacion auxiliar necesaria para conocer los tipos de dato de cada columna del dataset. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em file} & Archivo donde se almacena la informacion sobre los tipos de dato de cada columna del dataset \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{_controlador_dominio_8java_source_l00114}{114}} del archivo \mbox{\hyperlink{_controlador_dominio_8java_source}{Controlador\+Dominio.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00114                                              \{}
+\DoxyCodeLine{00115         \mbox{\hyperlink{classdominio_1_1controladores_1_1_controlador_dominio_ab58bba57be5096151e4d4447bea5c8b6}{ctrlGestioItems}}.\mbox{\hyperlink{classdominio_1_1controladores_1_1_ctrl_gestio_items_a9a244811aeae4666f5ebb0eba78d2622}{guardarAuxiliares}}(file);}
+\DoxyCodeLine{00116     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdominio_1_1controladores_1_1_controlador_dominio_ab5534c0a2e82c75f207196c30648a3ad}\label{classdominio_1_1controladores_1_1_controlador_dominio_ab5534c0a2e82c75f207196c30648a3ad}} 
+\index{dominio.controladores.ControladorDominio@{dominio.controladores.ControladorDominio}!guardarRatings@{guardarRatings}}
+\index{guardarRatings@{guardarRatings}!dominio.controladores.ControladorDominio@{dominio.controladores.ControladorDominio}}
+\doxysubsubsection{\texorpdfstring{guardarRatings()}{guardarRatings()}}
+{\footnotesize\ttfamily void dominio.\+controladores.\+Controlador\+Dominio.\+guardar\+Ratings (\begin{DoxyParamCaption}\item[{File}]{file }\end{DoxyParamCaption})}
+
+
+
+Metodo dedicado al almacenamiento del archivo que alberga la informacion de los ratings generales del dataset. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em file} & Archivo donde se almacena la informacion sobre los ratings generales \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{_controlador_dominio_8java_source_l00123}{123}} del archivo \mbox{\hyperlink{_controlador_dominio_8java_source}{Controlador\+Dominio.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00123                                           \{}
+\DoxyCodeLine{00124         \mbox{\hyperlink{classdominio_1_1controladores_1_1_controlador_dominio_ab58bba57be5096151e4d4447bea5c8b6}{ctrlGestioItems}}.\mbox{\hyperlink{classdominio_1_1controladores_1_1_ctrl_gestio_items_a732566f5417b5189ee862c6b936229ee}{guardarRatings}}(file);}
+\DoxyCodeLine{00125     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdominio_1_1controladores_1_1_controlador_dominio_aae0947d2c0ebebaebfa8495878f1a5c1}\label{classdominio_1_1controladores_1_1_controlador_dominio_aae0947d2c0ebebaebfa8495878f1a5c1}} 
+\index{dominio.controladores.ControladorDominio@{dominio.controladores.ControladorDominio}!guardarUnknown@{guardarUnknown}}
+\index{guardarUnknown@{guardarUnknown}!dominio.controladores.ControladorDominio@{dominio.controladores.ControladorDominio}}
+\doxysubsubsection{\texorpdfstring{guardarUnknown()}{guardarUnknown()}}
+{\footnotesize\ttfamily void dominio.\+controladores.\+Controlador\+Dominio.\+guardar\+Unknown (\begin{DoxyParamCaption}\item[{File}]{file }\end{DoxyParamCaption})}
+
+
+
+Metodo dedicado al almacenamiento del archivo que alberga la informacion sobre las queries desconocidas (o unknown) del dataset. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em file} & Archivo donde se almacena la informacion de las queries unknown \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{_controlador_dominio_8java_source_l00132}{132}} del archivo \mbox{\hyperlink{_controlador_dominio_8java_source}{Controlador\+Dominio.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00132                                           \{}
+\DoxyCodeLine{00133         \mbox{\hyperlink{classdominio_1_1controladores_1_1_controlador_dominio_ab58bba57be5096151e4d4447bea5c8b6}{ctrlGestioItems}}.\mbox{\hyperlink{classdominio_1_1controladores_1_1_ctrl_gestio_items_a97b51807ad5353ff676fdd6d61eb8d60}{guardarUnknown}}(file);}
+\DoxyCodeLine{00134     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdominio_1_1controladores_1_1_controlador_dominio_abaafcd3c6df91c7555fdae9a74b55f55}\label{classdominio_1_1controladores_1_1_controlador_dominio_abaafcd3c6df91c7555fdae9a74b55f55}} 
+\index{dominio.controladores.ControladorDominio@{dominio.controladores.ControladorDominio}!guardarKnown@{guardarKnown}}
+\index{guardarKnown@{guardarKnown}!dominio.controladores.ControladorDominio@{dominio.controladores.ControladorDominio}}
+\doxysubsubsection{\texorpdfstring{guardarKnown()}{guardarKnown()}}
+{\footnotesize\ttfamily void dominio.\+controladores.\+Controlador\+Dominio.\+guardar\+Known (\begin{DoxyParamCaption}\item[{File}]{file }\end{DoxyParamCaption})}
+
+
+
+Metodo dedicado al almacenamiento del archivo que alberga la informacion sobre las queries conocidas (o known) del dataset. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em file} & Archivo donde se almacena la informacion de las queries known \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{_controlador_dominio_8java_source_l00141}{141}} del archivo \mbox{\hyperlink{_controlador_dominio_8java_source}{Controlador\+Dominio.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00141                                         \{}
+\DoxyCodeLine{00142         \mbox{\hyperlink{classdominio_1_1controladores_1_1_controlador_dominio_ab58bba57be5096151e4d4447bea5c8b6}{ctrlGestioItems}}.\mbox{\hyperlink{classdominio_1_1controladores_1_1_ctrl_gestio_items_a5ba4d67aab741aec9a6d23dadf5765b7}{guardarKnown}}(file);}
+\DoxyCodeLine{00143     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdominio_1_1controladores_1_1_controlador_dominio_a7707ffe21246016f3c2816816d63f772}\label{classdominio_1_1controladores_1_1_controlador_dominio_a7707ffe21246016f3c2816816d63f772}} 
+\index{dominio.controladores.ControladorDominio@{dominio.controladores.ControladorDominio}!guardarLanguage@{guardarLanguage}}
+\index{guardarLanguage@{guardarLanguage}!dominio.controladores.ControladorDominio@{dominio.controladores.ControladorDominio}}
+\doxysubsubsection{\texorpdfstring{guardarLanguage()}{guardarLanguage()}}
+{\footnotesize\ttfamily void dominio.\+controladores.\+Controlador\+Dominio.\+guardar\+Language (\begin{DoxyParamCaption}\item[{String}]{language }\end{DoxyParamCaption})}
+
+
+
+Metodo dedicado al almacenamiento del lenguaje del dataset. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em language} & String que indica (en castellano) sobre qué lenguaje trabaja el dataset \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{_controlador_dominio_8java_source_l00150}{150}} del archivo \mbox{\hyperlink{_controlador_dominio_8java_source}{Controlador\+Dominio.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00150 \{\mbox{\hyperlink{classdominio_1_1controladores_1_1_controlador_dominio_ab58bba57be5096151e4d4447bea5c8b6}{ctrlGestioItems}}.\mbox{\hyperlink{classdominio_1_1controladores_1_1_ctrl_gestio_items_ae402afe11b3125a3d08e9ff685f250f3}{guardarLanguage}}(language);\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdominio_1_1controladores_1_1_controlador_dominio_a5fd2e4251a3e708e5524d9180b8f6cfe}\label{classdominio_1_1controladores_1_1_controlador_dominio_a5fd2e4251a3e708e5524d9180b8f6cfe}} 
+\index{dominio.controladores.ControladorDominio@{dominio.controladores.ControladorDominio}!isDatasetCargado@{isDatasetCargado}}
+\index{isDatasetCargado@{isDatasetCargado}!dominio.controladores.ControladorDominio@{dominio.controladores.ControladorDominio}}
+\doxysubsubsection{\texorpdfstring{isDatasetCargado()}{isDatasetCargado()}}
+{\footnotesize\ttfamily boolean dominio.\+controladores.\+Controlador\+Dominio.\+is\+Dataset\+Cargado (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Metodo dedicado a la comprovacion de si el sistema tiene algun dataset cargado. 
+
+\begin{DoxyReturn}{Devuelve}
+Un valor cierto o falso en funcion de si se encuentra cargado 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{_controlador_dominio_8java_source_l00157}{157}} del archivo \mbox{\hyperlink{_controlador_dominio_8java_source}{Controlador\+Dominio.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00157                                       \{}
+\DoxyCodeLine{00158         \textcolor{keywordflow}{return} \mbox{\hyperlink{classdominio_1_1controladores_1_1_controlador_dominio_ab58bba57be5096151e4d4447bea5c8b6}{ctrlGestioItems}}.\mbox{\hyperlink{classdominio_1_1controladores_1_1_ctrl_gestio_items_a6f68c681890b01f6d113c4025d64c74a}{isDatasetCargado}}();}
+\DoxyCodeLine{00159     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdominio_1_1controladores_1_1_controlador_dominio_a3cb5fcd392cb4209ee263ec9b3aba9eb}\label{classdominio_1_1controladores_1_1_controlador_dominio_a3cb5fcd392cb4209ee263ec9b3aba9eb}} 
+\index{dominio.controladores.ControladorDominio@{dominio.controladores.ControladorDominio}!almacenarRating@{almacenarRating}}
+\index{almacenarRating@{almacenarRating}!dominio.controladores.ControladorDominio@{dominio.controladores.ControladorDominio}}
+\doxysubsubsection{\texorpdfstring{almacenarRating()}{almacenarRating()}}
+{\footnotesize\ttfamily void dominio.\+controladores.\+Controlador\+Dominio.\+almacenar\+Rating (\begin{DoxyParamCaption}\item[{double}]{rating }\end{DoxyParamCaption}) throws Exception}
+
+
+
+Metodo que almacena el rating realizado por el usuario logeado en el sistema. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em rating} & Valor numerico de la valoracion del usuario sobre un item dado \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{_controlador_dominio_8java_source_l00166}{166}} del archivo \mbox{\hyperlink{_controlador_dominio_8java_source}{Controlador\+Dominio.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00166                                                                 \{}
+\DoxyCodeLine{00167         \mbox{\hyperlink{classdominio_1_1controladores_1_1_controlador_dominio_a1e8b7f856b6e0471cec288b9618a2737}{ctrlUsuaris}}.\mbox{\hyperlink{classdominio_1_1controladores_1_1_ctrl_gestio_usuaris_a6580b494cccaf54cdcceff461589b6ff}{getUsuari}}().\mbox{\hyperlink{classdominio_1_1clases_1_1_usuari_a7be6538c33a7ce2d5ad998032e9ff4e8}{addRatedItems}}(\mbox{\hyperlink{classdominio_1_1controladores_1_1_controlador_dominio_ab58bba57be5096151e4d4447bea5c8b6}{ctrlGestioItems}}.\mbox{\hyperlink{classdominio_1_1controladores_1_1_ctrl_gestio_items_a7c62023204b3275e9a5e278a1de2b745}{getDataset}}().getItem(\mbox{\hyperlink{classdominio_1_1controladores_1_1_controlador_dominio_ab58bba57be5096151e4d4447bea5c8b6}{ctrlGestioItems}}.\mbox{\hyperlink{classdominio_1_1controladores_1_1_ctrl_gestio_items_a1e67ddc01f709ff29e4c80748aff498b}{getItem}}()), rating);}
+\DoxyCodeLine{00168         \textcolor{keywordflow}{if}(\mbox{\hyperlink{classdominio_1_1controladores_1_1_controlador_dominio_ab58bba57be5096151e4d4447bea5c8b6}{ctrlGestioItems}}.\mbox{\hyperlink{classdominio_1_1controladores_1_1_ctrl_gestio_items_a373ed518f57dcb1d3cca16eff7ffa5cd}{usuarioPerteneceARatings}}(\mbox{\hyperlink{classdominio_1_1controladores_1_1_controlador_dominio_a1e8b7f856b6e0471cec288b9618a2737}{ctrlUsuaris}}.\mbox{\hyperlink{classdominio_1_1controladores_1_1_ctrl_gestio_usuaris_a1ea1c51fa82fe70f636eb97d6311ffe2}{getUserId}}()))}
+\DoxyCodeLine{00169             ControladorPersistencia.getInstance().guardarRating(\mbox{\hyperlink{classdominio_1_1controladores_1_1_controlador_dominio_a1e8b7f856b6e0471cec288b9618a2737}{ctrlUsuaris}}.\mbox{\hyperlink{classdominio_1_1controladores_1_1_ctrl_gestio_usuaris_a1ea1c51fa82fe70f636eb97d6311ffe2}{getUserId}}(), \mbox{\hyperlink{classdominio_1_1controladores_1_1_controlador_dominio_ab58bba57be5096151e4d4447bea5c8b6}{ctrlGestioItems}}.\mbox{\hyperlink{classdominio_1_1controladores_1_1_ctrl_gestio_items_a1e67ddc01f709ff29e4c80748aff498b}{getItem}}(),}
+\DoxyCodeLine{00170                     \textcolor{stringliteral}{"{}"{}}+rating,\mbox{\hyperlink{classdominio_1_1controladores_1_1_controlador_dominio_ab58bba57be5096151e4d4447bea5c8b6}{ctrlGestioItems}}.\mbox{\hyperlink{classdominio_1_1controladores_1_1_ctrl_gestio_items_a74a070a904b58818725845cadc431ad9}{getRatings}}().getAbsolutePath());}
+\DoxyCodeLine{00171         \textcolor{keywordflow}{else} ControladorPersistencia.getInstance().guardarRating(\mbox{\hyperlink{classdominio_1_1controladores_1_1_controlador_dominio_a1e8b7f856b6e0471cec288b9618a2737}{ctrlUsuaris}}.\mbox{\hyperlink{classdominio_1_1controladores_1_1_ctrl_gestio_usuaris_a1ea1c51fa82fe70f636eb97d6311ffe2}{getUserId}}(), \mbox{\hyperlink{classdominio_1_1controladores_1_1_controlador_dominio_ab58bba57be5096151e4d4447bea5c8b6}{ctrlGestioItems}}.\mbox{\hyperlink{classdominio_1_1controladores_1_1_ctrl_gestio_items_a1e67ddc01f709ff29e4c80748aff498b}{getItem}}(),}
+\DoxyCodeLine{00172                 \textcolor{stringliteral}{"{}"{}}+rating,\mbox{\hyperlink{classdominio_1_1controladores_1_1_controlador_dominio_ab58bba57be5096151e4d4447bea5c8b6}{ctrlGestioItems}}.\mbox{\hyperlink{classdominio_1_1controladores_1_1_ctrl_gestio_items_ac84451d6dcb1a1002d587e3a28f624c2}{getKnown}}().getAbsolutePath());}
+\DoxyCodeLine{00173     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdominio_1_1controladores_1_1_controlador_dominio_afec6c37555da8cb3eb9b089e0f388990}\label{classdominio_1_1controladores_1_1_controlador_dominio_afec6c37555da8cb3eb9b089e0f388990}} 
+\index{dominio.controladores.ControladorDominio@{dominio.controladores.ControladorDominio}!getColumnaActual@{getColumnaActual}}
+\index{getColumnaActual@{getColumnaActual}!dominio.controladores.ControladorDominio@{dominio.controladores.ControladorDominio}}
+\doxysubsubsection{\texorpdfstring{getColumnaActual()}{getColumnaActual()}}
+{\footnotesize\ttfamily String dominio.\+controladores.\+Controlador\+Dominio.\+get\+Columna\+Actual (\begin{DoxyParamCaption}\item[{String}]{current }\end{DoxyParamCaption}) throws Exception}
+
+
+
+Metodo dedicado a la consulta del valor asociado a una columna determinada del dataset. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em current} & La columna de la cual necesitamos saber su tipo \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+El tipo de valor de la columna indicada en formato String 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{_controlador_dominio_8java_source_l00181}{181}} del archivo \mbox{\hyperlink{_controlador_dominio_8java_source}{Controlador\+Dominio.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00181 \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{classdominio_1_1controladores_1_1_controlador_dominio_ab58bba57be5096151e4d4447bea5c8b6}{ctrlGestioItems}}.\mbox{\hyperlink{classdominio_1_1controladores_1_1_ctrl_gestio_items_ac46d0012a3530401475a11ab5802e631}{getColumnaActual}}(current); \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdominio_1_1controladores_1_1_controlador_dominio_a6ff05c804337cead371dd26055f50685}\label{classdominio_1_1controladores_1_1_controlador_dominio_a6ff05c804337cead371dd26055f50685}} 
+\index{dominio.controladores.ControladorDominio@{dominio.controladores.ControladorDominio}!makeRecomendation@{makeRecomendation}}
+\index{makeRecomendation@{makeRecomendation}!dominio.controladores.ControladorDominio@{dominio.controladores.ControladorDominio}}
+\doxysubsubsection{\texorpdfstring{makeRecomendation()}{makeRecomendation()}}
+{\footnotesize\ttfamily Hash\+Map$<$ String, Double $>$ dominio.\+controladores.\+Controlador\+Dominio.\+make\+Recomendation (\begin{DoxyParamCaption}\item[{int}]{n,  }\item[{List$<$ Boolean $>$}]{l }\end{DoxyParamCaption})}
+
+
+
+Metodo dedicado a la generacion de una recomendacion sobre un conjunto de predicciones. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em n} & Entero identificador del algoritmo que se va a usar (0 = Collaborative; 1 = Content-\/\+Based; 2 = Hybrid) \\
+\hline
+{\em l} & Lista de booleanos donde, para cada atributo, si se encuentra en estado true, significa que forma parte del subconjunto de atributos a tener en cuenta para generar una recomendacion \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+Un mapa donde, para cada clave, que corresponde a un identificador de item, tenemos la valoracion predecida para el usuario del sistema 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{_controlador_dominio_8java_source_l00190}{190}} del archivo \mbox{\hyperlink{_controlador_dominio_8java_source}{Controlador\+Dominio.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00190                                                                              \{}
+\DoxyCodeLine{00191         List<Boolean> intAt = \textcolor{keyword}{new} ArrayList<>();}
+\DoxyCodeLine{00192         List<Boolean> doubAt = \textcolor{keyword}{new} ArrayList<>();}
+\DoxyCodeLine{00193         List<Boolean> dateAt = \textcolor{keyword}{new} ArrayList<>();}
+\DoxyCodeLine{00194         List<Boolean> bAt = \textcolor{keyword}{new} ArrayList<>();}
+\DoxyCodeLine{00195         List<Boolean> catAt = \textcolor{keyword}{new} ArrayList<>();}
+\DoxyCodeLine{00196         List<Boolean> ftAt = \textcolor{keyword}{new} ArrayList<>();}
+\DoxyCodeLine{00197         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < l.size(); ++i) \{}
+\DoxyCodeLine{00198             \textcolor{keywordflow}{switch} (\mbox{\hyperlink{classdominio_1_1controladores_1_1_controlador_dominio_aecfbc8a6a96fb6224357d123fd1f7b05}{getHeaderInfo}}(\mbox{\hyperlink{classdominio_1_1controladores_1_1_controlador_dominio_a4c886ae0f21d598f9323d7d2dbd8621e}{getHeaders}}().\textcolor{keyword}{get}(i))) \{}
+\DoxyCodeLine{00199                 \textcolor{keywordflow}{case} \textcolor{stringliteral}{"{}integer"{}}:}
+\DoxyCodeLine{00200                     intAt.add(l.get(i));}
+\DoxyCodeLine{00201                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00202                 \textcolor{keywordflow}{case} \textcolor{stringliteral}{"{}float"{}}:}
+\DoxyCodeLine{00203                     doubAt.add(l.get(i));}
+\DoxyCodeLine{00204                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00205                 \textcolor{keywordflow}{case} \textcolor{stringliteral}{"{}date"{}}:}
+\DoxyCodeLine{00206                     dateAt.add(l.get(i));}
+\DoxyCodeLine{00207                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00208                 \textcolor{keywordflow}{case} \textcolor{stringliteral}{"{}boolean"{}}:}
+\DoxyCodeLine{00209                     bAt.add(l.get(i));}
+\DoxyCodeLine{00210                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00211                 \textcolor{keywordflow}{case} \textcolor{stringliteral}{"{}categorical"{}}:}
+\DoxyCodeLine{00212                     catAt.add(l.get(i));}
+\DoxyCodeLine{00213                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00214                 \textcolor{keywordflow}{case} \textcolor{stringliteral}{"{}freetext"{}}:}
+\DoxyCodeLine{00215                     ftAt.add(l.get(i));}
+\DoxyCodeLine{00216                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00217                 \textcolor{keywordflow}{case} \textcolor{stringliteral}{"{}other"{}}:}
+\DoxyCodeLine{00218                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00219             \}}
+\DoxyCodeLine{00220         \}}
+\DoxyCodeLine{00221         \textcolor{keywordflow}{return} \mbox{\hyperlink{classdominio_1_1controladores_1_1_controlador_dominio_ab6754bee9f5b4d9842b1446593d1f6e7}{ctrlGestioRecomanacio}}.\mbox{\hyperlink{classdominio_1_1controladores_1_1_ctrl_gestio_recomanacio_ac04ae71a3c35216ef3d135607b89cc80}{makeRecomendation}}(n, \mbox{\hyperlink{classdominio_1_1controladores_1_1_controlador_dominio_a1e8b7f856b6e0471cec288b9618a2737}{ctrlUsuaris}}.\mbox{\hyperlink{classdominio_1_1controladores_1_1_ctrl_gestio_usuaris_a6580b494cccaf54cdcceff461589b6ff}{getUsuari}}(), \mbox{\hyperlink{classdominio_1_1controladores_1_1_controlador_dominio_ab58bba57be5096151e4d4447bea5c8b6}{ctrlGestioItems}}.\mbox{\hyperlink{classdominio_1_1controladores_1_1_ctrl_gestio_items_a7c62023204b3275e9a5e278a1de2b745}{getDataset}}(), \mbox{\hyperlink{classdominio_1_1controladores_1_1_controlador_dominio_ab58bba57be5096151e4d4447bea5c8b6}{ctrlGestioItems}}.\mbox{\hyperlink{classdominio_1_1controladores_1_1_ctrl_gestio_items_ac90a002e9fadeb2754b1bbea2e3dcd86}{getVals}}(),}
+\DoxyCodeLine{00222                 intAt, doubAt, dateAt, bAt, catAt, ftAt);}
+\DoxyCodeLine{00223     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdominio_1_1controladores_1_1_controlador_dominio_a6da7d115c6c370955ffd02ee3b27412b}\label{classdominio_1_1controladores_1_1_controlador_dominio_a6da7d115c6c370955ffd02ee3b27412b}} 
+\index{dominio.controladores.ControladorDominio@{dominio.controladores.ControladorDominio}!loadDataset@{loadDataset}}
+\index{loadDataset@{loadDataset}!dominio.controladores.ControladorDominio@{dominio.controladores.ControladorDominio}}
+\doxysubsubsection{\texorpdfstring{loadDataset()}{loadDataset()}}
+{\footnotesize\ttfamily void dominio.\+controladores.\+Controlador\+Dominio.\+load\+Dataset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Metodo dedicado a la carga del dataset. 
+
+
+
+Definición en la línea \mbox{\hyperlink{_controlador_dominio_8java_source_l00229}{229}} del archivo \mbox{\hyperlink{_controlador_dominio_8java_source}{Controlador\+Dominio.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00229                               \{}
+\DoxyCodeLine{00230         \mbox{\hyperlink{classdominio_1_1controladores_1_1_controlador_dominio_ab58bba57be5096151e4d4447bea5c8b6}{ctrlGestioItems}}.\mbox{\hyperlink{classdominio_1_1controladores_1_1_ctrl_gestio_items_a3e49bff754be094321eb9bae048cb186}{loadDataset}}(\mbox{\hyperlink{classdominio_1_1controladores_1_1_controlador_dominio_a1e8b7f856b6e0471cec288b9618a2737}{ctrlUsuaris}}.\mbox{\hyperlink{classdominio_1_1controladores_1_1_ctrl_gestio_usuaris_a1ea1c51fa82fe70f636eb97d6311ffe2}{getUserId}}());}
+\DoxyCodeLine{00231     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdominio_1_1controladores_1_1_controlador_dominio_ab001774048eeb0312a872b5d60543844}\label{classdominio_1_1controladores_1_1_controlador_dominio_ab001774048eeb0312a872b5d60543844}} 
+\index{dominio.controladores.ControladorDominio@{dominio.controladores.ControladorDominio}!getPathToUpdatedFile@{getPathToUpdatedFile}}
+\index{getPathToUpdatedFile@{getPathToUpdatedFile}!dominio.controladores.ControladorDominio@{dominio.controladores.ControladorDominio}}
+\doxysubsubsection{\texorpdfstring{getPathToUpdatedFile()}{getPathToUpdatedFile()}}
+{\footnotesize\ttfamily String dominio.\+controladores.\+Controlador\+Dominio.\+get\+Path\+To\+Updated\+File (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Metodo dedicado a la consulta del path hasta una copia nueva del dataset; dicha copia se producira en caso de que haya errores y el usuario decida corregirlos. 
+
+\begin{DoxyReturn}{Devuelve}
+String almacenando el enrutamiento hacia dicho archivo 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{_controlador_dominio_8java_source_l00238}{238}} del archivo \mbox{\hyperlink{_controlador_dominio_8java_source}{Controlador\+Dominio.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00238 \{ \textcolor{keywordflow}{return} ControladorPersistencia.getInstance().getPathToUpdatedFile(); \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdominio_1_1controladores_1_1_controlador_dominio_a8456ccd3196acdd22ac6f7eb85f0e294}\label{classdominio_1_1controladores_1_1_controlador_dominio_a8456ccd3196acdd22ac6f7eb85f0e294}} 
+\index{dominio.controladores.ControladorDominio@{dominio.controladores.ControladorDominio}!searchItem@{searchItem}}
+\index{searchItem@{searchItem}!dominio.controladores.ControladorDominio@{dominio.controladores.ControladorDominio}}
+\doxysubsubsection{\texorpdfstring{searchItem()}{searchItem()}}
+{\footnotesize\ttfamily void dominio.\+controladores.\+Controlador\+Dominio.\+search\+Item (\begin{DoxyParamCaption}\item[{String}]{text }\end{DoxyParamCaption})}
+
+
+
+Metodo dedicado a la comprobacion de si un determinado item pertenece al dataset cargado. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em text} & String con el identificador del item a buscar \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{_controlador_dominio_8java_source_l00245}{245}} del archivo \mbox{\hyperlink{_controlador_dominio_8java_source}{Controlador\+Dominio.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00245 \{ \mbox{\hyperlink{classdominio_1_1controladores_1_1_controlador_dominio_ab58bba57be5096151e4d4447bea5c8b6}{ctrlGestioItems}}.\mbox{\hyperlink{classdominio_1_1controladores_1_1_ctrl_gestio_items_a5452638473c1493d20a4768b79326d57}{searchItem}}(text); \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdominio_1_1controladores_1_1_controlador_dominio_a4040cfd0b516611cb50f301f87f490b3}\label{classdominio_1_1controladores_1_1_controlador_dominio_a4040cfd0b516611cb50f301f87f490b3}} 
+\index{dominio.controladores.ControladorDominio@{dominio.controladores.ControladorDominio}!searchUser@{searchUser}}
+\index{searchUser@{searchUser}!dominio.controladores.ControladorDominio@{dominio.controladores.ControladorDominio}}
+\doxysubsubsection{\texorpdfstring{searchUser()}{searchUser()}}
+{\footnotesize\ttfamily void dominio.\+controladores.\+Controlador\+Dominio.\+search\+User (\begin{DoxyParamCaption}\item[{String}]{text }\end{DoxyParamCaption})}
+
+
+
+Metodo dedicado a la busqueda de la pertenencia de un determinado usuario al dataset cargado en el sistema. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em text} & String con el identificador del usuario en cuestion \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{_controlador_dominio_8java_source_l00252}{252}} del archivo \mbox{\hyperlink{_controlador_dominio_8java_source}{Controlador\+Dominio.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00252                                         \{}
+\DoxyCodeLine{00253         \mbox{\hyperlink{classdominio_1_1controladores_1_1_controlador_dominio_a1e8b7f856b6e0471cec288b9618a2737}{ctrlUsuaris}}.\mbox{\hyperlink{classdominio_1_1controladores_1_1_ctrl_gestio_usuaris_a83c46c6d57f4b3f6fa3aa37e9d055181}{searchUser}}(text);}
+\DoxyCodeLine{00254     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdominio_1_1controladores_1_1_controlador_dominio_aec3c5907a00fe05a8d539f3e65eaeab1}\label{classdominio_1_1controladores_1_1_controlador_dominio_aec3c5907a00fe05a8d539f3e65eaeab1}} 
+\index{dominio.controladores.ControladorDominio@{dominio.controladores.ControladorDominio}!getItemInfo@{getItemInfo}}
+\index{getItemInfo@{getItemInfo}!dominio.controladores.ControladorDominio@{dominio.controladores.ControladorDominio}}
+\doxysubsubsection{\texorpdfstring{getItemInfo()}{getItemInfo()}}
+{\footnotesize\ttfamily List$<$ String $>$ dominio.\+controladores.\+Controlador\+Dominio.\+get\+Item\+Info (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea \mbox{\hyperlink{_controlador_dominio_8java_source_l00256}{256}} del archivo \mbox{\hyperlink{_controlador_dominio_8java_source}{Controlador\+Dominio.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00256 \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{classdominio_1_1controladores_1_1_controlador_dominio_ab58bba57be5096151e4d4447bea5c8b6}{ctrlGestioItems}}.\mbox{\hyperlink{classdominio_1_1controladores_1_1_ctrl_gestio_items_a7c62023204b3275e9a5e278a1de2b745}{getDataset}}().getHeaders(); \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdominio_1_1controladores_1_1_controlador_dominio_a910384e76bc11b450853d2ad15923b5a}\label{classdominio_1_1controladores_1_1_controlador_dominio_a910384e76bc11b450853d2ad15923b5a}} 
+\index{dominio.controladores.ControladorDominio@{dominio.controladores.ControladorDominio}!getItems@{getItems}}
+\index{getItems@{getItems}!dominio.controladores.ControladorDominio@{dominio.controladores.ControladorDominio}}
+\doxysubsubsection{\texorpdfstring{getItems()}{getItems()}}
+{\footnotesize\ttfamily String dominio.\+controladores.\+Controlador\+Dominio.\+get\+Items (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea \mbox{\hyperlink{_controlador_dominio_8java_source_l00258}{258}} del archivo \mbox{\hyperlink{_controlador_dominio_8java_source}{Controlador\+Dominio.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00258                              \{}
+\DoxyCodeLine{00259         \textcolor{keywordflow}{return} \mbox{\hyperlink{classdominio_1_1controladores_1_1_controlador_dominio_ab58bba57be5096151e4d4447bea5c8b6}{ctrlGestioItems}}.\mbox{\hyperlink{classdominio_1_1controladores_1_1_ctrl_gestio_items_ae808879514200bf128dbad16ecfd8b18}{getItemNames}}();}
+\DoxyCodeLine{00260     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdominio_1_1controladores_1_1_controlador_dominio_a97b2342ab2f2a7a69d3968f9fac5c6aa}\label{classdominio_1_1controladores_1_1_controlador_dominio_a97b2342ab2f2a7a69d3968f9fac5c6aa}} 
+\index{dominio.controladores.ControladorDominio@{dominio.controladores.ControladorDominio}!getRecomendacion@{getRecomendacion}}
+\index{getRecomendacion@{getRecomendacion}!dominio.controladores.ControladorDominio@{dominio.controladores.ControladorDominio}}
+\doxysubsubsection{\texorpdfstring{getRecomendacion()}{getRecomendacion()}}
+{\footnotesize\ttfamily String dominio.\+controladores.\+Controlador\+Dominio.\+get\+Recomendacion (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea \mbox{\hyperlink{_controlador_dominio_8java_source_l00262}{262}} del archivo \mbox{\hyperlink{_controlador_dominio_8java_source}{Controlador\+Dominio.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00262                                      \{}
+\DoxyCodeLine{00263         \textcolor{keywordflow}{return} \mbox{\hyperlink{classdominio_1_1controladores_1_1_controlador_dominio_ab6754bee9f5b4d9842b1446593d1f6e7}{ctrlGestioRecomanacio}}.\mbox{\hyperlink{classdominio_1_1controladores_1_1_ctrl_gestio_recomanacio_a29eb6bda7d4304d20c25971ca99b7a8b}{getRecomendacion}}(\mbox{\hyperlink{classdominio_1_1controladores_1_1_controlador_dominio_ab58bba57be5096151e4d4447bea5c8b6}{ctrlGestioItems}}.\mbox{\hyperlink{classdominio_1_1controladores_1_1_ctrl_gestio_items_a7c62023204b3275e9a5e278a1de2b745}{getDataset}}(),\mbox{\hyperlink{classdominio_1_1controladores_1_1_controlador_dominio_ab58bba57be5096151e4d4447bea5c8b6}{ctrlGestioItems}}.\mbox{\hyperlink{classdominio_1_1controladores_1_1_ctrl_gestio_items_a1fa09207bccd6505cba2aecafdeaff5a}{getUnknown}}(), \mbox{\hyperlink{classdominio_1_1controladores_1_1_controlador_dominio_a1e8b7f856b6e0471cec288b9618a2737}{ctrlUsuaris}}.\mbox{\hyperlink{classdominio_1_1controladores_1_1_ctrl_gestio_usuaris_a6580b494cccaf54cdcceff461589b6ff}{getUsuari}}());}
+\DoxyCodeLine{00264     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdominio_1_1controladores_1_1_controlador_dominio_a01a8f111dc2ee8439ff055a68ff11ae3}\label{classdominio_1_1controladores_1_1_controlador_dominio_a01a8f111dc2ee8439ff055a68ff11ae3}} 
+\index{dominio.controladores.ControladorDominio@{dominio.controladores.ControladorDominio}!getUsuaris@{getUsuaris}}
+\index{getUsuaris@{getUsuaris}!dominio.controladores.ControladorDominio@{dominio.controladores.ControladorDominio}}
+\doxysubsubsection{\texorpdfstring{getUsuaris()}{getUsuaris()}}
+{\footnotesize\ttfamily Hash\+Map$<$ String, Double $>$ dominio.\+controladores.\+Controlador\+Dominio.\+get\+Usuaris (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea \mbox{\hyperlink{_controlador_dominio_8java_source_l00266}{266}} del archivo \mbox{\hyperlink{_controlador_dominio_8java_source}{Controlador\+Dominio.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00266 \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{classdominio_1_1controladores_1_1_controlador_dominio_a1e8b7f856b6e0471cec288b9618a2737}{ctrlUsuaris}}.\mbox{\hyperlink{classdominio_1_1controladores_1_1_ctrl_gestio_usuaris_a73a7fbe8d94caa8b112c0fe4ef9ae1f7}{getRatedItems}}(\textcolor{keywordtype}{id}); \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdominio_1_1controladores_1_1_controlador_dominio_ab551d880a3ad829998e93ca7af3639e1}\label{classdominio_1_1controladores_1_1_controlador_dominio_ab551d880a3ad829998e93ca7af3639e1}} 
+\index{dominio.controladores.ControladorDominio@{dominio.controladores.ControladorDominio}!pedirInput@{pedirInput}}
+\index{pedirInput@{pedirInput}!dominio.controladores.ControladorDominio@{dominio.controladores.ControladorDominio}}
+\doxysubsubsection{\texorpdfstring{pedirInput()}{pedirInput()}}
+{\footnotesize\ttfamily Array\+List$<$ Object $>$ dominio.\+controladores.\+Controlador\+Dominio.\+pedir\+Input (\begin{DoxyParamCaption}\item[{int}]{i,  }\item[{String}]{attr\+Header,  }\item[{String}]{id\+Item }\end{DoxyParamCaption})}
+
+
+
+Metodo dedicado a la comunicacion entre Cjt\+\_\+items y el usuario con el objetivo de tratar los errores detectados en el dataset. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em i} & Entero que indica de qué tipo de valor se trata \{entero, booleano, ...\} \\
+\hline
+{\em attr\+Header} & String que indica la cabecera de la columna afectada \\
+\hline
+{\em id\+Item} & String que contiene el identificador del item afectado \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+Una lista con todos los posibles objetos que se pueden almacenar en el campo del item afectado 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{_controlador_dominio_8java_source_l00276}{276}} del archivo \mbox{\hyperlink{_controlador_dominio_8java_source}{Controlador\+Dominio.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00276 \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{classdominio_1_1controladores_1_1_controlador_dominio_a6143f76ebdb7f9a025eb970428c41490}{padre}}.pedirInput(i, attrHeader, idItem); \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdominio_1_1controladores_1_1_controlador_dominio_ac6763b842b9cdc7790394ecb30da9541}\label{classdominio_1_1controladores_1_1_controlador_dominio_ac6763b842b9cdc7790394ecb30da9541}} 
+\index{dominio.controladores.ControladorDominio@{dominio.controladores.ControladorDominio}!userHasRatings@{userHasRatings}}
+\index{userHasRatings@{userHasRatings}!dominio.controladores.ControladorDominio@{dominio.controladores.ControladorDominio}}
+\doxysubsubsection{\texorpdfstring{userHasRatings()}{userHasRatings()}}
+{\footnotesize\ttfamily boolean dominio.\+controladores.\+Controlador\+Dominio.\+user\+Has\+Ratings (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Metodo que comprueba si un usuario tiene valoraciones. 
+
+\begin{DoxyReturn}{Devuelve}
+Valor booleano cierto o falso segun la condicion comprobada 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{_controlador_dominio_8java_source_l00283}{283}} del archivo \mbox{\hyperlink{_controlador_dominio_8java_source}{Controlador\+Dominio.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00283 \{ \textcolor{keywordflow}{return} (\mbox{\hyperlink{classdominio_1_1controladores_1_1_controlador_dominio_a1e8b7f856b6e0471cec288b9618a2737}{ctrlUsuaris}}.\mbox{\hyperlink{classdominio_1_1controladores_1_1_ctrl_gestio_usuaris_a6580b494cccaf54cdcceff461589b6ff}{getUsuari}}().\mbox{\hyperlink{classdominio_1_1clases_1_1_usuari_a5f2f72c56d755b0785792c34622f419d}{getRatedItems}}().size() > 0); \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdominio_1_1controladores_1_1_controlador_dominio_a58fa619ae73770a6d293536187e5453e}\label{classdominio_1_1controladores_1_1_controlador_dominio_a58fa619ae73770a6d293536187e5453e}} 
+\index{dominio.controladores.ControladorDominio@{dominio.controladores.ControladorDominio}!guardarRecomendacion@{guardarRecomendacion}}
+\index{guardarRecomendacion@{guardarRecomendacion}!dominio.controladores.ControladorDominio@{dominio.controladores.ControladorDominio}}
+\doxysubsubsection{\texorpdfstring{guardarRecomendacion()}{guardarRecomendacion()}}
+{\footnotesize\ttfamily void dominio.\+controladores.\+Controlador\+Dominio.\+guardar\+Recomendacion (\begin{DoxyParamCaption}\item[{String}]{recomendation }\end{DoxyParamCaption})}
+
+
+
+Metodo que almacena una recomendacion generada por alguno de los algoritmos predictores. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em recomendation} & String que contiene, ya formatada, la informacion respecto la recomendacion realizada \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{_controlador_dominio_8java_source_l00290}{290}} del archivo \mbox{\hyperlink{_controlador_dominio_8java_source}{Controlador\+Dominio.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00290                                                            \{}
+\DoxyCodeLine{00291         ControladorPersistencia.getInstance().guardarRecomendacion(\mbox{\hyperlink{classdominio_1_1controladores_1_1_controlador_dominio_a1e8b7f856b6e0471cec288b9618a2737}{ctrlUsuaris}}.\mbox{\hyperlink{classdominio_1_1controladores_1_1_ctrl_gestio_usuaris_a1ea1c51fa82fe70f636eb97d6311ffe2}{getUserId}}(),recomendation);}
+\DoxyCodeLine{00292     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdominio_1_1controladores_1_1_controlador_dominio_a55c06a7a3c65bf109bde953381304f04}\label{classdominio_1_1controladores_1_1_controlador_dominio_a55c06a7a3c65bf109bde953381304f04}} 
+\index{dominio.controladores.ControladorDominio@{dominio.controladores.ControladorDominio}!getUserId@{getUserId}}
+\index{getUserId@{getUserId}!dominio.controladores.ControladorDominio@{dominio.controladores.ControladorDominio}}
+\doxysubsubsection{\texorpdfstring{getUserId()}{getUserId()}}
+{\footnotesize\ttfamily int dominio.\+controladores.\+Controlador\+Dominio.\+get\+User\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea \mbox{\hyperlink{_controlador_dominio_8java_source_l00294}{294}} del archivo \mbox{\hyperlink{_controlador_dominio_8java_source}{Controlador\+Dominio.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00294 \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{classdominio_1_1controladores_1_1_controlador_dominio_a1e8b7f856b6e0471cec288b9618a2737}{ctrlUsuaris}}.\mbox{\hyperlink{classdominio_1_1controladores_1_1_ctrl_gestio_usuaris_a1ea1c51fa82fe70f636eb97d6311ffe2}{getUserId}}(); \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdominio_1_1controladores_1_1_controlador_dominio_a8c4eef3a106b4b28b0658e31605a22ed}\label{classdominio_1_1controladores_1_1_controlador_dominio_a8c4eef3a106b4b28b0658e31605a22ed}} 
+\index{dominio.controladores.ControladorDominio@{dominio.controladores.ControladorDominio}!getUserRecomendations@{getUserRecomendations}}
+\index{getUserRecomendations@{getUserRecomendations}!dominio.controladores.ControladorDominio@{dominio.controladores.ControladorDominio}}
+\doxysubsubsection{\texorpdfstring{getUserRecomendations()}{getUserRecomendations()}}
+{\footnotesize\ttfamily List$<$ String $>$ dominio.\+controladores.\+Controlador\+Dominio.\+get\+User\+Recomendations (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea \mbox{\hyperlink{_controlador_dominio_8java_source_l00296}{296}} del archivo \mbox{\hyperlink{_controlador_dominio_8java_source}{Controlador\+Dominio.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00296                                                 \{}
+\DoxyCodeLine{00297         \textcolor{keywordflow}{return} ControladorPersistencia.getInstance().getUserRecomendations(\mbox{\hyperlink{classdominio_1_1controladores_1_1_controlador_dominio_a55c06a7a3c65bf109bde953381304f04}{getUserId}}());}
+\DoxyCodeLine{00298     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdominio_1_1controladores_1_1_controlador_dominio_aa6c6d832bace8e9b2db50d2b1474e1fd}\label{classdominio_1_1controladores_1_1_controlador_dominio_aa6c6d832bace8e9b2db50d2b1474e1fd}} 
+\index{dominio.controladores.ControladorDominio@{dominio.controladores.ControladorDominio}!getTextRecomendacion@{getTextRecomendacion}}
+\index{getTextRecomendacion@{getTextRecomendacion}!dominio.controladores.ControladorDominio@{dominio.controladores.ControladorDominio}}
+\doxysubsubsection{\texorpdfstring{getTextRecomendacion()}{getTextRecomendacion()}}
+{\footnotesize\ttfamily String dominio.\+controladores.\+Controlador\+Dominio.\+get\+Text\+Recomendacion (\begin{DoxyParamCaption}\item[{String}]{file }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea \mbox{\hyperlink{_controlador_dominio_8java_source_l00300}{300}} del archivo \mbox{\hyperlink{_controlador_dominio_8java_source}{Controlador\+Dominio.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00300                                                     \{}
+\DoxyCodeLine{00301         \textcolor{keywordflow}{return} ControladorPersistencia.getInstance().getTextRecomendacion(file,\mbox{\hyperlink{classdominio_1_1controladores_1_1_controlador_dominio_a55c06a7a3c65bf109bde953381304f04}{getUserId}}());}
+\DoxyCodeLine{00302     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdominio_1_1controladores_1_1_controlador_dominio_a8c8e855145cb20db492f4202b89fdd21}\label{classdominio_1_1controladores_1_1_controlador_dominio_a8c8e855145cb20db492f4202b89fdd21}} 
+\index{dominio.controladores.ControladorDominio@{dominio.controladores.ControladorDominio}!guardarTipoDataset@{guardarTipoDataset}}
+\index{guardarTipoDataset@{guardarTipoDataset}!dominio.controladores.ControladorDominio@{dominio.controladores.ControladorDominio}}
+\doxysubsubsection{\texorpdfstring{guardarTipoDataset()}{guardarTipoDataset()}}
+{\footnotesize\ttfamily void dominio.\+controladores.\+Controlador\+Dominio.\+guardar\+Tipo\+Dataset (\begin{DoxyParamCaption}\item[{String}]{type }\end{DoxyParamCaption})}
+
+
+
+Metodo que almacena el tipo de dataset indicado por el usuario. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em type} & String que contiene el valor indicado por el usuario para el dataset tratado \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{_controlador_dominio_8java_source_l00309}{309}} del archivo \mbox{\hyperlink{_controlador_dominio_8java_source}{Controlador\+Dominio.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00309                                                 \{}
+\DoxyCodeLine{00310         ControladorPersistencia.getInstance().guardarTipoDataset(type);}
+\DoxyCodeLine{00311     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdominio_1_1controladores_1_1_controlador_dominio_a4c886ae0f21d598f9323d7d2dbd8621e}\label{classdominio_1_1controladores_1_1_controlador_dominio_a4c886ae0f21d598f9323d7d2dbd8621e}} 
+\index{dominio.controladores.ControladorDominio@{dominio.controladores.ControladorDominio}!getHeaders@{getHeaders}}
+\index{getHeaders@{getHeaders}!dominio.controladores.ControladorDominio@{dominio.controladores.ControladorDominio}}
+\doxysubsubsection{\texorpdfstring{getHeaders()}{getHeaders()}}
+{\footnotesize\ttfamily List$<$ String $>$ dominio.\+controladores.\+Controlador\+Dominio.\+get\+Headers (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea \mbox{\hyperlink{_controlador_dominio_8java_source_l00313}{313}} del archivo \mbox{\hyperlink{_controlador_dominio_8java_source}{Controlador\+Dominio.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00313 \{\textcolor{keywordflow}{return} \mbox{\hyperlink{classdominio_1_1controladores_1_1_controlador_dominio_ab58bba57be5096151e4d4447bea5c8b6}{ctrlGestioItems}}.\mbox{\hyperlink{classdominio_1_1controladores_1_1_ctrl_gestio_items_ae7744769574aa1523f99693094c3bcf8}{getHeaders}}();\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdominio_1_1controladores_1_1_controlador_dominio_aa72bff03fa6f47ca0e85417a169b99a9}\label{classdominio_1_1controladores_1_1_controlador_dominio_aa72bff03fa6f47ca0e85417a169b99a9}} 
+\index{dominio.controladores.ControladorDominio@{dominio.controladores.ControladorDominio}!guardarDatosPreprocesados@{guardarDatosPreprocesados}}
+\index{guardarDatosPreprocesados@{guardarDatosPreprocesados}!dominio.controladores.ControladorDominio@{dominio.controladores.ControladorDominio}}
+\doxysubsubsection{\texorpdfstring{guardarDatosPreprocesados()}{guardarDatosPreprocesados()}}
+{\footnotesize\ttfamily void dominio.\+controladores.\+Controlador\+Dominio.\+guardar\+Datos\+Preprocesados (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Metodo dedicado a la instruccion de almacenar la informacion actualmente cargada en el sistema, y de manera preprocesada. 
+
+
+
+Definición en la línea \mbox{\hyperlink{_controlador_dominio_8java_source_l00319}{319}} del archivo \mbox{\hyperlink{_controlador_dominio_8java_source}{Controlador\+Dominio.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00319 \{ ControladorPersistencia.getInstance().guardarDatosPreprocesados(\mbox{\hyperlink{classdominio_1_1controladores_1_1_controlador_dominio_ab58bba57be5096151e4d4447bea5c8b6}{ctrlGestioItems}}.\mbox{\hyperlink{classdominio_1_1controladores_1_1_ctrl_gestio_items_a7c62023204b3275e9a5e278a1de2b745}{getDataset}}(),\mbox{\hyperlink{classdominio_1_1controladores_1_1_controlador_dominio_ab58bba57be5096151e4d4447bea5c8b6}{ctrlGestioItems}}.\mbox{\hyperlink{classdominio_1_1controladores_1_1_ctrl_gestio_items_ac90a002e9fadeb2754b1bbea2e3dcd86}{getVals}}(),\mbox{\hyperlink{classdominio_1_1controladores_1_1_controlador_dominio_ab58bba57be5096151e4d4447bea5c8b6}{ctrlGestioItems}}.\mbox{\hyperlink{classdominio_1_1controladores_1_1_ctrl_gestio_items_a8926ec2305add8e2bf916d2381062ce3}{getKnownVals}}(),\mbox{\hyperlink{classdominio_1_1controladores_1_1_controlador_dominio_ab58bba57be5096151e4d4447bea5c8b6}{ctrlGestioItems}}.\mbox{\hyperlink{classdominio_1_1controladores_1_1_ctrl_gestio_items_a99eae8244902fab6d6e3c7e6456af095}{getUnknownVals}}()); \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdominio_1_1controladores_1_1_controlador_dominio_a8f6c8ae9fc9e08f8b2519f00b2c77d5d}\label{classdominio_1_1controladores_1_1_controlador_dominio_a8f6c8ae9fc9e08f8b2519f00b2c77d5d}} 
+\index{dominio.controladores.ControladorDominio@{dominio.controladores.ControladorDominio}!resetUpdatedFile@{resetUpdatedFile}}
+\index{resetUpdatedFile@{resetUpdatedFile}!dominio.controladores.ControladorDominio@{dominio.controladores.ControladorDominio}}
+\doxysubsubsection{\texorpdfstring{resetUpdatedFile()}{resetUpdatedFile()}}
+{\footnotesize\ttfamily void dominio.\+controladores.\+Controlador\+Dominio.\+reset\+Updated\+File (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Metodo que reinicia el archivo sobre el cual se realizan modificaciones durante la deteccion de errores en el dataset. 
+
+
+
+Definición en la línea \mbox{\hyperlink{_controlador_dominio_8java_source_l00325}{325}} del archivo \mbox{\hyperlink{_controlador_dominio_8java_source}{Controlador\+Dominio.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00325 \{ ControladorPersistencia.getInstance().resetUpdatedFile(); \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdominio_1_1controladores_1_1_controlador_dominio_a47c29b298444a7dfd108173a628cefe9}\label{classdominio_1_1controladores_1_1_controlador_dominio_a47c29b298444a7dfd108173a628cefe9}} 
+\index{dominio.controladores.ControladorDominio@{dominio.controladores.ControladorDominio}!cargarDatosPreprocesados@{cargarDatosPreprocesados}}
+\index{cargarDatosPreprocesados@{cargarDatosPreprocesados}!dominio.controladores.ControladorDominio@{dominio.controladores.ControladorDominio}}
+\doxysubsubsection{\texorpdfstring{cargarDatosPreprocesados()}{cargarDatosPreprocesados()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void dominio.\+controladores.\+Controlador\+Dominio.\+cargar\+Datos\+Preprocesados (\begin{DoxyParamCaption}\item[{String}]{absolute\+Path }\end{DoxyParamCaption})}
+
+
+
+Metodo dedicado al ordenamiento de cargar datos ya preprocesados y almacenados. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em absolute\+Path} & Enrutamiento en el cual se encuentra el archivo preprocesado de interes \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{_controlador_dominio_8java_source_l00332}{332}} del archivo \mbox{\hyperlink{_controlador_dominio_8java_source}{Controlador\+Dominio.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00332                                                               \{}
+\DoxyCodeLine{00333         \mbox{\hyperlink{classdominio_1_1controladores_1_1_controlador_dominio_ab58bba57be5096151e4d4447bea5c8b6}{ctrlGestioItems}}.\mbox{\hyperlink{classdominio_1_1controladores_1_1_ctrl_gestio_items_ae80b0afc19a641f49b0121480c2b02e2}{cargarDataset}}(ControladorPersistencia.getInstance().cargarDatosPreprocesados(absolutePath));}
+\DoxyCodeLine{00334     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdominio_1_1controladores_1_1_controlador_dominio_a5dc5bc56ddfd74132a38e06f860a725a}\label{classdominio_1_1controladores_1_1_controlador_dominio_a5dc5bc56ddfd74132a38e06f860a725a}} 
+\index{dominio.controladores.ControladorDominio@{dominio.controladores.ControladorDominio}!cargarDatosPreprocesados@{cargarDatosPreprocesados}}
+\index{cargarDatosPreprocesados@{cargarDatosPreprocesados}!dominio.controladores.ControladorDominio@{dominio.controladores.ControladorDominio}}
+\doxysubsubsection{\texorpdfstring{cargarDatosPreprocesados()}{cargarDatosPreprocesados()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void dominio.\+controladores.\+Controlador\+Dominio.\+cargar\+Datos\+Preprocesados (\begin{DoxyParamCaption}\item[{String}]{items,  }\item[{String}]{ratings,  }\item[{String}]{known,  }\item[{String}]{unknown }\end{DoxyParamCaption})}
+
+
+
+Metodo de ordenamiento y almacenamiento de datos preprocesados. En dicho metodo se carga el dataset preprocesado, juntamente con los ratings (generales/known/unknown) 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em items} & Path hasta el archivo que almacena la informacion preprocesada de los items del dataset \\
+\hline
+{\em ratings} & Path hasta el archivo que almacena la informacion preprocesada de los ratings generales del dataset \\
+\hline
+{\em known} & Path hasta el archivo que almacena la informacion preprocesada de las queries known del dataset \\
+\hline
+{\em unknown} & Path hasta el archivo que almacena la informacion preprocesada de las queries unknown del dataset \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{_controlador_dominio_8java_source_l00344}{344}} del archivo \mbox{\hyperlink{_controlador_dominio_8java_source}{Controlador\+Dominio.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00344                                                                                                    \{}
+\DoxyCodeLine{00345         \mbox{\hyperlink{classdominio_1_1controladores_1_1_controlador_dominio_a47c29b298444a7dfd108173a628cefe9}{cargarDatosPreprocesados}}(items);}
+\DoxyCodeLine{00346         HashMap<Integer,HashMap<Item,Double>> ratedItems = ControladorPersistencia.getInstance().loadDatos(ratings);}
+\DoxyCodeLine{00347         HashMap<Integer,HashMap<Item,Double>> knownQueries = ControladorPersistencia.getInstance().loadDatos(known);}
+\DoxyCodeLine{00348         HashMap<Integer,HashMap<Item,Double>> unknownQueries = ControladorPersistencia.getInstance().loadDatos(unknown);}
+\DoxyCodeLine{00349         \mbox{\hyperlink{classdominio_1_1controladores_1_1_controlador_dominio_ab58bba57be5096151e4d4447bea5c8b6}{ctrlGestioItems}}.\mbox{\hyperlink{classdominio_1_1controladores_1_1_ctrl_gestio_items_a215e53b231c20c0d57b3110d65245fd6}{setNewData}}(ratedItems,knownQueries,unknownQueries,items,ratings,known,unknown);}
+\DoxyCodeLine{00350     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdominio_1_1controladores_1_1_controlador_dominio_a6105d0606db6b3ffd9459e68bd397e74}\label{classdominio_1_1controladores_1_1_controlador_dominio_a6105d0606db6b3ffd9459e68bd397e74}} 
+\index{dominio.controladores.ControladorDominio@{dominio.controladores.ControladorDominio}!getDatasetPreprocesado@{getDatasetPreprocesado}}
+\index{getDatasetPreprocesado@{getDatasetPreprocesado}!dominio.controladores.ControladorDominio@{dominio.controladores.ControladorDominio}}
+\doxysubsubsection{\texorpdfstring{getDatasetPreprocesado()}{getDatasetPreprocesado()}}
+{\footnotesize\ttfamily String dominio.\+controladores.\+Controlador\+Dominio.\+get\+Dataset\+Preprocesado (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea \mbox{\hyperlink{_controlador_dominio_8java_source_l00352}{352}} del archivo \mbox{\hyperlink{_controlador_dominio_8java_source}{Controlador\+Dominio.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00352                                            \{ \textcolor{keywordflow}{return} ControladorPersistencia.getInstance().getDatasetPreprocesado();}
+\DoxyCodeLine{00353     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdominio_1_1controladores_1_1_controlador_dominio_a92f189b879e34147fcce9caa430eb267}\label{classdominio_1_1controladores_1_1_controlador_dominio_a92f189b879e34147fcce9caa430eb267}} 
+\index{dominio.controladores.ControladorDominio@{dominio.controladores.ControladorDominio}!existeUsuario@{existeUsuario}}
+\index{existeUsuario@{existeUsuario}!dominio.controladores.ControladorDominio@{dominio.controladores.ControladorDominio}}
+\doxysubsubsection{\texorpdfstring{existeUsuario()}{existeUsuario()}}
+{\footnotesize\ttfamily boolean dominio.\+controladores.\+Controlador\+Dominio.\+existe\+Usuario (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})}
+
+
+
+Metodo dedicado a la consulta de si un usuario determinado pertenece al dataset cargado en el sistema. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em id} & Entero con el numero identificador del usuario de interes \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+Valor booleano cierto o falso en funcion de la condicion tratada 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{_controlador_dominio_8java_source_l00361}{361}} del archivo \mbox{\hyperlink{_controlador_dominio_8java_source}{Controlador\+Dominio.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00361 \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{classdominio_1_1controladores_1_1_controlador_dominio_a1e8b7f856b6e0471cec288b9618a2737}{ctrlUsuaris}}.\mbox{\hyperlink{classdominio_1_1controladores_1_1_ctrl_gestio_usuaris_ab03d620f033477d6bb928226d11f33b1}{existeUsuario}}(\textcolor{keywordtype}{id}); \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdominio_1_1controladores_1_1_controlador_dominio_a6eabf786e9313790e15156cba5a388b1}\label{classdominio_1_1controladores_1_1_controlador_dominio_a6eabf786e9313790e15156cba5a388b1}} 
+\index{dominio.controladores.ControladorDominio@{dominio.controladores.ControladorDominio}!setUsers@{setUsers}}
+\index{setUsers@{setUsers}!dominio.controladores.ControladorDominio@{dominio.controladores.ControladorDominio}}
+\doxysubsubsection{\texorpdfstring{setUsers()}{setUsers()}}
+{\footnotesize\ttfamily void dominio.\+controladores.\+Controlador\+Dominio.\+set\+Users (\begin{DoxyParamCaption}\item[{List$<$ \mbox{\hyperlink{classdominio_1_1clases_1_1_usuari}{Usuari}} $>$}]{list }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea \mbox{\hyperlink{_controlador_dominio_8java_source_l00363}{363}} del archivo \mbox{\hyperlink{_controlador_dominio_8java_source}{Controlador\+Dominio.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00363                                             \{}
+\DoxyCodeLine{00364         \mbox{\hyperlink{classdominio_1_1controladores_1_1_controlador_dominio_a1e8b7f856b6e0471cec288b9618a2737}{ctrlUsuaris}}.\mbox{\hyperlink{classdominio_1_1controladores_1_1_ctrl_gestio_usuaris_aaa119678b0dc10c1f1f9edcae95a2703}{setUsers}}(list);}
+\DoxyCodeLine{00365     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdominio_1_1controladores_1_1_controlador_dominio_a18d911c6814b12ff49522b531f3693e1}\label{classdominio_1_1controladores_1_1_controlador_dominio_a18d911c6814b12ff49522b531f3693e1}} 
+\index{dominio.controladores.ControladorDominio@{dominio.controladores.ControladorDominio}!getIdxId@{getIdxId}}
+\index{getIdxId@{getIdxId}!dominio.controladores.ControladorDominio@{dominio.controladores.ControladorDominio}}
+\doxysubsubsection{\texorpdfstring{getIdxId()}{getIdxId()}}
+{\footnotesize\ttfamily int dominio.\+controladores.\+Controlador\+Dominio.\+get\+Idx\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea \mbox{\hyperlink{_controlador_dominio_8java_source_l00367}{367}} del archivo \mbox{\hyperlink{_controlador_dominio_8java_source}{Controlador\+Dominio.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00367 \{\textcolor{keywordflow}{return} \mbox{\hyperlink{classdominio_1_1controladores_1_1_controlador_dominio_ab58bba57be5096151e4d4447bea5c8b6}{ctrlGestioItems}}.\mbox{\hyperlink{classdominio_1_1controladores_1_1_ctrl_gestio_items_a11d193eb638081ebebea1f5154bc8fc9}{getidxId}}();\}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Documentación de los datos miembro}
+\mbox{\Hypertarget{classdominio_1_1controladores_1_1_controlador_dominio_ab6754bee9f5b4d9842b1446593d1f6e7}\label{classdominio_1_1controladores_1_1_controlador_dominio_ab6754bee9f5b4d9842b1446593d1f6e7}} 
+\index{dominio.controladores.ControladorDominio@{dominio.controladores.ControladorDominio}!ctrlGestioRecomanacio@{ctrlGestioRecomanacio}}
+\index{ctrlGestioRecomanacio@{ctrlGestioRecomanacio}!dominio.controladores.ControladorDominio@{dominio.controladores.ControladorDominio}}
+\doxysubsubsection{\texorpdfstring{ctrlGestioRecomanacio}{ctrlGestioRecomanacio}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classdominio_1_1controladores_1_1_ctrl_gestio_recomanacio}{Ctrl\+Gestio\+Recomanacio}} dominio.\+controladores.\+Controlador\+Dominio.\+ctrl\+Gestio\+Recomanacio\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Instancia del controlador del administrador de recomendaciones. 
+
+
+
+Definición en la línea \mbox{\hyperlink{_controlador_dominio_8java_source_l00026}{26}} del archivo \mbox{\hyperlink{_controlador_dominio_8java_source}{Controlador\+Dominio.\+java}}.
+
+\mbox{\Hypertarget{classdominio_1_1controladores_1_1_controlador_dominio_ab58bba57be5096151e4d4447bea5c8b6}\label{classdominio_1_1controladores_1_1_controlador_dominio_ab58bba57be5096151e4d4447bea5c8b6}} 
+\index{dominio.controladores.ControladorDominio@{dominio.controladores.ControladorDominio}!ctrlGestioItems@{ctrlGestioItems}}
+\index{ctrlGestioItems@{ctrlGestioItems}!dominio.controladores.ControladorDominio@{dominio.controladores.ControladorDominio}}
+\doxysubsubsection{\texorpdfstring{ctrlGestioItems}{ctrlGestioItems}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classdominio_1_1controladores_1_1_ctrl_gestio_items}{Ctrl\+Gestio\+Items}} dominio.\+controladores.\+Controlador\+Dominio.\+ctrl\+Gestio\+Items\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Instancia del controlador del administrador de items. 
+
+
+
+Definición en la línea \mbox{\hyperlink{_controlador_dominio_8java_source_l00032}{32}} del archivo \mbox{\hyperlink{_controlador_dominio_8java_source}{Controlador\+Dominio.\+java}}.
+
+\mbox{\Hypertarget{classdominio_1_1controladores_1_1_controlador_dominio_a1e8b7f856b6e0471cec288b9618a2737}\label{classdominio_1_1controladores_1_1_controlador_dominio_a1e8b7f856b6e0471cec288b9618a2737}} 
+\index{dominio.controladores.ControladorDominio@{dominio.controladores.ControladorDominio}!ctrlUsuaris@{ctrlUsuaris}}
+\index{ctrlUsuaris@{ctrlUsuaris}!dominio.controladores.ControladorDominio@{dominio.controladores.ControladorDominio}}
+\doxysubsubsection{\texorpdfstring{ctrlUsuaris}{ctrlUsuaris}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classdominio_1_1controladores_1_1_ctrl_gestio_usuaris}{Ctrl\+Gestio\+Usuaris}} dominio.\+controladores.\+Controlador\+Dominio.\+ctrl\+Usuaris\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Instancia del controlador del administrador de usuarios. 
+
+
+
+Definición en la línea \mbox{\hyperlink{_controlador_dominio_8java_source_l00038}{38}} del archivo \mbox{\hyperlink{_controlador_dominio_8java_source}{Controlador\+Dominio.\+java}}.
+
+\mbox{\Hypertarget{classdominio_1_1controladores_1_1_controlador_dominio_a6143f76ebdb7f9a025eb970428c41490}\label{classdominio_1_1controladores_1_1_controlador_dominio_a6143f76ebdb7f9a025eb970428c41490}} 
+\index{dominio.controladores.ControladorDominio@{dominio.controladores.ControladorDominio}!padre@{padre}}
+\index{padre@{padre}!dominio.controladores.ControladorDominio@{dominio.controladores.ControladorDominio}}
+\doxysubsubsection{\texorpdfstring{padre}{padre}}
+{\footnotesize\ttfamily Controlador\+Presentacion dominio.\+controladores.\+Controlador\+Dominio.\+padre\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Instancia del controlador principal de presentacion. 
+
+
+
+Definición en la línea \mbox{\hyperlink{_controlador_dominio_8java_source_l00044}{44}} del archivo \mbox{\hyperlink{_controlador_dominio_8java_source}{Controlador\+Dominio.\+java}}.
+
+
+
+La documentación para esta clase fue generada a partir del siguiente fichero\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_controlador_dominio_8java}{Controlador\+Dominio.\+java}}\end{DoxyCompactItemize}

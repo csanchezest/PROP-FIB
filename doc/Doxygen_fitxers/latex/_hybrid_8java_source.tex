@@ -1,0 +1,59 @@
+\hypertarget{_hybrid_8java_source}{}\doxysection{Hybrid.\+java}
+\label{_hybrid_8java_source}\index{Hybrid.java@{Hybrid.java}}
+\mbox{\hyperlink{_hybrid_8java}{Ir a la documentación de este archivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_hybrid_8java_source_l00001}00001 \textcolor{keyword}{package }dominio.clases;}
+\DoxyCodeLine{\Hypertarget{_hybrid_8java_source_l00002}00002 }
+\DoxyCodeLine{\Hypertarget{_hybrid_8java_source_l00003}00003 \textcolor{keyword}{import} java.util.*;}
+\DoxyCodeLine{\Hypertarget{_hybrid_8java_source_l00004}00004 }
+\DoxyCodeLine{\Hypertarget{_hybrid_8java_source_l00005}00005 \textcolor{keyword}{import} \textcolor{keyword}{static} dominio.clases.Avaluacio.sortByValue;}
+\DoxyCodeLine{\Hypertarget{_hybrid_8java_source_l00006}00006 }
+\DoxyCodeLine{\Hypertarget{_hybrid_8java_source_l00013}\mbox{\hyperlink{classdominio_1_1clases_1_1_hybrid}{00013}} \textcolor{keyword}{public} \textcolor{keyword}{class }\mbox{\hyperlink{classdominio_1_1clases_1_1_hybrid}{Hybrid}} \{}
+\DoxyCodeLine{\Hypertarget{_hybrid_8java_source_l00017}\mbox{\hyperlink{classdominio_1_1clases_1_1_hybrid_a27b71d32b89eaf0db4187dae5d4265ec}{00017}}     \textcolor{keyword}{private} HashMap<Item, Double> \mbox{\hyperlink{classdominio_1_1clases_1_1_hybrid_a27b71d32b89eaf0db4187dae5d4265ec}{collaborative}};}
+\DoxyCodeLine{\Hypertarget{_hybrid_8java_source_l00021}\mbox{\hyperlink{classdominio_1_1clases_1_1_hybrid_afe7d7217c1937b73cac0aefe99cbb0ce}{00021}}     \textcolor{keyword}{private} HashMap<Item, Double> \mbox{\hyperlink{classdominio_1_1clases_1_1_hybrid_afe7d7217c1937b73cac0aefe99cbb0ce}{content}};}
+\DoxyCodeLine{\Hypertarget{_hybrid_8java_source_l00025}\mbox{\hyperlink{classdominio_1_1clases_1_1_hybrid_a16c9cd77d10a92ce266a8c2497f6ac49}{00025}}     \textcolor{keyword}{private} \textcolor{keywordtype}{int} \mbox{\hyperlink{classdominio_1_1clases_1_1_hybrid_a16c9cd77d10a92ce266a8c2497f6ac49}{k}};}
+\DoxyCodeLine{\Hypertarget{_hybrid_8java_source_l00026}00026 }
+\DoxyCodeLine{\Hypertarget{_hybrid_8java_source_l00032}\mbox{\hyperlink{classdominio_1_1clases_1_1_hybrid_a2d58a16b774675d52ad4afe0f360b206}{00032}}     \textcolor{keyword}{public} \mbox{\hyperlink{classdominio_1_1clases_1_1_hybrid_a2d58a16b774675d52ad4afe0f360b206}{Hybrid}}(HashMap<Item, Double> \mbox{\hyperlink{classdominio_1_1clases_1_1_hybrid_a27b71d32b89eaf0db4187dae5d4265ec}{collaborative}}, HashMap<Item, Double> \mbox{\hyperlink{classdominio_1_1clases_1_1_hybrid_afe7d7217c1937b73cac0aefe99cbb0ce}{content}}) \{}
+\DoxyCodeLine{\Hypertarget{_hybrid_8java_source_l00033}00033         this.collaborative = \textcolor{keyword}{new} HashMap<>(\mbox{\hyperlink{classdominio_1_1clases_1_1_hybrid_a27b71d32b89eaf0db4187dae5d4265ec}{collaborative}});}
+\DoxyCodeLine{\Hypertarget{_hybrid_8java_source_l00034}00034         this.content = \textcolor{keyword}{new} HashMap<>(\mbox{\hyperlink{classdominio_1_1clases_1_1_hybrid_afe7d7217c1937b73cac0aefe99cbb0ce}{content}});}
+\DoxyCodeLine{\Hypertarget{_hybrid_8java_source_l00035}00035         this.k = \mbox{\hyperlink{classdominio_1_1clases_1_1_hybrid_afe7d7217c1937b73cac0aefe99cbb0ce}{content}}.size();}
+\DoxyCodeLine{\Hypertarget{_hybrid_8java_source_l00036}00036     \}}
+\DoxyCodeLine{\Hypertarget{_hybrid_8java_source_l00037}00037 }
+\DoxyCodeLine{\Hypertarget{_hybrid_8java_source_l00042}\mbox{\hyperlink{classdominio_1_1clases_1_1_hybrid_a7e9feca1edf15f6368e1fa25f9590335}{00042}}     \textcolor{keyword}{public} HashMap<Item, Double> \mbox{\hyperlink{classdominio_1_1clases_1_1_hybrid_a7e9feca1edf15f6368e1fa25f9590335}{recommended\_items}}() \{}
+\DoxyCodeLine{\Hypertarget{_hybrid_8java_source_l00043}00043         HashMap<Item, Double> \mbox{\hyperlink{classdominio_1_1clases_1_1_hybrid_a7e9feca1edf15f6368e1fa25f9590335}{recommended\_items}} = \textcolor{keyword}{new} HashMap<>();}
+\DoxyCodeLine{\Hypertarget{_hybrid_8java_source_l00044}00044         ArrayList<Item> deletedItems = \textcolor{keyword}{new} ArrayList<>();}
+\DoxyCodeLine{\Hypertarget{_hybrid_8java_source_l00045}00045         \textcolor{keywordflow}{for} (\mbox{\hyperlink{classdominio_1_1clases_1_1_item}{Item}} i : \mbox{\hyperlink{classdominio_1_1clases_1_1_hybrid_afe7d7217c1937b73cac0aefe99cbb0ce}{content}}.keySet()) \{}
+\DoxyCodeLine{\Hypertarget{_hybrid_8java_source_l00046}00046             \textcolor{keywordflow}{if} (\mbox{\hyperlink{classdominio_1_1clases_1_1_hybrid_a27b71d32b89eaf0db4187dae5d4265ec}{collaborative}}.containsKey(i)) \{}
+\DoxyCodeLine{\Hypertarget{_hybrid_8java_source_l00047}00047                 \mbox{\hyperlink{classdominio_1_1clases_1_1_hybrid_a7e9feca1edf15f6368e1fa25f9590335}{recommended\_items}}.put(i, (\mbox{\hyperlink{classdominio_1_1clases_1_1_hybrid_a27b71d32b89eaf0db4187dae5d4265ec}{collaborative}}.get(i) + \mbox{\hyperlink{classdominio_1_1clases_1_1_hybrid_afe7d7217c1937b73cac0aefe99cbb0ce}{content}}.get(i)) / 2);}
+\DoxyCodeLine{\Hypertarget{_hybrid_8java_source_l00048}00048                 deletedItems.add(i);}
+\DoxyCodeLine{\Hypertarget{_hybrid_8java_source_l00049}00049             \}}
+\DoxyCodeLine{\Hypertarget{_hybrid_8java_source_l00050}00050         \}}
+\DoxyCodeLine{\Hypertarget{_hybrid_8java_source_l00051}00051         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classdominio_1_1clases_1_1_hybrid_a7e9feca1edf15f6368e1fa25f9590335}{recommended\_items}}.size() < \mbox{\hyperlink{classdominio_1_1clases_1_1_hybrid_a16c9cd77d10a92ce266a8c2497f6ac49}{k}}) \{}
+\DoxyCodeLine{\Hypertarget{_hybrid_8java_source_l00052}00052             \textcolor{keywordflow}{for}(\mbox{\hyperlink{classdominio_1_1clases_1_1_item}{Item}} i : deletedItems)\{}
+\DoxyCodeLine{\Hypertarget{_hybrid_8java_source_l00053}00053                 \mbox{\hyperlink{classdominio_1_1clases_1_1_hybrid_a27b71d32b89eaf0db4187dae5d4265ec}{collaborative}}.remove(i);}
+\DoxyCodeLine{\Hypertarget{_hybrid_8java_source_l00054}00054                 \mbox{\hyperlink{classdominio_1_1clases_1_1_hybrid_afe7d7217c1937b73cac0aefe99cbb0ce}{content}}.remove(i);}
+\DoxyCodeLine{\Hypertarget{_hybrid_8java_source_l00055}00055             \}}
+\DoxyCodeLine{\Hypertarget{_hybrid_8java_source_l00056}00056             LinkedHashMap<Item, Double> sortedCol = (LinkedHashMap) sortByValue(\mbox{\hyperlink{classdominio_1_1clases_1_1_hybrid_a27b71d32b89eaf0db4187dae5d4265ec}{collaborative}});}
+\DoxyCodeLine{\Hypertarget{_hybrid_8java_source_l00057}00057             LinkedHashMap<Item, Double> sortContent = (LinkedHashMap) sortByValue(\mbox{\hyperlink{classdominio_1_1clases_1_1_hybrid_afe7d7217c1937b73cac0aefe99cbb0ce}{content}});}
+\DoxyCodeLine{\Hypertarget{_hybrid_8java_source_l00058}00058 }
+\DoxyCodeLine{\Hypertarget{_hybrid_8java_source_l00059}00059             Iterator it1 = sortedCol.entrySet().iterator();}
+\DoxyCodeLine{\Hypertarget{_hybrid_8java_source_l00060}00060             Iterator it2 = sortContent.entrySet().iterator();}
+\DoxyCodeLine{\Hypertarget{_hybrid_8java_source_l00061}00061             Map.Entry pair1 = (Map.Entry) it1.next();}
+\DoxyCodeLine{\Hypertarget{_hybrid_8java_source_l00062}00062             Map.Entry pair2 = (Map.Entry) it2.next();}
+\DoxyCodeLine{\Hypertarget{_hybrid_8java_source_l00063}00063             \textcolor{keywordflow}{while} (\mbox{\hyperlink{classdominio_1_1clases_1_1_hybrid_a7e9feca1edf15f6368e1fa25f9590335}{recommended\_items}}.size() < \mbox{\hyperlink{classdominio_1_1clases_1_1_hybrid_a16c9cd77d10a92ce266a8c2497f6ac49}{k}}) \{}
+\DoxyCodeLine{\Hypertarget{_hybrid_8java_source_l00064}00064                 \textcolor{keywordflow}{if} ((Double) pair1.getValue() > (Double) pair2.getValue()) \{}
+\DoxyCodeLine{\Hypertarget{_hybrid_8java_source_l00065}00065                     \mbox{\hyperlink{classdominio_1_1clases_1_1_hybrid_a7e9feca1edf15f6368e1fa25f9590335}{recommended\_items}}.put((\mbox{\hyperlink{classdominio_1_1clases_1_1_item}{Item}}) pair1.getKey(), (Double) pair1.getValue());}
+\DoxyCodeLine{\Hypertarget{_hybrid_8java_source_l00066}00066                     \textcolor{keywordflow}{if} (it1.hasNext())}
+\DoxyCodeLine{\Hypertarget{_hybrid_8java_source_l00067}00067                         pair1 = (Map.Entry) it1.next();}
+\DoxyCodeLine{\Hypertarget{_hybrid_8java_source_l00068}00068                 \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{\Hypertarget{_hybrid_8java_source_l00069}00069                     \mbox{\hyperlink{classdominio_1_1clases_1_1_hybrid_a7e9feca1edf15f6368e1fa25f9590335}{recommended\_items}}.put((\mbox{\hyperlink{classdominio_1_1clases_1_1_item}{Item}}) pair2.getKey(), (Double) pair2.getValue());}
+\DoxyCodeLine{\Hypertarget{_hybrid_8java_source_l00070}00070                     \textcolor{keywordflow}{if} (it2.hasNext())}
+\DoxyCodeLine{\Hypertarget{_hybrid_8java_source_l00071}00071                         pair2 = (Map.Entry) it2.next();}
+\DoxyCodeLine{\Hypertarget{_hybrid_8java_source_l00072}00072                 \}}
+\DoxyCodeLine{\Hypertarget{_hybrid_8java_source_l00073}00073             \}}
+\DoxyCodeLine{\Hypertarget{_hybrid_8java_source_l00074}00074         \}}
+\DoxyCodeLine{\Hypertarget{_hybrid_8java_source_l00075}00075         \textcolor{keywordflow}{return} \mbox{\hyperlink{classdominio_1_1clases_1_1_hybrid_a7e9feca1edf15f6368e1fa25f9590335}{recommended\_items}};}
+\DoxyCodeLine{\Hypertarget{_hybrid_8java_source_l00076}00076     \}}
+\DoxyCodeLine{\Hypertarget{_hybrid_8java_source_l00077}00077 \}}
+
+\end{DoxyCode}

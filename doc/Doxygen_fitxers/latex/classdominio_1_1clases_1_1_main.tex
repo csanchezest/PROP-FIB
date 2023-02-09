@@ -1,0 +1,233 @@
+\hypertarget{classdominio_1_1clases_1_1_main}{}\doxysection{Referencia de la Clase dominio.\+clases.\+Main}
+\label{classdominio_1_1clases_1_1_main}\index{dominio.clases.Main@{dominio.clases.Main}}
+
+
+Clase que ejecuta el sistema recomendador. El sistema permite al usuario elegir un dataset y pedir recomendaciones con el algoritmo \mbox{\hyperlink{classdominio_1_1clases_1_1_collaborative}{Collaborative}} Filtering y \mbox{\hyperlink{classdominio_1_1clases_1_1_content_based}{Content\+Based}} Filtering.  
+
+
+\doxysubsection*{Métodos públicos estáticos}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{classdominio_1_1clases_1_1_main_a2a1fe442cbc07acc8c57d24ae3fa144a}{main}} (String\mbox{[}$\,$\mbox{]} args)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Clase que ejecuta el sistema recomendador. El sistema permite al usuario elegir un dataset y pedir recomendaciones con el algoritmo \mbox{\hyperlink{classdominio_1_1clases_1_1_collaborative}{Collaborative}} Filtering y \mbox{\hyperlink{classdominio_1_1clases_1_1_content_based}{Content\+Based}} Filtering. 
+
+\begin{DoxyAuthor}{Autor}
+Cristian Sanchez Estape y Jordi Elgueta Serra 
+\end{DoxyAuthor}
+
+
+Definición en la línea \mbox{\hyperlink{_main_8java_source_l00027}{27}} del archivo \mbox{\hyperlink{_main_8java_source}{Main.\+java}}.
+
+
+
+\doxysubsection{Documentación de las funciones miembro}
+\mbox{\Hypertarget{classdominio_1_1clases_1_1_main_a2a1fe442cbc07acc8c57d24ae3fa144a}\label{classdominio_1_1clases_1_1_main_a2a1fe442cbc07acc8c57d24ae3fa144a}} 
+\index{dominio.clases.Main@{dominio.clases.Main}!main@{main}}
+\index{main@{main}!dominio.clases.Main@{dominio.clases.Main}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily static void dominio.\+clases.\+Main.\+main (\begin{DoxyParamCaption}\item[{String\mbox{[}$\,$\mbox{]}}]{args }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{_main_8java_source_l00029}{29}} del archivo \mbox{\hyperlink{_main_8java_source}{Main.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00029                                            \{}
+\DoxyCodeLine{00030         \textcolor{keywordtype}{boolean} finished = \textcolor{keyword}{false};}
+\DoxyCodeLine{00031         System.out.print(\textcolor{stringliteral}{"{}Bienvenido al sistema recomendador. "{}});}
+\DoxyCodeLine{00032         \textcolor{keywordflow}{while} (!finished) \{}
+\DoxyCodeLine{00033             \textcolor{keywordtype}{int} id, algo, ds, sz = 0;}
+\DoxyCodeLine{00034             String pathToCsv = \textcolor{stringliteral}{"{}/persistencia/data/datasets/"{}};}
+\DoxyCodeLine{00035             Scanner sc = \textcolor{keyword}{new} Scanner(System.in);}
+\DoxyCodeLine{00036             System.out.print(\textcolor{stringliteral}{"{}Indique el dataset a usar (0 -\/> Movielens; 1 -\/> Series): "{}});}
+\DoxyCodeLine{00037             ds = sc.nextInt();}
+\DoxyCodeLine{00038             \textcolor{keywordflow}{while} (ds != 0 \&\& ds != 1) \{}
+\DoxyCodeLine{00039                 System.out.print(\textcolor{stringliteral}{"{}Número incorrecto, inténtalo de nuevo:"{}});}
+\DoxyCodeLine{00040                 ds = sc.nextInt();}
+\DoxyCodeLine{00041             \}}
+\DoxyCodeLine{00042             \textcolor{keywordflow}{switch} (ds) \{}
+\DoxyCodeLine{00043                 \textcolor{keywordflow}{case} 0:}
+\DoxyCodeLine{00044                     pathToCsv += \textcolor{stringliteral}{"{}Movielens/"{}};}
+\DoxyCodeLine{00045                     System.out.print(\textcolor{stringliteral}{"{}Elije el tamaño del dataset (0 -\/> 250; 1 -\/> 750, 2 -\/> 2250, 3 -\/> 6750): "{}});}
+\DoxyCodeLine{00046                     sz = sc.nextInt();}
+\DoxyCodeLine{00047                     \textcolor{keywordflow}{while} (sz != 0 \&\& sz != 1 \&\& sz != 2 \&\& sz != 3) \{}
+\DoxyCodeLine{00048                         System.out.print(\textcolor{stringliteral}{"{}Tamaño erroneo. Pruebe de nuevo: "{}});}
+\DoxyCodeLine{00049                         sz = sc.nextInt();}
+\DoxyCodeLine{00050                     \}}
+\DoxyCodeLine{00051                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00052                 \textcolor{keywordflow}{case} 1:}
+\DoxyCodeLine{00053                     pathToCsv += \textcolor{stringliteral}{"{}Series/"{}};}
+\DoxyCodeLine{00054                     System.out.print(\textcolor{stringliteral}{"{}Elije el tamaño del dataset (0 -\/> pequeño; 1 -\/> mediano; 2 -\/> grande): "{}});}
+\DoxyCodeLine{00055                     sz = sc.nextInt();}
+\DoxyCodeLine{00056                     \textcolor{keywordflow}{while} (sz != 0 \&\& sz != 1 \&\& sz != 2) \{}
+\DoxyCodeLine{00057                         System.out.print(\textcolor{stringliteral}{"{}Tamaño erroneo. Pruebe de nuevo: "{}});}
+\DoxyCodeLine{00058                         sz = sc.nextInt();}
+\DoxyCodeLine{00059                     \}}
+\DoxyCodeLine{00060             \}}
+\DoxyCodeLine{00061             \textcolor{keywordflow}{switch} (sz) \{}
+\DoxyCodeLine{00062                 \textcolor{keywordflow}{case} 0:}
+\DoxyCodeLine{00063                     pathToCsv += \textcolor{stringliteral}{"{}250/"{}};}
+\DoxyCodeLine{00064                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00065                 \textcolor{keywordflow}{case} 1:}
+\DoxyCodeLine{00066                     pathToCsv += \textcolor{stringliteral}{"{}750/"{}};}
+\DoxyCodeLine{00067                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00068                 \textcolor{keywordflow}{case} 2:}
+\DoxyCodeLine{00069                     pathToCsv += \textcolor{stringliteral}{"{}2250/"{}};}
+\DoxyCodeLine{00070                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00071                 \textcolor{keywordflow}{case} 3:}
+\DoxyCodeLine{00072                     pathToCsv += \textcolor{stringliteral}{"{}6750/"{}};}
+\DoxyCodeLine{00073                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00074             \}}
+\DoxyCodeLine{00075             \textcolor{comment}{//Lectura del dataset y de los ratings}}
+\DoxyCodeLine{00076             Cjt\_items dataset = \textcolor{keyword}{new} Cjt\_items(pathToCsv + \textcolor{stringliteral}{"{}items.csv"{}}, \textcolor{stringliteral}{"{}"{}});}
+\DoxyCodeLine{00077             HashMap<String,Item> items = dataset.getItems();}
+\DoxyCodeLine{00078             Valoracio ratings = \textcolor{keyword}{new} Valoracio(pathToCsv + \textcolor{stringliteral}{"{}ratings.db.csv"{}}, dataset);}
+\DoxyCodeLine{00079             Valoracio ratingsKnown = \textcolor{keyword}{new} Valoracio(pathToCsv + \textcolor{stringliteral}{"{}ratings.test.known.csv"{}}, dataset);}
+\DoxyCodeLine{00080             Valoracio ratingsUnknown = \textcolor{keyword}{new} Valoracio(pathToCsv + \textcolor{stringliteral}{"{}ratings.test.unknown.csv"{}}, dataset);}
+\DoxyCodeLine{00081             \textcolor{keywordtype}{double} maxRating = ratings.getMaxRating();}
+\DoxyCodeLine{00082 }
+\DoxyCodeLine{00083             System.out.print(\textcolor{stringliteral}{"{}Elije el usuario al que se le hara la recomendacion (-\/1 -\/> Si quieres que se hagan recomendaciones a todos los usuarios del fichero known): "{}});}
+\DoxyCodeLine{00084             \textcolor{keywordtype}{id} = sc.nextInt();}
+\DoxyCodeLine{00085             \textcolor{keywordflow}{while} (!ratingsKnown.getUserRatings().containsKey(\textcolor{keywordtype}{id}) \&\& \textcolor{keywordtype}{id} != -\/1) \{}
+\DoxyCodeLine{00086                 System.out.println(\textcolor{stringliteral}{"{}El usuario que has introducido es incorrecto, introducelo de nuevo: "{}});}
+\DoxyCodeLine{00087                 \textcolor{keywordtype}{id} = sc.nextInt();}
+\DoxyCodeLine{00088             \}}
+\DoxyCodeLine{00089             System.out.print(\textcolor{stringliteral}{"{}Elije el algoritmo a usar (0 -\/> Collaborative filltering; 1 -\/> Content-\/based): "{}});}
+\DoxyCodeLine{00090             algo = sc.nextInt();}
+\DoxyCodeLine{00091             \textcolor{keywordflow}{while} (algo != 0 \&\& algo != 1) \{}
+\DoxyCodeLine{00092                 System.out.print(\textcolor{stringliteral}{"{}Instruccion incorrecta, inténtalo de nuevo: "{}});}
+\DoxyCodeLine{00093                 algo = sc.nextInt();}
+\DoxyCodeLine{00094             \}}
+\DoxyCodeLine{00095 }
+\DoxyCodeLine{00096             HashMap<Integer,HashMap<Item,Double>> unkown = ratingsUnknown.getUserRatings();}
+\DoxyCodeLine{00097             \textcolor{keywordtype}{int} k;}
+\DoxyCodeLine{00098             System.out.print(\textcolor{stringliteral}{"{}Escoje el numero de items que quieres que se recomiendan: "{}});}
+\DoxyCodeLine{00099             k = sc.nextInt();}
+\DoxyCodeLine{00100             \textcolor{keywordflow}{while} (k > items.size()) \{}
+\DoxyCodeLine{00101                 System.out.print(\textcolor{stringliteral}{"{}Número incorrecto, inténtalo de nuevo:"{}});}
+\DoxyCodeLine{00102                 k = sc.nextInt();}
+\DoxyCodeLine{00103             \}}
+\DoxyCodeLine{00104             \textcolor{keywordflow}{if} (\textcolor{keywordtype}{id} != -\/1) \{}
+\DoxyCodeLine{00105                 Usuari us = \textcolor{keyword}{null};}
+\DoxyCodeLine{00106                 \textcolor{keywordflow}{for} (Usuari u : ratingsKnown.getUsers())}
+\DoxyCodeLine{00107                     \textcolor{keywordflow}{if} (u.getUserId() == \textcolor{keywordtype}{id}) \{}
+\DoxyCodeLine{00108                         us = u;}
+\DoxyCodeLine{00109                         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00110                     \}}
+\DoxyCodeLine{00111                 \textcolor{keywordflow}{switch} (algo) \{}
+\DoxyCodeLine{00112                     \textcolor{keywordflow}{case} 0:}
+\DoxyCodeLine{00113                         SlopeOne sp = \textcolor{keyword}{new} SlopeOne();}
+\DoxyCodeLine{00114                         System.out.println(\textcolor{stringliteral}{"{}Los ítems que recomendamos para el usuario "{}} + us.getUserId() + \textcolor{stringliteral}{"{} son: "{}});}
+\DoxyCodeLine{00115                         Collaborative alg = \textcolor{keyword}{new} Collaborative();}
+\DoxyCodeLine{00116                         List<Usuari> aux2 = ratings.getUsers();}
+\DoxyCodeLine{00117                         aux2.add(us);}
+\DoxyCodeLine{00118                         HashMap<Centroid, List<Usuari>> centroids = alg.recommendations(aux2, 10, \textcolor{keyword}{new} DistanceUsers(),}
+\DoxyCodeLine{00119                                 100, 3);}
+\DoxyCodeLine{00120                         List<Usuari> nearby = \textcolor{keyword}{new} LinkedList<>();}
+\DoxyCodeLine{00121                         Set<Item> neededItems = \textcolor{keyword}{new} HashSet<>();}
+\DoxyCodeLine{00122                         \textcolor{keywordflow}{for} (Centroid c : centroids.keySet()) \{}
+\DoxyCodeLine{00123                             List<Usuari> aux = centroids.get(c);}
+\DoxyCodeLine{00124                             \textcolor{keywordflow}{if} (centroids.get(c).contains(us)) \{}
+\DoxyCodeLine{00125                                 nearby.addAll(aux);}
+\DoxyCodeLine{00126                                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00127                             \}}
+\DoxyCodeLine{00128                         \}}
+\DoxyCodeLine{00129                         \textcolor{keywordflow}{for}(Usuari u: nearby) neededItems.add((Item) u.getRatedItems().keySet());}
+\DoxyCodeLine{00130                         List<Item> analizedItems = \textcolor{keyword}{new} ArrayList<>();}
+\DoxyCodeLine{00131                         analizedItems.addAll(neededItems);}
+\DoxyCodeLine{00132                         sp.slopeOne(nearby, us,maxRating);}
+\DoxyCodeLine{00133                         HashMap<Item, Double> preds = Avaluacio.sortByValue(sp.getPredictions()), prov = \textcolor{keyword}{new} HashMap<>();}
+\DoxyCodeLine{00134                         \textcolor{keywordtype}{int} x = 0;}
+\DoxyCodeLine{00135                         \textcolor{keywordflow}{for} (Item i : preds.keySet()) \{}
+\DoxyCodeLine{00136                             \textcolor{keywordflow}{if} (preds.get(i) >= 0) \{}
+\DoxyCodeLine{00137                                 System.out.println(\textcolor{stringliteral}{"{}\(\backslash\)t"{}} + i.getId() + \textcolor{stringliteral}{"{} -\/> "{}} + preds.get(i));}
+\DoxyCodeLine{00138                                 x++;}
+\DoxyCodeLine{00139                                 \textcolor{keywordflow}{if} (x == k) \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00140                             \}}
+\DoxyCodeLine{00141                         \}}
+\DoxyCodeLine{00142                         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00143                     \textcolor{keywordflow}{case} 1:}
+\DoxyCodeLine{00144                         System.out.println(\textcolor{stringliteral}{"{}Los ítems que recomendados para el usuario "{}} + us.getUserId() + \textcolor{stringliteral}{"{} son: "{}});}
+\DoxyCodeLine{00145                         ContentBased cb = \textcolor{keyword}{new} ContentBased(us, dataset, ratings.getRatings(), maxRating);}
+\DoxyCodeLine{00146                         cb.setK(k);}
+\DoxyCodeLine{00147                         HashMap<Item, Double> recomendations = cb.recommended\_items();}
+\DoxyCodeLine{00148                         Algorisme.print(Avaluacio.sortByValue(recomendations));}
+\DoxyCodeLine{00149                         HashMap<Integer, HashMap<Item, Double>> vals = \textcolor{keyword}{new} HashMap<>();}
+\DoxyCodeLine{00150                         vals.put(us.getUserId(), recomendations);}
+\DoxyCodeLine{00151                         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00152                 \}}
+\DoxyCodeLine{00153 }
+\DoxyCodeLine{00154                 System.out.print(\textcolor{stringliteral}{"{}Quieres pedir recomendaciones con otro Dataset?(y/n) "{}});}
+\DoxyCodeLine{00155                 String s = sc.next();}
+\DoxyCodeLine{00156                 finished = s.equals(\textcolor{stringliteral}{"{}n"{}});}
+\DoxyCodeLine{00157             \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{00158                 \textcolor{keywordflow}{for} (Usuari us : ratingsKnown.getUsers()) \{}
+\DoxyCodeLine{00159                     \textcolor{keywordflow}{switch} (algo) \{}
+\DoxyCodeLine{00160                         \textcolor{keywordflow}{case} 0:}
+\DoxyCodeLine{00161                             SlopeOne sp = \textcolor{keyword}{new} SlopeOne();}
+\DoxyCodeLine{00162                             System.out.println(\textcolor{stringliteral}{"{}Los ítems que recomendamos para el usuario "{}} + us.getUserId() + \textcolor{stringliteral}{"{} son: "{}});}
+\DoxyCodeLine{00163                             Collaborative alg = \textcolor{keyword}{new} Collaborative();}
+\DoxyCodeLine{00164                             List<Usuari> aux2 = ratings.getUsers();}
+\DoxyCodeLine{00165                             aux2.add(us);}
+\DoxyCodeLine{00166                             HashMap<Centroid, List<Usuari>> centroids = alg.recommendations(aux2, 5, \textcolor{keyword}{new} DistanceUsers(),}
+\DoxyCodeLine{00167                                     100, 3);}
+\DoxyCodeLine{00168                             List<Usuari> nearby = \textcolor{keyword}{new} LinkedList<>();}
+\DoxyCodeLine{00169                             Set<Item> neededItems = \textcolor{keyword}{new} HashSet<>();}
+\DoxyCodeLine{00170                             \textcolor{keywordflow}{for} (Centroid c : centroids.keySet()) \{}
+\DoxyCodeLine{00171                                 List<Usuari> aux = centroids.get(c);}
+\DoxyCodeLine{00172                                 \textcolor{keywordflow}{if} (centroids.get(c).contains(us)) \{}
+\DoxyCodeLine{00173                                     nearby.addAll(aux);}
+\DoxyCodeLine{00174                                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00175                                 \}}
+\DoxyCodeLine{00176                             \}}
+\DoxyCodeLine{00177                             \textcolor{keywordflow}{for}(Usuari u: nearby) neededItems.addAll(u.getRatedItems().keySet());}
+\DoxyCodeLine{00178                             List<Item> analizedItems = \textcolor{keyword}{new} ArrayList<>();}
+\DoxyCodeLine{00179                             analizedItems.addAll(neededItems);}
+\DoxyCodeLine{00180                             sp.slopeOne(nearby, us,maxRating);}
+\DoxyCodeLine{00181                             HashMap<Item, Double> preds = Avaluacio.sortByValue(sp.getPredictions()), prov = \textcolor{keyword}{new} HashMap<>();}
+\DoxyCodeLine{00182                             HashMap<Integer,HashMap<Item,Double>>sol = \textcolor{keyword}{new} HashMap<>();}
+\DoxyCodeLine{00183                             \textcolor{keywordtype}{int} x = 0;}
+\DoxyCodeLine{00184                             \textcolor{keywordflow}{for} (Item i : preds.keySet()) \{}
+\DoxyCodeLine{00185                                 \textcolor{keywordflow}{if} (preds.get(i) >= 0) \{}
+\DoxyCodeLine{00186                                     System.out.println(\textcolor{stringliteral}{"{}\(\backslash\)t"{}} + i.getId() + \textcolor{stringliteral}{"{} -\/> "{}} + preds.get(i));}
+\DoxyCodeLine{00187                                     prov.put(i,preds.get(i));}
+\DoxyCodeLine{00188                                     x++;}
+\DoxyCodeLine{00189                                     \textcolor{keywordflow}{if} (x == k) \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00190                                 \}}
+\DoxyCodeLine{00191                             \}}
+\DoxyCodeLine{00192                             sol.put(us.getUserId(),prov);}
+\DoxyCodeLine{00193                             System.out.print(\textcolor{stringliteral}{"{}Evaluacion de la recomendacion: "{}});}
+\DoxyCodeLine{00194                             Avaluacio.DCG(sol,unkown,us.getUserId());}
+\DoxyCodeLine{00195                             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00196                         \textcolor{keywordflow}{case} 1:}
+\DoxyCodeLine{00197                             System.out.println(\textcolor{stringliteral}{"{}Los ítems que recomendados para el usuario "{}} + us.getUserId() + \textcolor{stringliteral}{"{} son: "{}});}
+\DoxyCodeLine{00198                             ContentBased cb = \textcolor{keyword}{new} ContentBased(us, dataset, ratings.getRatings(), maxRating);}
+\DoxyCodeLine{00199                             cb.setK(k);}
+\DoxyCodeLine{00200                             HashMap<Item, Double> recomendations = cb.recommended\_items();}
+\DoxyCodeLine{00201                             Algorisme.print(Avaluacio.sortByValue(recomendations));}
+\DoxyCodeLine{00202                             HashMap<Integer, HashMap<Item, Double>> vals = \textcolor{keyword}{new} HashMap<>();}
+\DoxyCodeLine{00203                             vals.put(us.getUserId(), recomendations);}
+\DoxyCodeLine{00204                             System.out.print(\textcolor{stringliteral}{"{}Evaluacion de la recomendacion: "{}});}
+\DoxyCodeLine{00205                             Avaluacio.DCG(vals,unkown,us.getUserId());}
+\DoxyCodeLine{00206                             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00207                     \}}
+\DoxyCodeLine{00208                 \}}
+\DoxyCodeLine{00209                 System.out.print(\textcolor{stringliteral}{"{}Quieres pedir recomendaciones con otro Dataset?(y/n) "{}});}
+\DoxyCodeLine{00210                 String s = sc.next();}
+\DoxyCodeLine{00211                 finished = s.equals(\textcolor{stringliteral}{"{}n"{}});}
+\DoxyCodeLine{00212             \}}
+\DoxyCodeLine{00213         \}}
+\DoxyCodeLine{00214         System.out.println(\textcolor{stringliteral}{"{}La ejecución ha terminado."{}});}
+\DoxyCodeLine{00215     \}}
+
+\end{DoxyCode}
+
+
+La documentación para esta clase fue generada a partir del siguiente fichero\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_main_8java}{Main.\+java}}\end{DoxyCompactItemize}

@@ -1,0 +1,174 @@
+\hypertarget{_item_8java_source}{}\doxysection{Item.\+java}
+\label{_item_8java_source}\index{Item.java@{Item.java}}
+\mbox{\hyperlink{_item_8java}{Ir a la documentación de este archivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_item_8java_source_l00001}00001 }
+\DoxyCodeLine{\Hypertarget{_item_8java_source_l00006}00006 \textcolor{keyword}{package }dominio.clases;}
+\DoxyCodeLine{\Hypertarget{_item_8java_source_l00007}00007 }
+\DoxyCodeLine{\Hypertarget{_item_8java_source_l00008}00008 \textcolor{keyword}{import} java.util.ArrayList;}
+\DoxyCodeLine{\Hypertarget{_item_8java_source_l00009}00009 \textcolor{keyword}{import} java.util.BitSet; \textcolor{comment}{//BitSet}}
+\DoxyCodeLine{\Hypertarget{_item_8java_source_l00010}00010 \textcolor{keyword}{import} java.time.LocalDate;}
+\DoxyCodeLine{\Hypertarget{_item_8java_source_l00011}00011 \textcolor{keyword}{import} java.util.HashMap;}
+\DoxyCodeLine{\Hypertarget{_item_8java_source_l00012}00012 \textcolor{keyword}{import} java.util.LinkedHashMap;}
+\DoxyCodeLine{\Hypertarget{_item_8java_source_l00013}00013 }
+\DoxyCodeLine{\Hypertarget{_item_8java_source_l00019}\mbox{\hyperlink{classdominio_1_1clases_1_1_item}{00019}} \textcolor{keyword}{public} \textcolor{keyword}{class }\mbox{\hyperlink{classdominio_1_1clases_1_1_item}{Item}} \{}
+\DoxyCodeLine{\Hypertarget{_item_8java_source_l00020}00020 }
+\DoxyCodeLine{\Hypertarget{_item_8java_source_l00022}\mbox{\hyperlink{classdominio_1_1clases_1_1_item_a1dadc9a96ab96ea9998c90710852d9d0}{00022}}     \textcolor{keyword}{private} String \mbox{\hyperlink{classdominio_1_1clases_1_1_item_a1dadc9a96ab96ea9998c90710852d9d0}{id\_item}};}
+\DoxyCodeLine{\Hypertarget{_item_8java_source_l00023}00023 }
+\DoxyCodeLine{\Hypertarget{_item_8java_source_l00025}\mbox{\hyperlink{classdominio_1_1clases_1_1_item_ad39a0a446829f2eb00c67ef08ecc0413}{00025}}     \textcolor{keyword}{private} ArrayList<Long> \mbox{\hyperlink{classdominio_1_1clases_1_1_item_ad39a0a446829f2eb00c67ef08ecc0413}{IntAtt}};}
+\DoxyCodeLine{\Hypertarget{_item_8java_source_l00026}00026 }
+\DoxyCodeLine{\Hypertarget{_item_8java_source_l00028}\mbox{\hyperlink{classdominio_1_1clases_1_1_item_a671a2fe3283d7db93af0e494dc03317b}{00028}}     \textcolor{keyword}{private} ArrayList<Double> \mbox{\hyperlink{classdominio_1_1clases_1_1_item_a671a2fe3283d7db93af0e494dc03317b}{DoubleAtt}};}
+\DoxyCodeLine{\Hypertarget{_item_8java_source_l00029}00029 }
+\DoxyCodeLine{\Hypertarget{_item_8java_source_l00031}\mbox{\hyperlink{classdominio_1_1clases_1_1_item_a55f8b33c9fab79b55904e62a5c06208f}{00031}}     \textcolor{keyword}{private} ArrayList<String> \mbox{\hyperlink{classdominio_1_1clases_1_1_item_a55f8b33c9fab79b55904e62a5c06208f}{StringAtt}};}
+\DoxyCodeLine{\Hypertarget{_item_8java_source_l00032}00032 }
+\DoxyCodeLine{\Hypertarget{_item_8java_source_l00034}\mbox{\hyperlink{classdominio_1_1clases_1_1_item_a621e4760412988731146647541beda62}{00034}}     \textcolor{keyword}{private} ArrayList<BitSet> \mbox{\hyperlink{classdominio_1_1clases_1_1_item_a621e4760412988731146647541beda62}{CategoricalAtt\_Psc\_bits}};}
+\DoxyCodeLine{\Hypertarget{_item_8java_source_l00035}00035 }
+\DoxyCodeLine{\Hypertarget{_item_8java_source_l00036}\mbox{\hyperlink{classdominio_1_1clases_1_1_item_af97689e82026b39311c2d0cd7ccaa6ef}{00036}}     \textcolor{keyword}{private} HashMap<Integer, ArrayList<String>> \mbox{\hyperlink{classdominio_1_1clases_1_1_item_af97689e82026b39311c2d0cd7ccaa6ef}{CatAttr}};}
+\DoxyCodeLine{\Hypertarget{_item_8java_source_l00037}00037 }
+\DoxyCodeLine{\Hypertarget{_item_8java_source_l00039}\mbox{\hyperlink{classdominio_1_1clases_1_1_item_ac12226043bed2b5b59b0f2188a73e9d6}{00039}}     \textcolor{keyword}{private} ArrayList<LocalDate> \mbox{\hyperlink{classdominio_1_1clases_1_1_item_ac12226043bed2b5b59b0f2188a73e9d6}{DateAtt}};}
+\DoxyCodeLine{\Hypertarget{_item_8java_source_l00040}00040 }
+\DoxyCodeLine{\Hypertarget{_item_8java_source_l00042}\mbox{\hyperlink{classdominio_1_1clases_1_1_item_abdbf2f38bbb32e692a6312e3ce6222f4}{00042}}     \textcolor{keyword}{private} ArrayList<String> \mbox{\hyperlink{classdominio_1_1clases_1_1_item_abdbf2f38bbb32e692a6312e3ce6222f4}{BooleanAtt}};}
+\DoxyCodeLine{\Hypertarget{_item_8java_source_l00043}00043 }
+\DoxyCodeLine{\Hypertarget{_item_8java_source_l00045}\mbox{\hyperlink{classdominio_1_1clases_1_1_item_ab6724f18aefb7822c36b8b2c6476dd46}{00045}}     \textcolor{keyword}{private} LinkedHashMap<Integer, HashMap<String,Integer>> \mbox{\hyperlink{classdominio_1_1clases_1_1_item_ab6724f18aefb7822c36b8b2c6476dd46}{wordFrequencies}};}
+\DoxyCodeLine{\Hypertarget{_item_8java_source_l00046}00046 }
+\DoxyCodeLine{\Hypertarget{_item_8java_source_l00050}\mbox{\hyperlink{classdominio_1_1clases_1_1_item_ae4ad22e17fcba45f5bcfddf105dd8c6a}{00050}}     \textcolor{keyword}{public} \mbox{\hyperlink{classdominio_1_1clases_1_1_item_ae4ad22e17fcba45f5bcfddf105dd8c6a}{Item}}() \{}
+\DoxyCodeLine{\Hypertarget{_item_8java_source_l00051}00051 }
+\DoxyCodeLine{\Hypertarget{_item_8java_source_l00052}00052         this.id\_item = \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{\Hypertarget{_item_8java_source_l00053}00053         this.IntAtt = \textcolor{keyword}{new} ArrayList<>();}
+\DoxyCodeLine{\Hypertarget{_item_8java_source_l00054}00054         this.DoubleAtt = \textcolor{keyword}{new} ArrayList<>();}
+\DoxyCodeLine{\Hypertarget{_item_8java_source_l00055}00055         this.StringAtt = \textcolor{keyword}{new} ArrayList<>();}
+\DoxyCodeLine{\Hypertarget{_item_8java_source_l00056}00056         this.CategoricalAtt\_Psc\_bits = \textcolor{keyword}{new} ArrayList<>();}
+\DoxyCodeLine{\Hypertarget{_item_8java_source_l00057}00057         this.CatAttr = \textcolor{keyword}{new} HashMap<>();}
+\DoxyCodeLine{\Hypertarget{_item_8java_source_l00058}00058         this.DateAtt = \textcolor{keyword}{new} ArrayList<>();}
+\DoxyCodeLine{\Hypertarget{_item_8java_source_l00059}00059         this.BooleanAtt = \textcolor{keyword}{new} ArrayList<>();}
+\DoxyCodeLine{\Hypertarget{_item_8java_source_l00060}00060         this.wordFrequencies = \textcolor{keyword}{new} LinkedHashMap<>();}
+\DoxyCodeLine{\Hypertarget{_item_8java_source_l00061}00061     \}}
+\DoxyCodeLine{\Hypertarget{_item_8java_source_l00062}00062 }
+\DoxyCodeLine{\Hypertarget{_item_8java_source_l00068}\mbox{\hyperlink{classdominio_1_1clases_1_1_item_ad0931eb129b40f5862300becefdda2bd}{00068}}     \textcolor{keyword}{public} \mbox{\hyperlink{classdominio_1_1clases_1_1_item_ad0931eb129b40f5862300becefdda2bd}{Item}}(String \textcolor{keywordtype}{id}) \{}
+\DoxyCodeLine{\Hypertarget{_item_8java_source_l00069}00069 }
+\DoxyCodeLine{\Hypertarget{_item_8java_source_l00070}00070         this.id\_item = id;}
+\DoxyCodeLine{\Hypertarget{_item_8java_source_l00071}00071         this.IntAtt = \textcolor{keyword}{new} ArrayList<>();}
+\DoxyCodeLine{\Hypertarget{_item_8java_source_l00072}00072         this.DoubleAtt = \textcolor{keyword}{new} ArrayList<>();}
+\DoxyCodeLine{\Hypertarget{_item_8java_source_l00073}00073         this.StringAtt = \textcolor{keyword}{new} ArrayList<>();}
+\DoxyCodeLine{\Hypertarget{_item_8java_source_l00074}00074         this.CategoricalAtt\_Psc\_bits = \textcolor{keyword}{new} ArrayList<>();}
+\DoxyCodeLine{\Hypertarget{_item_8java_source_l00075}00075         this.DateAtt = \textcolor{keyword}{new} ArrayList<>();}
+\DoxyCodeLine{\Hypertarget{_item_8java_source_l00076}00076         this.BooleanAtt = \textcolor{keyword}{new} ArrayList<>();}
+\DoxyCodeLine{\Hypertarget{_item_8java_source_l00077}00077         this.wordFrequencies = \textcolor{keyword}{new} LinkedHashMap<>();}
+\DoxyCodeLine{\Hypertarget{_item_8java_source_l00078}00078     \}}
+\DoxyCodeLine{\Hypertarget{_item_8java_source_l00079}00079 }
+\DoxyCodeLine{\Hypertarget{_item_8java_source_l00085}\mbox{\hyperlink{classdominio_1_1clases_1_1_item_a73cb6799c0b4d5c59c3a79cec34d88e5}{00085}}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classdominio_1_1clases_1_1_item_a73cb6799c0b4d5c59c3a79cec34d88e5}{setId}}(String \textcolor{keywordtype}{id}) \{}
+\DoxyCodeLine{\Hypertarget{_item_8java_source_l00086}00086         this.id\_item = id;}
+\DoxyCodeLine{\Hypertarget{_item_8java_source_l00087}00087     \}}
+\DoxyCodeLine{\Hypertarget{_item_8java_source_l00088}00088 }
+\DoxyCodeLine{\Hypertarget{_item_8java_source_l00094}\mbox{\hyperlink{classdominio_1_1clases_1_1_item_a9d4f8f9352f3c2d95b18c211eba9051b}{00094}}     \textcolor{keyword}{public} String \mbox{\hyperlink{classdominio_1_1clases_1_1_item_a9d4f8f9352f3c2d95b18c211eba9051b}{getId}}() \{\textcolor{keywordflow}{return} this.\mbox{\hyperlink{classdominio_1_1clases_1_1_item_a1dadc9a96ab96ea9998c90710852d9d0}{id\_item}}; \}}
+\DoxyCodeLine{\Hypertarget{_item_8java_source_l00095}00095 }
+\DoxyCodeLine{\Hypertarget{_item_8java_source_l00105}\mbox{\hyperlink{classdominio_1_1clases_1_1_item_a97f0888b1069e10f33586dc9749821f3}{00105}}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classdominio_1_1clases_1_1_item_a97f0888b1069e10f33586dc9749821f3}{setAttributes}}(ArrayList<Long> attrI, ArrayList<Double> attrD, ArrayList<String> attrStr, ArrayList<BitSet> attrCatBits,}
+\DoxyCodeLine{\Hypertarget{_item_8java_source_l00106}00106                               ArrayList<LocalDate> attrDate, ArrayList<String> attrBool, HashMap<Integer, ArrayList<String>> \mbox{\hyperlink{classdominio_1_1clases_1_1_item_af97689e82026b39311c2d0cd7ccaa6ef}{CatAttr}})\{}
+\DoxyCodeLine{\Hypertarget{_item_8java_source_l00107}00107 }
+\DoxyCodeLine{\Hypertarget{_item_8java_source_l00108}00108         \textcolor{keywordflow}{if} (!(attrI==\textcolor{keyword}{null})) this.IntAtt = attrI;}
+\DoxyCodeLine{\Hypertarget{_item_8java_source_l00109}00109         \textcolor{keywordflow}{if} (!(attrD==\textcolor{keyword}{null})) this.DoubleAtt = attrD;}
+\DoxyCodeLine{\Hypertarget{_item_8java_source_l00110}00110         \textcolor{keywordflow}{if} (!(attrStr==\textcolor{keyword}{null})) this.StringAtt = attrStr;}
+\DoxyCodeLine{\Hypertarget{_item_8java_source_l00111}00111         \textcolor{keywordflow}{if} (!(attrCatBits==\textcolor{keyword}{null})) this.CategoricalAtt\_Psc\_bits = attrCatBits;}
+\DoxyCodeLine{\Hypertarget{_item_8java_source_l00112}00112         \textcolor{keywordflow}{if} (!(attrDate==\textcolor{keyword}{null})) this.DateAtt = attrDate;}
+\DoxyCodeLine{\Hypertarget{_item_8java_source_l00113}00113         \textcolor{keywordflow}{if} (!(attrBool==\textcolor{keyword}{null})) this.BooleanAtt = attrBool;}
+\DoxyCodeLine{\Hypertarget{_item_8java_source_l00114}00114         \textcolor{keywordflow}{if} (!(\mbox{\hyperlink{classdominio_1_1clases_1_1_item_af97689e82026b39311c2d0cd7ccaa6ef}{CatAttr}}==\textcolor{keyword}{null})) this.CatAttr = \mbox{\hyperlink{classdominio_1_1clases_1_1_item_af97689e82026b39311c2d0cd7ccaa6ef}{CatAttr}};}
+\DoxyCodeLine{\Hypertarget{_item_8java_source_l00115}00115     \}}
+\DoxyCodeLine{\Hypertarget{_item_8java_source_l00116}00116 }
+\DoxyCodeLine{\Hypertarget{_item_8java_source_l00117}\mbox{\hyperlink{classdominio_1_1clases_1_1_item_a2897c66f7356fcc8e6eda6d02f30d92f}{00117}}     \textcolor{keyword}{public} LinkedHashMap<Integer, HashMap<String,Integer>> \mbox{\hyperlink{classdominio_1_1clases_1_1_item_a2897c66f7356fcc8e6eda6d02f30d92f}{getWordFrequencies}}()\{}
+\DoxyCodeLine{\Hypertarget{_item_8java_source_l00118}00118         \textcolor{keywordflow}{return} this.\mbox{\hyperlink{classdominio_1_1clases_1_1_item_ab6724f18aefb7822c36b8b2c6476dd46}{wordFrequencies}};}
+\DoxyCodeLine{\Hypertarget{_item_8java_source_l00119}00119     \}}
+\DoxyCodeLine{\Hypertarget{_item_8java_source_l00120}00120 }
+\DoxyCodeLine{\Hypertarget{_item_8java_source_l00126}\mbox{\hyperlink{classdominio_1_1clases_1_1_item_a7f4f0a001b2a9612dbc34f0630491d82}{00126}}     \textcolor{keyword}{public} ArrayList<Long> \mbox{\hyperlink{classdominio_1_1clases_1_1_item_a7f4f0a001b2a9612dbc34f0630491d82}{getIntAttributes}}()\{}
+\DoxyCodeLine{\Hypertarget{_item_8java_source_l00127}00127         \textcolor{keywordflow}{return} this.\mbox{\hyperlink{classdominio_1_1clases_1_1_item_ad39a0a446829f2eb00c67ef08ecc0413}{IntAtt}};}
+\DoxyCodeLine{\Hypertarget{_item_8java_source_l00128}00128     \}}
+\DoxyCodeLine{\Hypertarget{_item_8java_source_l00129}00129 }
+\DoxyCodeLine{\Hypertarget{_item_8java_source_l00135}\mbox{\hyperlink{classdominio_1_1clases_1_1_item_afa418979ae70f3a964590a1590a807b6}{00135}}     \textcolor{keyword}{public} ArrayList<Double> \mbox{\hyperlink{classdominio_1_1clases_1_1_item_afa418979ae70f3a964590a1590a807b6}{getDoubleAttributes}}()\{}
+\DoxyCodeLine{\Hypertarget{_item_8java_source_l00136}00136         \textcolor{keywordflow}{return} this.\mbox{\hyperlink{classdominio_1_1clases_1_1_item_a671a2fe3283d7db93af0e494dc03317b}{DoubleAtt}};}
+\DoxyCodeLine{\Hypertarget{_item_8java_source_l00137}00137     \}}
+\DoxyCodeLine{\Hypertarget{_item_8java_source_l00138}00138 }
+\DoxyCodeLine{\Hypertarget{_item_8java_source_l00144}\mbox{\hyperlink{classdominio_1_1clases_1_1_item_aa606ffa817a67d36c69d830d1271be0c}{00144}}     \textcolor{keyword}{public} ArrayList<String> \mbox{\hyperlink{classdominio_1_1clases_1_1_item_aa606ffa817a67d36c69d830d1271be0c}{getStringAttributes}}()\{}
+\DoxyCodeLine{\Hypertarget{_item_8java_source_l00145}00145         \textcolor{keywordflow}{return} this.\mbox{\hyperlink{classdominio_1_1clases_1_1_item_a55f8b33c9fab79b55904e62a5c06208f}{StringAtt}};}
+\DoxyCodeLine{\Hypertarget{_item_8java_source_l00146}00146     \}}
+\DoxyCodeLine{\Hypertarget{_item_8java_source_l00147}00147 }
+\DoxyCodeLine{\Hypertarget{_item_8java_source_l00153}\mbox{\hyperlink{classdominio_1_1clases_1_1_item_ac180dfac8c5187f1273944953621230c}{00153}}     \textcolor{keyword}{public} ArrayList<BitSet> \mbox{\hyperlink{classdominio_1_1clases_1_1_item_ac180dfac8c5187f1273944953621230c}{getCategoryPscBits}}()\{}
+\DoxyCodeLine{\Hypertarget{_item_8java_source_l00154}00154         \textcolor{keywordflow}{return} this.\mbox{\hyperlink{classdominio_1_1clases_1_1_item_a621e4760412988731146647541beda62}{CategoricalAtt\_Psc\_bits}};}
+\DoxyCodeLine{\Hypertarget{_item_8java_source_l00155}00155     \}}
+\DoxyCodeLine{\Hypertarget{_item_8java_source_l00156}00156 }
+\DoxyCodeLine{\Hypertarget{_item_8java_source_l00162}\mbox{\hyperlink{classdominio_1_1clases_1_1_item_a8e5ca2e9277a0ff8c067f94938ebcace}{00162}}     \textcolor{keyword}{public} HashMap<Integer, ArrayList<String>> \mbox{\hyperlink{classdominio_1_1clases_1_1_item_a8e5ca2e9277a0ff8c067f94938ebcace}{getCategoricalAttributes}}()\{}
+\DoxyCodeLine{\Hypertarget{_item_8java_source_l00163}00163         \textcolor{keywordflow}{return} this.\mbox{\hyperlink{classdominio_1_1clases_1_1_item_af97689e82026b39311c2d0cd7ccaa6ef}{CatAttr}};}
+\DoxyCodeLine{\Hypertarget{_item_8java_source_l00164}00164     \}}
+\DoxyCodeLine{\Hypertarget{_item_8java_source_l00165}00165 }
+\DoxyCodeLine{\Hypertarget{_item_8java_source_l00171}\mbox{\hyperlink{classdominio_1_1clases_1_1_item_adcc53eecefedc021e3be30a8a3438901}{00171}}     \textcolor{keyword}{public} ArrayList<LocalDate> \mbox{\hyperlink{classdominio_1_1clases_1_1_item_adcc53eecefedc021e3be30a8a3438901}{getDateAttributes}}()\{}
+\DoxyCodeLine{\Hypertarget{_item_8java_source_l00172}00172         \textcolor{keywordflow}{return} this.\mbox{\hyperlink{classdominio_1_1clases_1_1_item_ac12226043bed2b5b59b0f2188a73e9d6}{DateAtt}};}
+\DoxyCodeLine{\Hypertarget{_item_8java_source_l00173}00173     \}}
+\DoxyCodeLine{\Hypertarget{_item_8java_source_l00174}00174 }
+\DoxyCodeLine{\Hypertarget{_item_8java_source_l00180}\mbox{\hyperlink{classdominio_1_1clases_1_1_item_a134319074fbe3059a14668a9b3028e66}{00180}}     \textcolor{keyword}{public} ArrayList<String> \mbox{\hyperlink{classdominio_1_1clases_1_1_item_a134319074fbe3059a14668a9b3028e66}{getBooleanAttributes}}()\{}
+\DoxyCodeLine{\Hypertarget{_item_8java_source_l00181}00181         \textcolor{keywordflow}{return} this.\mbox{\hyperlink{classdominio_1_1clases_1_1_item_abdbf2f38bbb32e692a6312e3ce6222f4}{BooleanAtt}};}
+\DoxyCodeLine{\Hypertarget{_item_8java_source_l00182}00182     \}}
+\DoxyCodeLine{\Hypertarget{_item_8java_source_l00183}00183 }
+\DoxyCodeLine{\Hypertarget{_item_8java_source_l00189}\mbox{\hyperlink{classdominio_1_1clases_1_1_item_a36c9be03a2fc92b3f361c25a6b446d72}{00189}}     \textcolor{keyword}{public} ArrayList<Object> \mbox{\hyperlink{classdominio_1_1clases_1_1_item_a36c9be03a2fc92b3f361c25a6b446d72}{getItemAttributes}}()\{}
+\DoxyCodeLine{\Hypertarget{_item_8java_source_l00190}00190         ArrayList<Object> Attributes = \textcolor{keyword}{new} ArrayList<Object>();}
+\DoxyCodeLine{\Hypertarget{_item_8java_source_l00191}00191         Attributes.addAll(this.IntAtt);}
+\DoxyCodeLine{\Hypertarget{_item_8java_source_l00192}00192         Attributes.addAll(this.DoubleAtt);}
+\DoxyCodeLine{\Hypertarget{_item_8java_source_l00193}00193         Attributes.addAll(this.StringAtt);}
+\DoxyCodeLine{\Hypertarget{_item_8java_source_l00194}00194         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < this.CategoricalAtt\_Psc\_bits.size(); ++i)\{}
+\DoxyCodeLine{\Hypertarget{_item_8java_source_l00195}00195 }
+\DoxyCodeLine{\Hypertarget{_item_8java_source_l00196}00196             Attributes.add(this.CategoricalAtt\_Psc\_bits.get(i));}
+\DoxyCodeLine{\Hypertarget{_item_8java_source_l00197}00197         \}}
+\DoxyCodeLine{\Hypertarget{_item_8java_source_l00198}00198 }
+\DoxyCodeLine{\Hypertarget{_item_8java_source_l00199}00199         Attributes.addAll(this.DateAtt);}
+\DoxyCodeLine{\Hypertarget{_item_8java_source_l00200}00200         Attributes.addAll(this.BooleanAtt);}
+\DoxyCodeLine{\Hypertarget{_item_8java_source_l00201}00201 }
+\DoxyCodeLine{\Hypertarget{_item_8java_source_l00202}00202         \textcolor{keywordflow}{return} Attributes;}
+\DoxyCodeLine{\Hypertarget{_item_8java_source_l00203}00203     \}}
+\DoxyCodeLine{\Hypertarget{_item_8java_source_l00204}00204 }
+\DoxyCodeLine{\Hypertarget{_item_8java_source_l00205}\mbox{\hyperlink{classdominio_1_1clases_1_1_item_a0f71b94566578380911b638d7abc9137}{00205}}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classdominio_1_1clases_1_1_item_a0f71b94566578380911b638d7abc9137}{setId\_item}}(String \mbox{\hyperlink{classdominio_1_1clases_1_1_item_a1dadc9a96ab96ea9998c90710852d9d0}{id\_item}}) \{}
+\DoxyCodeLine{\Hypertarget{_item_8java_source_l00206}00206         this.id\_item = \mbox{\hyperlink{classdominio_1_1clases_1_1_item_a1dadc9a96ab96ea9998c90710852d9d0}{id\_item}};}
+\DoxyCodeLine{\Hypertarget{_item_8java_source_l00207}00207     \}}
+\DoxyCodeLine{\Hypertarget{_item_8java_source_l00208}00208 }
+\DoxyCodeLine{\Hypertarget{_item_8java_source_l00209}\mbox{\hyperlink{classdominio_1_1clases_1_1_item_a764798dbf80e130bfd32d1478fa41ad2}{00209}}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classdominio_1_1clases_1_1_item_a764798dbf80e130bfd32d1478fa41ad2}{setIntAtt}}(ArrayList<Long> intAtt) \{}
+\DoxyCodeLine{\Hypertarget{_item_8java_source_l00210}00210         \mbox{\hyperlink{classdominio_1_1clases_1_1_item_ad39a0a446829f2eb00c67ef08ecc0413}{IntAtt}} = \textcolor{keyword}{new} ArrayList<>(intAtt);}
+\DoxyCodeLine{\Hypertarget{_item_8java_source_l00211}00211     \}}
+\DoxyCodeLine{\Hypertarget{_item_8java_source_l00212}00212 }
+\DoxyCodeLine{\Hypertarget{_item_8java_source_l00213}\mbox{\hyperlink{classdominio_1_1clases_1_1_item_a39ac706100eb06693dafb87a86466046}{00213}}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classdominio_1_1clases_1_1_item_a39ac706100eb06693dafb87a86466046}{setDoubleAtt}}(ArrayList<Double> doubleAtt) \{}
+\DoxyCodeLine{\Hypertarget{_item_8java_source_l00214}00214         \mbox{\hyperlink{classdominio_1_1clases_1_1_item_a671a2fe3283d7db93af0e494dc03317b}{DoubleAtt}} = \textcolor{keyword}{new} ArrayList<>(doubleAtt);}
+\DoxyCodeLine{\Hypertarget{_item_8java_source_l00215}00215     \}}
+\DoxyCodeLine{\Hypertarget{_item_8java_source_l00216}00216 }
+\DoxyCodeLine{\Hypertarget{_item_8java_source_l00217}\mbox{\hyperlink{classdominio_1_1clases_1_1_item_a6ae5b995d2a3e68f62d01adb44ed05ce}{00217}}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classdominio_1_1clases_1_1_item_a6ae5b995d2a3e68f62d01adb44ed05ce}{setStringAtt}}(ArrayList<String> stringAtt) \{}
+\DoxyCodeLine{\Hypertarget{_item_8java_source_l00218}00218         \mbox{\hyperlink{classdominio_1_1clases_1_1_item_a55f8b33c9fab79b55904e62a5c06208f}{StringAtt}} = \textcolor{keyword}{new} ArrayList<>(stringAtt);}
+\DoxyCodeLine{\Hypertarget{_item_8java_source_l00219}00219     \}}
+\DoxyCodeLine{\Hypertarget{_item_8java_source_l00220}00220 }
+\DoxyCodeLine{\Hypertarget{_item_8java_source_l00221}\mbox{\hyperlink{classdominio_1_1clases_1_1_item_a86b67eaa92036c7b99574404a97857a4}{00221}}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classdominio_1_1clases_1_1_item_a86b67eaa92036c7b99574404a97857a4}{setCategoricalAtt\_Psc\_bits}}(ArrayList<BitSet> categoricalAtt\_Psc\_bits) \{}
+\DoxyCodeLine{\Hypertarget{_item_8java_source_l00222}00222         \mbox{\hyperlink{classdominio_1_1clases_1_1_item_a621e4760412988731146647541beda62}{CategoricalAtt\_Psc\_bits}} = \textcolor{keyword}{new} ArrayList<>(categoricalAtt\_Psc\_bits);}
+\DoxyCodeLine{\Hypertarget{_item_8java_source_l00223}00223     \}}
+\DoxyCodeLine{\Hypertarget{_item_8java_source_l00224}00224 }
+\DoxyCodeLine{\Hypertarget{_item_8java_source_l00225}\mbox{\hyperlink{classdominio_1_1clases_1_1_item_a7fa24132ecdd01037102743c5bfbcf61}{00225}}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classdominio_1_1clases_1_1_item_a7fa24132ecdd01037102743c5bfbcf61}{setCatAttr}}(HashMap<Integer, ArrayList<String>> catAttr) \{}
+\DoxyCodeLine{\Hypertarget{_item_8java_source_l00226}00226         \mbox{\hyperlink{classdominio_1_1clases_1_1_item_af97689e82026b39311c2d0cd7ccaa6ef}{CatAttr}} = \textcolor{keyword}{new} HashMap<>(catAttr);}
+\DoxyCodeLine{\Hypertarget{_item_8java_source_l00227}00227     \}}
+\DoxyCodeLine{\Hypertarget{_item_8java_source_l00228}00228 }
+\DoxyCodeLine{\Hypertarget{_item_8java_source_l00229}\mbox{\hyperlink{classdominio_1_1clases_1_1_item_a4718e0989c6cf0350a52bfa28b6e2040}{00229}}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classdominio_1_1clases_1_1_item_a4718e0989c6cf0350a52bfa28b6e2040}{setDateAtt}}(ArrayList<LocalDate> dateAtt) \{}
+\DoxyCodeLine{\Hypertarget{_item_8java_source_l00230}00230         \mbox{\hyperlink{classdominio_1_1clases_1_1_item_ac12226043bed2b5b59b0f2188a73e9d6}{DateAtt}} = \textcolor{keyword}{new} ArrayList<>(dateAtt);}
+\DoxyCodeLine{\Hypertarget{_item_8java_source_l00231}00231     \}}
+\DoxyCodeLine{\Hypertarget{_item_8java_source_l00232}00232 }
+\DoxyCodeLine{\Hypertarget{_item_8java_source_l00233}\mbox{\hyperlink{classdominio_1_1clases_1_1_item_a19f7b98d76b0b2d6b4fae25b302424ab}{00233}}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classdominio_1_1clases_1_1_item_a19f7b98d76b0b2d6b4fae25b302424ab}{setBooleanAtt}}(ArrayList<String> booleanAtt) \{}
+\DoxyCodeLine{\Hypertarget{_item_8java_source_l00234}00234         \mbox{\hyperlink{classdominio_1_1clases_1_1_item_abdbf2f38bbb32e692a6312e3ce6222f4}{BooleanAtt}} = \textcolor{keyword}{new} ArrayList<>(booleanAtt);}
+\DoxyCodeLine{\Hypertarget{_item_8java_source_l00235}00235     \}}
+\DoxyCodeLine{\Hypertarget{_item_8java_source_l00236}00236 }
+\DoxyCodeLine{\Hypertarget{_item_8java_source_l00237}\mbox{\hyperlink{classdominio_1_1clases_1_1_item_ae9a6dcffee34d590eb296b9636c7ff7f}{00237}}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classdominio_1_1clases_1_1_item_ae9a6dcffee34d590eb296b9636c7ff7f}{setWordFrequencies}}(LinkedHashMap<Integer,HashMap<String,Integer>> \mbox{\hyperlink{classdominio_1_1clases_1_1_item_ab6724f18aefb7822c36b8b2c6476dd46}{wordFrequencies}})\{}
+\DoxyCodeLine{\Hypertarget{_item_8java_source_l00238}00238         this.wordFrequencies = \textcolor{keyword}{new} LinkedHashMap<>(\mbox{\hyperlink{classdominio_1_1clases_1_1_item_ab6724f18aefb7822c36b8b2c6476dd46}{wordFrequencies}});}
+\DoxyCodeLine{\Hypertarget{_item_8java_source_l00239}00239     \}}
+\DoxyCodeLine{\Hypertarget{_item_8java_source_l00240}00240 }
+\DoxyCodeLine{\Hypertarget{_item_8java_source_l00242}00242     @Override}
+\DoxyCodeLine{\Hypertarget{_item_8java_source_l00243}\mbox{\hyperlink{classdominio_1_1clases_1_1_item_a0ddad3d76757e3f015f212526f941ec5}{00243}}     \textcolor{keyword}{public} \textcolor{keywordtype}{boolean} \mbox{\hyperlink{classdominio_1_1clases_1_1_item_a0ddad3d76757e3f015f212526f941ec5}{equals}}(Object o) \{}
+\DoxyCodeLine{\Hypertarget{_item_8java_source_l00244}00244         \textcolor{keywordflow}{if}(o==\textcolor{keyword}{null} || !(o instanceof \mbox{\hyperlink{classdominio_1_1clases_1_1_item}{Item}})) \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_item_8java_source_l00245}00245         \mbox{\hyperlink{classdominio_1_1clases_1_1_item}{Item}} i = (\mbox{\hyperlink{classdominio_1_1clases_1_1_item_ae4ad22e17fcba45f5bcfddf105dd8c6a}{Item}})o;}
+\DoxyCodeLine{\Hypertarget{_item_8java_source_l00246}00246         \textcolor{keywordflow}{return} this.id\_item.\mbox{\hyperlink{classdominio_1_1clases_1_1_item_a0ddad3d76757e3f015f212526f941ec5}{equals}}(i.\mbox{\hyperlink{classdominio_1_1clases_1_1_item_a9d4f8f9352f3c2d95b18c211eba9051b}{getId}}());}
+\DoxyCodeLine{\Hypertarget{_item_8java_source_l00247}00247     \}}
+\DoxyCodeLine{\Hypertarget{_item_8java_source_l00248}00248 }
+\DoxyCodeLine{\Hypertarget{_item_8java_source_l00252}00252     @Override}
+\DoxyCodeLine{\Hypertarget{_item_8java_source_l00253}\mbox{\hyperlink{classdominio_1_1clases_1_1_item_ade0201c0a941de4d068369fca52ad0c7}{00253}}     \textcolor{keyword}{public} \textcolor{keywordtype}{int} \mbox{\hyperlink{classdominio_1_1clases_1_1_item_ade0201c0a941de4d068369fca52ad0c7}{hashCode}}()\{}
+\DoxyCodeLine{\Hypertarget{_item_8java_source_l00254}00254         \textcolor{keywordflow}{return} \mbox{\hyperlink{classdominio_1_1clases_1_1_item_a1dadc9a96ab96ea9998c90710852d9d0}{id\_item}}.hashCode();}
+\DoxyCodeLine{\Hypertarget{_item_8java_source_l00255}00255     \}}
+\DoxyCodeLine{\Hypertarget{_item_8java_source_l00256}00256 \}}
+
+\end{DoxyCode}

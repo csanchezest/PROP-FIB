@@ -1,0 +1,275 @@
+\hypertarget{classdominio_1_1controladores_1_1_driver_collaborative}{}\doxysection{Referencia de la Clase dominio.\+controladores.\+Driver\+Collaborative}
+\label{classdominio_1_1controladores_1_1_driver_collaborative}\index{dominio.controladores.drivers.DriverCollaborative@{dominio.controladores.drivers.DriverCollaborative}}
+
+
+Driver representativo de dos ejemplos de ejecución del algoritmo de Collaborative Filtering.  
+
+
+\doxysubsection*{Métodos públicos estáticos}
+\begin{DoxyCompactItemize}
+\item 
+static Map$<$ \mbox{\hyperlink{classdominio_1_1clases_1_1_centroid}{Centroid}}, List$<$ \mbox{\hyperlink{classdominio_1_1clases_1_1_usuari}{Usuari}} $>$ $>$ \mbox{\hyperlink{classdominio_1_1controladores_1_1_driver_collaborative_a59772bf91b7147a8d860c8691ce1d33d}{test\+KMeans}} (List$<$ \mbox{\hyperlink{classdominio_1_1clases_1_1_usuari}{Usuari}} $>$ usuaris)
+\begin{DoxyCompactList}\small\item\em Metodo de ejemplo de ejecucion del algoritmo KMeans sobre una muestra de usuarios concreta. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classdominio_1_1controladores_1_1_driver_collaborative_a74031d8d890d6d9ba04565c72e43f2be}{test\+Slope\+One}} (List$<$ \mbox{\hyperlink{classdominio_1_1clases_1_1_usuari}{Usuari}} $>$ users, List$<$ \mbox{\hyperlink{classdominio_1_1clases_1_1_item}{Item}} $>$ items)
+\begin{DoxyCompactList}\small\item\em Metodo de ejemplo de ejecucion del algoritmo Slope\+One sobre una muestra de usuarios e items concreta. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classdominio_1_1controladores_1_1_driver_collaborative_a94cdfc74b6187d8765d06dabf118659c}{main}} (String\mbox{[}$\,$\mbox{]} args)
+\end{DoxyCompactItemize}
+\doxysubsection*{Atributos públicos estáticos}
+\begin{DoxyCompactItemize}
+\item 
+static int \mbox{\hyperlink{classdominio_1_1controladores_1_1_driver_collaborative_a05f9ebac6147ced9b625bb336aa4d68e}{n}} = Integer.\+MAX\+\_\+\+VALUE
+\begin{DoxyCompactList}\small\item\em Nº de iteraciones a realizar hasta encontrar la distribucion adecuada de usuarios en clusters. \end{DoxyCompactList}\item 
+static int \mbox{\hyperlink{classdominio_1_1controladores_1_1_driver_collaborative_aaf156ae7ee2b4f0e61e6d39ef16d9cb0}{num\+\_\+clusters}} = 3
+\begin{DoxyCompactList}\small\item\em Nº de clusters a crear. \end{DoxyCompactList}\item 
+static int \mbox{\hyperlink{classdominio_1_1controladores_1_1_driver_collaborative_af55b5369f0e878aa6452799ffcad8d58}{k}} = 3
+\begin{DoxyCompactList}\small\item\em Nº de clusters a crear. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Métodos privados estáticos}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{classdominio_1_1controladores_1_1_driver_collaborative_a480b6eaf01051b06796b567fc3c72788}{initialize\+Valoracions}} (List$<$ \mbox{\hyperlink{classdominio_1_1clases_1_1_usuari}{Usuari}} $>$ valoracions, List$<$ Integer $>$ usuaris, List$<$ \mbox{\hyperlink{classdominio_1_1clases_1_1_item}{Item}} $>$ items)
+\begin{DoxyCompactList}\small\item\em Metodo local para inicializar los usuarios, items y valoraciones de los mismos de manera manual. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Driver representativo de dos ejemplos de ejecución del algoritmo de Collaborative Filtering. 
+
+\begin{DoxyAuthor}{Autor}
+Cristian Sanchez Estape and Muhammad Haris 
+\end{DoxyAuthor}
+
+
+Definición en la línea \mbox{\hyperlink{_driver_collaborative_8java_source_l00021}{21}} del archivo \mbox{\hyperlink{_driver_collaborative_8java_source}{Driver\+Collaborative.\+java}}.
+
+
+
+\doxysubsection{Documentación de las funciones miembro}
+\mbox{\Hypertarget{classdominio_1_1controladores_1_1_driver_collaborative_a59772bf91b7147a8d860c8691ce1d33d}\label{classdominio_1_1controladores_1_1_driver_collaborative_a59772bf91b7147a8d860c8691ce1d33d}} 
+\index{dominio.controladores.drivers.DriverCollaborative@{dominio.controladores.drivers.DriverCollaborative}!testKMeans@{testKMeans}}
+\index{testKMeans@{testKMeans}!dominio.controladores.drivers.DriverCollaborative@{dominio.controladores.drivers.DriverCollaborative}}
+\doxysubsubsection{\texorpdfstring{testKMeans()}{testKMeans()}}
+{\footnotesize\ttfamily static Map$<$ \mbox{\hyperlink{classdominio_1_1clases_1_1_centroid}{Centroid}}, List$<$ \mbox{\hyperlink{classdominio_1_1clases_1_1_usuari}{Usuari}} $>$ $>$ dominio.\+controladores.\+Driver\+Collaborative.\+test\+KMeans (\begin{DoxyParamCaption}\item[{List$<$ \mbox{\hyperlink{classdominio_1_1clases_1_1_usuari}{Usuari}} $>$}]{usuaris }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Metodo de ejemplo de ejecucion del algoritmo KMeans sobre una muestra de usuarios concreta. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em usuaris} & Lista de usuarios sobre los que aplicar KMeans \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+Distribucion de los usuarios en centroides; el nº de centroides viene dado como atributo de clase 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{_driver_collaborative_8java_source_l00048}{48}} del archivo \mbox{\hyperlink{_driver_collaborative_8java_source}{Driver\+Collaborative.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00048                                                                                \{}
+\DoxyCodeLine{00049         System.out.println(\textcolor{stringliteral}{"{}Método que ejecuta el algoritmo k-\/means. Devuelve k clusters con sus centroides y los usuarios correspondientes"{}});}
+\DoxyCodeLine{00050         \mbox{\hyperlink{classdominio_1_1clases_1_1_collaborative}{Collaborative}} a = \textcolor{keyword}{new} \mbox{\hyperlink{classdominio_1_1clases_1_1_collaborative}{Collaborative}}();}
+\DoxyCodeLine{00051         Map<Centroid, List<Usuari>> clusters = a.\mbox{\hyperlink{classdominio_1_1clases_1_1_collaborative_a0abf3775716bbec72f760848caa79b4a}{recommendations}}(usuaris, \mbox{\hyperlink{classdominio_1_1controladores_1_1_driver_collaborative_af55b5369f0e878aa6452799ffcad8d58}{k}}, \textcolor{keyword}{new} \mbox{\hyperlink{classdominio_1_1clases_1_1_distance_users}{DistanceUsers}}(), \mbox{\hyperlink{classdominio_1_1controladores_1_1_driver_collaborative_a05f9ebac6147ced9b625bb336aa4d68e}{n}}, \mbox{\hyperlink{classdominio_1_1controladores_1_1_driver_collaborative_aaf156ae7ee2b4f0e61e6d39ef16d9cb0}{num\_clusters}});}
+\DoxyCodeLine{00052         clusters.forEach((key, value) -\/> \{}
+\DoxyCodeLine{00053             System.out.println(\textcolor{stringliteral}{"{}-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ CLUSTER "{}} + key.getCentroid\_number() + \textcolor{stringliteral}{"{} -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/"{}});}
+\DoxyCodeLine{00054             System.out.println(\textcolor{stringliteral}{"{}Items:"{}});}
+\DoxyCodeLine{00055             System.out.println(\textcolor{stringliteral}{"{}"{}});}
+\DoxyCodeLine{00056             for (\mbox{\hyperlink{classdominio_1_1clases_1_1_item}{Item}} i : key.getCentroid().keySet()) System.out.println(i.getId() + \textcolor{stringliteral}{"{}\(\backslash\)t"{}} + key.getCentroid().get(i));}
+\DoxyCodeLine{00057             System.out.println(\textcolor{stringliteral}{"{}"{}});}
+\DoxyCodeLine{00058             System.out.println(\textcolor{stringliteral}{"{}Users:"{}});}
+\DoxyCodeLine{00059             System.out.println(\textcolor{stringliteral}{"{}"{}});}
+\DoxyCodeLine{00060             for (\mbox{\hyperlink{classdominio_1_1clases_1_1_usuari}{Usuari}} \mbox{\hyperlink{classdominio_1_1clases_1_1_usuari}{Usuari}} : value) \{}
+\DoxyCodeLine{00061                 System.out.println(\mbox{\hyperlink{classdominio_1_1clases_1_1_usuari}{Usuari}}.\mbox{\hyperlink{classdominio_1_1clases_1_1_usuari_aa22633a65abe77a2c62a8388d62f9902}{getUserId}}());}
+\DoxyCodeLine{00062             \}}
+\DoxyCodeLine{00063             System.out.println();}
+\DoxyCodeLine{00064             System.out.println();}
+\DoxyCodeLine{00065         \});}
+\DoxyCodeLine{00066         \textcolor{keywordflow}{return} clusters;}
+\DoxyCodeLine{00067     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdominio_1_1controladores_1_1_driver_collaborative_a74031d8d890d6d9ba04565c72e43f2be}\label{classdominio_1_1controladores_1_1_driver_collaborative_a74031d8d890d6d9ba04565c72e43f2be}} 
+\index{dominio.controladores.drivers.DriverCollaborative@{dominio.controladores.drivers.DriverCollaborative}!testSlopeOne@{testSlopeOne}}
+\index{testSlopeOne@{testSlopeOne}!dominio.controladores.drivers.DriverCollaborative@{dominio.controladores.drivers.DriverCollaborative}}
+\doxysubsubsection{\texorpdfstring{testSlopeOne()}{testSlopeOne()}}
+{\footnotesize\ttfamily static void dominio.\+controladores.\+Driver\+Collaborative.\+test\+Slope\+One (\begin{DoxyParamCaption}\item[{List$<$ \mbox{\hyperlink{classdominio_1_1clases_1_1_usuari}{Usuari}} $>$}]{users,  }\item[{List$<$ \mbox{\hyperlink{classdominio_1_1clases_1_1_item}{Item}} $>$}]{items }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Metodo de ejemplo de ejecucion del algoritmo Slope\+One sobre una muestra de usuarios e items concreta. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em users} & Lista de usuarios sobre los que aplicar el algoritmo \\
+\hline
+{\em items} & Lista de items sobre la que aplicar el algoritmo \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{_driver_collaborative_8java_source_l00076}{76}} del archivo \mbox{\hyperlink{_driver_collaborative_8java_source}{Driver\+Collaborative.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00076                                                                           \{}
+\DoxyCodeLine{00077         System.out.println(\textcolor{stringliteral}{"{}Metodo que ejecuta el SlopeOne para cada cluster encontrado en KMeans"{}});}
+\DoxyCodeLine{00078         \mbox{\hyperlink{classdominio_1_1clases_1_1_slope_one}{SlopeOne}} sp = \textcolor{keyword}{new} \mbox{\hyperlink{classdominio_1_1clases_1_1_slope_one}{SlopeOne}}();}
+\DoxyCodeLine{00079         \textcolor{comment}{//sp.slopeOne(users, items, 5.);}}
+\DoxyCodeLine{00080         \textcolor{comment}{//Algorisme.printData(sp.getOutputData());}}
+\DoxyCodeLine{00081     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdominio_1_1controladores_1_1_driver_collaborative_a94cdfc74b6187d8765d06dabf118659c}\label{classdominio_1_1controladores_1_1_driver_collaborative_a94cdfc74b6187d8765d06dabf118659c}} 
+\index{dominio.controladores.drivers.DriverCollaborative@{dominio.controladores.drivers.DriverCollaborative}!main@{main}}
+\index{main@{main}!dominio.controladores.drivers.DriverCollaborative@{dominio.controladores.drivers.DriverCollaborative}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily static void dominio.\+controladores.\+Driver\+Collaborative.\+main (\begin{DoxyParamCaption}\item[{String\mbox{[}$\,$\mbox{]}}]{args }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{_driver_collaborative_8java_source_l00083}{83}} del archivo \mbox{\hyperlink{_driver_collaborative_8java_source}{Driver\+Collaborative.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00083                                            \{}
+\DoxyCodeLine{00084         System.out.println(\textcolor{stringliteral}{"{}\(\backslash\)tTest con datos inventados:"{}});}
+\DoxyCodeLine{00085         List<Integer> usuaris = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);}
+\DoxyCodeLine{00086         List<Item> items = Arrays.asList(\textcolor{keyword}{new} \mbox{\hyperlink{classdominio_1_1clases_1_1_item}{Item}}(\textcolor{stringliteral}{"{}11"{}}), \textcolor{keyword}{new} \mbox{\hyperlink{classdominio_1_1clases_1_1_item}{Item}}(\textcolor{stringliteral}{"{}12"{}}), \textcolor{keyword}{new} \mbox{\hyperlink{classdominio_1_1clases_1_1_item}{Item}}(\textcolor{stringliteral}{"{}13"{}}), \textcolor{keyword}{new} \mbox{\hyperlink{classdominio_1_1clases_1_1_item}{Item}}(\textcolor{stringliteral}{"{}14"{}}), \textcolor{keyword}{new} \mbox{\hyperlink{classdominio_1_1clases_1_1_item}{Item}}(\textcolor{stringliteral}{"{}15"{}}), \textcolor{keyword}{new} \mbox{\hyperlink{classdominio_1_1clases_1_1_item}{Item}}(\textcolor{stringliteral}{"{}16"{}}),}
+\DoxyCodeLine{00087                 \textcolor{keyword}{new} \mbox{\hyperlink{classdominio_1_1clases_1_1_item}{Item}}(\textcolor{stringliteral}{"{}17"{}}), \textcolor{keyword}{new} \mbox{\hyperlink{classdominio_1_1clases_1_1_item}{Item}}(\textcolor{stringliteral}{"{}18"{}}), \textcolor{keyword}{new} \mbox{\hyperlink{classdominio_1_1clases_1_1_item}{Item}}(\textcolor{stringliteral}{"{}19"{}}), \textcolor{keyword}{new} \mbox{\hyperlink{classdominio_1_1clases_1_1_item}{Item}}(\textcolor{stringliteral}{"{}110"{}}));}
+\DoxyCodeLine{00088         List<Usuari> valoracions = \textcolor{keyword}{new} LinkedList<>();}
+\DoxyCodeLine{00089         \mbox{\hyperlink{classdominio_1_1controladores_1_1_driver_collaborative_a480b6eaf01051b06796b567fc3c72788}{initializeValoracions}}(valoracions, usuaris, items);}
+\DoxyCodeLine{00090         Map<Centroid, List<Usuari>> centroids = \mbox{\hyperlink{classdominio_1_1controladores_1_1_driver_collaborative_a59772bf91b7147a8d860c8691ce1d33d}{testKMeans}}(valoracions);}
+\DoxyCodeLine{00091         \textcolor{keywordflow}{for} (\mbox{\hyperlink{classdominio_1_1clases_1_1_centroid}{Centroid}} c : centroids.keySet()) \mbox{\hyperlink{classdominio_1_1controladores_1_1_driver_collaborative_a74031d8d890d6d9ba04565c72e43f2be}{testSlopeOne}}(centroids.get(c), items);}
+\DoxyCodeLine{00092         System.out.println(\textcolor{stringliteral}{"{}-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/"{}});}
+\DoxyCodeLine{00093         System.out.println(\textcolor{stringliteral}{"{}Testeo sobre datos de Series:"{}});}
+\DoxyCodeLine{00094         \mbox{\hyperlink{classdominio_1_1clases_1_1_cjt__items}{Cjt\_items}} c = \textcolor{keyword}{new} \mbox{\hyperlink{classdominio_1_1clases_1_1_cjt__items}{Cjt\_items}}(\textcolor{stringliteral}{"{}/persistencia/data/datasets/Series/250/items.csv"{}});}
+\DoxyCodeLine{00095         Valoracio v = \textcolor{keyword}{new} Valoracio(\textcolor{stringliteral}{"{}/persistencia/data/datasets/Series/250/ratings.db.csv"{}}, c);}
+\DoxyCodeLine{00096         List<Usuari> users = v.getUsers();}
+\DoxyCodeLine{00097         \textcolor{comment}{//items = c.getItems();}}
+\DoxyCodeLine{00098         centroids = \mbox{\hyperlink{classdominio_1_1controladores_1_1_driver_collaborative_a59772bf91b7147a8d860c8691ce1d33d}{testKMeans}}(users);}
+\DoxyCodeLine{00099         \textcolor{keywordflow}{for} (\mbox{\hyperlink{classdominio_1_1clases_1_1_centroid}{Centroid}} ct : centroids.keySet()) \mbox{\hyperlink{classdominio_1_1controladores_1_1_driver_collaborative_a74031d8d890d6d9ba04565c72e43f2be}{testSlopeOne}}(centroids.get(ct), items);}
+\DoxyCodeLine{00100         System.out.println(\textcolor{stringliteral}{"{}-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/"{}});}
+\DoxyCodeLine{00101     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdominio_1_1controladores_1_1_driver_collaborative_a480b6eaf01051b06796b567fc3c72788}\label{classdominio_1_1controladores_1_1_driver_collaborative_a480b6eaf01051b06796b567fc3c72788}} 
+\index{dominio.controladores.drivers.DriverCollaborative@{dominio.controladores.drivers.DriverCollaborative}!initializeValoracions@{initializeValoracions}}
+\index{initializeValoracions@{initializeValoracions}!dominio.controladores.drivers.DriverCollaborative@{dominio.controladores.drivers.DriverCollaborative}}
+\doxysubsubsection{\texorpdfstring{initializeValoracions()}{initializeValoracions()}}
+{\footnotesize\ttfamily static void dominio.\+controladores.\+Driver\+Collaborative.\+initialize\+Valoracions (\begin{DoxyParamCaption}\item[{List$<$ \mbox{\hyperlink{classdominio_1_1clases_1_1_usuari}{Usuari}} $>$}]{valoracions,  }\item[{List$<$ Integer $>$}]{usuaris,  }\item[{List$<$ \mbox{\hyperlink{classdominio_1_1clases_1_1_item}{Item}} $>$}]{items }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Metodo local para inicializar los usuarios, items y valoraciones de los mismos de manera manual. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em valoracions} & Lista de usuarios que vamos a tratar \\
+\hline
+{\em usuaris} & Lista de los IDs de los usuarios con los que vamos a tratar \\
+\hline
+{\em items} & Lista de items con los que vamos a tratar \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{_driver_collaborative_8java_source_l00111}{111}} del archivo \mbox{\hyperlink{_driver_collaborative_8java_source}{Driver\+Collaborative.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00112                                                                                        \{}
+\DoxyCodeLine{00113         Random rand = \textcolor{keyword}{new} Random();}
+\DoxyCodeLine{00114         \mbox{\hyperlink{classdominio_1_1clases_1_1_usuari}{Usuari}} u = \textcolor{keyword}{new} \mbox{\hyperlink{classdominio_1_1clases_1_1_usuari}{Usuari}}(usuaris.get(0));}
+\DoxyCodeLine{00115         u.\mbox{\hyperlink{classdominio_1_1clases_1_1_usuari_a7be6538c33a7ce2d5ad998032e9ff4e8}{addRatedItems}}(items.get(0), rand.nextDouble() * 5);}
+\DoxyCodeLine{00116         u.\mbox{\hyperlink{classdominio_1_1clases_1_1_usuari_a7be6538c33a7ce2d5ad998032e9ff4e8}{addRatedItems}}(items.get(1), rand.nextDouble() * 5);}
+\DoxyCodeLine{00117         valoracions.add(u);}
+\DoxyCodeLine{00118         u = \textcolor{keyword}{new} \mbox{\hyperlink{classdominio_1_1clases_1_1_usuari}{Usuari}}(usuaris.get(1));}
+\DoxyCodeLine{00119         u.\mbox{\hyperlink{classdominio_1_1clases_1_1_usuari_a7be6538c33a7ce2d5ad998032e9ff4e8}{addRatedItems}}(items.get(1), rand.nextDouble() * 5);}
+\DoxyCodeLine{00120         u.\mbox{\hyperlink{classdominio_1_1clases_1_1_usuari_a7be6538c33a7ce2d5ad998032e9ff4e8}{addRatedItems}}(items.get(2), rand.nextDouble() * 5);}
+\DoxyCodeLine{00121         valoracions.add(u);}
+\DoxyCodeLine{00122         u = \textcolor{keyword}{new} \mbox{\hyperlink{classdominio_1_1clases_1_1_usuari}{Usuari}}(usuaris.get(2));}
+\DoxyCodeLine{00123         u.\mbox{\hyperlink{classdominio_1_1clases_1_1_usuari_a7be6538c33a7ce2d5ad998032e9ff4e8}{addRatedItems}}(items.get(2), rand.nextDouble() * 5);}
+\DoxyCodeLine{00124         u.\mbox{\hyperlink{classdominio_1_1clases_1_1_usuari_a7be6538c33a7ce2d5ad998032e9ff4e8}{addRatedItems}}(items.get(3), rand.nextDouble() * 5);}
+\DoxyCodeLine{00125         valoracions.add(u);}
+\DoxyCodeLine{00126         u = \textcolor{keyword}{new} \mbox{\hyperlink{classdominio_1_1clases_1_1_usuari}{Usuari}}(usuaris.get(3));}
+\DoxyCodeLine{00127         u.\mbox{\hyperlink{classdominio_1_1clases_1_1_usuari_a7be6538c33a7ce2d5ad998032e9ff4e8}{addRatedItems}}(items.get(3), rand.nextDouble() * 5);}
+\DoxyCodeLine{00128         u.\mbox{\hyperlink{classdominio_1_1clases_1_1_usuari_a7be6538c33a7ce2d5ad998032e9ff4e8}{addRatedItems}}(items.get(4), rand.nextDouble() * 5);}
+\DoxyCodeLine{00129         valoracions.add(u);}
+\DoxyCodeLine{00130         u = \textcolor{keyword}{new} \mbox{\hyperlink{classdominio_1_1clases_1_1_usuari}{Usuari}}(usuaris.get(4));}
+\DoxyCodeLine{00131         u.\mbox{\hyperlink{classdominio_1_1clases_1_1_usuari_a7be6538c33a7ce2d5ad998032e9ff4e8}{addRatedItems}}(items.get(4), rand.nextDouble() * 5);}
+\DoxyCodeLine{00132         u.\mbox{\hyperlink{classdominio_1_1clases_1_1_usuari_a7be6538c33a7ce2d5ad998032e9ff4e8}{addRatedItems}}(items.get(5), rand.nextDouble() * 5);}
+\DoxyCodeLine{00133         valoracions.add(u);}
+\DoxyCodeLine{00134         u = \textcolor{keyword}{new} \mbox{\hyperlink{classdominio_1_1clases_1_1_usuari}{Usuari}}(usuaris.get(5));}
+\DoxyCodeLine{00135         u.\mbox{\hyperlink{classdominio_1_1clases_1_1_usuari_a7be6538c33a7ce2d5ad998032e9ff4e8}{addRatedItems}}(items.get(5), rand.nextDouble() * 5);}
+\DoxyCodeLine{00136         u.\mbox{\hyperlink{classdominio_1_1clases_1_1_usuari_a7be6538c33a7ce2d5ad998032e9ff4e8}{addRatedItems}}(items.get(6), rand.nextDouble() * 5);}
+\DoxyCodeLine{00137         valoracions.add(u);}
+\DoxyCodeLine{00138         u = \textcolor{keyword}{new} \mbox{\hyperlink{classdominio_1_1clases_1_1_usuari}{Usuari}}(usuaris.get(6));}
+\DoxyCodeLine{00139         u.\mbox{\hyperlink{classdominio_1_1clases_1_1_usuari_a7be6538c33a7ce2d5ad998032e9ff4e8}{addRatedItems}}(items.get(6), rand.nextDouble() * 5);}
+\DoxyCodeLine{00140         u.\mbox{\hyperlink{classdominio_1_1clases_1_1_usuari_a7be6538c33a7ce2d5ad998032e9ff4e8}{addRatedItems}}(items.get(7), rand.nextDouble() * 5);}
+\DoxyCodeLine{00141         valoracions.add(u);}
+\DoxyCodeLine{00142         u = \textcolor{keyword}{new} \mbox{\hyperlink{classdominio_1_1clases_1_1_usuari}{Usuari}}(usuaris.get(7));}
+\DoxyCodeLine{00143         u.\mbox{\hyperlink{classdominio_1_1clases_1_1_usuari_a7be6538c33a7ce2d5ad998032e9ff4e8}{addRatedItems}}(items.get(7), rand.nextDouble() * 5);}
+\DoxyCodeLine{00144         u.\mbox{\hyperlink{classdominio_1_1clases_1_1_usuari_a7be6538c33a7ce2d5ad998032e9ff4e8}{addRatedItems}}(items.get(8), rand.nextDouble() * 5);}
+\DoxyCodeLine{00145         valoracions.add(u);}
+\DoxyCodeLine{00146         u = \textcolor{keyword}{new} \mbox{\hyperlink{classdominio_1_1clases_1_1_usuari}{Usuari}}(usuaris.get(8));}
+\DoxyCodeLine{00147         u.\mbox{\hyperlink{classdominio_1_1clases_1_1_usuari_a7be6538c33a7ce2d5ad998032e9ff4e8}{addRatedItems}}(items.get(8), rand.nextDouble() * 5);}
+\DoxyCodeLine{00148         u.\mbox{\hyperlink{classdominio_1_1clases_1_1_usuari_a7be6538c33a7ce2d5ad998032e9ff4e8}{addRatedItems}}(items.get(9), rand.nextDouble() * 5);}
+\DoxyCodeLine{00149         valoracions.add(u);}
+\DoxyCodeLine{00150         u = \textcolor{keyword}{new} \mbox{\hyperlink{classdominio_1_1clases_1_1_usuari}{Usuari}}(usuaris.get(9));}
+\DoxyCodeLine{00151         u.\mbox{\hyperlink{classdominio_1_1clases_1_1_usuari_a7be6538c33a7ce2d5ad998032e9ff4e8}{addRatedItems}}(items.get(9), rand.nextDouble() * 5);}
+\DoxyCodeLine{00152         u.\mbox{\hyperlink{classdominio_1_1clases_1_1_usuari_a7be6538c33a7ce2d5ad998032e9ff4e8}{addRatedItems}}(items.get(0), rand.nextDouble() * 5);}
+\DoxyCodeLine{00153         valoracions.add(u);}
+\DoxyCodeLine{00154     \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Documentación de los datos miembro}
+\mbox{\Hypertarget{classdominio_1_1controladores_1_1_driver_collaborative_a05f9ebac6147ced9b625bb336aa4d68e}\label{classdominio_1_1controladores_1_1_driver_collaborative_a05f9ebac6147ced9b625bb336aa4d68e}} 
+\index{dominio.controladores.drivers.DriverCollaborative@{dominio.controladores.drivers.DriverCollaborative}!n@{n}}
+\index{n@{n}!dominio.controladores.drivers.DriverCollaborative@{dominio.controladores.drivers.DriverCollaborative}}
+\doxysubsubsection{\texorpdfstring{n}{n}}
+{\footnotesize\ttfamily int dominio.\+controladores.\+Driver\+Collaborative.\+n = Integer.\+MAX\+\_\+\+VALUE\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Nº de iteraciones a realizar hasta encontrar la distribucion adecuada de usuarios en clusters. 
+
+
+
+Definición en la línea \mbox{\hyperlink{_driver_collaborative_8java_source_l00027}{27}} del archivo \mbox{\hyperlink{_driver_collaborative_8java_source}{Driver\+Collaborative.\+java}}.
+
+\mbox{\Hypertarget{classdominio_1_1controladores_1_1_driver_collaborative_aaf156ae7ee2b4f0e61e6d39ef16d9cb0}\label{classdominio_1_1controladores_1_1_driver_collaborative_aaf156ae7ee2b4f0e61e6d39ef16d9cb0}} 
+\index{dominio.controladores.drivers.DriverCollaborative@{dominio.controladores.drivers.DriverCollaborative}!num\_clusters@{num\_clusters}}
+\index{num\_clusters@{num\_clusters}!dominio.controladores.drivers.DriverCollaborative@{dominio.controladores.drivers.DriverCollaborative}}
+\doxysubsubsection{\texorpdfstring{num\_clusters}{num\_clusters}}
+{\footnotesize\ttfamily int dominio.\+controladores.\+Driver\+Collaborative.\+num\+\_\+clusters = 3\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Nº de clusters a crear. 
+
+
+
+Definición en la línea \mbox{\hyperlink{_driver_collaborative_8java_source_l00033}{33}} del archivo \mbox{\hyperlink{_driver_collaborative_8java_source}{Driver\+Collaborative.\+java}}.
+
+\mbox{\Hypertarget{classdominio_1_1controladores_1_1_driver_collaborative_af55b5369f0e878aa6452799ffcad8d58}\label{classdominio_1_1controladores_1_1_driver_collaborative_af55b5369f0e878aa6452799ffcad8d58}} 
+\index{dominio.controladores.drivers.DriverCollaborative@{dominio.controladores.drivers.DriverCollaborative}!k@{k}}
+\index{k@{k}!dominio.controladores.drivers.DriverCollaborative@{dominio.controladores.drivers.DriverCollaborative}}
+\doxysubsubsection{\texorpdfstring{k}{k}}
+{\footnotesize\ttfamily int dominio.\+controladores.\+Driver\+Collaborative.\+k = 3\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Nº de clusters a crear. 
+
+
+
+Definición en la línea \mbox{\hyperlink{_driver_collaborative_8java_source_l00039}{39}} del archivo \mbox{\hyperlink{_driver_collaborative_8java_source}{Driver\+Collaborative.\+java}}.
+
+
+
+La documentación para esta clase fue generada a partir del siguiente fichero\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_driver_collaborative_8java}{Driver\+Collaborative.\+java}}\end{DoxyCompactItemize}

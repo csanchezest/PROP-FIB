@@ -1,0 +1,51 @@
+\hypertarget{_algorisme_8java_source}{}\doxysection{Algorisme.\+java}
+\label{_algorisme_8java_source}\index{Algorisme.java@{Algorisme.java}}
+\mbox{\hyperlink{_algorisme_8java}{Ir a la documentación de este archivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_algorisme_8java_source_l00001}00001 }
+\DoxyCodeLine{\Hypertarget{_algorisme_8java_source_l00006}\mbox{\hyperlink{namespacedominio_1_1clases}{00006}} \textcolor{keyword}{package }dominio.clases;}
+\DoxyCodeLine{\Hypertarget{_algorisme_8java_source_l00007}00007 }
+\DoxyCodeLine{\Hypertarget{_algorisme_8java_source_l00008}00008 \textcolor{keyword}{import} java.text.DecimalFormat;}
+\DoxyCodeLine{\Hypertarget{_algorisme_8java_source_l00009}00009 \textcolor{keyword}{import} java.text.NumberFormat;}
+\DoxyCodeLine{\Hypertarget{_algorisme_8java_source_l00010}00010 \textcolor{keyword}{import} java.util.*;}
+\DoxyCodeLine{\Hypertarget{_algorisme_8java_source_l00011}00011 }
+\DoxyCodeLine{\Hypertarget{_algorisme_8java_source_l00018}\mbox{\hyperlink{classdominio_1_1clases_1_1_algorisme}{00018}} \textcolor{keyword}{public} \textcolor{keyword}{class }\mbox{\hyperlink{classdominio_1_1clases_1_1_algorisme}{Algorisme}} \{}
+\DoxyCodeLine{\Hypertarget{_algorisme_8java_source_l00022}\mbox{\hyperlink{classdominio_1_1clases_1_1_algorisme_a966a79e4751cb23c2f8a0537511cd94e}{00022}}     \textcolor{keyword}{protected} \mbox{\hyperlink{classdominio_1_1clases_1_1_cjt__items}{Cjt\_items}} \mbox{\hyperlink{classdominio_1_1clases_1_1_algorisme_a966a79e4751cb23c2f8a0537511cd94e}{dataset}};}
+\DoxyCodeLine{\Hypertarget{_algorisme_8java_source_l00023}00023 }
+\DoxyCodeLine{\Hypertarget{_algorisme_8java_source_l00027}\mbox{\hyperlink{classdominio_1_1clases_1_1_algorisme_aee088dc070748fe366f2068b0a512981}{00027}}     \textcolor{keyword}{protected} \mbox{\hyperlink{classdominio_1_1clases_1_1_usuari}{Usuari}} \mbox{\hyperlink{classdominio_1_1clases_1_1_algorisme_aee088dc070748fe366f2068b0a512981}{user}};}
+\DoxyCodeLine{\Hypertarget{_algorisme_8java_source_l00031}\mbox{\hyperlink{classdominio_1_1clases_1_1_algorisme_a9c9055131097eeb0052bc6da89a59475}{00031}}     \textcolor{keyword}{protected} HashMap<Item, ArrayList<Double>> \mbox{\hyperlink{classdominio_1_1clases_1_1_algorisme_a9c9055131097eeb0052bc6da89a59475}{ratings}};}
+\DoxyCodeLine{\Hypertarget{_algorisme_8java_source_l00032}00032 }
+\DoxyCodeLine{\Hypertarget{_algorisme_8java_source_l00037}\mbox{\hyperlink{classdominio_1_1clases_1_1_algorisme_aa2a6296923e364755e6d0efaaaa4b2c2}{00037}}     \textcolor{keyword}{protected} List<Usuari> \mbox{\hyperlink{classdominio_1_1clases_1_1_algorisme_aa2a6296923e364755e6d0efaaaa4b2c2}{users}};}
+\DoxyCodeLine{\Hypertarget{_algorisme_8java_source_l00038}00038 }
+\DoxyCodeLine{\Hypertarget{_algorisme_8java_source_l00045}\mbox{\hyperlink{classdominio_1_1clases_1_1_algorisme_af2cea62ddcce94fccda105803f915b5b}{00045}}     \textcolor{keyword}{public} \mbox{\hyperlink{classdominio_1_1clases_1_1_algorisme_af2cea62ddcce94fccda105803f915b5b}{Algorisme}}(\mbox{\hyperlink{classdominio_1_1clases_1_1_usuari}{Usuari}} \mbox{\hyperlink{classdominio_1_1clases_1_1_algorisme_aee088dc070748fe366f2068b0a512981}{user}}, \mbox{\hyperlink{classdominio_1_1clases_1_1_cjt__items}{Cjt\_items}} \mbox{\hyperlink{classdominio_1_1clases_1_1_algorisme_a966a79e4751cb23c2f8a0537511cd94e}{dataset}}, HashMap<\mbox{\hyperlink{classdominio_1_1clases_1_1_item}{Item}}, ArrayList<Double>> \mbox{\hyperlink{classdominio_1_1clases_1_1_algorisme_a9c9055131097eeb0052bc6da89a59475}{ratings}}) \{}
+\DoxyCodeLine{\Hypertarget{_algorisme_8java_source_l00046}00046         this.user=\mbox{\hyperlink{classdominio_1_1clases_1_1_algorisme_aee088dc070748fe366f2068b0a512981}{user}};}
+\DoxyCodeLine{\Hypertarget{_algorisme_8java_source_l00047}00047         this.dataset=\mbox{\hyperlink{classdominio_1_1clases_1_1_algorisme_a966a79e4751cb23c2f8a0537511cd94e}{dataset}};}
+\DoxyCodeLine{\Hypertarget{_algorisme_8java_source_l00048}00048         this.ratings=\textcolor{keyword}{new} HashMap<>(\mbox{\hyperlink{classdominio_1_1clases_1_1_algorisme_a9c9055131097eeb0052bc6da89a59475}{ratings}});}
+\DoxyCodeLine{\Hypertarget{_algorisme_8java_source_l00049}00049     \}}
+\DoxyCodeLine{\Hypertarget{_algorisme_8java_source_l00050}00050 }
+\DoxyCodeLine{\Hypertarget{_algorisme_8java_source_l00054}\mbox{\hyperlink{classdominio_1_1clases_1_1_algorisme_aa4fcd0310a6e25c22e5dc3dba4c897cf}{00054}}     \textcolor{keyword}{public} \mbox{\hyperlink{classdominio_1_1clases_1_1_algorisme_aa4fcd0310a6e25c22e5dc3dba4c897cf}{Algorisme}}()\{\}}
+\DoxyCodeLine{\Hypertarget{_algorisme_8java_source_l00055}00055 }
+\DoxyCodeLine{\Hypertarget{_algorisme_8java_source_l00061}\mbox{\hyperlink{classdominio_1_1clases_1_1_algorisme_a5f7851101e9d77a1772b65ff634a4c65}{00061}}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classdominio_1_1clases_1_1_algorisme_a5f7851101e9d77a1772b65ff634a4c65}{setUser}}(\mbox{\hyperlink{classdominio_1_1clases_1_1_usuari}{Usuari}} \mbox{\hyperlink{classdominio_1_1clases_1_1_algorisme_aee088dc070748fe366f2068b0a512981}{user}}) \{}
+\DoxyCodeLine{\Hypertarget{_algorisme_8java_source_l00062}00062         this.user = \textcolor{keyword}{new} \mbox{\hyperlink{classdominio_1_1clases_1_1_usuari}{Usuari}}(\mbox{\hyperlink{classdominio_1_1clases_1_1_algorisme_aee088dc070748fe366f2068b0a512981}{user}});}
+\DoxyCodeLine{\Hypertarget{_algorisme_8java_source_l00063}00063     \}}
+\DoxyCodeLine{\Hypertarget{_algorisme_8java_source_l00064}00064 }
+\DoxyCodeLine{\Hypertarget{_algorisme_8java_source_l00070}\mbox{\hyperlink{classdominio_1_1clases_1_1_algorisme_a54eea465b2997a3bb9064126af622a9b}{00070}}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classdominio_1_1clases_1_1_algorisme_a54eea465b2997a3bb9064126af622a9b}{setUsers}}(List<Usuari> \mbox{\hyperlink{classdominio_1_1clases_1_1_algorisme_aa2a6296923e364755e6d0efaaaa4b2c2}{users}}) \{}
+\DoxyCodeLine{\Hypertarget{_algorisme_8java_source_l00071}00071         this.users = \textcolor{keyword}{new} LinkedList<>(\mbox{\hyperlink{classdominio_1_1clases_1_1_algorisme_aa2a6296923e364755e6d0efaaaa4b2c2}{users}});}
+\DoxyCodeLine{\Hypertarget{_algorisme_8java_source_l00072}00072     \}}
+\DoxyCodeLine{\Hypertarget{_algorisme_8java_source_l00073}00073 }
+\DoxyCodeLine{\Hypertarget{_algorisme_8java_source_l00079}\mbox{\hyperlink{classdominio_1_1clases_1_1_algorisme_a1cebe59280d945e4de04fbbe0543e80b}{00079}}     \textcolor{keyword}{public} \textcolor{keyword}{static} \textcolor{keywordtype}{void} \mbox{\hyperlink{classdominio_1_1clases_1_1_algorisme_a1cebe59280d945e4de04fbbe0543e80b}{printData}}(Map<Integer, HashMap<Item, Double>> valoracions) \{}
+\DoxyCodeLine{\Hypertarget{_algorisme_8java_source_l00080}00080         \textcolor{keywordflow}{for} (Integer u : valoracions.keySet()) \{}
+\DoxyCodeLine{\Hypertarget{_algorisme_8java_source_l00081}00081             System.out.println(\textcolor{stringliteral}{"{}Usuari "{}} + u + \textcolor{stringliteral}{"{}:"{}});}
+\DoxyCodeLine{\Hypertarget{_algorisme_8java_source_l00082}00082             \mbox{\hyperlink{classdominio_1_1clases_1_1_algorisme_aca5be8bf5ae18ceaa31e09fea41db9e9}{print}}(valoracions.get(u));}
+\DoxyCodeLine{\Hypertarget{_algorisme_8java_source_l00083}00083         \}}
+\DoxyCodeLine{\Hypertarget{_algorisme_8java_source_l00084}00084     \}}
+\DoxyCodeLine{\Hypertarget{_algorisme_8java_source_l00085}00085 }
+\DoxyCodeLine{\Hypertarget{_algorisme_8java_source_l00090}\mbox{\hyperlink{classdominio_1_1clases_1_1_algorisme_aca5be8bf5ae18ceaa31e09fea41db9e9}{00090}}     \textcolor{keyword}{public} \textcolor{keyword}{static} \textcolor{keywordtype}{void} \mbox{\hyperlink{classdominio_1_1clases_1_1_algorisme_aca5be8bf5ae18ceaa31e09fea41db9e9}{print}}(HashMap<Item, Double> \mbox{\hyperlink{classdominio_1_1clases_1_1_algorisme_a9c9055131097eeb0052bc6da89a59475}{ratings}}) \{}
+\DoxyCodeLine{\Hypertarget{_algorisme_8java_source_l00091}00091         NumberFormat formatter = \textcolor{keyword}{new} DecimalFormat(\textcolor{stringliteral}{"{}\#0.000"{}});}
+\DoxyCodeLine{\Hypertarget{_algorisme_8java_source_l00092}00092         \textcolor{keywordflow}{for} (\mbox{\hyperlink{classdominio_1_1clases_1_1_item}{Item}} i : \mbox{\hyperlink{classdominio_1_1clases_1_1_algorisme_a9c9055131097eeb0052bc6da89a59475}{ratings}}.keySet()) System.out.println(\textcolor{stringliteral}{"{} "{}} + i.getId() + \textcolor{stringliteral}{"{} -\/-\/> "{}} + formatter.format(\mbox{\hyperlink{classdominio_1_1clases_1_1_algorisme_a9c9055131097eeb0052bc6da89a59475}{ratings}}.get(i).doubleValue()));}
+\DoxyCodeLine{\Hypertarget{_algorisme_8java_source_l00093}00093 }
+\DoxyCodeLine{\Hypertarget{_algorisme_8java_source_l00094}00094     \}}
+\DoxyCodeLine{\Hypertarget{_algorisme_8java_source_l00095}00095 }
+\DoxyCodeLine{\Hypertarget{_algorisme_8java_source_l00096}00096 \}}
+
+\end{DoxyCode}

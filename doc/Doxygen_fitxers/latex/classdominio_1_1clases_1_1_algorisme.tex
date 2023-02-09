@@ -1,0 +1,278 @@
+\hypertarget{classdominio_1_1clases_1_1_algorisme}{}\doxysection{Referencia de la Clase dominio.\+clases.\+Algorisme}
+\label{classdominio_1_1clases_1_1_algorisme}\index{dominio.clases.Algorisme@{dominio.clases.Algorisme}}
+
+
+Superclase de los Algortimos de recomendacion.  
+
+
+\doxysubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classdominio_1_1clases_1_1_algorisme_af2cea62ddcce94fccda105803f915b5b}{Algorisme}} (\mbox{\hyperlink{classdominio_1_1clases_1_1_usuari}{Usuari}} \mbox{\hyperlink{classdominio_1_1clases_1_1_algorisme_aee088dc070748fe366f2068b0a512981}{user}}, \mbox{\hyperlink{classdominio_1_1clases_1_1_cjt__items}{Cjt\+\_\+items}} \mbox{\hyperlink{classdominio_1_1clases_1_1_algorisme_a966a79e4751cb23c2f8a0537511cd94e}{dataset}}, Hash\+Map$<$ \mbox{\hyperlink{classdominio_1_1clases_1_1_item}{Item}}, Array\+List$<$ Double $>$ $>$ \mbox{\hyperlink{classdominio_1_1clases_1_1_algorisme_a9c9055131097eeb0052bc6da89a59475}{ratings}})
+\begin{DoxyCompactList}\small\item\em Creadora de la clase \mbox{\hyperlink{classdominio_1_1clases_1_1_algorisme}{Algorisme}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classdominio_1_1clases_1_1_algorisme_aa4fcd0310a6e25c22e5dc3dba4c897cf}{Algorisme}} ()
+\begin{DoxyCompactList}\small\item\em Creadora por defecto de la clase \mbox{\hyperlink{classdominio_1_1clases_1_1_algorisme}{Algorisme}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classdominio_1_1clases_1_1_algorisme_a5f7851101e9d77a1772b65ff634a4c65}{set\+User}} (\mbox{\hyperlink{classdominio_1_1clases_1_1_usuari}{Usuari}} \mbox{\hyperlink{classdominio_1_1clases_1_1_algorisme_aee088dc070748fe366f2068b0a512981}{user}})
+\begin{DoxyCompactList}\small\item\em Metodo set del usuario. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classdominio_1_1clases_1_1_algorisme_a54eea465b2997a3bb9064126af622a9b}{set\+Users}} (List$<$ \mbox{\hyperlink{classdominio_1_1clases_1_1_usuari}{Usuari}} $>$ \mbox{\hyperlink{classdominio_1_1clases_1_1_algorisme_aa2a6296923e364755e6d0efaaaa4b2c2}{users}})
+\begin{DoxyCompactList}\small\item\em Metodo set de los usuarios del dataset. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Métodos públicos estáticos}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{classdominio_1_1clases_1_1_algorisme_a1cebe59280d945e4de04fbbe0543e80b}{print\+Data}} (Map$<$ Integer, Hash\+Map$<$ \mbox{\hyperlink{classdominio_1_1clases_1_1_item}{Item}}, Double $>$ $>$ valoracions)
+\begin{DoxyCompactList}\small\item\em Metodo que imprime por pantalla los usuarios junto con todas sus valoraciones. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classdominio_1_1clases_1_1_algorisme_aca5be8bf5ae18ceaa31e09fea41db9e9}{print}} (Hash\+Map$<$ \mbox{\hyperlink{classdominio_1_1clases_1_1_item}{Item}}, Double $>$ \mbox{\hyperlink{classdominio_1_1clases_1_1_algorisme_a9c9055131097eeb0052bc6da89a59475}{ratings}})
+\begin{DoxyCompactList}\small\item\em Metodo que imprime por pantalla los items con su valoracion. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Atributos protegidos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classdominio_1_1clases_1_1_cjt__items}{Cjt\+\_\+items}} \mbox{\hyperlink{classdominio_1_1clases_1_1_algorisme_a966a79e4751cb23c2f8a0537511cd94e}{dataset}}
+\begin{DoxyCompactList}\small\item\em Dataset sobre el cual se quiere aplicar la recomendacion. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classdominio_1_1clases_1_1_usuari}{Usuari}} \mbox{\hyperlink{classdominio_1_1clases_1_1_algorisme_aee088dc070748fe366f2068b0a512981}{user}}
+\begin{DoxyCompactList}\small\item\em Usuario que pide la recomendacion. \end{DoxyCompactList}\item 
+Hash\+Map$<$ \mbox{\hyperlink{classdominio_1_1clases_1_1_item}{Item}}, Array\+List$<$ Double $>$ $>$ \mbox{\hyperlink{classdominio_1_1clases_1_1_algorisme_a9c9055131097eeb0052bc6da89a59475}{ratings}}
+\begin{DoxyCompactList}\small\item\em Diccionario con todos los items del dataset que guarda, para cada uno, todas las valoraciones que tiene. \end{DoxyCompactList}\item 
+List$<$ \mbox{\hyperlink{classdominio_1_1clases_1_1_usuari}{Usuari}} $>$ \mbox{\hyperlink{classdominio_1_1clases_1_1_algorisme_aa2a6296923e364755e6d0efaaaa4b2c2}{users}}
+\begin{DoxyCompactList}\small\item\em Lista con los usuarios con valoraciones para el presente dataset. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Superclase de los Algortimos de recomendacion. 
+
+\begin{DoxyAuthor}{Autor}
+Cristian Sanchez Estape y Jordi Elgueta Serra 
+\end{DoxyAuthor}
+
+
+Definición en la línea \mbox{\hyperlink{_algorisme_8java_source_l00018}{18}} del archivo \mbox{\hyperlink{_algorisme_8java_source}{Algorisme.\+java}}.
+
+
+
+\doxysubsection{Documentación del constructor y destructor}
+\mbox{\Hypertarget{classdominio_1_1clases_1_1_algorisme_af2cea62ddcce94fccda105803f915b5b}\label{classdominio_1_1clases_1_1_algorisme_af2cea62ddcce94fccda105803f915b5b}} 
+\index{dominio.clases.Algorisme@{dominio.clases.Algorisme}!Algorisme@{Algorisme}}
+\index{Algorisme@{Algorisme}!dominio.clases.Algorisme@{dominio.clases.Algorisme}}
+\doxysubsubsection{\texorpdfstring{Algorisme()}{Algorisme()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily dominio.\+clases.\+Algorisme.\+Algorisme (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classdominio_1_1clases_1_1_usuari}{Usuari}}}]{user,  }\item[{\mbox{\hyperlink{classdominio_1_1clases_1_1_cjt__items}{Cjt\+\_\+items}}}]{dataset,  }\item[{Hash\+Map$<$ \mbox{\hyperlink{classdominio_1_1clases_1_1_item}{Item}}, Array\+List$<$ Double $>$ $>$}]{ratings }\end{DoxyParamCaption})}
+
+
+
+Creadora de la clase \mbox{\hyperlink{classdominio_1_1clases_1_1_algorisme}{Algorisme}}. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em user} & Usuario que pide la recomendacion \\
+\hline
+{\em dataset} & Dataset sobre el cual se quiere aplicar la recomendacion \\
+\hline
+{\em ratings} & Diccionario con todos los items del dataset que guarda, para cada uno, todas las valoraciones que tiene \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{_algorisme_8java_source_l00045}{45}} del archivo \mbox{\hyperlink{_algorisme_8java_source}{Algorisme.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00045                                                                                                \{}
+\DoxyCodeLine{00046         this.\mbox{\hyperlink{classdominio_1_1clases_1_1_algorisme_aee088dc070748fe366f2068b0a512981}{user}}=\mbox{\hyperlink{classdominio_1_1clases_1_1_algorisme_aee088dc070748fe366f2068b0a512981}{user}};}
+\DoxyCodeLine{00047         this.\mbox{\hyperlink{classdominio_1_1clases_1_1_algorisme_a966a79e4751cb23c2f8a0537511cd94e}{dataset}}=\mbox{\hyperlink{classdominio_1_1clases_1_1_algorisme_a966a79e4751cb23c2f8a0537511cd94e}{dataset}};}
+\DoxyCodeLine{00048         this.\mbox{\hyperlink{classdominio_1_1clases_1_1_algorisme_a9c9055131097eeb0052bc6da89a59475}{ratings}}=\textcolor{keyword}{new} HashMap<>(\mbox{\hyperlink{classdominio_1_1clases_1_1_algorisme_a9c9055131097eeb0052bc6da89a59475}{ratings}});}
+\DoxyCodeLine{00049     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdominio_1_1clases_1_1_algorisme_aa4fcd0310a6e25c22e5dc3dba4c897cf}\label{classdominio_1_1clases_1_1_algorisme_aa4fcd0310a6e25c22e5dc3dba4c897cf}} 
+\index{dominio.clases.Algorisme@{dominio.clases.Algorisme}!Algorisme@{Algorisme}}
+\index{Algorisme@{Algorisme}!dominio.clases.Algorisme@{dominio.clases.Algorisme}}
+\doxysubsubsection{\texorpdfstring{Algorisme()}{Algorisme()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily dominio.\+clases.\+Algorisme.\+Algorisme (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Creadora por defecto de la clase \mbox{\hyperlink{classdominio_1_1clases_1_1_algorisme}{Algorisme}}. 
+
+
+
+Definición en la línea \mbox{\hyperlink{_algorisme_8java_source_l00054}{54}} del archivo \mbox{\hyperlink{_algorisme_8java_source}{Algorisme.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00054 \{\}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Documentación de las funciones miembro}
+\mbox{\Hypertarget{classdominio_1_1clases_1_1_algorisme_a5f7851101e9d77a1772b65ff634a4c65}\label{classdominio_1_1clases_1_1_algorisme_a5f7851101e9d77a1772b65ff634a4c65}} 
+\index{dominio.clases.Algorisme@{dominio.clases.Algorisme}!setUser@{setUser}}
+\index{setUser@{setUser}!dominio.clases.Algorisme@{dominio.clases.Algorisme}}
+\doxysubsubsection{\texorpdfstring{setUser()}{setUser()}}
+{\footnotesize\ttfamily void dominio.\+clases.\+Algorisme.\+set\+User (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classdominio_1_1clases_1_1_usuari}{Usuari}}}]{user }\end{DoxyParamCaption})}
+
+
+
+Metodo set del usuario. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em user} & Usuario sobre el cual trabajamos \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{_algorisme_8java_source_l00061}{61}} del archivo \mbox{\hyperlink{_algorisme_8java_source}{Algorisme.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00061                                      \{}
+\DoxyCodeLine{00062         this.\mbox{\hyperlink{classdominio_1_1clases_1_1_algorisme_aee088dc070748fe366f2068b0a512981}{user}} = \textcolor{keyword}{new} Usuari(\mbox{\hyperlink{classdominio_1_1clases_1_1_algorisme_aee088dc070748fe366f2068b0a512981}{user}});}
+\DoxyCodeLine{00063     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdominio_1_1clases_1_1_algorisme_a54eea465b2997a3bb9064126af622a9b}\label{classdominio_1_1clases_1_1_algorisme_a54eea465b2997a3bb9064126af622a9b}} 
+\index{dominio.clases.Algorisme@{dominio.clases.Algorisme}!setUsers@{setUsers}}
+\index{setUsers@{setUsers}!dominio.clases.Algorisme@{dominio.clases.Algorisme}}
+\doxysubsubsection{\texorpdfstring{setUsers()}{setUsers()}}
+{\footnotesize\ttfamily void dominio.\+clases.\+Algorisme.\+set\+Users (\begin{DoxyParamCaption}\item[{List$<$ \mbox{\hyperlink{classdominio_1_1clases_1_1_usuari}{Usuari}} $>$}]{users }\end{DoxyParamCaption})}
+
+
+
+Metodo set de los usuarios del dataset. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em users} & Usuarios que tienen valoraciones para el dataset \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{_algorisme_8java_source_l00070}{70}} del archivo \mbox{\hyperlink{_algorisme_8java_source}{Algorisme.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00070                                              \{}
+\DoxyCodeLine{00071         this.\mbox{\hyperlink{classdominio_1_1clases_1_1_algorisme_aa2a6296923e364755e6d0efaaaa4b2c2}{users}} = \textcolor{keyword}{new} LinkedList<>(\mbox{\hyperlink{classdominio_1_1clases_1_1_algorisme_aa2a6296923e364755e6d0efaaaa4b2c2}{users}});}
+\DoxyCodeLine{00072     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdominio_1_1clases_1_1_algorisme_a1cebe59280d945e4de04fbbe0543e80b}\label{classdominio_1_1clases_1_1_algorisme_a1cebe59280d945e4de04fbbe0543e80b}} 
+\index{dominio.clases.Algorisme@{dominio.clases.Algorisme}!printData@{printData}}
+\index{printData@{printData}!dominio.clases.Algorisme@{dominio.clases.Algorisme}}
+\doxysubsubsection{\texorpdfstring{printData()}{printData()}}
+{\footnotesize\ttfamily static void dominio.\+clases.\+Algorisme.\+print\+Data (\begin{DoxyParamCaption}\item[{Map$<$ Integer, Hash\+Map$<$ \mbox{\hyperlink{classdominio_1_1clases_1_1_item}{Item}}, Double $>$ $>$}]{valoracions }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Metodo que imprime por pantalla los usuarios junto con todas sus valoraciones. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em valoracions} & Diccionario que contiene los usuarios con todas sus valoraciones en forma de otro diccionario que contiene los items y sus respectivas valoraciones \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{_algorisme_8java_source_l00079}{79}} del archivo \mbox{\hyperlink{_algorisme_8java_source}{Algorisme.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00079                                                                                   \{}
+\DoxyCodeLine{00080         \textcolor{keywordflow}{for} (Integer u : valoracions.keySet()) \{}
+\DoxyCodeLine{00081             System.out.println(\textcolor{stringliteral}{"{}Usuari "{}} + u + \textcolor{stringliteral}{"{}:"{}});}
+\DoxyCodeLine{00082             \mbox{\hyperlink{classdominio_1_1clases_1_1_algorisme_aca5be8bf5ae18ceaa31e09fea41db9e9}{print}}(valoracions.get(u));}
+\DoxyCodeLine{00083         \}}
+\DoxyCodeLine{00084     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdominio_1_1clases_1_1_algorisme_aca5be8bf5ae18ceaa31e09fea41db9e9}\label{classdominio_1_1clases_1_1_algorisme_aca5be8bf5ae18ceaa31e09fea41db9e9}} 
+\index{dominio.clases.Algorisme@{dominio.clases.Algorisme}!print@{print}}
+\index{print@{print}!dominio.clases.Algorisme@{dominio.clases.Algorisme}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily static void dominio.\+clases.\+Algorisme.\+print (\begin{DoxyParamCaption}\item[{Hash\+Map$<$ \mbox{\hyperlink{classdominio_1_1clases_1_1_item}{Item}}, Double $>$}]{ratings }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Metodo que imprime por pantalla los items con su valoracion. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em ratings} & Diccionario que contine todos los items con su valoracion \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{_algorisme_8java_source_l00090}{90}} del archivo \mbox{\hyperlink{_algorisme_8java_source}{Algorisme.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00090                                                             \{}
+\DoxyCodeLine{00091         NumberFormat formatter = \textcolor{keyword}{new} DecimalFormat(\textcolor{stringliteral}{"{}\#0.000"{}});}
+\DoxyCodeLine{00092         \textcolor{keywordflow}{for} (Item i : \mbox{\hyperlink{classdominio_1_1clases_1_1_algorisme_a9c9055131097eeb0052bc6da89a59475}{ratings}}.keySet()) System.out.println(\textcolor{stringliteral}{"{} "{}} + i.getId() + \textcolor{stringliteral}{"{} -\/-\/> "{}} + formatter.format(\mbox{\hyperlink{classdominio_1_1clases_1_1_algorisme_a9c9055131097eeb0052bc6da89a59475}{ratings}}.get(i).doubleValue()));}
+\DoxyCodeLine{00093 }
+\DoxyCodeLine{00094     \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Documentación de los datos miembro}
+\mbox{\Hypertarget{classdominio_1_1clases_1_1_algorisme_a966a79e4751cb23c2f8a0537511cd94e}\label{classdominio_1_1clases_1_1_algorisme_a966a79e4751cb23c2f8a0537511cd94e}} 
+\index{dominio.clases.Algorisme@{dominio.clases.Algorisme}!dataset@{dataset}}
+\index{dataset@{dataset}!dominio.clases.Algorisme@{dominio.clases.Algorisme}}
+\doxysubsubsection{\texorpdfstring{dataset}{dataset}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classdominio_1_1clases_1_1_cjt__items}{Cjt\+\_\+items}} dominio.\+clases.\+Algorisme.\+dataset\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Dataset sobre el cual se quiere aplicar la recomendacion. 
+
+
+
+Definición en la línea \mbox{\hyperlink{_algorisme_8java_source_l00022}{22}} del archivo \mbox{\hyperlink{_algorisme_8java_source}{Algorisme.\+java}}.
+
+\mbox{\Hypertarget{classdominio_1_1clases_1_1_algorisme_aee088dc070748fe366f2068b0a512981}\label{classdominio_1_1clases_1_1_algorisme_aee088dc070748fe366f2068b0a512981}} 
+\index{dominio.clases.Algorisme@{dominio.clases.Algorisme}!user@{user}}
+\index{user@{user}!dominio.clases.Algorisme@{dominio.clases.Algorisme}}
+\doxysubsubsection{\texorpdfstring{user}{user}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classdominio_1_1clases_1_1_usuari}{Usuari}} dominio.\+clases.\+Algorisme.\+user\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Usuario que pide la recomendacion. 
+
+
+
+Definición en la línea \mbox{\hyperlink{_algorisme_8java_source_l00027}{27}} del archivo \mbox{\hyperlink{_algorisme_8java_source}{Algorisme.\+java}}.
+
+\mbox{\Hypertarget{classdominio_1_1clases_1_1_algorisme_a9c9055131097eeb0052bc6da89a59475}\label{classdominio_1_1clases_1_1_algorisme_a9c9055131097eeb0052bc6da89a59475}} 
+\index{dominio.clases.Algorisme@{dominio.clases.Algorisme}!ratings@{ratings}}
+\index{ratings@{ratings}!dominio.clases.Algorisme@{dominio.clases.Algorisme}}
+\doxysubsubsection{\texorpdfstring{ratings}{ratings}}
+{\footnotesize\ttfamily Hash\+Map$<$\mbox{\hyperlink{classdominio_1_1clases_1_1_item}{Item}}, Array\+List$<$Double$>$ $>$ dominio.\+clases.\+Algorisme.\+ratings\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Diccionario con todos los items del dataset que guarda, para cada uno, todas las valoraciones que tiene. 
+
+
+
+Definición en la línea \mbox{\hyperlink{_algorisme_8java_source_l00031}{31}} del archivo \mbox{\hyperlink{_algorisme_8java_source}{Algorisme.\+java}}.
+
+\mbox{\Hypertarget{classdominio_1_1clases_1_1_algorisme_aa2a6296923e364755e6d0efaaaa4b2c2}\label{classdominio_1_1clases_1_1_algorisme_aa2a6296923e364755e6d0efaaaa4b2c2}} 
+\index{dominio.clases.Algorisme@{dominio.clases.Algorisme}!users@{users}}
+\index{users@{users}!dominio.clases.Algorisme@{dominio.clases.Algorisme}}
+\doxysubsubsection{\texorpdfstring{users}{users}}
+{\footnotesize\ttfamily List$<$\mbox{\hyperlink{classdominio_1_1clases_1_1_usuari}{Usuari}}$>$ dominio.\+clases.\+Algorisme.\+users\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Lista con los usuarios con valoraciones para el presente dataset. 
+
+
+
+Definición en la línea \mbox{\hyperlink{_algorisme_8java_source_l00037}{37}} del archivo \mbox{\hyperlink{_algorisme_8java_source}{Algorisme.\+java}}.
+
+
+
+La documentación para esta clase fue generada a partir del siguiente fichero\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_algorisme_8java}{Algorisme.\+java}}\end{DoxyCompactItemize}

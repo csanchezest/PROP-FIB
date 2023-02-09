@@ -1,0 +1,148 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Proyecto PROP: Sistema Recomendador: Fichero Fuente SlopeOne.java</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Proyecto PROP: Sistema Recomendador<span id="projectnumber">&#160;Muhammad Haris, Cristian Sanchez Estape, Jordi Elgueta Serra y Houda El Fezzak Bekkouri</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.9.3 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Buscar','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_99e8efb7985db3832d54cf06274403f7.html">dominio</a></li><li class="navelem"><a class="el" href="dir_fe0974f999c1660430f80e949da3a897.html">clases</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">SlopeOne.java</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_slope_one_8java.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">package </span>dominio.clases;</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">import</span> java.util.*;</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="classdominio_1_1clases_1_1_slope_one.html">   15</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="classdominio_1_1clases_1_1_slope_one.html">SlopeOne</a> <span class="keyword">extends</span> <a class="code hl_class" href="classdominio_1_1clases_1_1_algorisme.html">Algorisme</a> {</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="classdominio_1_1clases_1_1_slope_one.html#a2b932364f1890dd0c3ff5a7f250f29bb">   19</a></span>    <span class="keyword">private</span> HashMap&lt;Item, Double&gt; <a class="code hl_variable" href="classdominio_1_1clases_1_1_slope_one.html#a2b932364f1890dd0c3ff5a7f250f29bb">predictions</a> = <span class="keyword">new</span> HashMap&lt;&gt;();</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="classdominio_1_1clases_1_1_slope_one.html#a1d8e25393af27ae0779edd9fc34c8832">   27</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdominio_1_1clases_1_1_slope_one.html#a1d8e25393af27ae0779edd9fc34c8832">slopeOne</a>(List&lt;Usuari&gt; <a class="code hl_variable" href="classdominio_1_1clases_1_1_algorisme.html#aa2a6296923e364755e6d0efaaaa4b2c2">users</a>, <span class="keywordtype">double</span> max, <span class="keywordtype">int</span> k) {</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        HashMap&lt;Item, Double&gt; queries = <a class="code hl_variable" href="classdominio_1_1clases_1_1_algorisme.html#aee088dc070748fe366f2068b0a512981">user</a>.<a class="code hl_function" href="classdominio_1_1clases_1_1_usuari.html#a5f2f72c56d755b0785792c34622f419d">getRatedItems</a>(), usersRatings;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        HashMap&lt;Item, Double&gt; sums = <span class="keyword">new</span> HashMap&lt;&gt;();</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        HashMap&lt;Item, Integer&gt; nums = <span class="keyword">new</span> HashMap&lt;&gt;();</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        <span class="keywordflow">for</span> (<a class="code hl_class" href="classdominio_1_1clases_1_1_item.html">Item</a> j : queries.keySet()) {</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>            <span class="keywordflow">for</span> (<a class="code hl_class" href="classdominio_1_1clases_1_1_usuari.html">Usuari</a> i : <a class="code hl_variable" href="classdominio_1_1clases_1_1_algorisme.html#aa2a6296923e364755e6d0efaaaa4b2c2">users</a>) {</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>                usersRatings = i.getRatedItems();</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>                <span class="keywordflow">if</span> (usersRatings.containsKey(j))</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>                    <span class="keywordflow">for</span> (<a class="code hl_class" href="classdominio_1_1clases_1_1_item.html">Item</a> J : usersRatings.keySet()) {</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>                        <span class="keywordflow">if</span> (!J.equals(j)) {</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>                            <span class="keywordflow">if</span> (sums.get(J) == <span class="keyword">null</span>) {</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>                                sums.put(J, 0.);</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>                                nums.put(J, 0);</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>                            }</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>                            sums.put(J, sums.get(J) + queries.get(j) + (usersRatings.get(J) - usersRatings.get(j)));</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>                            nums.put(J, nums.get(J) + 1);</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>                        }</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>                    }</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>            }</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        }</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        <span class="keywordflow">for</span> (<a class="code hl_class" href="classdominio_1_1clases_1_1_item.html">Item</a> j : sums.keySet()) {</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>            <span class="keywordtype">double</span> val = sums.get(j);</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>            <span class="keywordflow">if</span> (val &gt;= 0.) <a class="code hl_variable" href="classdominio_1_1clases_1_1_slope_one.html#a2b932364f1890dd0c3ff5a7f250f29bb">predictions</a>.put(j, val / nums.get(j));</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        }</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classdominio_1_1clases_1_1_slope_one.html#a2b932364f1890dd0c3ff5a7f250f29bb">predictions</a>.size() &gt; k) {</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>            <a class="code hl_class" href="classdominio_1_1clases_1_1_avaluacio.html">Avaluacio</a>.<a class="code hl_function" href="classdominio_1_1clases_1_1_avaluacio.html#a6d7fb87ff65af489726e43e652c6effb">sortByValue</a>(<a class="code hl_variable" href="classdominio_1_1clases_1_1_slope_one.html#a2b932364f1890dd0c3ff5a7f250f29bb">predictions</a>);</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>            <span class="keywordtype">int</span> count = 0;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>            HashMap&lt;Item, Double&gt; finalPreds = <span class="keyword">new</span> LinkedHashMap&lt;&gt;();</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>            <span class="keywordflow">for</span> (<a class="code hl_class" href="classdominio_1_1clases_1_1_item.html">Item</a> i : <a class="code hl_variable" href="classdominio_1_1clases_1_1_slope_one.html#a2b932364f1890dd0c3ff5a7f250f29bb">predictions</a>.keySet()) {</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>                <span class="keywordtype">double</span> val = <a class="code hl_variable" href="classdominio_1_1clases_1_1_slope_one.html#a2b932364f1890dd0c3ff5a7f250f29bb">predictions</a>.get(i);</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>                <span class="keywordflow">if</span> (val &gt; max) finalPreds.put(i, max);</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>                <span class="keywordflow">else</span> finalPreds.put(i, val);</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>                count++;</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>                <span class="keywordflow">if</span> (count == k) <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>            }</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>            <a class="code hl_variable" href="classdominio_1_1clases_1_1_slope_one.html#a2b932364f1890dd0c3ff5a7f250f29bb">predictions</a> = <span class="keyword">new</span> LinkedHashMap&lt;&gt;(finalPreds);</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        }</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    }</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno"><a class="line" href="classdominio_1_1clases_1_1_slope_one.html#a667af6b9487f6b406d5b7b0a32f9d7b3">   71</a></span>    <span class="keyword">public</span> HashMap&lt;Item, Double&gt; <a class="code hl_function" href="classdominio_1_1clases_1_1_slope_one.html#a667af6b9487f6b406d5b7b0a32f9d7b3">getPredictions</a>() {</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classdominio_1_1clases_1_1_slope_one.html#a2b932364f1890dd0c3ff5a7f250f29bb">predictions</a>;</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    }</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno"><a class="line" href="classdominio_1_1clases_1_1_slope_one.html#a4ae0debcdd31def7edbd2ed9d09e0408">   80</a></span>    <span class="keyword">public</span> <a class="code hl_function" href="classdominio_1_1clases_1_1_slope_one.html#a4ae0debcdd31def7edbd2ed9d09e0408">SlopeOne</a>(<a class="code hl_class" href="classdominio_1_1clases_1_1_usuari.html">Usuari</a> u) {</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        super();</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        super.setUser(u);</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    }</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>}</div>
+<div class="ttc" id="aclassdominio_1_1clases_1_1_algorisme_html"><div class="ttname"><a href="classdominio_1_1clases_1_1_algorisme.html">dominio.clases.Algorisme</a></div><div class="ttdoc">Superclase de los Algortimos de recomendacion.</div><div class="ttdef"><b>Definition:</b> <a href="_algorisme_8java_source.html#l00018">Algorisme.java:18</a></div></div>
+<div class="ttc" id="aclassdominio_1_1clases_1_1_algorisme_html_aa2a6296923e364755e6d0efaaaa4b2c2"><div class="ttname"><a href="classdominio_1_1clases_1_1_algorisme.html#aa2a6296923e364755e6d0efaaaa4b2c2">dominio.clases.Algorisme.users</a></div><div class="ttdeci">List&lt; Usuari &gt; users</div><div class="ttdoc">Lista con los usuarios con valoraciones para el presente dataset.</div><div class="ttdef"><b>Definition:</b> <a href="_algorisme_8java_source.html#l00037">Algorisme.java:37</a></div></div>
+<div class="ttc" id="aclassdominio_1_1clases_1_1_algorisme_html_aee088dc070748fe366f2068b0a512981"><div class="ttname"><a href="classdominio_1_1clases_1_1_algorisme.html#aee088dc070748fe366f2068b0a512981">dominio.clases.Algorisme.user</a></div><div class="ttdeci">Usuari user</div><div class="ttdoc">Usuario que pide la recomendacion.</div><div class="ttdef"><b>Definition:</b> <a href="_algorisme_8java_source.html#l00027">Algorisme.java:27</a></div></div>
+<div class="ttc" id="aclassdominio_1_1clases_1_1_avaluacio_html"><div class="ttname"><a href="classdominio_1_1clases_1_1_avaluacio.html">dominio.clases.Avaluacio</a></div><div class="ttdoc">Clase dedicada a la evaluacion de recomendaciones mediante el calculo del DCG de un conjunto de valor...</div><div class="ttdef"><b>Definition:</b> <a href="_avaluacio_8java_source.html#l00015">Avaluacio.java:15</a></div></div>
+<div class="ttc" id="aclassdominio_1_1clases_1_1_avaluacio_html_a6d7fb87ff65af489726e43e652c6effb"><div class="ttname"><a href="classdominio_1_1clases_1_1_avaluacio.html#a6d7fb87ff65af489726e43e652c6effb">dominio.clases.Avaluacio.sortByValue</a></div><div class="ttdeci">static HashMap&lt; Item, Double &gt; sortByValue(HashMap&lt; Item, Double &gt; data)</div><div class="ttdoc">Metodo dedicado a la reordenacion de las valoraciones segun su valor (paso necesario para la aplicaci...</div><div class="ttdef"><b>Definition:</b> <a href="_avaluacio_8java_source.html#l00063">Avaluacio.java:63</a></div></div>
+<div class="ttc" id="aclassdominio_1_1clases_1_1_item_html"><div class="ttname"><a href="classdominio_1_1clases_1_1_item.html">dominio.clases.Item</a></div><div class="ttdoc">Representa un item y su conjunto de atributos.</div><div class="ttdef"><b>Definition:</b> <a href="_item_8java_source.html#l00019">Item.java:19</a></div></div>
+<div class="ttc" id="aclassdominio_1_1clases_1_1_slope_one_html"><div class="ttname"><a href="classdominio_1_1clases_1_1_slope_one.html">dominio.clases.SlopeOne</a></div><div class="ttdoc">Clase dedicada a la implementacion del algoritmo de prediccion SlopeOne.</div><div class="ttdef"><b>Definition:</b> <a href="_slope_one_8java_source.html#l00015">SlopeOne.java:15</a></div></div>
+<div class="ttc" id="aclassdominio_1_1clases_1_1_slope_one_html_a1d8e25393af27ae0779edd9fc34c8832"><div class="ttname"><a href="classdominio_1_1clases_1_1_slope_one.html#a1d8e25393af27ae0779edd9fc34c8832">dominio.clases.SlopeOne.slopeOne</a></div><div class="ttdeci">void slopeOne(List&lt; Usuari &gt; users, double max, int k)</div><div class="ttdoc">Metodo que computa el Weighted SlopeOne.</div><div class="ttdef"><b>Definition:</b> <a href="_slope_one_8java_source.html#l00027">SlopeOne.java:27</a></div></div>
+<div class="ttc" id="aclassdominio_1_1clases_1_1_slope_one_html_a2b932364f1890dd0c3ff5a7f250f29bb"><div class="ttname"><a href="classdominio_1_1clases_1_1_slope_one.html#a2b932364f1890dd0c3ff5a7f250f29bb">dominio.clases.SlopeOne.predictions</a></div><div class="ttdeci">HashMap&lt; Item, Double &gt; predictions</div><div class="ttdoc">Map que almacena, para un unico usuario, las predicciones sobre un conjunto determinado de items.</div><div class="ttdef"><b>Definition:</b> <a href="_slope_one_8java_source.html#l00019">SlopeOne.java:19</a></div></div>
+<div class="ttc" id="aclassdominio_1_1clases_1_1_slope_one_html_a4ae0debcdd31def7edbd2ed9d09e0408"><div class="ttname"><a href="classdominio_1_1clases_1_1_slope_one.html#a4ae0debcdd31def7edbd2ed9d09e0408">dominio.clases.SlopeOne.SlopeOne</a></div><div class="ttdeci">SlopeOne(Usuari u)</div><div class="ttdoc">Constructora de SlopeOne.</div><div class="ttdef"><b>Definition:</b> <a href="_slope_one_8java_source.html#l00080">SlopeOne.java:80</a></div></div>
+<div class="ttc" id="aclassdominio_1_1clases_1_1_slope_one_html_a667af6b9487f6b406d5b7b0a32f9d7b3"><div class="ttname"><a href="classdominio_1_1clases_1_1_slope_one.html#a667af6b9487f6b406d5b7b0a32f9d7b3">dominio.clases.SlopeOne.getPredictions</a></div><div class="ttdeci">HashMap&lt; Item, Double &gt; getPredictions()</div><div class="ttdoc">Metodo get de las predicciones generadas.</div><div class="ttdef"><b>Definition:</b> <a href="_slope_one_8java_source.html#l00071">SlopeOne.java:71</a></div></div>
+<div class="ttc" id="aclassdominio_1_1clases_1_1_usuari_html"><div class="ttname"><a href="classdominio_1_1clases_1_1_usuari.html">dominio.clases.Usuari</a></div><div class="ttdoc">Clase que representa un Usuario.</div><div class="ttdef"><b>Definition:</b> <a href="_usuari_8java_source.html#l00016">Usuari.java:16</a></div></div>
+<div class="ttc" id="aclassdominio_1_1clases_1_1_usuari_html_a5f2f72c56d755b0785792c34622f419d"><div class="ttname"><a href="classdominio_1_1clases_1_1_usuari.html#a5f2f72c56d755b0785792c34622f419d">dominio.clases.Usuari.getRatedItems</a></div><div class="ttdeci">HashMap&lt; Item, Double &gt; getRatedItems()</div><div class="ttdoc">Metodo getter de las valoraciones realizadas por un usuario.</div><div class="ttdef"><b>Definition:</b> <a href="_usuari_8java_source.html#l00095">Usuari.java:95</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+</small></address>
+</body>
+</html>

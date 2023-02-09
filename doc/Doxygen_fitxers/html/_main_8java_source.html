@@ -1,0 +1,301 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Proyecto PROP: Sistema Recomendador: Fichero Fuente Main.java</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Proyecto PROP: Sistema Recomendador<span id="projectnumber">&#160;Muhammad Haris, Cristian Sanchez Estape, Jordi Elgueta Serra y Houda El Fezzak Bekkouri</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.9.3 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Buscar','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_99e8efb7985db3832d54cf06274403f7.html">dominio</a></li><li class="navelem"><a class="el" href="dir_fe0974f999c1660430f80e949da3a897.html">clases</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">Main.java</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_main_8java.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">package </span>dominio.clases;</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">import</span> java.io.BufferedReader;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="keyword">import</span> java.io.File;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keyword">import</span> java.io.FileReader;</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="keyword">import</span> java.io.IOException;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="keyword">import</span> java.net.URISyntaxException;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="keyword">import</span> java.util.*;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="classdominio_1_1clases_1_1_main.html">   27</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="classdominio_1_1clases_1_1_main.html">Main</a> {</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="classdominio_1_1clases_1_1_main.html#a2a1fe442cbc07acc8c57d24ae3fa144a">   29</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdominio_1_1clases_1_1_main.html#a2a1fe442cbc07acc8c57d24ae3fa144a">main</a>(String[] args) {</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        <span class="keywordtype">boolean</span> finished = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        System.out.print(<span class="stringliteral">&quot;Bienvenido al sistema recomendador. &quot;</span>);</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        <span class="keywordflow">while</span> (!finished) {</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>            <span class="keywordtype">int</span> id, algo, ds, sz = 0;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>            String pathToCsv = <span class="stringliteral">&quot;/persistencia/data/datasets/&quot;</span>;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>            Scanner sc = <span class="keyword">new</span> Scanner(System.in);</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>            System.out.print(<span class="stringliteral">&quot;Indique el dataset a usar (0 -&gt; Movielens; 1 -&gt; Series): &quot;</span>);</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>            ds = sc.nextInt();</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>            <span class="keywordflow">while</span> (ds != 0 &amp;&amp; ds != 1) {</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>                System.out.print(<span class="stringliteral">&quot;Número incorrecto, inténtalo de nuevo:&quot;</span>);</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>                ds = sc.nextInt();</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>            }</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>            <span class="keywordflow">switch</span> (ds) {</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>                <span class="keywordflow">case</span> 0:</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>                    pathToCsv += <span class="stringliteral">&quot;Movielens/&quot;</span>;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>                    System.out.print(<span class="stringliteral">&quot;Elije el tamaño del dataset (0 -&gt; 250; 1 -&gt; 750, 2 -&gt; 2250, 3 -&gt; 6750): &quot;</span>);</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>                    sz = sc.nextInt();</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>                    <span class="keywordflow">while</span> (sz != 0 &amp;&amp; sz != 1 &amp;&amp; sz != 2 &amp;&amp; sz != 3) {</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>                        System.out.print(<span class="stringliteral">&quot;Tamaño erroneo. Pruebe de nuevo: &quot;</span>);</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>                        sz = sc.nextInt();</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>                    }</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>                <span class="keywordflow">case</span> 1:</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>                    pathToCsv += <span class="stringliteral">&quot;Series/&quot;</span>;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>                    System.out.print(<span class="stringliteral">&quot;Elije el tamaño del dataset (0 -&gt; pequeño; 1 -&gt; mediano; 2 -&gt; grande): &quot;</span>);</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>                    sz = sc.nextInt();</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>                    <span class="keywordflow">while</span> (sz != 0 &amp;&amp; sz != 1 &amp;&amp; sz != 2) {</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>                        System.out.print(<span class="stringliteral">&quot;Tamaño erroneo. Pruebe de nuevo: &quot;</span>);</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>                        sz = sc.nextInt();</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>                    }</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>            }</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>            <span class="keywordflow">switch</span> (sz) {</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>                <span class="keywordflow">case</span> 0:</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>                    pathToCsv += <span class="stringliteral">&quot;250/&quot;</span>;</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>                <span class="keywordflow">case</span> 1:</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>                    pathToCsv += <span class="stringliteral">&quot;750/&quot;</span>;</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>                <span class="keywordflow">case</span> 2:</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>                    pathToCsv += <span class="stringliteral">&quot;2250/&quot;</span>;</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>                <span class="keywordflow">case</span> 3:</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>                    pathToCsv += <span class="stringliteral">&quot;6750/&quot;</span>;</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>            }</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>            <span class="comment">//Lectura del dataset y de los ratings</span></div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>            <a class="code hl_class" href="classdominio_1_1clases_1_1_cjt__items.html">Cjt_items</a> dataset = <span class="keyword">new</span> <a class="code hl_class" href="classdominio_1_1clases_1_1_cjt__items.html">Cjt_items</a>(pathToCsv + <span class="stringliteral">&quot;items.csv&quot;</span>, <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>            HashMap&lt;String,Item&gt; items = dataset.<a class="code hl_function" href="classdominio_1_1clases_1_1_cjt__items.html#ad65ce3e01d8107df2fe96e4ac3280b92">getItems</a>();</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>            Valoracio ratings = <span class="keyword">new</span> Valoracio(pathToCsv + <span class="stringliteral">&quot;ratings.db.csv&quot;</span>, dataset);</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>            Valoracio ratingsKnown = <span class="keyword">new</span> Valoracio(pathToCsv + <span class="stringliteral">&quot;ratings.test.known.csv&quot;</span>, dataset);</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>            Valoracio ratingsUnknown = <span class="keyword">new</span> Valoracio(pathToCsv + <span class="stringliteral">&quot;ratings.test.unknown.csv&quot;</span>, dataset);</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>            <span class="keywordtype">double</span> maxRating = ratings.getMaxRating();</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>            System.out.print(<span class="stringliteral">&quot;Elije el usuario al que se le hara la recomendacion (-1 -&gt; Si quieres que se hagan recomendaciones a todos los usuarios del fichero known): &quot;</span>);</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>            <span class="keywordtype">id</span> = sc.nextInt();</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>            <span class="keywordflow">while</span> (!ratingsKnown.getUserRatings().containsKey(<span class="keywordtype">id</span>) &amp;&amp; <span class="keywordtype">id</span> != -1) {</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>                System.out.println(<span class="stringliteral">&quot;El usuario que has introducido es incorrecto, introducelo de nuevo: &quot;</span>);</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>                <span class="keywordtype">id</span> = sc.nextInt();</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>            }</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>            System.out.print(<span class="stringliteral">&quot;Elije el algoritmo a usar (0 -&gt; Collaborative filltering; 1 -&gt; Content-based): &quot;</span>);</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>            algo = sc.nextInt();</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>            <span class="keywordflow">while</span> (algo != 0 &amp;&amp; algo != 1) {</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>                System.out.print(<span class="stringliteral">&quot;Instruccion incorrecta, inténtalo de nuevo: &quot;</span>);</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>                algo = sc.nextInt();</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>            }</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span> </div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>            HashMap&lt;Integer,HashMap&lt;Item,Double&gt;&gt; unkown = ratingsUnknown.getUserRatings();</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>            <span class="keywordtype">int</span> k;</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>            System.out.print(<span class="stringliteral">&quot;Escoje el numero de items que quieres que se recomiendan: &quot;</span>);</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>            k = sc.nextInt();</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>            <span class="keywordflow">while</span> (k &gt; items.size()) {</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>                System.out.print(<span class="stringliteral">&quot;Número incorrecto, inténtalo de nuevo:&quot;</span>);</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>                k = sc.nextInt();</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>            }</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>            <span class="keywordflow">if</span> (<span class="keywordtype">id</span> != -1) {</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>                <a class="code hl_class" href="classdominio_1_1clases_1_1_usuari.html">Usuari</a> us = <span class="keyword">null</span>;</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>                <span class="keywordflow">for</span> (<a class="code hl_class" href="classdominio_1_1clases_1_1_usuari.html">Usuari</a> u : ratingsKnown.getUsers())</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>                    <span class="keywordflow">if</span> (u.getUserId() == <span class="keywordtype">id</span>) {</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>                        us = u;</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>                        <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>                    }</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>                <span class="keywordflow">switch</span> (algo) {</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>                    <span class="keywordflow">case</span> 0:</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>                        <a class="code hl_class" href="classdominio_1_1clases_1_1_slope_one.html">SlopeOne</a> sp = <span class="keyword">new</span> <a class="code hl_class" href="classdominio_1_1clases_1_1_slope_one.html">SlopeOne</a>();</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>                        System.out.println(<span class="stringliteral">&quot;Los ítems que recomendamos para el usuario &quot;</span> + us.<a class="code hl_function" href="classdominio_1_1clases_1_1_usuari.html#aa22633a65abe77a2c62a8388d62f9902">getUserId</a>() + <span class="stringliteral">&quot; son: &quot;</span>);</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>                        <a class="code hl_class" href="classdominio_1_1clases_1_1_collaborative.html">Collaborative</a> alg = <span class="keyword">new</span> <a class="code hl_class" href="classdominio_1_1clases_1_1_collaborative.html">Collaborative</a>();</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>                        List&lt;Usuari&gt; aux2 = ratings.getUsers();</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>                        aux2.add(us);</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>                        HashMap&lt;Centroid, List&lt;Usuari&gt;&gt; centroids = alg.<a class="code hl_function" href="classdominio_1_1clases_1_1_collaborative.html#a0abf3775716bbec72f760848caa79b4a">recommendations</a>(aux2, 10, <span class="keyword">new</span> <a class="code hl_class" href="classdominio_1_1clases_1_1_distance_users.html">DistanceUsers</a>(),</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>                                100, 3);</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>                        List&lt;Usuari&gt; nearby = <span class="keyword">new</span> LinkedList&lt;&gt;();</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>                        Set&lt;Item&gt; neededItems = <span class="keyword">new</span> HashSet&lt;&gt;();</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>                        <span class="keywordflow">for</span> (<a class="code hl_class" href="classdominio_1_1clases_1_1_centroid.html">Centroid</a> c : centroids.keySet()) {</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>                            List&lt;Usuari&gt; aux = centroids.get(c);</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>                            <span class="keywordflow">if</span> (centroids.get(c).contains(us)) {</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>                                nearby.addAll(aux);</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>                                <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>                            }</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>                        }</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>                        <span class="keywordflow">for</span>(<a class="code hl_class" href="classdominio_1_1clases_1_1_usuari.html">Usuari</a> u: nearby) neededItems.add((<a class="code hl_class" href="classdominio_1_1clases_1_1_item.html">Item</a>) u.getRatedItems().keySet());</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>                        List&lt;Item&gt; analizedItems = <span class="keyword">new</span> ArrayList&lt;&gt;();</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>                        analizedItems.addAll(neededItems);</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>                        sp.<a class="code hl_function" href="classdominio_1_1clases_1_1_slope_one.html#a30e9ff9b4901d657847fa305c6911300">slopeOne</a>(nearby, us,maxRating);</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>                        HashMap&lt;Item, Double&gt; preds = <a class="code hl_class" href="classdominio_1_1clases_1_1_avaluacio.html">Avaluacio</a>.<a class="code hl_function" href="classdominio_1_1clases_1_1_avaluacio.html#a6d7fb87ff65af489726e43e652c6effb">sortByValue</a>(sp.<a class="code hl_function" href="classdominio_1_1clases_1_1_slope_one.html#a667af6b9487f6b406d5b7b0a32f9d7b3">getPredictions</a>()), prov = <span class="keyword">new</span> HashMap&lt;&gt;();</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>                        <span class="keywordtype">int</span> x = 0;</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>                        <span class="keywordflow">for</span> (<a class="code hl_class" href="classdominio_1_1clases_1_1_item.html">Item</a> i : preds.keySet()) {</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>                            <span class="keywordflow">if</span> (preds.get(i) &gt;= 0) {</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>                                System.out.println(<span class="stringliteral">&quot;\t&quot;</span> + i.getId() + <span class="stringliteral">&quot; -&gt; &quot;</span> + preds.get(i));</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>                                x++;</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>                                <span class="keywordflow">if</span> (x == k) <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>                            }</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>                        }</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>                        <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>                    <span class="keywordflow">case</span> 1:</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>                        System.out.println(<span class="stringliteral">&quot;Los ítems que recomendados para el usuario &quot;</span> + us.<a class="code hl_function" href="classdominio_1_1clases_1_1_usuari.html#aa22633a65abe77a2c62a8388d62f9902">getUserId</a>() + <span class="stringliteral">&quot; son: &quot;</span>);</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>                        <a class="code hl_class" href="classdominio_1_1clases_1_1_content_based.html">ContentBased</a> cb = <span class="keyword">new</span> <a class="code hl_class" href="classdominio_1_1clases_1_1_content_based.html">ContentBased</a>(us, dataset, ratings.getRatings(), maxRating);</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>                        cb.<a class="code hl_function" href="classdominio_1_1clases_1_1_content_based.html#a672f34661a60a5596ae6d64f7e30f641">setK</a>(k);</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>                        HashMap&lt;Item, Double&gt; recomendations = cb.<a class="code hl_function" href="classdominio_1_1clases_1_1_content_based.html#a85943724cd710fd0ab3d14159604589a">recommended_items</a>();</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>                        <a class="code hl_class" href="classdominio_1_1clases_1_1_algorisme.html">Algorisme</a>.<a class="code hl_function" href="classdominio_1_1clases_1_1_algorisme.html#aca5be8bf5ae18ceaa31e09fea41db9e9">print</a>(<a class="code hl_class" href="classdominio_1_1clases_1_1_avaluacio.html">Avaluacio</a>.<a class="code hl_function" href="classdominio_1_1clases_1_1_avaluacio.html#a6d7fb87ff65af489726e43e652c6effb">sortByValue</a>(recomendations));</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>                        HashMap&lt;Integer, HashMap&lt;Item, Double&gt;&gt; vals = <span class="keyword">new</span> HashMap&lt;&gt;();</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>                        vals.put(us.<a class="code hl_function" href="classdominio_1_1clases_1_1_usuari.html#aa22633a65abe77a2c62a8388d62f9902">getUserId</a>(), recomendations);</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>                        <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>                }</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span> </div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>                System.out.print(<span class="stringliteral">&quot;Quieres pedir recomendaciones con otro Dataset?(y/n) &quot;</span>);</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>                String s = sc.next();</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>                finished = s.equals(<span class="stringliteral">&quot;n&quot;</span>);</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>            } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>                <span class="keywordflow">for</span> (<a class="code hl_class" href="classdominio_1_1clases_1_1_usuari.html">Usuari</a> us : ratingsKnown.getUsers()) {</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>                    <span class="keywordflow">switch</span> (algo) {</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>                        <span class="keywordflow">case</span> 0:</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>                            <a class="code hl_class" href="classdominio_1_1clases_1_1_slope_one.html">SlopeOne</a> sp = <span class="keyword">new</span> <a class="code hl_class" href="classdominio_1_1clases_1_1_slope_one.html">SlopeOne</a>();</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>                            System.out.println(<span class="stringliteral">&quot;Los ítems que recomendamos para el usuario &quot;</span> + us.getUserId() + <span class="stringliteral">&quot; son: &quot;</span>);</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>                            <a class="code hl_class" href="classdominio_1_1clases_1_1_collaborative.html">Collaborative</a> alg = <span class="keyword">new</span> <a class="code hl_class" href="classdominio_1_1clases_1_1_collaborative.html">Collaborative</a>();</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>                            List&lt;Usuari&gt; aux2 = ratings.getUsers();</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>                            aux2.add(us);</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>                            HashMap&lt;Centroid, List&lt;Usuari&gt;&gt; centroids = alg.<a class="code hl_function" href="classdominio_1_1clases_1_1_collaborative.html#a0abf3775716bbec72f760848caa79b4a">recommendations</a>(aux2, 5, <span class="keyword">new</span> <a class="code hl_class" href="classdominio_1_1clases_1_1_distance_users.html">DistanceUsers</a>(),</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>                                    100, 3);</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>                            List&lt;Usuari&gt; nearby = <span class="keyword">new</span> LinkedList&lt;&gt;();</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>                            Set&lt;Item&gt; neededItems = <span class="keyword">new</span> HashSet&lt;&gt;();</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>                            <span class="keywordflow">for</span> (<a class="code hl_class" href="classdominio_1_1clases_1_1_centroid.html">Centroid</a> c : centroids.keySet()) {</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>                                List&lt;Usuari&gt; aux = centroids.get(c);</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>                                <span class="keywordflow">if</span> (centroids.get(c).contains(us)) {</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>                                    nearby.addAll(aux);</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>                                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>                                }</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>                            }</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>                            <span class="keywordflow">for</span>(<a class="code hl_class" href="classdominio_1_1clases_1_1_usuari.html">Usuari</a> u: nearby) neededItems.addAll(u.getRatedItems().keySet());</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>                            List&lt;Item&gt; analizedItems = <span class="keyword">new</span> ArrayList&lt;&gt;();</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>                            analizedItems.addAll(neededItems);</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>                            sp.<a class="code hl_function" href="classdominio_1_1clases_1_1_slope_one.html#a30e9ff9b4901d657847fa305c6911300">slopeOne</a>(nearby, us,maxRating);</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>                            HashMap&lt;Item, Double&gt; preds = <a class="code hl_class" href="classdominio_1_1clases_1_1_avaluacio.html">Avaluacio</a>.<a class="code hl_function" href="classdominio_1_1clases_1_1_avaluacio.html#a6d7fb87ff65af489726e43e652c6effb">sortByValue</a>(sp.<a class="code hl_function" href="classdominio_1_1clases_1_1_slope_one.html#a667af6b9487f6b406d5b7b0a32f9d7b3">getPredictions</a>()), prov = <span class="keyword">new</span> HashMap&lt;&gt;();</div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>                            HashMap&lt;Integer,HashMap&lt;Item,Double&gt;&gt;sol = <span class="keyword">new</span> HashMap&lt;&gt;();</div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>                            <span class="keywordtype">int</span> x = 0;</div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>                            <span class="keywordflow">for</span> (<a class="code hl_class" href="classdominio_1_1clases_1_1_item.html">Item</a> i : preds.keySet()) {</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>                                <span class="keywordflow">if</span> (preds.get(i) &gt;= 0) {</div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>                                    System.out.println(<span class="stringliteral">&quot;\t&quot;</span> + i.getId() + <span class="stringliteral">&quot; -&gt; &quot;</span> + preds.get(i));</div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>                                    prov.put(i,preds.get(i));</div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>                                    x++;</div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>                                    <span class="keywordflow">if</span> (x == k) <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>                                }</div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>                            }</div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>                            sol.put(us.getUserId(),prov);</div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>                            System.out.print(<span class="stringliteral">&quot;Evaluacion de la recomendacion: &quot;</span>);</div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>                            <a class="code hl_class" href="classdominio_1_1clases_1_1_avaluacio.html">Avaluacio</a>.<a class="code hl_function" href="classdominio_1_1clases_1_1_avaluacio.html#a882f7035680a3273984ab00f78aa3be6">DCG</a>(sol,unkown,us.getUserId());</div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>                            <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>                        <span class="keywordflow">case</span> 1:</div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>                            System.out.println(<span class="stringliteral">&quot;Los ítems que recomendados para el usuario &quot;</span> + us.getUserId() + <span class="stringliteral">&quot; son: &quot;</span>);</div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>                            <a class="code hl_class" href="classdominio_1_1clases_1_1_content_based.html">ContentBased</a> cb = <span class="keyword">new</span> <a class="code hl_class" href="classdominio_1_1clases_1_1_content_based.html">ContentBased</a>(us, dataset, ratings.getRatings(), maxRating);</div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>                            cb.<a class="code hl_function" href="classdominio_1_1clases_1_1_content_based.html#a672f34661a60a5596ae6d64f7e30f641">setK</a>(k);</div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>                            HashMap&lt;Item, Double&gt; recomendations = cb.<a class="code hl_function" href="classdominio_1_1clases_1_1_content_based.html#a85943724cd710fd0ab3d14159604589a">recommended_items</a>();</div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>                            <a class="code hl_class" href="classdominio_1_1clases_1_1_algorisme.html">Algorisme</a>.<a class="code hl_function" href="classdominio_1_1clases_1_1_algorisme.html#aca5be8bf5ae18ceaa31e09fea41db9e9">print</a>(<a class="code hl_class" href="classdominio_1_1clases_1_1_avaluacio.html">Avaluacio</a>.<a class="code hl_function" href="classdominio_1_1clases_1_1_avaluacio.html#a6d7fb87ff65af489726e43e652c6effb">sortByValue</a>(recomendations));</div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>                            HashMap&lt;Integer, HashMap&lt;Item, Double&gt;&gt; vals = <span class="keyword">new</span> HashMap&lt;&gt;();</div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>                            vals.put(us.getUserId(), recomendations);</div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>                            System.out.print(<span class="stringliteral">&quot;Evaluacion de la recomendacion: &quot;</span>);</div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>                            <a class="code hl_class" href="classdominio_1_1clases_1_1_avaluacio.html">Avaluacio</a>.<a class="code hl_function" href="classdominio_1_1clases_1_1_avaluacio.html#a882f7035680a3273984ab00f78aa3be6">DCG</a>(vals,unkown,us.getUserId());</div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>                            <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>                    }</div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>                }</div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>                System.out.print(<span class="stringliteral">&quot;Quieres pedir recomendaciones con otro Dataset?(y/n) &quot;</span>);</div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>                String s = sc.next();</div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>                finished = s.equals(<span class="stringliteral">&quot;n&quot;</span>);</div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>            }</div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>        }</div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>        System.out.println(<span class="stringliteral">&quot;La ejecución ha terminado.&quot;</span>);</div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>    }</div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span> </div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>}</div>
+<div class="ttc" id="aclassdominio_1_1clases_1_1_algorisme_html"><div class="ttname"><a href="classdominio_1_1clases_1_1_algorisme.html">dominio.clases.Algorisme</a></div><div class="ttdoc">Superclase de los Algortimos de recomendacion.</div><div class="ttdef"><b>Definition:</b> <a href="_algorisme_8java_source.html#l00020">Algorisme.java:20</a></div></div>
+<div class="ttc" id="aclassdominio_1_1clases_1_1_algorisme_html_aca5be8bf5ae18ceaa31e09fea41db9e9"><div class="ttname"><a href="classdominio_1_1clases_1_1_algorisme.html#aca5be8bf5ae18ceaa31e09fea41db9e9">dominio.clases.Algorisme.print</a></div><div class="ttdeci">static void print(HashMap&lt; Item, Double &gt; ratings)</div><div class="ttdoc">Metodo que imprime por pantalla los items con su valoracion.</div><div class="ttdef"><b>Definition:</b> <a href="_algorisme_8java_source.html#l00067">Algorisme.java:67</a></div></div>
+<div class="ttc" id="aclassdominio_1_1clases_1_1_avaluacio_html"><div class="ttname"><a href="classdominio_1_1clases_1_1_avaluacio.html">dominio.clases.Avaluacio</a></div><div class="ttdoc">Clase dedicada a la evaluacion de recomendaciones mediante el calculo del DCG de un conjunto de valor...</div><div class="ttdef"><b>Definition:</b> <a href="_avaluacio_8java_source.html#l00015">Avaluacio.java:15</a></div></div>
+<div class="ttc" id="aclassdominio_1_1clases_1_1_avaluacio_html_a6d7fb87ff65af489726e43e652c6effb"><div class="ttname"><a href="classdominio_1_1clases_1_1_avaluacio.html#a6d7fb87ff65af489726e43e652c6effb">dominio.clases.Avaluacio.sortByValue</a></div><div class="ttdeci">static HashMap&lt; Item, Double &gt; sortByValue(HashMap&lt; Item, Double &gt; data)</div><div class="ttdoc">Metodo dedicado a la reordenacion de las valoraciones segun su valor (paso necesario para la aplicaci...</div><div class="ttdef"><b>Definition:</b> <a href="_avaluacio_8java_source.html#l00122">Avaluacio.java:122</a></div></div>
+<div class="ttc" id="aclassdominio_1_1clases_1_1_avaluacio_html_a882f7035680a3273984ab00f78aa3be6"><div class="ttname"><a href="classdominio_1_1clases_1_1_avaluacio.html#a882f7035680a3273984ab00f78aa3be6">dominio.clases.Avaluacio.DCG</a></div><div class="ttdeci">static void DCG(HashMap&lt; Integer, HashMap&lt; Item, Double &gt; &gt; LR, HashMap&lt; Integer, HashMap&lt; Item, Double &gt; &gt; LT, int u)</div><div class="ttdoc">Metodo responsable de la aplicacion de la formula del DCG propiamente dicho.</div><div class="ttdef"><b>Definition:</b> <a href="_avaluacio_8java_source.html#l00033">Avaluacio.java:33</a></div></div>
+<div class="ttc" id="aclassdominio_1_1clases_1_1_centroid_html"><div class="ttname"><a href="classdominio_1_1clases_1_1_centroid.html">dominio.clases.Centroid</a></div><div class="ttdoc">Clase que representa un Centroide.</div><div class="ttdef"><b>Definition:</b> <a href="_centroid_8java_source.html#l00015">Centroid.java:15</a></div></div>
+<div class="ttc" id="aclassdominio_1_1clases_1_1_cjt__items_html"><div class="ttname"><a href="classdominio_1_1clases_1_1_cjt__items.html">dominio.clases.Cjt_items</a></div><div class="ttdoc">Clase dedicada al preprocesado de un dataset de items con numero y tipo de atributos uniforme y la po...</div><div class="ttdef"><b>Definition:</b> <a href="_cjt__items_8java_source.html#l00029">Cjt_items.java:29</a></div></div>
+<div class="ttc" id="aclassdominio_1_1clases_1_1_cjt__items_html_ad65ce3e01d8107df2fe96e4ac3280b92"><div class="ttname"><a href="classdominio_1_1clases_1_1_cjt__items.html#ad65ce3e01d8107df2fe96e4ac3280b92">dominio.clases.Cjt_items.getItems</a></div><div class="ttdeci">HashMap&lt; String, Item &gt; getItems()</div><div class="ttdoc">Metodo que retorna el conjunto de items asociado a la instancia de la clase.</div><div class="ttdef"><b>Definition:</b> <a href="_cjt__items_8java_source.html#l00137">Cjt_items.java:137</a></div></div>
+<div class="ttc" id="aclassdominio_1_1clases_1_1_collaborative_html"><div class="ttname"><a href="classdominio_1_1clases_1_1_collaborative.html">dominio.clases.Collaborative</a></div><div class="ttdoc">Clase dedicada a la implementacion del algoritmo K-means.</div><div class="ttdef"><b>Definition:</b> <a href="_collaborative_8java_source.html#l00020">Collaborative.java:20</a></div></div>
+<div class="ttc" id="aclassdominio_1_1clases_1_1_collaborative_html_a0abf3775716bbec72f760848caa79b4a"><div class="ttname"><a href="classdominio_1_1clases_1_1_collaborative.html#a0abf3775716bbec72f760848caa79b4a">dominio.clases.Collaborative.recommendations</a></div><div class="ttdeci">HashMap&lt; Centroid, List&lt; Usuari &gt; &gt; recommendations(List&lt; Usuari &gt; Usuaris, int k, DistanceUsers distance, int n, int num_clusters)</div><div class="ttdoc">Metodo que ejecuta el algoritmo k-means. Devuelve k clusters con sus centroides y los usuarios corres...</div><div class="ttdef"><b>Definition:</b> <a href="_collaborative_8java_source.html#l00042">Collaborative.java:42</a></div></div>
+<div class="ttc" id="aclassdominio_1_1clases_1_1_content_based_html"><div class="ttname"><a href="classdominio_1_1clases_1_1_content_based.html">dominio.clases.ContentBased</a></div><div class="ttdoc">Clase que implementa el sistema de recomendacion con el metodo &quot;Content Based Filtering&quot;.</div><div class="ttdef"><b>Definition:</b> <a href="_content_based_8java_source.html#l00017">ContentBased.java:17</a></div></div>
+<div class="ttc" id="aclassdominio_1_1clases_1_1_content_based_html_a672f34661a60a5596ae6d64f7e30f641"><div class="ttname"><a href="classdominio_1_1clases_1_1_content_based.html#a672f34661a60a5596ae6d64f7e30f641">dominio.clases.ContentBased.setK</a></div><div class="ttdeci">void setK(int k)</div><div class="ttdoc">Setter del parametro k.</div><div class="ttdef"><b>Definition:</b> <a href="_content_based_8java_source.html#l00049">ContentBased.java:49</a></div></div>
+<div class="ttc" id="aclassdominio_1_1clases_1_1_content_based_html_a85943724cd710fd0ab3d14159604589a"><div class="ttname"><a href="classdominio_1_1clases_1_1_content_based.html#a85943724cd710fd0ab3d14159604589a">dominio.clases.ContentBased.recommended_items</a></div><div class="ttdeci">HashMap&lt; Item, Double &gt; recommended_items()</div><div class="ttdoc">Metodo que devuelve los items recomendados al usuario que pide la recomendacion junto con la predicci...</div><div class="ttdef"><b>Definition:</b> <a href="_content_based_8java_source.html#l00058">ContentBased.java:58</a></div></div>
+<div class="ttc" id="aclassdominio_1_1clases_1_1_distance_users_html"><div class="ttname"><a href="classdominio_1_1clases_1_1_distance_users.html">dominio.clases.DistanceUsers</a></div><div class="ttdoc">Clase que calcula la distancia entre un usuario y un centroide.</div><div class="ttdef"><b>Definition:</b> <a href="_distance_users_8java_source.html#l00016">DistanceUsers.java:16</a></div></div>
+<div class="ttc" id="aclassdominio_1_1clases_1_1_item_html"><div class="ttname"><a href="classdominio_1_1clases_1_1_item.html">dominio.clases.Item</a></div><div class="ttdoc">Representa un item y su conjunto de atributos.</div><div class="ttdef"><b>Definition:</b> <a href="_item_8java_source.html#l00017">Item.java:17</a></div></div>
+<div class="ttc" id="aclassdominio_1_1clases_1_1_main_html"><div class="ttname"><a href="classdominio_1_1clases_1_1_main.html">dominio.clases.Main</a></div><div class="ttdoc">Clase que ejecuta el sistema recomendador. El sistema permite al usuario elegir un dataset y pedir re...</div><div class="ttdef"><b>Definition:</b> <a href="_main_8java_source.html#l00027">Main.java:27</a></div></div>
+<div class="ttc" id="aclassdominio_1_1clases_1_1_main_html_a2a1fe442cbc07acc8c57d24ae3fa144a"><div class="ttname"><a href="classdominio_1_1clases_1_1_main.html#a2a1fe442cbc07acc8c57d24ae3fa144a">dominio.clases.Main.main</a></div><div class="ttdeci">static void main(String[] args)</div><div class="ttdef"><b>Definition:</b> <a href="_main_8java_source.html#l00029">Main.java:29</a></div></div>
+<div class="ttc" id="aclassdominio_1_1clases_1_1_slope_one_html"><div class="ttname"><a href="classdominio_1_1clases_1_1_slope_one.html">dominio.clases.SlopeOne</a></div><div class="ttdoc">Clase dedicada a la implementacion del algoritmo de prediccion SlopeOne.</div><div class="ttdef"><b>Definition:</b> <a href="_slope_one_8java_source.html#l00017">SlopeOne.java:17</a></div></div>
+<div class="ttc" id="aclassdominio_1_1clases_1_1_slope_one_html_a30e9ff9b4901d657847fa305c6911300"><div class="ttname"><a href="classdominio_1_1clases_1_1_slope_one.html#a30e9ff9b4901d657847fa305c6911300">dominio.clases.SlopeOne.slopeOne</a></div><div class="ttdeci">void slopeOne(List&lt; Usuari &gt; users, Usuari I, double max)</div><div class="ttdef"><b>Definition:</b> <a href="_slope_one_8java_source.html#l00021">SlopeOne.java:21</a></div></div>
+<div class="ttc" id="aclassdominio_1_1clases_1_1_slope_one_html_a667af6b9487f6b406d5b7b0a32f9d7b3"><div class="ttname"><a href="classdominio_1_1clases_1_1_slope_one.html#a667af6b9487f6b406d5b7b0a32f9d7b3">dominio.clases.SlopeOne.getPredictions</a></div><div class="ttdeci">HashMap&lt; Item, Double &gt; getPredictions()</div><div class="ttdef"><b>Definition:</b> <a href="_slope_one_8java_source.html#l00051">SlopeOne.java:51</a></div></div>
+<div class="ttc" id="aclassdominio_1_1clases_1_1_usuari_html"><div class="ttname"><a href="classdominio_1_1clases_1_1_usuari.html">dominio.clases.Usuari</a></div><div class="ttdoc">Clase que representa un Usuario.</div><div class="ttdef"><b>Definition:</b> <a href="_usuari_8java_source.html#l00016">Usuari.java:16</a></div></div>
+<div class="ttc" id="aclassdominio_1_1clases_1_1_usuari_html_aa22633a65abe77a2c62a8388d62f9902"><div class="ttname"><a href="classdominio_1_1clases_1_1_usuari.html#aa22633a65abe77a2c62a8388d62f9902">dominio.clases.Usuari.getUserId</a></div><div class="ttdeci">int getUserId()</div><div class="ttdoc">Metodo getter del ID del usuario.</div><div class="ttdef"><b>Definition:</b> <a href="_usuari_8java_source.html#l00054">Usuari.java:54</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+</small></address>
+</body>
+</html>
