@@ -1,0 +1,29 @@
+Pruebas con el driver de la clase Avaluacio.
+
+Prueba 1
+Descripcion: Testeo de la aplicacion del DCG para un conjunto reducido de datos de un unico usuario
+Objetivos: comprobar el correcto computo del DCG para un conjunto de datos reducido
+ Para la prueba se ha construido un driver de la clase Avaluacio.
+ Entrada: un conjunto reducido de datos (valoraciones predecidas y valoraciones correctas) para un conjunto de items, y solo para un unico usuario; toda esta informacion ha sido definida localmente (esto es, a nivel de codigo)
+ Salida: se imprime un mensaje con el siguiente formato:
+
+ El testeo sobre el dadatset de "x" usuarios
+ Valor de la recomendacion
+ User "y" --> "valor del DCG"
+ ...
+
+ Resultado de la prueba: ok
+
+Prueba 2
+Descripcion: Testeo de la aplicacion del DCG para un conjunto de datos de varios usuarios
+Objetivos: comprobar el correcto computo del DCG para un conjunto de datos estandar
+ Para la prueba se hace uso del driver para la clase Avaluacio.
+ Entrada: un subconjunto de datos del dataset Movielens, concretamente el de tamaño 250; el subconjunto de datos recoge, para 10 usuarios determinados, un conjunto de 10 valoraciones predecidas y 10 valoraciones correctas (esto es, pertenecientes al conjunto unknown)
+ Salida: se imprime un mensaje con el siguiente formato:
+
+ El testeo sobre el dadatset de "x" usuarios
+ Valor de la recomendacion
+ User "y" --> "valor del DCG"
+ ...
+
+ Resultado de la prueba: ok
