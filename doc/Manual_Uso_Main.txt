@@ -1,0 +1,43 @@
+Manual de uso del Main:
+
+Los inputs que pide el algoritmo son los siguientes:
+
+1. Eleccion del dataset, donde hay que introducir 0 o 1 segun:
+
+	0 -> Se coge el dataset Movielens
+	1 -> Se coge el dataset Series
+
+2. Eleccion del tamaño del dataset:
+
+	2.1 Si se usa el Movielenes, hay que introducir 0, 1, 2 o 3 segun:
+
+		0 -> Se coge el de tamaño 250
+		1 -> Se coge el de tamaño 750
+		2 -> Se coge el de tamaño 2250
+		3 -> Se coge el de tamaño 6750
+
+	2.2 Si se usa las Series, hay que introducir 0, 1 o 2 segun:
+
+		0 -> Se coge el de tamaño 250
+		1 -> Se coge el de tamaño 750
+		2 -> Se coge el de tamaño 2250
+
+3. Eleccion del usuario al que se le hara la recomendación; se puede introducir:
+
+	idUsuario -> se hara la recomendación al usuario con este “idUsuario”, que debe estar en el fichero known
+	-1 -> se hara una recomendación por cada usuario del fichero known
+
+4. Eleccion del algoritmo a ejecutar para la recomendación, hay que introducir 0 o 1 segun:
+
+	0- > Collaborative Filtering
+	1 -> Content Based
+
+5. Eleccion del numero de items que deben recomendarse a un usuario, donde se puede introducir:
+
+	numeroItems -> numero natural positivo que debe ser menor que el total de items del dataset menos los que ya haya valorado el usuario; se recomendaran (como maximo) “numeroItems” items por usuario
+
+6. Una vez terminada la recomendacion, se da la opcion a seguir pidiendo mas recomendaciones o terminar el programa:
+
+	n -> se termina la ejecucion del programa
+	y -> se vuelve a hacer una recomendación y por lo tanto se nos vuelve a pedir los mismos inputs desde el punto 1
+

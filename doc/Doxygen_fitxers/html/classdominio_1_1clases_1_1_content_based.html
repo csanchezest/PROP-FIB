@@ -1,0 +1,696 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Proyecto PROP: Sistema Recomendador: Referencia de la Clase dominio.clases.ContentBased</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Proyecto PROP: Sistema Recomendador<span id="projectnumber">&#160;Muhammad Haris, Cristian Sanchez Estape, Jordi Elgueta Serra y Houda El Fezzak Bekkouri</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.9.3 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Buscar','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><b>dominio</b></li><li class="navelem"><a class="el" href="namespacedominio_1_1clases.html">clases</a></li><li class="navelem"><a class="el" href="classdominio_1_1clases_1_1_content_based.html">ContentBased</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Métodos públicos</a> &#124;
+<a href="#pri-methods">Métodos privados</a> &#124;
+<a href="#pri-attribs">Atributos privados</a> &#124;
+<a href="#pri-static-attribs">Atributos privados estáticos</a> &#124;
+<a href="classdominio_1_1clases_1_1_content_based-members.html">Lista de todos los miembros</a>  </div>
+  <div class="headertitle"><div class="title">Referencia de la Clase dominio.clases.ContentBased</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Clase que implementa el sistema de recomendacion con el metodo "Content Based Filtering".  
+ <a href="classdominio_1_1clases_1_1_content_based.html#details">Más...</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Métodos públicos</h2></td></tr>
+<tr class="memitem:a9377b3601359575e470216472884cd12"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdominio_1_1clases_1_1_content_based.html#a9377b3601359575e470216472884cd12">ContentBased</a> (<a class="el" href="classdominio_1_1clases_1_1_usuari.html">Usuari</a> <a class="el" href="classdominio_1_1clases_1_1_algorisme.html#aee088dc070748fe366f2068b0a512981">user</a>, <a class="el" href="classdominio_1_1clases_1_1_cjt__items.html">Cjt_items</a> <a class="el" href="classdominio_1_1clases_1_1_algorisme.html#a966a79e4751cb23c2f8a0537511cd94e">dataset</a>, HashMap&lt; <a class="el" href="classdominio_1_1clases_1_1_item.html">Item</a>, ArrayList&lt; Double &gt; &gt; <a class="el" href="classdominio_1_1clases_1_1_algorisme.html#a9c9055131097eeb0052bc6da89a59475">ratings</a>, double <a class="el" href="classdominio_1_1clases_1_1_content_based.html#af2be76954b698d6f016461ab3cee7516">maxRating</a>, List&lt; Boolean &gt; <a class="el" href="classdominio_1_1clases_1_1_content_based.html#afc91adb39d697089490568895be285af">intAt</a>, List&lt; Boolean &gt; <a class="el" href="classdominio_1_1clases_1_1_content_based.html#a6340ab091377a0d056cfd20119370b2b">doubAt</a>, List&lt; Boolean &gt; <a class="el" href="classdominio_1_1clases_1_1_content_based.html#a73e0142249ad740b54efef71f2078fb0">dateAt</a>, List&lt; Boolean &gt; <a class="el" href="classdominio_1_1clases_1_1_content_based.html#afc96c69348d58366f6b3d868a073a01f">bAt</a>, List&lt; Boolean &gt; <a class="el" href="classdominio_1_1clases_1_1_content_based.html#a58fc6e587f94625f55819aafddd62141">catAt</a>, List&lt; Boolean &gt; <a class="el" href="classdominio_1_1clases_1_1_content_based.html#a78dbed395df5211421b8ecd94cce1308">ftAt</a>)</td></tr>
+<tr class="memdesc:a9377b3601359575e470216472884cd12"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructora de <a class="el" href="classdominio_1_1clases_1_1_content_based.html" title="Clase que implementa el sistema de recomendacion con el metodo &quot;Content Based Filtering&quot;.">ContentBased</a>.  <a href="classdominio_1_1clases_1_1_content_based.html#a9377b3601359575e470216472884cd12">Más...</a><br /></td></tr>
+<tr class="separator:a9377b3601359575e470216472884cd12"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a672f34661a60a5596ae6d64f7e30f641"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdominio_1_1clases_1_1_content_based.html#a672f34661a60a5596ae6d64f7e30f641">setK</a> (int <a class="el" href="classdominio_1_1clases_1_1_content_based.html#a81aee2992403d63aa5c1aeda9d55cb8b">k</a>)</td></tr>
+<tr class="memdesc:a672f34661a60a5596ae6d64f7e30f641"><td class="mdescLeft">&#160;</td><td class="mdescRight">Setter del parametro k.  <a href="classdominio_1_1clases_1_1_content_based.html#a672f34661a60a5596ae6d64f7e30f641">Más...</a><br /></td></tr>
+<tr class="separator:a672f34661a60a5596ae6d64f7e30f641"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a85943724cd710fd0ab3d14159604589a"><td class="memItemLeft" align="right" valign="top">HashMap&lt; <a class="el" href="classdominio_1_1clases_1_1_item.html">Item</a>, Double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdominio_1_1clases_1_1_content_based.html#a85943724cd710fd0ab3d14159604589a">recommended_items</a> ()</td></tr>
+<tr class="memdesc:a85943724cd710fd0ab3d14159604589a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metodo que devuelve los items recomendados al usuario que pide la recomendacion junto con la prediccion de la valoracion qe haría dicho usuario para cada uno de los items.  <a href="classdominio_1_1clases_1_1_content_based.html#a85943724cd710fd0ab3d14159604589a">Más...</a><br /></td></tr>
+<tr class="separator:a85943724cd710fd0ab3d14159604589a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classdominio_1_1clases_1_1_algorisme"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classdominio_1_1clases_1_1_algorisme')"><img src="closed.png" alt="-"/>&#160;Métodos públicos heredados desde <a class="el" href="classdominio_1_1clases_1_1_algorisme.html">dominio.clases.Algorisme</a></td></tr>
+<tr class="memitem:af2cea62ddcce94fccda105803f915b5b inherit pub_methods_classdominio_1_1clases_1_1_algorisme"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdominio_1_1clases_1_1_algorisme.html#af2cea62ddcce94fccda105803f915b5b">Algorisme</a> (<a class="el" href="classdominio_1_1clases_1_1_usuari.html">Usuari</a> <a class="el" href="classdominio_1_1clases_1_1_algorisme.html#aee088dc070748fe366f2068b0a512981">user</a>, <a class="el" href="classdominio_1_1clases_1_1_cjt__items.html">Cjt_items</a> <a class="el" href="classdominio_1_1clases_1_1_algorisme.html#a966a79e4751cb23c2f8a0537511cd94e">dataset</a>, HashMap&lt; <a class="el" href="classdominio_1_1clases_1_1_item.html">Item</a>, ArrayList&lt; Double &gt; &gt; <a class="el" href="classdominio_1_1clases_1_1_algorisme.html#a9c9055131097eeb0052bc6da89a59475">ratings</a>)</td></tr>
+<tr class="memdesc:af2cea62ddcce94fccda105803f915b5b inherit pub_methods_classdominio_1_1clases_1_1_algorisme"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creadora de la clase <a class="el" href="classdominio_1_1clases_1_1_algorisme.html" title="Superclase de los Algortimos de recomendacion.">Algorisme</a>.  <a href="classdominio_1_1clases_1_1_algorisme.html#af2cea62ddcce94fccda105803f915b5b">Más...</a><br /></td></tr>
+<tr class="separator:af2cea62ddcce94fccda105803f915b5b inherit pub_methods_classdominio_1_1clases_1_1_algorisme"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4fcd0310a6e25c22e5dc3dba4c897cf inherit pub_methods_classdominio_1_1clases_1_1_algorisme"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdominio_1_1clases_1_1_algorisme.html#aa4fcd0310a6e25c22e5dc3dba4c897cf">Algorisme</a> ()</td></tr>
+<tr class="memdesc:aa4fcd0310a6e25c22e5dc3dba4c897cf inherit pub_methods_classdominio_1_1clases_1_1_algorisme"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creadora por defecto de la clase <a class="el" href="classdominio_1_1clases_1_1_algorisme.html" title="Superclase de los Algortimos de recomendacion.">Algorisme</a>.  <a href="classdominio_1_1clases_1_1_algorisme.html#aa4fcd0310a6e25c22e5dc3dba4c897cf">Más...</a><br /></td></tr>
+<tr class="separator:aa4fcd0310a6e25c22e5dc3dba4c897cf inherit pub_methods_classdominio_1_1clases_1_1_algorisme"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f7851101e9d77a1772b65ff634a4c65 inherit pub_methods_classdominio_1_1clases_1_1_algorisme"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdominio_1_1clases_1_1_algorisme.html#a5f7851101e9d77a1772b65ff634a4c65">setUser</a> (<a class="el" href="classdominio_1_1clases_1_1_usuari.html">Usuari</a> <a class="el" href="classdominio_1_1clases_1_1_algorisme.html#aee088dc070748fe366f2068b0a512981">user</a>)</td></tr>
+<tr class="memdesc:a5f7851101e9d77a1772b65ff634a4c65 inherit pub_methods_classdominio_1_1clases_1_1_algorisme"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metodo set del usuario.  <a href="classdominio_1_1clases_1_1_algorisme.html#a5f7851101e9d77a1772b65ff634a4c65">Más...</a><br /></td></tr>
+<tr class="separator:a5f7851101e9d77a1772b65ff634a4c65 inherit pub_methods_classdominio_1_1clases_1_1_algorisme"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54eea465b2997a3bb9064126af622a9b inherit pub_methods_classdominio_1_1clases_1_1_algorisme"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdominio_1_1clases_1_1_algorisme.html#a54eea465b2997a3bb9064126af622a9b">setUsers</a> (List&lt; <a class="el" href="classdominio_1_1clases_1_1_usuari.html">Usuari</a> &gt; <a class="el" href="classdominio_1_1clases_1_1_algorisme.html#aa2a6296923e364755e6d0efaaaa4b2c2">users</a>)</td></tr>
+<tr class="memdesc:a54eea465b2997a3bb9064126af622a9b inherit pub_methods_classdominio_1_1clases_1_1_algorisme"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metodo set de los usuarios del dataset.  <a href="classdominio_1_1clases_1_1_algorisme.html#a54eea465b2997a3bb9064126af622a9b">Más...</a><br /></td></tr>
+<tr class="separator:a54eea465b2997a3bb9064126af622a9b inherit pub_methods_classdominio_1_1clases_1_1_algorisme"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Métodos privados</h2></td></tr>
+<tr class="memitem:a75b4c034a8b60bc1c267d700787c11ad"><td class="memItemLeft" align="right" valign="top">HashMap&lt; <a class="el" href="classdominio_1_1clases_1_1_item.html">Item</a>, Double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdominio_1_1clases_1_1_content_based.html#a75b4c034a8b60bc1c267d700787c11ad">get_KNN</a> (<a class="el" href="classdominio_1_1clases_1_1_item.html">Item</a> a, double rating)</td></tr>
+<tr class="memdesc:a75b4c034a8b60bc1c267d700787c11ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metodo que implementa el algortimo K-NN para un item a que recibe como parametro. Devuelve un diccionario con los k items con mejor prediccion de valoracion. Para la prediccion se usa la similitud entre ítems y se pondera con el rating dado por el usuario que pide la recomendacion del item a y con el rating promedio del ítem candidato a formar parte de los k-NN.  <a href="classdominio_1_1clases_1_1_content_based.html#a75b4c034a8b60bc1c267d700787c11ad">Más...</a><br /></td></tr>
+<tr class="separator:a75b4c034a8b60bc1c267d700787c11ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Atributos privados</h2></td></tr>
+<tr class="memitem:ac79c5546f6c70b0f5fa5edcd529c38ca"><td class="memItemLeft" align="right" valign="top">HashMap&lt; <a class="el" href="classdominio_1_1clases_1_1_item.html">Item</a>, Double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdominio_1_1clases_1_1_content_based.html#ac79c5546f6c70b0f5fa5edcd529c38ca">ratedItems</a></td></tr>
+<tr class="memdesc:ac79c5546f6c70b0f5fa5edcd529c38ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Diccionario con los ítems valorados por el Usuario que pide la recomendacion junto con su valoracion.  <a href="classdominio_1_1clases_1_1_content_based.html#ac79c5546f6c70b0f5fa5edcd529c38ca">Más...</a><br /></td></tr>
+<tr class="separator:ac79c5546f6c70b0f5fa5edcd529c38ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af2be76954b698d6f016461ab3cee7516"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdominio_1_1clases_1_1_content_based.html#af2be76954b698d6f016461ab3cee7516">maxRating</a></td></tr>
+<tr class="memdesc:af2be76954b698d6f016461ab3cee7516"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parametro que representa la valoracion maxima que se puede dar a un item.  <a href="classdominio_1_1clases_1_1_content_based.html#af2be76954b698d6f016461ab3cee7516">Más...</a><br /></td></tr>
+<tr class="separator:af2be76954b698d6f016461ab3cee7516"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc91adb39d697089490568895be285af"><td class="memItemLeft" align="right" valign="top">List&lt; Boolean &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdominio_1_1clases_1_1_content_based.html#afc91adb39d697089490568895be285af">intAt</a></td></tr>
+<tr class="separator:afc91adb39d697089490568895be285af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6340ab091377a0d056cfd20119370b2b"><td class="memItemLeft" align="right" valign="top">List&lt; Boolean &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdominio_1_1clases_1_1_content_based.html#a6340ab091377a0d056cfd20119370b2b">doubAt</a></td></tr>
+<tr class="separator:a6340ab091377a0d056cfd20119370b2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73e0142249ad740b54efef71f2078fb0"><td class="memItemLeft" align="right" valign="top">List&lt; Boolean &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdominio_1_1clases_1_1_content_based.html#a73e0142249ad740b54efef71f2078fb0">dateAt</a></td></tr>
+<tr class="separator:a73e0142249ad740b54efef71f2078fb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc96c69348d58366f6b3d868a073a01f"><td class="memItemLeft" align="right" valign="top">List&lt; Boolean &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdominio_1_1clases_1_1_content_based.html#afc96c69348d58366f6b3d868a073a01f">bAt</a></td></tr>
+<tr class="separator:afc96c69348d58366f6b3d868a073a01f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58fc6e587f94625f55819aafddd62141"><td class="memItemLeft" align="right" valign="top">List&lt; Boolean &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdominio_1_1clases_1_1_content_based.html#a58fc6e587f94625f55819aafddd62141">catAt</a></td></tr>
+<tr class="separator:a58fc6e587f94625f55819aafddd62141"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78dbed395df5211421b8ecd94cce1308"><td class="memItemLeft" align="right" valign="top">List&lt; Boolean &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdominio_1_1clases_1_1_content_based.html#a78dbed395df5211421b8ecd94cce1308">ftAt</a></td></tr>
+<tr class="separator:a78dbed395df5211421b8ecd94cce1308"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-static-attribs" name="pri-static-attribs"></a>
+Atributos privados estáticos</h2></td></tr>
+<tr class="memitem:a81aee2992403d63aa5c1aeda9d55cb8b"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdominio_1_1clases_1_1_content_based.html#a81aee2992403d63aa5c1aeda9d55cb8b">k</a></td></tr>
+<tr class="memdesc:a81aee2992403d63aa5c1aeda9d55cb8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parametro k que se usa para el algoritmo K-NN.  <a href="classdominio_1_1clases_1_1_content_based.html#a81aee2992403d63aa5c1aeda9d55cb8b">Más...</a><br /></td></tr>
+<tr class="separator:a81aee2992403d63aa5c1aeda9d55cb8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
+Otros miembros heredados</h2></td></tr>
+<tr class="inherit_header pub_static_methods_classdominio_1_1clases_1_1_algorisme"><td colspan="2" onclick="javascript:toggleInherit('pub_static_methods_classdominio_1_1clases_1_1_algorisme')"><img src="closed.png" alt="-"/>&#160;Métodos públicos estáticos heredados desde <a class="el" href="classdominio_1_1clases_1_1_algorisme.html">dominio.clases.Algorisme</a></td></tr>
+<tr class="memitem:a1cebe59280d945e4de04fbbe0543e80b inherit pub_static_methods_classdominio_1_1clases_1_1_algorisme"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdominio_1_1clases_1_1_algorisme.html#a1cebe59280d945e4de04fbbe0543e80b">printData</a> (Map&lt; Integer, HashMap&lt; <a class="el" href="classdominio_1_1clases_1_1_item.html">Item</a>, Double &gt; &gt; valoracions)</td></tr>
+<tr class="memdesc:a1cebe59280d945e4de04fbbe0543e80b inherit pub_static_methods_classdominio_1_1clases_1_1_algorisme"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metodo que imprime por pantalla los usuarios junto con todas sus valoraciones.  <a href="classdominio_1_1clases_1_1_algorisme.html#a1cebe59280d945e4de04fbbe0543e80b">Más...</a><br /></td></tr>
+<tr class="separator:a1cebe59280d945e4de04fbbe0543e80b inherit pub_static_methods_classdominio_1_1clases_1_1_algorisme"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca5be8bf5ae18ceaa31e09fea41db9e9 inherit pub_static_methods_classdominio_1_1clases_1_1_algorisme"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdominio_1_1clases_1_1_algorisme.html#aca5be8bf5ae18ceaa31e09fea41db9e9">print</a> (HashMap&lt; <a class="el" href="classdominio_1_1clases_1_1_item.html">Item</a>, Double &gt; <a class="el" href="classdominio_1_1clases_1_1_algorisme.html#a9c9055131097eeb0052bc6da89a59475">ratings</a>)</td></tr>
+<tr class="memdesc:aca5be8bf5ae18ceaa31e09fea41db9e9 inherit pub_static_methods_classdominio_1_1clases_1_1_algorisme"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metodo que imprime por pantalla los items con su valoracion.  <a href="classdominio_1_1clases_1_1_algorisme.html#aca5be8bf5ae18ceaa31e09fea41db9e9">Más...</a><br /></td></tr>
+<tr class="separator:aca5be8bf5ae18ceaa31e09fea41db9e9 inherit pub_static_methods_classdominio_1_1clases_1_1_algorisme"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_attribs_classdominio_1_1clases_1_1_algorisme"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classdominio_1_1clases_1_1_algorisme')"><img src="closed.png" alt="-"/>&#160;Atributos protegidos heredados desde <a class="el" href="classdominio_1_1clases_1_1_algorisme.html">dominio.clases.Algorisme</a></td></tr>
+<tr class="memitem:a966a79e4751cb23c2f8a0537511cd94e inherit pro_attribs_classdominio_1_1clases_1_1_algorisme"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdominio_1_1clases_1_1_cjt__items.html">Cjt_items</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdominio_1_1clases_1_1_algorisme.html#a966a79e4751cb23c2f8a0537511cd94e">dataset</a></td></tr>
+<tr class="memdesc:a966a79e4751cb23c2f8a0537511cd94e inherit pro_attribs_classdominio_1_1clases_1_1_algorisme"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dataset sobre el cual se quiere aplicar la recomendacion.  <a href="classdominio_1_1clases_1_1_algorisme.html#a966a79e4751cb23c2f8a0537511cd94e">Más...</a><br /></td></tr>
+<tr class="separator:a966a79e4751cb23c2f8a0537511cd94e inherit pro_attribs_classdominio_1_1clases_1_1_algorisme"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee088dc070748fe366f2068b0a512981 inherit pro_attribs_classdominio_1_1clases_1_1_algorisme"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdominio_1_1clases_1_1_usuari.html">Usuari</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdominio_1_1clases_1_1_algorisme.html#aee088dc070748fe366f2068b0a512981">user</a></td></tr>
+<tr class="memdesc:aee088dc070748fe366f2068b0a512981 inherit pro_attribs_classdominio_1_1clases_1_1_algorisme"><td class="mdescLeft">&#160;</td><td class="mdescRight">Usuario que pide la recomendacion.  <a href="classdominio_1_1clases_1_1_algorisme.html#aee088dc070748fe366f2068b0a512981">Más...</a><br /></td></tr>
+<tr class="separator:aee088dc070748fe366f2068b0a512981 inherit pro_attribs_classdominio_1_1clases_1_1_algorisme"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c9055131097eeb0052bc6da89a59475 inherit pro_attribs_classdominio_1_1clases_1_1_algorisme"><td class="memItemLeft" align="right" valign="top">HashMap&lt; <a class="el" href="classdominio_1_1clases_1_1_item.html">Item</a>, ArrayList&lt; Double &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdominio_1_1clases_1_1_algorisme.html#a9c9055131097eeb0052bc6da89a59475">ratings</a></td></tr>
+<tr class="memdesc:a9c9055131097eeb0052bc6da89a59475 inherit pro_attribs_classdominio_1_1clases_1_1_algorisme"><td class="mdescLeft">&#160;</td><td class="mdescRight">Diccionario con todos los items del dataset que guarda, para cada uno, todas las valoraciones que tiene.  <a href="classdominio_1_1clases_1_1_algorisme.html#a9c9055131097eeb0052bc6da89a59475">Más...</a><br /></td></tr>
+<tr class="separator:a9c9055131097eeb0052bc6da89a59475 inherit pro_attribs_classdominio_1_1clases_1_1_algorisme"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2a6296923e364755e6d0efaaaa4b2c2 inherit pro_attribs_classdominio_1_1clases_1_1_algorisme"><td class="memItemLeft" align="right" valign="top">List&lt; <a class="el" href="classdominio_1_1clases_1_1_usuari.html">Usuari</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdominio_1_1clases_1_1_algorisme.html#aa2a6296923e364755e6d0efaaaa4b2c2">users</a></td></tr>
+<tr class="memdesc:aa2a6296923e364755e6d0efaaaa4b2c2 inherit pro_attribs_classdominio_1_1clases_1_1_algorisme"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lista con los usuarios con valoraciones para el presente dataset.  <a href="classdominio_1_1clases_1_1_algorisme.html#aa2a6296923e364755e6d0efaaaa4b2c2">Más...</a><br /></td></tr>
+<tr class="separator:aa2a6296923e364755e6d0efaaaa4b2c2 inherit pro_attribs_classdominio_1_1clases_1_1_algorisme"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Descripción detallada</h2>
+<div class="textblock"><p >Clase que implementa el sistema de recomendacion con el metodo "Content Based Filtering". </p>
+<dl class="section author"><dt>Autor</dt><dd>Jordi Elgueta Serra </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="_content_based_8java_source.html#l00017">17</a> del archivo <a class="el" href="_content_based_8java_source.html">ContentBased.java</a>.</p>
+</div><h2 class="groupheader">Documentación del constructor y destructor</h2>
+<a id="a9377b3601359575e470216472884cd12" name="a9377b3601359575e470216472884cd12"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9377b3601359575e470216472884cd12">&#9670;&nbsp;</a></span>ContentBased()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">dominio.clases.ContentBased.ContentBased </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdominio_1_1clases_1_1_usuari.html">Usuari</a>&#160;</td>
+          <td class="paramname"><em>user</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdominio_1_1clases_1_1_cjt__items.html">Cjt_items</a>&#160;</td>
+          <td class="paramname"><em>dataset</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">HashMap&lt; <a class="el" href="classdominio_1_1clases_1_1_item.html">Item</a>, ArrayList&lt; Double &gt; &gt;&#160;</td>
+          <td class="paramname"><em>ratings</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>maxRating</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">List&lt; Boolean &gt;&#160;</td>
+          <td class="paramname"><em>intAt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">List&lt; Boolean &gt;&#160;</td>
+          <td class="paramname"><em>doubAt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">List&lt; Boolean &gt;&#160;</td>
+          <td class="paramname"><em>dateAt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">List&lt; Boolean &gt;&#160;</td>
+          <td class="paramname"><em>bAt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">List&lt; Boolean &gt;&#160;</td>
+          <td class="paramname"><em>catAt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">List&lt; Boolean &gt;&#160;</td>
+          <td class="paramname"><em>ftAt</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructora de <a class="el" href="classdominio_1_1clases_1_1_content_based.html" title="Clase que implementa el sistema de recomendacion con el metodo &quot;Content Based Filtering&quot;.">ContentBased</a>. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">user</td><td><a class="el" href="classdominio_1_1clases_1_1_usuari.html" title="Clase que representa un Usuario.">Usuari</a> que pide la recomendacion </td></tr>
+    <tr><td class="paramname">dataset</td><td>Instancia de <a class="el" href="classdominio_1_1clases_1_1_cjt__items.html" title="Clase dedicada al preprocesado de un dataset de items con numero y tipo de atributos uniforme y la po...">Cjt_items</a> que almacena el dataset de entrada procesado </td></tr>
+    <tr><td class="paramname">ratings</td><td>Diccionario con los items (keys) y una lista de todas sus valoraciones </td></tr>
+    <tr><td class="paramname">maxRating</td><td>Valoración máxima registrada </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="_content_based_8java_source.html#l00046">46</a> del archivo <a class="el" href="_content_based_8java_source.html">ContentBased.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   48</span>                                                                {</div>
+<div class="line"><span class="lineno">   49</span>        super(<a class="code hl_variable" href="classdominio_1_1clases_1_1_algorisme.html#aee088dc070748fe366f2068b0a512981">user</a>,<a class="code hl_variable" href="classdominio_1_1clases_1_1_algorisme.html#a966a79e4751cb23c2f8a0537511cd94e">dataset</a>, <a class="code hl_variable" href="classdominio_1_1clases_1_1_algorisme.html#a9c9055131097eeb0052bc6da89a59475">ratings</a>);</div>
+<div class="line"><span class="lineno">   50</span>        <a class="code hl_variable" href="classdominio_1_1clases_1_1_content_based.html#ac79c5546f6c70b0f5fa5edcd529c38ca">ratedItems</a> = <a class="code hl_variable" href="classdominio_1_1clases_1_1_algorisme.html#aee088dc070748fe366f2068b0a512981">user</a>.<a class="code hl_function" href="classdominio_1_1clases_1_1_usuari.html#a5f2f72c56d755b0785792c34622f419d">getRatedItems</a>();</div>
+<div class="line"><span class="lineno">   51</span>        this.<a class="code hl_variable" href="classdominio_1_1clases_1_1_content_based.html#af2be76954b698d6f016461ab3cee7516">maxRating</a> = <a class="code hl_variable" href="classdominio_1_1clases_1_1_content_based.html#af2be76954b698d6f016461ab3cee7516">maxRating</a>;</div>
+<div class="line"><span class="lineno">   52</span>        this.<a class="code hl_variable" href="classdominio_1_1clases_1_1_content_based.html#a73e0142249ad740b54efef71f2078fb0">dateAt</a> = <a class="code hl_variable" href="classdominio_1_1clases_1_1_content_based.html#a73e0142249ad740b54efef71f2078fb0">dateAt</a>;</div>
+<div class="line"><span class="lineno">   53</span>        this.<a class="code hl_variable" href="classdominio_1_1clases_1_1_content_based.html#afc96c69348d58366f6b3d868a073a01f">bAt</a> = <a class="code hl_variable" href="classdominio_1_1clases_1_1_content_based.html#afc96c69348d58366f6b3d868a073a01f">bAt</a>;</div>
+<div class="line"><span class="lineno">   54</span>        this.<a class="code hl_variable" href="classdominio_1_1clases_1_1_content_based.html#a58fc6e587f94625f55819aafddd62141">catAt</a> = <a class="code hl_variable" href="classdominio_1_1clases_1_1_content_based.html#a58fc6e587f94625f55819aafddd62141">catAt</a>;</div>
+<div class="line"><span class="lineno">   55</span>        this.<a class="code hl_variable" href="classdominio_1_1clases_1_1_content_based.html#a78dbed395df5211421b8ecd94cce1308">ftAt</a> = <a class="code hl_variable" href="classdominio_1_1clases_1_1_content_based.html#a78dbed395df5211421b8ecd94cce1308">ftAt</a>;</div>
+<div class="line"><span class="lineno">   56</span>        this.<a class="code hl_variable" href="classdominio_1_1clases_1_1_content_based.html#afc91adb39d697089490568895be285af">intAt</a> = <a class="code hl_variable" href="classdominio_1_1clases_1_1_content_based.html#afc91adb39d697089490568895be285af">intAt</a>;</div>
+<div class="line"><span class="lineno">   57</span>        this.<a class="code hl_variable" href="classdominio_1_1clases_1_1_content_based.html#a6340ab091377a0d056cfd20119370b2b">doubAt</a> = <a class="code hl_variable" href="classdominio_1_1clases_1_1_content_based.html#a6340ab091377a0d056cfd20119370b2b">doubAt</a>;</div>
+<div class="line"><span class="lineno">   58</span>    }</div>
+<div class="ttc" id="aclassdominio_1_1clases_1_1_algorisme_html_a966a79e4751cb23c2f8a0537511cd94e"><div class="ttname"><a href="classdominio_1_1clases_1_1_algorisme.html#a966a79e4751cb23c2f8a0537511cd94e">dominio.clases.Algorisme.dataset</a></div><div class="ttdeci">Cjt_items dataset</div><div class="ttdoc">Dataset sobre el cual se quiere aplicar la recomendacion.</div><div class="ttdef"><b>Definition:</b> <a href="_algorisme_8java_source.html#l00022">Algorisme.java:22</a></div></div>
+<div class="ttc" id="aclassdominio_1_1clases_1_1_algorisme_html_a9c9055131097eeb0052bc6da89a59475"><div class="ttname"><a href="classdominio_1_1clases_1_1_algorisme.html#a9c9055131097eeb0052bc6da89a59475">dominio.clases.Algorisme.ratings</a></div><div class="ttdeci">HashMap&lt; Item, ArrayList&lt; Double &gt; &gt; ratings</div><div class="ttdoc">Diccionario con todos los items del dataset que guarda, para cada uno, todas las valoraciones que tie...</div><div class="ttdef"><b>Definition:</b> <a href="_algorisme_8java_source.html#l00031">Algorisme.java:31</a></div></div>
+<div class="ttc" id="aclassdominio_1_1clases_1_1_algorisme_html_aee088dc070748fe366f2068b0a512981"><div class="ttname"><a href="classdominio_1_1clases_1_1_algorisme.html#aee088dc070748fe366f2068b0a512981">dominio.clases.Algorisme.user</a></div><div class="ttdeci">Usuari user</div><div class="ttdoc">Usuario que pide la recomendacion.</div><div class="ttdef"><b>Definition:</b> <a href="_algorisme_8java_source.html#l00027">Algorisme.java:27</a></div></div>
+<div class="ttc" id="aclassdominio_1_1clases_1_1_content_based_html_a58fc6e587f94625f55819aafddd62141"><div class="ttname"><a href="classdominio_1_1clases_1_1_content_based.html#a58fc6e587f94625f55819aafddd62141">dominio.clases.ContentBased.catAt</a></div><div class="ttdeci">List&lt; Boolean &gt; catAt</div><div class="ttdef"><b>Definition:</b> <a href="_content_based_8java_source.html#l00036">ContentBased.java:36</a></div></div>
+<div class="ttc" id="aclassdominio_1_1clases_1_1_content_based_html_a6340ab091377a0d056cfd20119370b2b"><div class="ttname"><a href="classdominio_1_1clases_1_1_content_based.html#a6340ab091377a0d056cfd20119370b2b">dominio.clases.ContentBased.doubAt</a></div><div class="ttdeci">List&lt; Boolean &gt; doubAt</div><div class="ttdef"><b>Definition:</b> <a href="_content_based_8java_source.html#l00033">ContentBased.java:33</a></div></div>
+<div class="ttc" id="aclassdominio_1_1clases_1_1_content_based_html_a73e0142249ad740b54efef71f2078fb0"><div class="ttname"><a href="classdominio_1_1clases_1_1_content_based.html#a73e0142249ad740b54efef71f2078fb0">dominio.clases.ContentBased.dateAt</a></div><div class="ttdeci">List&lt; Boolean &gt; dateAt</div><div class="ttdef"><b>Definition:</b> <a href="_content_based_8java_source.html#l00034">ContentBased.java:34</a></div></div>
+<div class="ttc" id="aclassdominio_1_1clases_1_1_content_based_html_a78dbed395df5211421b8ecd94cce1308"><div class="ttname"><a href="classdominio_1_1clases_1_1_content_based.html#a78dbed395df5211421b8ecd94cce1308">dominio.clases.ContentBased.ftAt</a></div><div class="ttdeci">List&lt; Boolean &gt; ftAt</div><div class="ttdef"><b>Definition:</b> <a href="_content_based_8java_source.html#l00037">ContentBased.java:37</a></div></div>
+<div class="ttc" id="aclassdominio_1_1clases_1_1_content_based_html_ac79c5546f6c70b0f5fa5edcd529c38ca"><div class="ttname"><a href="classdominio_1_1clases_1_1_content_based.html#ac79c5546f6c70b0f5fa5edcd529c38ca">dominio.clases.ContentBased.ratedItems</a></div><div class="ttdeci">HashMap&lt; Item, Double &gt; ratedItems</div><div class="ttdoc">Diccionario con los ítems valorados por el Usuario que pide la recomendacion junto con su valoracion.</div><div class="ttdef"><b>Definition:</b> <a href="_content_based_8java_source.html#l00026">ContentBased.java:26</a></div></div>
+<div class="ttc" id="aclassdominio_1_1clases_1_1_content_based_html_af2be76954b698d6f016461ab3cee7516"><div class="ttname"><a href="classdominio_1_1clases_1_1_content_based.html#af2be76954b698d6f016461ab3cee7516">dominio.clases.ContentBased.maxRating</a></div><div class="ttdeci">double maxRating</div><div class="ttdoc">Parametro que representa la valoracion maxima que se puede dar a un item.</div><div class="ttdef"><b>Definition:</b> <a href="_content_based_8java_source.html#l00030">ContentBased.java:30</a></div></div>
+<div class="ttc" id="aclassdominio_1_1clases_1_1_content_based_html_afc91adb39d697089490568895be285af"><div class="ttname"><a href="classdominio_1_1clases_1_1_content_based.html#afc91adb39d697089490568895be285af">dominio.clases.ContentBased.intAt</a></div><div class="ttdeci">List&lt; Boolean &gt; intAt</div><div class="ttdef"><b>Definition:</b> <a href="_content_based_8java_source.html#l00032">ContentBased.java:32</a></div></div>
+<div class="ttc" id="aclassdominio_1_1clases_1_1_content_based_html_afc96c69348d58366f6b3d868a073a01f"><div class="ttname"><a href="classdominio_1_1clases_1_1_content_based.html#afc96c69348d58366f6b3d868a073a01f">dominio.clases.ContentBased.bAt</a></div><div class="ttdeci">List&lt; Boolean &gt; bAt</div><div class="ttdef"><b>Definition:</b> <a href="_content_based_8java_source.html#l00035">ContentBased.java:35</a></div></div>
+<div class="ttc" id="aclassdominio_1_1clases_1_1_usuari_html_a5f2f72c56d755b0785792c34622f419d"><div class="ttname"><a href="classdominio_1_1clases_1_1_usuari.html#a5f2f72c56d755b0785792c34622f419d">dominio.clases.Usuari.getRatedItems</a></div><div class="ttdeci">HashMap&lt; Item, Double &gt; getRatedItems()</div><div class="ttdoc">Metodo getter de las valoraciones realizadas por un usuario.</div><div class="ttdef"><b>Definition:</b> <a href="_usuari_8java_source.html#l00095">Usuari.java:95</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Documentación de las funciones miembro</h2>
+<a id="a672f34661a60a5596ae6d64f7e30f641" name="a672f34661a60a5596ae6d64f7e30f641"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a672f34661a60a5596ae6d64f7e30f641">&#9670;&nbsp;</a></span>setK()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void dominio.clases.ContentBased.setK </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>k</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Setter del parametro k. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">k</td><td>Valor que se asigna al parametro k para el K-NN </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="_content_based_8java_source.html#l00064">64</a> del archivo <a class="el" href="_content_based_8java_source.html">ContentBased.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   64</span>                             {</div>
+<div class="line"><span class="lineno">   65</span>        this.<a class="code hl_variable" href="classdominio_1_1clases_1_1_content_based.html#a81aee2992403d63aa5c1aeda9d55cb8b">k</a> = <a class="code hl_variable" href="classdominio_1_1clases_1_1_content_based.html#a81aee2992403d63aa5c1aeda9d55cb8b">k</a>;</div>
+<div class="line"><span class="lineno">   66</span>    }</div>
+<div class="ttc" id="aclassdominio_1_1clases_1_1_content_based_html_a81aee2992403d63aa5c1aeda9d55cb8b"><div class="ttname"><a href="classdominio_1_1clases_1_1_content_based.html#a81aee2992403d63aa5c1aeda9d55cb8b">dominio.clases.ContentBased.k</a></div><div class="ttdeci">static int k</div><div class="ttdoc">Parametro k que se usa para el algoritmo K-NN.</div><div class="ttdef"><b>Definition:</b> <a href="_content_based_8java_source.html#l00022">ContentBased.java:22</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a85943724cd710fd0ab3d14159604589a" name="a85943724cd710fd0ab3d14159604589a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a85943724cd710fd0ab3d14159604589a">&#9670;&nbsp;</a></span>recommended_items()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">HashMap&lt; <a class="el" href="classdominio_1_1clases_1_1_item.html">Item</a>, Double &gt; dominio.clases.ContentBased.recommended_items </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Metodo que devuelve los items recomendados al usuario que pide la recomendacion junto con la prediccion de la valoracion qe haría dicho usuario para cada uno de los items. </p>
+<dl class="section return"><dt>Devuelve</dt><dd>Diccionario de los items con sus respectivas predicciones de valoracion </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="_content_based_8java_source.html#l00073">73</a> del archivo <a class="el" href="_content_based_8java_source.html">ContentBased.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   73</span>                                                     {</div>
+<div class="line"><span class="lineno">   74</span>        HashMap&lt;Item, Double&gt; predictions = <span class="keyword">new</span> HashMap&lt;&gt;();</div>
+<div class="line"><span class="lineno">   75</span>        Item minimum = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">   76</span>        <span class="keywordflow">for</span> (Item item : <a class="code hl_variable" href="classdominio_1_1clases_1_1_content_based.html#ac79c5546f6c70b0f5fa5edcd529c38ca">ratedItems</a>.keySet()) {</div>
+<div class="line"><span class="lineno">   77</span>            <span class="keywordtype">double</span> rating = <a class="code hl_variable" href="classdominio_1_1clases_1_1_content_based.html#ac79c5546f6c70b0f5fa5edcd529c38ca">ratedItems</a>.get(item);</div>
+<div class="line"><span class="lineno">   78</span>            HashMap&lt;Item, Double&gt; knn = <a class="code hl_function" href="classdominio_1_1clases_1_1_content_based.html#a75b4c034a8b60bc1c267d700787c11ad">get_KNN</a>(item, rating);</div>
+<div class="line"><span class="lineno">   79</span>            <span class="keywordflow">for</span> (Item key : knn.keySet()) {</div>
+<div class="line"><span class="lineno">   80</span>                <span class="keywordflow">if</span> (minimum == <span class="keyword">null</span>) {</div>
+<div class="line"><span class="lineno">   81</span>                    minimum = key;</div>
+<div class="line"><span class="lineno">   82</span>                    predictions.put(key, knn.get(key));</div>
+<div class="line"><span class="lineno">   83</span>                }</div>
+<div class="line"><span class="lineno">   84</span>                <span class="comment">//If item already in the map take the greatest rating prediction</span></div>
+<div class="line"><span class="lineno">   85</span>                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (predictions.containsKey(key)) {</div>
+<div class="line"><span class="lineno">   86</span>                    <span class="keywordflow">if</span> (predictions.get(key) &lt; knn.get(key))</div>
+<div class="line"><span class="lineno">   87</span>                        predictions.replace(key, knn.get(key));</div>
+<div class="line"><span class="lineno">   88</span>                }</div>
+<div class="line"><span class="lineno">   89</span>                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (predictions.size() &lt; <a class="code hl_variable" href="classdominio_1_1clases_1_1_content_based.html#a81aee2992403d63aa5c1aeda9d55cb8b">k</a>) {</div>
+<div class="line"><span class="lineno">   90</span>                    <span class="keywordflow">if</span> (predictions.get(minimum) &gt; knn.get(key))</div>
+<div class="line"><span class="lineno">   91</span>                        minimum = key;</div>
+<div class="line"><span class="lineno">   92</span>                    predictions.put(key, knn.get(key));</div>
+<div class="line"><span class="lineno">   93</span>                }</div>
+<div class="line"><span class="lineno">   94</span>                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (predictions.get(minimum) &lt; knn.get(key)) {</div>
+<div class="line"><span class="lineno">   95</span>                    predictions.remove(minimum);</div>
+<div class="line"><span class="lineno">   96</span>                    predictions.put(key, knn.get(key));</div>
+<div class="line"><span class="lineno">   97</span>                    minimum = Collections.min(predictions.entrySet(), Map.Entry.comparingByValue()).getKey();</div>
+<div class="line"><span class="lineno">   98</span>                }</div>
+<div class="line"><span class="lineno">   99</span>            }</div>
+<div class="line"><span class="lineno">  100</span>        }</div>
+<div class="line"><span class="lineno">  101</span>        <span class="keywordflow">return</span> predictions;</div>
+<div class="line"><span class="lineno">  102</span>    }</div>
+<div class="ttc" id="aclassdominio_1_1clases_1_1_content_based_html_a75b4c034a8b60bc1c267d700787c11ad"><div class="ttname"><a href="classdominio_1_1clases_1_1_content_based.html#a75b4c034a8b60bc1c267d700787c11ad">dominio.clases.ContentBased.get_KNN</a></div><div class="ttdeci">HashMap&lt; Item, Double &gt; get_KNN(Item a, double rating)</div><div class="ttdoc">Metodo que implementa el algortimo K-NN para un item a que recibe como parametro. Devuelve un diccion...</div><div class="ttdef"><b>Definition:</b> <a href="_content_based_8java_source.html#l00114">ContentBased.java:114</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a75b4c034a8b60bc1c267d700787c11ad" name="a75b4c034a8b60bc1c267d700787c11ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a75b4c034a8b60bc1c267d700787c11ad">&#9670;&nbsp;</a></span>get_KNN()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">HashMap&lt; <a class="el" href="classdominio_1_1clases_1_1_item.html">Item</a>, Double &gt; dominio.clases.ContentBased.get_KNN </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdominio_1_1clases_1_1_item.html">Item</a>&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>rating</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Metodo que implementa el algortimo K-NN para un item a que recibe como parametro. Devuelve un diccionario con los k items con mejor prediccion de valoracion. Para la prediccion se usa la similitud entre ítems y se pondera con el rating dado por el usuario que pide la recomendacion del item a y con el rating promedio del ítem candidato a formar parte de los k-NN. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td><a class="el" href="classdominio_1_1clases_1_1_item.html" title="Representa un item y su conjunto de atributos.">Item</a> para el cual se calculan los K-NN </td></tr>
+    <tr><td class="paramname">rating</td><td>Valoracion del usuario que pide la recomendacion al ítem a </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>Estructura de datos que contiene, para un conjunto de items determinado, sus predicciones </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="_content_based_8java_source.html#l00114">114</a> del archivo <a class="el" href="_content_based_8java_source.html">ContentBased.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  114</span>                                                                 {</div>
+<div class="line"><span class="lineno">  115</span>        SortedMap&lt;Double, List&lt;Item&gt;&gt; maxPred = <span class="keyword">new</span> TreeMap&lt;&gt;();</div>
+<div class="line"><span class="lineno">  116</span>        HashMap&lt;String,Item&gt; data = super.dataset.getItems();</div>
+<div class="line"><span class="lineno">  117</span>        <span class="keywordflow">for</span> (Item dItem : data.values()) {</div>
+<div class="line"><span class="lineno">  118</span>            <span class="keywordflow">if</span> (!<a class="code hl_variable" href="classdominio_1_1clases_1_1_content_based.html#ac79c5546f6c70b0f5fa5edcd529c38ca">ratedItems</a>.containsKey(dItem)) {</div>
+<div class="line"><span class="lineno">  119</span>                DistanceItems d = <span class="keyword">new</span> DistanceItems(a, dItem, <a class="code hl_variable" href="classdominio_1_1clases_1_1_algorisme.html#a966a79e4751cb23c2f8a0537511cd94e">dataset</a>.<a class="code hl_function" href="classdominio_1_1clases_1_1_cjt__items.html#a45da1fed3bd533038cac61d85d6c2bca">getMaxValIntegers</a>().values(), <a class="code hl_variable" href="classdominio_1_1clases_1_1_algorisme.html#a966a79e4751cb23c2f8a0537511cd94e">dataset</a>.<a class="code hl_function" href="classdominio_1_1clases_1_1_cjt__items.html#a21af1ffbfe2964edf597b979c0731a94">getMinValIntegers</a>().values(),</div>
+<div class="line"><span class="lineno">  120</span>                        <a class="code hl_variable" href="classdominio_1_1clases_1_1_algorisme.html#a966a79e4751cb23c2f8a0537511cd94e">dataset</a>.<a class="code hl_function" href="classdominio_1_1clases_1_1_cjt__items.html#ae850e287ca41c2994f877b1e00b53d85">getMaxValDoubles</a>().values(), <a class="code hl_variable" href="classdominio_1_1clases_1_1_algorisme.html#a966a79e4751cb23c2f8a0537511cd94e">dataset</a>.<a class="code hl_function" href="classdominio_1_1clases_1_1_cjt__items.html#a8f50eb1411d7e506234ae0674be726ea">getMinValDoubles</a>().values(), <a class="code hl_variable" href="classdominio_1_1clases_1_1_algorisme.html#a966a79e4751cb23c2f8a0537511cd94e">dataset</a>.<a class="code hl_function" href="classdominio_1_1clases_1_1_cjt__items.html#a5c36693e47cffb9da13c1aaeeb191df0">getMaxDates</a>().values(),</div>
+<div class="line"><span class="lineno">  121</span>                        <a class="code hl_variable" href="classdominio_1_1clases_1_1_algorisme.html#a966a79e4751cb23c2f8a0537511cd94e">dataset</a>.<a class="code hl_function" href="classdominio_1_1clases_1_1_cjt__items.html#a71ed2c367bb59ec18a6e4b3a430a4e3b">getMinDates</a>().values(), <a class="code hl_variable" href="classdominio_1_1clases_1_1_content_based.html#afc91adb39d697089490568895be285af">intAt</a>, <a class="code hl_variable" href="classdominio_1_1clases_1_1_content_based.html#a6340ab091377a0d056cfd20119370b2b">doubAt</a>, <a class="code hl_variable" href="classdominio_1_1clases_1_1_content_based.html#a73e0142249ad740b54efef71f2078fb0">dateAt</a>, <a class="code hl_variable" href="classdominio_1_1clases_1_1_content_based.html#afc96c69348d58366f6b3d868a073a01f">bAt</a>, <a class="code hl_variable" href="classdominio_1_1clases_1_1_content_based.html#a58fc6e587f94625f55819aafddd62141">catAt</a>, <a class="code hl_variable" href="classdominio_1_1clases_1_1_content_based.html#a78dbed395df5211421b8ecd94cce1308">ftAt</a>);</div>
+<div class="line"><span class="lineno">  122</span>                <span class="keywordtype">double</span> prediction = (1 - d.get_distance()) * <a class="code hl_variable" href="classdominio_1_1clases_1_1_content_based.html#af2be76954b698d6f016461ab3cee7516">maxRating</a> - (<a class="code hl_variable" href="classdominio_1_1clases_1_1_content_based.html#af2be76954b698d6f016461ab3cee7516">maxRating</a> - rating) / (2*<a class="code hl_variable" href="classdominio_1_1clases_1_1_content_based.html#af2be76954b698d6f016461ab3cee7516">maxRating</a>);</div>
+<div class="line"><span class="lineno">  123</span>                <span class="keywordflow">if</span> (super.ratings.containsKey((dItem))) {</div>
+<div class="line"><span class="lineno">  124</span>                    <span class="keywordtype">double</span> meanRating = 0;</div>
+<div class="line"><span class="lineno">  125</span>                    ArrayList&lt;Double&gt; stars = super.ratings.get(dItem);</div>
+<div class="line"><span class="lineno">  126</span>                    <span class="keywordflow">for</span> (<span class="keywordtype">double</span> rate : stars)</div>
+<div class="line"><span class="lineno">  127</span>                        meanRating += rate;</div>
+<div class="line"><span class="lineno">  128</span>                    meanRating /= stars.size();</div>
+<div class="line"><span class="lineno">  129</span>                    prediction -= (<a class="code hl_variable" href="classdominio_1_1clases_1_1_content_based.html#af2be76954b698d6f016461ab3cee7516">maxRating</a> - meanRating) / (2*<a class="code hl_variable" href="classdominio_1_1clases_1_1_content_based.html#af2be76954b698d6f016461ab3cee7516">maxRating</a>);</div>
+<div class="line"><span class="lineno">  130</span> </div>
+<div class="line"><span class="lineno">  131</span>                }</div>
+<div class="line"><span class="lineno">  132</span>                <span class="keywordflow">if</span> (prediction &lt; 0) prediction = 0.0;</div>
+<div class="line"><span class="lineno">  133</span>                <span class="keywordflow">if</span>(maxPred.containsKey(prediction)) {</div>
+<div class="line"><span class="lineno">  134</span>                    maxPred.get(prediction).add(dItem);</div>
+<div class="line"><span class="lineno">  135</span>                }</div>
+<div class="line"><span class="lineno">  136</span>                <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  137</span>                    List&lt;Item&gt; value = <span class="keyword">new</span> ArrayList&lt;&gt;(List.of(dItem));</div>
+<div class="line"><span class="lineno">  138</span>                    <span class="keywordflow">if</span> (maxPred.size() &lt; <a class="code hl_variable" href="classdominio_1_1clases_1_1_content_based.html#a81aee2992403d63aa5c1aeda9d55cb8b">k</a>)</div>
+<div class="line"><span class="lineno">  139</span>                        maxPred.put(prediction, value);</div>
+<div class="line"><span class="lineno">  140</span>                    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (maxPred.firstKey() &lt; prediction) {</div>
+<div class="line"><span class="lineno">  141</span>                        maxPred.remove(maxPred.firstKey());</div>
+<div class="line"><span class="lineno">  142</span>                        maxPred.put(prediction, value);</div>
+<div class="line"><span class="lineno">  143</span>                    }</div>
+<div class="line"><span class="lineno">  144</span>                }</div>
+<div class="line"><span class="lineno">  145</span>            }</div>
+<div class="line"><span class="lineno">  146</span>        }</div>
+<div class="line"><span class="lineno">  147</span>        HashMap&lt;Item, Double&gt; knn = <span class="keyword">new</span> HashMap&lt;&gt;();</div>
+<div class="line"><span class="lineno">  148</span>        <span class="keywordtype">int</span> itemCounter = 0;</div>
+<div class="line"><span class="lineno">  149</span>        <span class="keywordflow">for</span> (Double d : maxPred.keySet()) {</div>
+<div class="line"><span class="lineno">  150</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; maxPred.get(d).size() &amp;&amp; itemCounter &lt; <a class="code hl_variable" href="classdominio_1_1clases_1_1_content_based.html#a81aee2992403d63aa5c1aeda9d55cb8b">k</a>; ++i, ++itemCounter) {</div>
+<div class="line"><span class="lineno">  151</span>                knn.put(maxPred.get(d).get(i), d);</div>
+<div class="line"><span class="lineno">  152</span>            }</div>
+<div class="line"><span class="lineno">  153</span>            <span class="keywordflow">if</span> (itemCounter == <a class="code hl_variable" href="classdominio_1_1clases_1_1_content_based.html#a81aee2992403d63aa5c1aeda9d55cb8b">k</a>) <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  154</span>        }</div>
+<div class="line"><span class="lineno">  155</span>        <span class="keywordflow">return</span> knn;</div>
+<div class="line"><span class="lineno">  156</span>    }</div>
+<div class="ttc" id="aclassdominio_1_1clases_1_1_cjt__items_html_a21af1ffbfe2964edf597b979c0731a94"><div class="ttname"><a href="classdominio_1_1clases_1_1_cjt__items.html#a21af1ffbfe2964edf597b979c0731a94">dominio.clases.Cjt_items.getMinValIntegers</a></div><div class="ttdeci">LinkedHashMap&lt; Integer, Long &gt; getMinValIntegers()</div><div class="ttdoc">Metodo que devuelve los valores minimos de los atributos enteros del dataset.</div><div class="ttdef"><b>Definition:</b> <a href="_cjt__items_8java_source.html#l00208">Cjt_items.java:208</a></div></div>
+<div class="ttc" id="aclassdominio_1_1clases_1_1_cjt__items_html_a45da1fed3bd533038cac61d85d6c2bca"><div class="ttname"><a href="classdominio_1_1clases_1_1_cjt__items.html#a45da1fed3bd533038cac61d85d6c2bca">dominio.clases.Cjt_items.getMaxValIntegers</a></div><div class="ttdeci">LinkedHashMap&lt; Integer, Long &gt; getMaxValIntegers()</div><div class="ttdoc">Metodo que devuelve los valores maximos de los atributos enteros del dataset.</div><div class="ttdef"><b>Definition:</b> <a href="_cjt__items_8java_source.html#l00199">Cjt_items.java:199</a></div></div>
+<div class="ttc" id="aclassdominio_1_1clases_1_1_cjt__items_html_a5c36693e47cffb9da13c1aaeeb191df0"><div class="ttname"><a href="classdominio_1_1clases_1_1_cjt__items.html#a5c36693e47cffb9da13c1aaeeb191df0">dominio.clases.Cjt_items.getMaxDates</a></div><div class="ttdeci">LinkedHashMap&lt; Integer, LocalDate &gt; getMaxDates()</div><div class="ttdoc">Metodo que devuelve los valores maximos de los atributos fecha del dataset.</div><div class="ttdef"><b>Definition:</b> <a href="_cjt__items_8java_source.html#l00235">Cjt_items.java:235</a></div></div>
+<div class="ttc" id="aclassdominio_1_1clases_1_1_cjt__items_html_a71ed2c367bb59ec18a6e4b3a430a4e3b"><div class="ttname"><a href="classdominio_1_1clases_1_1_cjt__items.html#a71ed2c367bb59ec18a6e4b3a430a4e3b">dominio.clases.Cjt_items.getMinDates</a></div><div class="ttdeci">LinkedHashMap&lt; Integer, LocalDate &gt; getMinDates()</div><div class="ttdoc">Metodo que devuelve los valores minimos de los atributos fecha del dataset.</div><div class="ttdef"><b>Definition:</b> <a href="_cjt__items_8java_source.html#l00244">Cjt_items.java:244</a></div></div>
+<div class="ttc" id="aclassdominio_1_1clases_1_1_cjt__items_html_a8f50eb1411d7e506234ae0674be726ea"><div class="ttname"><a href="classdominio_1_1clases_1_1_cjt__items.html#a8f50eb1411d7e506234ae0674be726ea">dominio.clases.Cjt_items.getMinValDoubles</a></div><div class="ttdeci">LinkedHashMap&lt; Integer, Double &gt; getMinValDoubles()</div><div class="ttdoc">Metodo que devuelve los valores minimos de los atributos reales del dataset.</div><div class="ttdef"><b>Definition:</b> <a href="_cjt__items_8java_source.html#l00226">Cjt_items.java:226</a></div></div>
+<div class="ttc" id="aclassdominio_1_1clases_1_1_cjt__items_html_ae850e287ca41c2994f877b1e00b53d85"><div class="ttname"><a href="classdominio_1_1clases_1_1_cjt__items.html#ae850e287ca41c2994f877b1e00b53d85">dominio.clases.Cjt_items.getMaxValDoubles</a></div><div class="ttdeci">LinkedHashMap&lt; Integer, Double &gt; getMaxValDoubles()</div><div class="ttdoc">Metodo que devuelve los valores maximos de los atributos reales del dataset.</div><div class="ttdef"><b>Definition:</b> <a href="_cjt__items_8java_source.html#l00217">Cjt_items.java:217</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Documentación de los datos miembro</h2>
+<a id="a81aee2992403d63aa5c1aeda9d55cb8b" name="a81aee2992403d63aa5c1aeda9d55cb8b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a81aee2992403d63aa5c1aeda9d55cb8b">&#9670;&nbsp;</a></span>k</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int dominio.clases.ContentBased.k</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Parametro k que se usa para el algoritmo K-NN. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="_content_based_8java_source.html#l00022">22</a> del archivo <a class="el" href="_content_based_8java_source.html">ContentBased.java</a>.</p>
+
+</div>
+</div>
+<a id="ac79c5546f6c70b0f5fa5edcd529c38ca" name="ac79c5546f6c70b0f5fa5edcd529c38ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac79c5546f6c70b0f5fa5edcd529c38ca">&#9670;&nbsp;</a></span>ratedItems</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">HashMap&lt;<a class="el" href="classdominio_1_1clases_1_1_item.html">Item</a>,Double&gt; dominio.clases.ContentBased.ratedItems</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Diccionario con los ítems valorados por el Usuario que pide la recomendacion junto con su valoracion. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="_content_based_8java_source.html#l00026">26</a> del archivo <a class="el" href="_content_based_8java_source.html">ContentBased.java</a>.</p>
+
+</div>
+</div>
+<a id="af2be76954b698d6f016461ab3cee7516" name="af2be76954b698d6f016461ab3cee7516"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af2be76954b698d6f016461ab3cee7516">&#9670;&nbsp;</a></span>maxRating</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double dominio.clases.ContentBased.maxRating</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Parametro que representa la valoracion maxima que se puede dar a un item. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="_content_based_8java_source.html#l00030">30</a> del archivo <a class="el" href="_content_based_8java_source.html">ContentBased.java</a>.</p>
+
+</div>
+</div>
+<a id="afc91adb39d697089490568895be285af" name="afc91adb39d697089490568895be285af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc91adb39d697089490568895be285af">&#9670;&nbsp;</a></span>intAt</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt;Boolean&gt; dominio.clases.ContentBased.intAt</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="_content_based_8java_source.html#l00032">32</a> del archivo <a class="el" href="_content_based_8java_source.html">ContentBased.java</a>.</p>
+
+</div>
+</div>
+<a id="a6340ab091377a0d056cfd20119370b2b" name="a6340ab091377a0d056cfd20119370b2b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6340ab091377a0d056cfd20119370b2b">&#9670;&nbsp;</a></span>doubAt</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt;Boolean&gt; dominio.clases.ContentBased.doubAt</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="_content_based_8java_source.html#l00033">33</a> del archivo <a class="el" href="_content_based_8java_source.html">ContentBased.java</a>.</p>
+
+</div>
+</div>
+<a id="a73e0142249ad740b54efef71f2078fb0" name="a73e0142249ad740b54efef71f2078fb0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a73e0142249ad740b54efef71f2078fb0">&#9670;&nbsp;</a></span>dateAt</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt;Boolean&gt; dominio.clases.ContentBased.dateAt</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="_content_based_8java_source.html#l00034">34</a> del archivo <a class="el" href="_content_based_8java_source.html">ContentBased.java</a>.</p>
+
+</div>
+</div>
+<a id="afc96c69348d58366f6b3d868a073a01f" name="afc96c69348d58366f6b3d868a073a01f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc96c69348d58366f6b3d868a073a01f">&#9670;&nbsp;</a></span>bAt</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt;Boolean&gt; dominio.clases.ContentBased.bAt</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="_content_based_8java_source.html#l00035">35</a> del archivo <a class="el" href="_content_based_8java_source.html">ContentBased.java</a>.</p>
+
+</div>
+</div>
+<a id="a58fc6e587f94625f55819aafddd62141" name="a58fc6e587f94625f55819aafddd62141"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a58fc6e587f94625f55819aafddd62141">&#9670;&nbsp;</a></span>catAt</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt;Boolean&gt; dominio.clases.ContentBased.catAt</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="_content_based_8java_source.html#l00036">36</a> del archivo <a class="el" href="_content_based_8java_source.html">ContentBased.java</a>.</p>
+
+</div>
+</div>
+<a id="a78dbed395df5211421b8ecd94cce1308" name="a78dbed395df5211421b8ecd94cce1308"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a78dbed395df5211421b8ecd94cce1308">&#9670;&nbsp;</a></span>ftAt</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt;Boolean&gt; dominio.clases.ContentBased.ftAt</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="_content_based_8java_source.html#l00037">37</a> del archivo <a class="el" href="_content_based_8java_source.html">ContentBased.java</a>.</p>
+
+</div>
+</div>
+<hr/>La documentación para esta clase fue generada a partir del siguiente fichero:<ul>
+<li><a class="el" href="_content_based_8java_source.html">ContentBased.java</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+</small></address>
+</body>
+</html>
