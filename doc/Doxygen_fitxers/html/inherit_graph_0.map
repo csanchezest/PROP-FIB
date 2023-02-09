@@ -1,6 +1,0 @@
-<map id="Representación gráfica de la clase" name="Representación gráfica de la clase">
-<area shape="rect" id="node1" href="$classdominio_1_1clases_1_1_algorisme.html" title="Superclase de los Algortimos de recomendacion." alt="" coords="5,56,172,83"/>
-<area shape="rect" id="node2" href="$classdominio_1_1clases_1_1_collaborative.html" title="Clase dedicada a la implementacion del algoritmo K&#45;means." alt="" coords="224,5,407,32"/>
-<area shape="rect" id="node3" href="$classdominio_1_1clases_1_1_content_based.html" title="Clase que implementa el sistema de recomendacion con el metodo &quot;Content Based Filtering&quot;." alt="" coords="220,56,411,83"/>
-<area shape="rect" id="node4" href="$classdominio_1_1clases_1_1_slope_one.html" title="Clase dedicada a la implementacion del algoritmo de prediccion SlopeOne." alt="" coords="232,107,399,133"/>
-</map>
