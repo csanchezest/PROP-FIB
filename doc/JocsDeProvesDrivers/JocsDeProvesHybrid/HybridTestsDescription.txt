@@ -1,0 +1,30 @@
+Descripcion de los tests de la clase Hybrid hechos en la clase DriverHybris
+
+Test 1
+Descripcion: Se testea la clase Hybrid que nos sirve para el caso de uso Carregar Hybrid
+Objetivos: evaluar la generacion de una recomendacion con el Hybrid approach con un tamaño de datos pequeño que se puede
+calcular a mano y asi comprobar que el resultado es el que tiene que ser.
+Entrada: El testeo recibe la recomendacion hecha por el Collaborative Recommender y por el Content Based Recommender
+en forma de dos maps. Estos no se leen de ningun fichero sino que se declaran directamente en el propio driver.
+Los numero de items recomendados en ambas recomendaciones es 5, es decir, el tamaño de los maps es 5.
+Salida: El formato de la salida es el siguiente:
+    id_item --> prediccion de la valoracion
+Es decir, se imprimen los identificadores de los items recomendados junto con su valoracion de la prediccion.
+Resultado de la prueba: ok
+Operativa: el driver esta programado para que se ejecute automaticamente este test. No se requiere de ningun input
+por parte del usuario ya que como se ha dicho antes, los datos de entrada se declaran directamente en el mismo codigo.
+
+Test 2
+Descripcion: Se testea la clase Hybrid que nos sirve para el caso de uso Carregar Hybrid
+Objetivos: evaluar la generacion de una recomendacion con el Hybrid approach con un tamaño de datos mas grande para
+comprobar que funcione correctamente con una entrada mas compleja.
+Entrada: El testeo recibe la recomendacion hecha por el Collaborative Recommender y por el Content Based Recommender
+en forma de dos maps. Estos no se leen de ningun fichero sino que se declaran directamente en el propio driver.
+Los numero de items recomendados en ambas recomendaciones es 20, es decir, el tamaño de los maps es 20.
+Salida: El formato de la salida es el siguiente:
+    id_item --> prediccion de la valoracion
+Es decir, se imprimen los identificadores de los items recomendados junto con su valoracion de la prediccion.
+Resultado de la prueba: ok
+Operativa: el driver esta programado para que se ejecute automaticamente este test. No se requiere de ningun input
+por parte del usuario ya que como se ha dicho antes, los datos de entrada se declaran directamente en el mismo codigo.
+
