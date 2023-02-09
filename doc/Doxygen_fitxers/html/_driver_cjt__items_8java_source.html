@@ -1,0 +1,336 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Proyecto PROP: Sistema Recomendador: Fichero Fuente DriverCjt_items.java</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Proyecto PROP: Sistema Recomendador<span id="projectnumber">&#160;Muhammad Haris, Cristian Sanchez Estape, Jordi Elgueta Serra y Houda El Fezzak Bekkouri</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.9.3 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Buscar','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_99e8efb7985db3832d54cf06274403f7.html">dominio</a></li><li class="navelem"><a class="el" href="dir_10cedd71bc84c60470c6fc80555c1bd1.html">controladores</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">DriverCjt_items.java</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_driver_cjt__items_8java.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">package </span>dominio.controladores;</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">import</span> dominio.clases.*;</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">import</span> java.lang.reflect.Method;</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">import</span> java.time.LocalDate;</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">import</span> java.util.*;</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="classdominio_1_1controladores_1_1_driver_cjt__items.html">   20</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="classdominio_1_1controladores_1_1_driver_cjt__items.html">DriverCjt_items</a> {</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="comment">//    public static void testSetItems(Cjt_items c, ArrayList&lt;Item&gt;items) {</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="comment">//        System.out.println(&quot;Test setItems&quot;);</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="comment">//        items.add(new Item(&quot;223&quot;));</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="comment">//        c.setItems(items);</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="comment">//        System.out.println(&quot;\tItemId: 223&quot;);</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="comment">//    }</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="classdominio_1_1controladores_1_1_driver_cjt__items.html#a96f39b94e7cd0b1582eb0710194534c3">   40</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdominio_1_1controladores_1_1_driver_cjt__items.html#a96f39b94e7cd0b1582eb0710194534c3">testGetItems</a>(<a class="code hl_class" href="classdominio_1_1clases_1_1_cjt__items.html">Cjt_items</a> c) {</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        System.out.println(<span class="stringliteral">&quot;Test getItems:&quot;</span>);</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        <span class="keywordflow">for</span>(<a class="code hl_class" href="classdominio_1_1clases_1_1_item.html">Item</a> i: c.<a class="code hl_function" href="classdominio_1_1clases_1_1_cjt__items.html#ad65ce3e01d8107df2fe96e4ac3280b92">getItems</a>().values()) System.out.println(<span class="stringliteral">&quot;\t&quot;</span> + i.getId());</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        <span class="comment">//Falta hacer un printeo de lo que hace</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    }</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="classdominio_1_1controladores_1_1_driver_cjt__items.html#a9d5a188578404f90b5bb5205e1a436ac">   52</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdominio_1_1controladores_1_1_driver_cjt__items.html#a9d5a188578404f90b5bb5205e1a436ac">testIsDate</a> (<a class="code hl_class" href="classdominio_1_1clases_1_1_cjt__items.html">Cjt_items</a> c, String column) {</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        System.out.println(<span class="stringliteral">&quot;Test date&quot;</span>);</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        Method isDate = <span class="keyword">null</span>;</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        <span class="keywordflow">try</span> {</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>            isDate = c.getClass().getDeclaredMethod(<span class="stringliteral">&quot;isDate&quot;</span>, String.class);</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>            isDate.setAccessible(<span class="keyword">true</span>);</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>            System.out.println(isDate.invoke(c,column));</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        } <span class="keywordflow">catch</span>(Exception e){</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>            e.printStackTrace();</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>            System.exit(-1);</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        }</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    }</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno"><a class="line" href="classdominio_1_1controladores_1_1_driver_cjt__items.html#a9a7055d8d222c4f504449bb760ef1b77">   71</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdominio_1_1controladores_1_1_driver_cjt__items.html#a9a7055d8d222c4f504449bb760ef1b77">testIsInteger</a> (<a class="code hl_class" href="classdominio_1_1clases_1_1_cjt__items.html">Cjt_items</a> c, String column) {</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        System.out.println(<span class="stringliteral">&quot;Test isInteger&quot;</span>);</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        Method isInteger = <span class="keyword">null</span>;</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        <span class="keywordflow">try</span> {</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>            isInteger = c.getClass().getDeclaredMethod(<span class="stringliteral">&quot;isInteger&quot;</span>, String.class);</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>            isInteger.setAccessible(<span class="keyword">true</span>);</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>            System.out.println(isInteger.invoke(c,column));</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>        } <span class="keywordflow">catch</span>(Exception e){</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>            e.printStackTrace();</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>            System.exit(-1);</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        }</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    }</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno"><a class="line" href="classdominio_1_1controladores_1_1_driver_cjt__items.html#a5f30c2eb7301c92566c3df8fd412e073">   90</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdominio_1_1controladores_1_1_driver_cjt__items.html#a5f30c2eb7301c92566c3df8fd412e073">testIsDouble</a> (<a class="code hl_class" href="classdominio_1_1clases_1_1_cjt__items.html">Cjt_items</a> c, String column) {</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>        System.out.println(<span class="stringliteral">&quot;Test isDouble&quot;</span>);</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>        Method isDouble = <span class="keyword">null</span>;</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>        <span class="keywordflow">try</span> {</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>            isDouble = c.getClass().getDeclaredMethod(<span class="stringliteral">&quot;isDouble&quot;</span>, String.class);</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>            isDouble.setAccessible(<span class="keyword">true</span>);</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>            System.out.println(isDouble.invoke(c,column));</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>        } <span class="keywordflow">catch</span>(Exception e){</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>            e.printStackTrace();</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>            System.exit(-1);</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>        }</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    }</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span> </div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno"><a class="line" href="classdominio_1_1controladores_1_1_driver_cjt__items.html#a9091085cf4342c55493e107104beaafc">  109</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdominio_1_1controladores_1_1_driver_cjt__items.html#a9091085cf4342c55493e107104beaafc">testIsCategorical</a> (<a class="code hl_class" href="classdominio_1_1clases_1_1_cjt__items.html">Cjt_items</a> c, String column) {</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>        System.out.println(<span class="stringliteral">&quot;Test isCategorical&quot;</span>);</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>        Method isCategorical = <span class="keyword">null</span>;</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>        <span class="keywordflow">try</span> {</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>            isCategorical = c.getClass().getDeclaredMethod(<span class="stringliteral">&quot;isCategorical&quot;</span>, String.class);</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>            isCategorical.setAccessible(<span class="keyword">true</span>);</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>            System.out.println(isCategorical.invoke(c,column));</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>        } <span class="keywordflow">catch</span>(Exception e){</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>            e.printStackTrace();</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>            System.exit(-1);</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>        }</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>    }</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span> </div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno"><a class="line" href="classdominio_1_1controladores_1_1_driver_cjt__items.html#ac40969ba0b12972966989f5fd0d5a368">  128</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdominio_1_1controladores_1_1_driver_cjt__items.html#ac40969ba0b12972966989f5fd0d5a368">testParseToArray</a>(<a class="code hl_class" href="classdominio_1_1clases_1_1_cjt__items.html">Cjt_items</a> c, String column) {</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>        System.out.println(<span class="stringliteral">&quot;Test parseToArray&quot;</span>);</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>        Method parseToArray = <span class="keyword">null</span>;</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>        <span class="keywordflow">try</span> {</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>            parseToArray = c.getClass().getDeclaredMethod(<span class="stringliteral">&quot;parseToArray&quot;</span>, String.class);</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>            parseToArray.setAccessible(<span class="keyword">true</span>);</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>            parseToArray.invoke(c,column);</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>        } <span class="keywordflow">catch</span>(Exception e){</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>            e.printStackTrace();</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>            System.exit(-1);</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>        }</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>    }</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span> </div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno"><a class="line" href="classdominio_1_1controladores_1_1_driver_cjt__items.html#a7ba67667f604c382a4933eb9fbceff60">  147</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdominio_1_1controladores_1_1_driver_cjt__items.html#a7ba67667f604c382a4933eb9fbceff60">testIsBoolean</a> (<a class="code hl_class" href="classdominio_1_1clases_1_1_cjt__items.html">Cjt_items</a> c, String column) {</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>        System.out.println(<span class="stringliteral">&quot;Test isBoolean&quot;</span>);</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>        Method isBoolean = <span class="keyword">null</span>;</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>        <span class="keywordflow">try</span> {</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>            isBoolean = c.getClass().getDeclaredMethod(<span class="stringliteral">&quot;isBoolean&quot;</span>, String.class);</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>            isBoolean.setAccessible(<span class="keyword">true</span>);</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>            System.out.println(isBoolean.invoke(c,column));</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>        } <span class="keywordflow">catch</span>(Exception e){</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>            e.printStackTrace();</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>            System.exit(-1);</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>        }</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>    }</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span> </div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno"><a class="line" href="classdominio_1_1controladores_1_1_driver_cjt__items.html#afe454285751dc40fc3577a3a6ce9ec8e">  164</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdominio_1_1controladores_1_1_driver_cjt__items.html#afe454285751dc40fc3577a3a6ce9ec8e">testPrintItems</a>() {</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>        System.out.println(<span class="stringliteral">&quot;Test printItems&quot;</span>);</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>        List&lt;Item&gt; items = <span class="keyword">new</span> ArrayList&lt;&gt;();</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>        items.add(<span class="keyword">new</span> <a class="code hl_class" href="classdominio_1_1clases_1_1_item.html">Item</a>(<span class="stringliteral">&quot;223&quot;</span>));</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>        <a class="code hl_class" href="classdominio_1_1clases_1_1_cjt__items.html">Cjt_items</a>.<a class="code hl_function" href="classdominio_1_1clases_1_1_cjt__items.html#a3fb7b53ebfcda9c9b04289375fc06dfe">printItems</a>((HashMap&lt;String, Item&gt;) items);</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>    }</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span> </div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno"><a class="line" href="classdominio_1_1controladores_1_1_driver_cjt__items.html#af2e74ef7c5211d4ef507b0d1021653fb">  176</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdominio_1_1controladores_1_1_driver_cjt__items.html#af2e74ef7c5211d4ef507b0d1021653fb">testGetMaxValIntegers</a>(<a class="code hl_class" href="classdominio_1_1clases_1_1_cjt__items.html">Cjt_items</a> c) {</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>        System.out.println(<span class="stringliteral">&quot;testGetMaxValIntegers:&quot;</span>);</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>        HashMap&lt;Integer,Integer&gt; data = c.<a class="code hl_function" href="classdominio_1_1clases_1_1_cjt__items.html#a45da1fed3bd533038cac61d85d6c2bca">getMaxValIntegers</a>();</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i: data.keySet()){</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>            System.out.println(i + <span class="stringliteral">&quot; -&gt; &quot;</span> + data.get(i));</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>        }</div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>    }</div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span> </div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno"><a class="line" href="classdominio_1_1controladores_1_1_driver_cjt__items.html#aaf4b764be82ae760d1e4c2d6040012f9">  189</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdominio_1_1controladores_1_1_driver_cjt__items.html#aaf4b764be82ae760d1e4c2d6040012f9">testGetMinValIntegers</a>(<a class="code hl_class" href="classdominio_1_1clases_1_1_cjt__items.html">Cjt_items</a> c) {</div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>        System.out.println(<span class="stringliteral">&quot;testGetMinValIntegers:&quot;</span>);</div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>        HashMap&lt;Integer,Integer&gt; data = c.<a class="code hl_function" href="classdominio_1_1clases_1_1_cjt__items.html#a21af1ffbfe2964edf597b979c0731a94">getMinValIntegers</a>();</div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i: data.keySet()){</div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>            System.out.println(i + <span class="stringliteral">&quot; -&gt; &quot;</span> + data.get(i));</div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>        }</div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>    }</div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span> </div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno"><a class="line" href="classdominio_1_1controladores_1_1_driver_cjt__items.html#a638b172f092794329252b1ebee5d981d">  202</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdominio_1_1controladores_1_1_driver_cjt__items.html#a638b172f092794329252b1ebee5d981d">testGetMaxValDoubles</a>(<a class="code hl_class" href="classdominio_1_1clases_1_1_cjt__items.html">Cjt_items</a> c) {</div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>        System.out.println(<span class="stringliteral">&quot;testGetMaxValDoubles:&quot;</span>);</div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>        HashMap&lt;Integer,Double&gt; data = c.<a class="code hl_function" href="classdominio_1_1clases_1_1_cjt__items.html#ae850e287ca41c2994f877b1e00b53d85">getMaxValDoubles</a>();</div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i: data.keySet()){</div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>            System.out.println(i + <span class="stringliteral">&quot; -&gt; &quot;</span> + data.get(i));</div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>        }</div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>    }</div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span> </div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno"><a class="line" href="classdominio_1_1controladores_1_1_driver_cjt__items.html#a145ac759fa8817d3678e22eb8a56e8d6">  215</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdominio_1_1controladores_1_1_driver_cjt__items.html#a145ac759fa8817d3678e22eb8a56e8d6">testGetMinValDoubles</a>(<a class="code hl_class" href="classdominio_1_1clases_1_1_cjt__items.html">Cjt_items</a> c) {</div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>        System.out.println(<span class="stringliteral">&quot;testGetMinValDoubles:&quot;</span>);</div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>        HashMap&lt;Integer,Double&gt; data = c.<a class="code hl_function" href="classdominio_1_1clases_1_1_cjt__items.html#a8f50eb1411d7e506234ae0674be726ea">getMinValDoubles</a>();</div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i: data.keySet()){</div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>            System.out.println(i + <span class="stringliteral">&quot; -&gt; &quot;</span> + data.get(i));</div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>        }</div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>    }</div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span> </div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno"><a class="line" href="classdominio_1_1controladores_1_1_driver_cjt__items.html#a7573be131c59194d2f45bb9c44efcc7b">  228</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdominio_1_1controladores_1_1_driver_cjt__items.html#a7573be131c59194d2f45bb9c44efcc7b">testGetMaxDates</a>(<a class="code hl_class" href="classdominio_1_1clases_1_1_cjt__items.html">Cjt_items</a> c) {</div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>        System.out.println(<span class="stringliteral">&quot;testGetMaxDates:&quot;</span>);</div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>        HashMap&lt;Integer, LocalDate&gt; data = c.<a class="code hl_function" href="classdominio_1_1clases_1_1_cjt__items.html#a5c36693e47cffb9da13c1aaeeb191df0">getMaxDates</a>();</div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i: data.keySet()){</div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>            System.out.println(i + <span class="stringliteral">&quot; -&gt; &quot;</span> + data.get(i));</div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>        }</div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>    }</div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span> </div>
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno"><a class="line" href="classdominio_1_1controladores_1_1_driver_cjt__items.html#a3138fb4dc6cfa9f9343d23b8b2f6ecce">  241</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdominio_1_1controladores_1_1_driver_cjt__items.html#a3138fb4dc6cfa9f9343d23b8b2f6ecce">testGetMinDates</a>(<a class="code hl_class" href="classdominio_1_1clases_1_1_cjt__items.html">Cjt_items</a> c) {</div>
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>        System.out.println(<span class="stringliteral">&quot;testGetMinDates:&quot;</span>);</div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>        HashMap&lt;Integer,LocalDate&gt; data = c.<a class="code hl_function" href="classdominio_1_1clases_1_1_cjt__items.html#a71ed2c367bb59ec18a6e4b3a430a4e3b">getMinDates</a>();</div>
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i: data.keySet()){</div>
+<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>            System.out.println(i + <span class="stringliteral">&quot; -&gt; &quot;</span> + data.get(i));</div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>        }</div>
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>    }</div>
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span> </div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno"><a class="line" href="classdominio_1_1controladores_1_1_driver_cjt__items.html#ab3c0f5773dd6064277c086270100ab80">  249</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classdominio_1_1controladores_1_1_driver_cjt__items.html#ab3c0f5773dd6064277c086270100ab80">main</a> (String args[]) {</div>
+<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>        Scanner sc = <span class="keyword">new</span> Scanner(System.in);</div>
+<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>        <span class="keywordtype">int</span> ds;</div>
+<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>        System.out.print(<span class="stringliteral">&quot;Indique si quiere realizar el test con datos inventados o del dataset (0 - Inventados; 1 - Dataset): &quot;</span>);</div>
+<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>        ds = sc.nextInt();</div>
+<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>        <span class="keywordflow">while</span> (ds != 0 &amp;&amp; ds != 1) {</div>
+<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>            System.out.print(<span class="stringliteral">&quot;Número incorrecto, inténtalo de nuevo:&quot;</span>);</div>
+<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>            ds = sc.nextInt();</div>
+<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>        }</div>
+<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>        <span class="keywordflow">switch</span> (ds) {</div>
+<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>            <span class="keywordflow">case</span> 0:</div>
+<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>                String pathToCsv = <span class="stringliteral">&quot;/persistencia/data/DriversData/Cjt_itemsTestSets/&quot;</span>;</div>
+<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>                <a class="code hl_class" href="classdominio_1_1clases_1_1_cjt__items.html">Cjt_items</a> dataset = <span class="keyword">new</span> <a class="code hl_class" href="classdominio_1_1clases_1_1_cjt__items.html">Cjt_items</a>(pathToCsv + <span class="stringliteral">&quot;smallTestItems.csv&quot;</span>);</div>
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>                <a class="code hl_function" href="classdominio_1_1controladores_1_1_driver_cjt__items.html#a96f39b94e7cd0b1582eb0710194534c3">testGetItems</a>(dataset);</div>
+<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>                System.out.println(<span class="stringliteral">&quot;------------&quot;</span>);</div>
+<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>                <a class="code hl_function" href="classdominio_1_1controladores_1_1_driver_cjt__items.html#a7573be131c59194d2f45bb9c44efcc7b">testGetMaxDates</a>(dataset);</div>
+<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>                System.out.println(<span class="stringliteral">&quot;------------&quot;</span>);</div>
+<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>                <a class="code hl_function" href="classdominio_1_1controladores_1_1_driver_cjt__items.html#a638b172f092794329252b1ebee5d981d">testGetMaxValDoubles</a>(dataset);</div>
+<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>                System.out.println(<span class="stringliteral">&quot;------------&quot;</span>);</div>
+<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>                <a class="code hl_function" href="classdominio_1_1controladores_1_1_driver_cjt__items.html#af2e74ef7c5211d4ef507b0d1021653fb">testGetMaxValIntegers</a>(dataset);</div>
+<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>                System.out.println(<span class="stringliteral">&quot;------------&quot;</span>);</div>
+<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>                <a class="code hl_function" href="classdominio_1_1controladores_1_1_driver_cjt__items.html#a145ac759fa8817d3678e22eb8a56e8d6">testGetMinValDoubles</a>(dataset);</div>
+<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>                System.out.println(<span class="stringliteral">&quot;------------&quot;</span>);</div>
+<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>                <a class="code hl_function" href="classdominio_1_1controladores_1_1_driver_cjt__items.html#a3138fb4dc6cfa9f9343d23b8b2f6ecce">testGetMinDates</a>(dataset);</div>
+<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>                System.out.println(<span class="stringliteral">&quot;------------&quot;</span>);</div>
+<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>                <a class="code hl_function" href="classdominio_1_1controladores_1_1_driver_cjt__items.html#aaf4b764be82ae760d1e4c2d6040012f9">testGetMinValIntegers</a>(dataset);</div>
+<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>                System.out.println(<span class="stringliteral">&quot;--------------------------------------&quot;</span>);</div>
+<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>                System.out.println(<span class="stringliteral">&quot;Impresión de Items y sus atributos:&quot;</span>);</div>
+<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>                System.out.println(<span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span>                <span class="keywordflow">for</span> (<a class="code hl_class" href="classdominio_1_1clases_1_1_item.html">Item</a> i : dataset.<a class="code hl_function" href="classdominio_1_1clases_1_1_cjt__items.html#ad65ce3e01d8107df2fe96e4ac3280b92">getItems</a>().values()) {</div>
+<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>                    System.out.println(<span class="stringliteral">&quot;ItemId &quot;</span> + i.getId() + <span class="stringliteral">&quot;-&gt; &quot;</span> + <span class="stringliteral">&quot;IntAttributes: &quot;</span> + i.getIntAttributes());</div>
+<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>                    System.out.println(<span class="stringliteral">&quot;ItemId &quot;</span> + i.getId() + <span class="stringliteral">&quot;-&gt; &quot;</span> + <span class="stringliteral">&quot;CategoryPscBits: &quot;</span> + i.getCategoryPscBits());</div>
+<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>                    System.out.println(<span class="stringliteral">&quot;ItemId &quot;</span> + i.getId() + <span class="stringliteral">&quot;-&gt; &quot;</span> + <span class="stringliteral">&quot;StringAttributes: &quot;</span> + i.getStringAttributes());</div>
+<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>                    System.out.println(<span class="stringliteral">&quot;ItemId &quot;</span> + i.getId() + <span class="stringliteral">&quot;-&gt; &quot;</span> + <span class="stringliteral">&quot;DoubleAttributes: &quot;</span> + i.getDoubleAttributes());</div>
+<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>                    System.out.println(<span class="stringliteral">&quot;ItemId &quot;</span> + i.getId() + <span class="stringliteral">&quot;-&gt; &quot;</span> + <span class="stringliteral">&quot;DateAttributes: &quot;</span> + i.getDateAttributes());</div>
+<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>                    System.out.println(<span class="stringliteral">&quot;ItemId &quot;</span> + i.getId() + <span class="stringliteral">&quot;-&gt; &quot;</span> + <span class="stringliteral">&quot;BooleanAttributes: &quot;</span> + i.getBooleanAttributes());</div>
+<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span>                    System.out.println(<span class="stringliteral">&quot;------------&quot;</span>);</div>
+<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span> </div>
+<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span> </div>
+<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span>                }</div>
+<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span>            <span class="keywordflow">case</span> 1:</div>
+<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>                String pathToCsv2 = <span class="stringliteral">&quot;/persistencia/data/DriversData/Cjt_itemsTestSets/&quot;</span>;</div>
+<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>                <a class="code hl_class" href="classdominio_1_1clases_1_1_cjt__items.html">Cjt_items</a> dataset2 = <span class="keyword">new</span> <a class="code hl_class" href="classdominio_1_1clases_1_1_cjt__items.html">Cjt_items</a>(pathToCsv2 + <span class="stringliteral">&quot;items.csv&quot;</span>);</div>
+<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>                <a class="code hl_function" href="classdominio_1_1controladores_1_1_driver_cjt__items.html#a96f39b94e7cd0b1582eb0710194534c3">testGetItems</a>(dataset2);</div>
+<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span>                System.out.println(<span class="stringliteral">&quot;------------&quot;</span>);</div>
+<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span>                <a class="code hl_function" href="classdominio_1_1controladores_1_1_driver_cjt__items.html#a7573be131c59194d2f45bb9c44efcc7b">testGetMaxDates</a>(dataset2);</div>
+<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>                System.out.println(<span class="stringliteral">&quot;------------&quot;</span>);</div>
+<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span>                <a class="code hl_function" href="classdominio_1_1controladores_1_1_driver_cjt__items.html#a638b172f092794329252b1ebee5d981d">testGetMaxValDoubles</a>(dataset2);</div>
+<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span>                System.out.println(<span class="stringliteral">&quot;------------&quot;</span>);</div>
+<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span>                <a class="code hl_function" href="classdominio_1_1controladores_1_1_driver_cjt__items.html#af2e74ef7c5211d4ef507b0d1021653fb">testGetMaxValIntegers</a>(dataset2);</div>
+<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span>                System.out.println(<span class="stringliteral">&quot;------------&quot;</span>);</div>
+<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span>                <a class="code hl_function" href="classdominio_1_1controladores_1_1_driver_cjt__items.html#a145ac759fa8817d3678e22eb8a56e8d6">testGetMinValDoubles</a>(dataset2);</div>
+<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span>                System.out.println(<span class="stringliteral">&quot;------------&quot;</span>);</div>
+<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span>                <a class="code hl_function" href="classdominio_1_1controladores_1_1_driver_cjt__items.html#a3138fb4dc6cfa9f9343d23b8b2f6ecce">testGetMinDates</a>(dataset2);</div>
+<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span>                System.out.println(<span class="stringliteral">&quot;------------&quot;</span>);</div>
+<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span>                <a class="code hl_function" href="classdominio_1_1controladores_1_1_driver_cjt__items.html#aaf4b764be82ae760d1e4c2d6040012f9">testGetMinValIntegers</a>(dataset2);</div>
+<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span>                System.out.println(<span class="stringliteral">&quot;--------------------------------------&quot;</span>);</div>
+<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span>                System.out.println(<span class="stringliteral">&quot;Impresión de Items y sus atributos:&quot;</span>);</div>
+<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span>                System.out.println(<span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span>                <span class="keywordflow">for</span> (<a class="code hl_class" href="classdominio_1_1clases_1_1_item.html">Item</a> i : dataset2.<a class="code hl_function" href="classdominio_1_1clases_1_1_cjt__items.html#ad65ce3e01d8107df2fe96e4ac3280b92">getItems</a>().values()) {</div>
+<div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span>                    System.out.println(<span class="stringliteral">&quot;ItemId &quot;</span> + i.getId() + <span class="stringliteral">&quot;-&gt; &quot;</span> + <span class="stringliteral">&quot;IntAttributes: &quot;</span> + i.getIntAttributes());</div>
+<div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span>                    System.out.println(<span class="stringliteral">&quot;ItemId &quot;</span> + i.getId() + <span class="stringliteral">&quot;-&gt; &quot;</span> + <span class="stringliteral">&quot;CategoryPscBits: &quot;</span> + i.getCategoryPscBits());</div>
+<div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span>                    System.out.println(<span class="stringliteral">&quot;ItemId &quot;</span> + i.getId() + <span class="stringliteral">&quot;-&gt; &quot;</span> + <span class="stringliteral">&quot;StringAttributes: &quot;</span> + i.getStringAttributes());</div>
+<div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span>                    System.out.println(<span class="stringliteral">&quot;ItemId &quot;</span> + i.getId() + <span class="stringliteral">&quot;-&gt; &quot;</span> + <span class="stringliteral">&quot;DoubleAttributes: &quot;</span> + i.getDoubleAttributes());</div>
+<div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span>                    System.out.println(<span class="stringliteral">&quot;ItemId &quot;</span> + i.getId() + <span class="stringliteral">&quot;-&gt; &quot;</span> + <span class="stringliteral">&quot;DateAttributes: &quot;</span> + i.getDateAttributes());</div>
+<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span>                    System.out.println(<span class="stringliteral">&quot;ItemId &quot;</span> + i.getId() + <span class="stringliteral">&quot;-&gt; &quot;</span> + <span class="stringliteral">&quot;BooleanAttributes: &quot;</span> + i.getBooleanAttributes());</div>
+<div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span>                    System.out.println(<span class="stringliteral">&quot;------------&quot;</span>);</div>
+<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span> </div>
+<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span> </div>
+<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span>                }</div>
+<div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span>        }</div>
+<div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span>    }</div>
+<div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span> </div>
+<div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span>}</div>
+<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span> </div>
+<div class="ttc" id="aclassdominio_1_1clases_1_1_cjt__items_html"><div class="ttname"><a href="classdominio_1_1clases_1_1_cjt__items.html">dominio.clases.Cjt_items</a></div><div class="ttdoc">Clase dedicada al preprocesado de un dataset de items con numero y tipo de atributos uniforme y la po...</div><div class="ttdef"><b>Definition:</b> <a href="_cjt__items_8java_source.html#l00029">Cjt_items.java:29</a></div></div>
+<div class="ttc" id="aclassdominio_1_1clases_1_1_cjt__items_html_a21af1ffbfe2964edf597b979c0731a94"><div class="ttname"><a href="classdominio_1_1clases_1_1_cjt__items.html#a21af1ffbfe2964edf597b979c0731a94">dominio.clases.Cjt_items.getMinValIntegers</a></div><div class="ttdeci">LinkedHashMap&lt; Integer, Long &gt; getMinValIntegers()</div><div class="ttdoc">Metodo que devuelve los valores minimos de los atributos enteros del dataset.</div><div class="ttdef"><b>Definition:</b> <a href="_cjt__items_8java_source.html#l00081">Cjt_items.java:81</a></div></div>
+<div class="ttc" id="aclassdominio_1_1clases_1_1_cjt__items_html_a3fb7b53ebfcda9c9b04289375fc06dfe"><div class="ttname"><a href="classdominio_1_1clases_1_1_cjt__items.html#a3fb7b53ebfcda9c9b04289375fc06dfe">dominio.clases.Cjt_items.printItems</a></div><div class="ttdeci">static void printItems(HashMap&lt; String, Item &gt; Items)</div><div class="ttdoc">Metodo que imprime por la salida estandar de output un conjunto de items.</div><div class="ttdef"><b>Definition:</b> <a href="_cjt__items_8java_source.html#l00309">Cjt_items.java:309</a></div></div>
+<div class="ttc" id="aclassdominio_1_1clases_1_1_cjt__items_html_a45da1fed3bd533038cac61d85d6c2bca"><div class="ttname"><a href="classdominio_1_1clases_1_1_cjt__items.html#a45da1fed3bd533038cac61d85d6c2bca">dominio.clases.Cjt_items.getMaxValIntegers</a></div><div class="ttdeci">LinkedHashMap&lt; Integer, Long &gt; getMaxValIntegers()</div><div class="ttdoc">Metodo que devuelve los valores maximos de los atributos enteros del dataset.</div><div class="ttdef"><b>Definition:</b> <a href="_cjt__items_8java_source.html#l00072">Cjt_items.java:72</a></div></div>
+<div class="ttc" id="aclassdominio_1_1clases_1_1_cjt__items_html_a5c36693e47cffb9da13c1aaeeb191df0"><div class="ttname"><a href="classdominio_1_1clases_1_1_cjt__items.html#a5c36693e47cffb9da13c1aaeeb191df0">dominio.clases.Cjt_items.getMaxDates</a></div><div class="ttdeci">LinkedHashMap&lt; Integer, LocalDate &gt; getMaxDates()</div><div class="ttdoc">Metodo que devuelve los valores maximos de los atributos fecha del dataset.</div><div class="ttdef"><b>Definition:</b> <a href="_cjt__items_8java_source.html#l00108">Cjt_items.java:108</a></div></div>
+<div class="ttc" id="aclassdominio_1_1clases_1_1_cjt__items_html_a71ed2c367bb59ec18a6e4b3a430a4e3b"><div class="ttname"><a href="classdominio_1_1clases_1_1_cjt__items.html#a71ed2c367bb59ec18a6e4b3a430a4e3b">dominio.clases.Cjt_items.getMinDates</a></div><div class="ttdeci">LinkedHashMap&lt; Integer, LocalDate &gt; getMinDates()</div><div class="ttdoc">Metodo que devuelve los valores minimos de los atributos fecha del dataset.</div><div class="ttdef"><b>Definition:</b> <a href="_cjt__items_8java_source.html#l00117">Cjt_items.java:117</a></div></div>
+<div class="ttc" id="aclassdominio_1_1clases_1_1_cjt__items_html_a8f50eb1411d7e506234ae0674be726ea"><div class="ttname"><a href="classdominio_1_1clases_1_1_cjt__items.html#a8f50eb1411d7e506234ae0674be726ea">dominio.clases.Cjt_items.getMinValDoubles</a></div><div class="ttdeci">LinkedHashMap&lt; Integer, Double &gt; getMinValDoubles()</div><div class="ttdoc">Metodo que devuelve los valores minimos de los atributos reales del dataset.</div><div class="ttdef"><b>Definition:</b> <a href="_cjt__items_8java_source.html#l00099">Cjt_items.java:99</a></div></div>
+<div class="ttc" id="aclassdominio_1_1clases_1_1_cjt__items_html_ad65ce3e01d8107df2fe96e4ac3280b92"><div class="ttname"><a href="classdominio_1_1clases_1_1_cjt__items.html#ad65ce3e01d8107df2fe96e4ac3280b92">dominio.clases.Cjt_items.getItems</a></div><div class="ttdeci">HashMap&lt; String, Item &gt; getItems()</div><div class="ttdoc">Metodo que retorna el conjunto de items asociado a la instancia de la clase.</div><div class="ttdef"><b>Definition:</b> <a href="_cjt__items_8java_source.html#l00137">Cjt_items.java:137</a></div></div>
+<div class="ttc" id="aclassdominio_1_1clases_1_1_cjt__items_html_ae850e287ca41c2994f877b1e00b53d85"><div class="ttname"><a href="classdominio_1_1clases_1_1_cjt__items.html#ae850e287ca41c2994f877b1e00b53d85">dominio.clases.Cjt_items.getMaxValDoubles</a></div><div class="ttdeci">LinkedHashMap&lt; Integer, Double &gt; getMaxValDoubles()</div><div class="ttdoc">Metodo que devuelve los valores maximos de los atributos reales del dataset.</div><div class="ttdef"><b>Definition:</b> <a href="_cjt__items_8java_source.html#l00090">Cjt_items.java:90</a></div></div>
+<div class="ttc" id="aclassdominio_1_1clases_1_1_item_html"><div class="ttname"><a href="classdominio_1_1clases_1_1_item.html">dominio.clases.Item</a></div><div class="ttdoc">Representa un item y su conjunto de atributos.</div><div class="ttdef"><b>Definition:</b> <a href="_item_8java_source.html#l00017">Item.java:17</a></div></div>
+<div class="ttc" id="aclassdominio_1_1controladores_1_1_driver_cjt__items_html"><div class="ttname"><a href="classdominio_1_1controladores_1_1_driver_cjt__items.html">dominio.controladores.drivers.DriverCjt_items</a></div><div class="ttdoc">Driver representativo de un ejemeplo de ejecucion del funcionamiento de la clase Cjt_items.</div><div class="ttdef"><b>Definition:</b> <a href="_driver_cjt__items_8java_source.html#l00020">DriverCjt_items.java:20</a></div></div>
+<div class="ttc" id="aclassdominio_1_1controladores_1_1_driver_cjt__items_html_a145ac759fa8817d3678e22eb8a56e8d6"><div class="ttname"><a href="classdominio_1_1controladores_1_1_driver_cjt__items.html#a145ac759fa8817d3678e22eb8a56e8d6">dominio.controladores.drivers.DriverCjt_items.testGetMinValDoubles</a></div><div class="ttdeci">static void testGetMinValDoubles(Cjt_items c)</div><div class="ttdoc">Metodo de consulta de los valores doubles minimos de las columnas del conjunto de items.</div><div class="ttdef"><b>Definition:</b> <a href="_driver_cjt__items_8java_source.html#l00215">DriverCjt_items.java:215</a></div></div>
+<div class="ttc" id="aclassdominio_1_1controladores_1_1_driver_cjt__items_html_a3138fb4dc6cfa9f9343d23b8b2f6ecce"><div class="ttname"><a href="classdominio_1_1controladores_1_1_driver_cjt__items.html#a3138fb4dc6cfa9f9343d23b8b2f6ecce">dominio.controladores.drivers.DriverCjt_items.testGetMinDates</a></div><div class="ttdeci">static void testGetMinDates(Cjt_items c)</div><div class="ttdoc">Metodo de consulta de los valores date minimos de las columnas del conjunto de items.</div><div class="ttdef"><b>Definition:</b> <a href="_driver_cjt__items_8java_source.html#l00241">DriverCjt_items.java:241</a></div></div>
+<div class="ttc" id="aclassdominio_1_1controladores_1_1_driver_cjt__items_html_a5f30c2eb7301c92566c3df8fd412e073"><div class="ttname"><a href="classdominio_1_1controladores_1_1_driver_cjt__items.html#a5f30c2eb7301c92566c3df8fd412e073">dominio.controladores.drivers.DriverCjt_items.testIsDouble</a></div><div class="ttdeci">static void testIsDouble(Cjt_items c, String column)</div><div class="ttdoc">Metodo que comprueba si un string es un double.</div><div class="ttdef"><b>Definition:</b> <a href="_driver_cjt__items_8java_source.html#l00090">DriverCjt_items.java:90</a></div></div>
+<div class="ttc" id="aclassdominio_1_1controladores_1_1_driver_cjt__items_html_a638b172f092794329252b1ebee5d981d"><div class="ttname"><a href="classdominio_1_1controladores_1_1_driver_cjt__items.html#a638b172f092794329252b1ebee5d981d">dominio.controladores.drivers.DriverCjt_items.testGetMaxValDoubles</a></div><div class="ttdeci">static void testGetMaxValDoubles(Cjt_items c)</div><div class="ttdoc">Metodo de consulta de los valores doubles maximos de las columnas del conjunto de items.</div><div class="ttdef"><b>Definition:</b> <a href="_driver_cjt__items_8java_source.html#l00202">DriverCjt_items.java:202</a></div></div>
+<div class="ttc" id="aclassdominio_1_1controladores_1_1_driver_cjt__items_html_a7573be131c59194d2f45bb9c44efcc7b"><div class="ttname"><a href="classdominio_1_1controladores_1_1_driver_cjt__items.html#a7573be131c59194d2f45bb9c44efcc7b">dominio.controladores.drivers.DriverCjt_items.testGetMaxDates</a></div><div class="ttdeci">static void testGetMaxDates(Cjt_items c)</div><div class="ttdoc">Metodo de consulta de los valores date maximos de las columnas del conjunto de items.</div><div class="ttdef"><b>Definition:</b> <a href="_driver_cjt__items_8java_source.html#l00228">DriverCjt_items.java:228</a></div></div>
+<div class="ttc" id="aclassdominio_1_1controladores_1_1_driver_cjt__items_html_a7ba67667f604c382a4933eb9fbceff60"><div class="ttname"><a href="classdominio_1_1controladores_1_1_driver_cjt__items.html#a7ba67667f604c382a4933eb9fbceff60">dominio.controladores.drivers.DriverCjt_items.testIsBoolean</a></div><div class="ttdeci">static void testIsBoolean(Cjt_items c, String column)</div><div class="ttdoc">Metodo que comprueba si un string es un booleano.</div><div class="ttdef"><b>Definition:</b> <a href="_driver_cjt__items_8java_source.html#l00147">DriverCjt_items.java:147</a></div></div>
+<div class="ttc" id="aclassdominio_1_1controladores_1_1_driver_cjt__items_html_a9091085cf4342c55493e107104beaafc"><div class="ttname"><a href="classdominio_1_1controladores_1_1_driver_cjt__items.html#a9091085cf4342c55493e107104beaafc">dominio.controladores.drivers.DriverCjt_items.testIsCategorical</a></div><div class="ttdeci">static void testIsCategorical(Cjt_items c, String column)</div><div class="ttdoc">Metodo que comprueba si un string es un atributo de tipo categorico.</div><div class="ttdef"><b>Definition:</b> <a href="_driver_cjt__items_8java_source.html#l00109">DriverCjt_items.java:109</a></div></div>
+<div class="ttc" id="aclassdominio_1_1controladores_1_1_driver_cjt__items_html_a96f39b94e7cd0b1582eb0710194534c3"><div class="ttname"><a href="classdominio_1_1controladores_1_1_driver_cjt__items.html#a96f39b94e7cd0b1582eb0710194534c3">dominio.controladores.drivers.DriverCjt_items.testGetItems</a></div><div class="ttdeci">static void testGetItems(Cjt_items c)</div><div class="ttdoc">Metodo para comprobar la correcta asignacion de un conjunto de items a un Cjt_items.</div><div class="ttdef"><b>Definition:</b> <a href="_driver_cjt__items_8java_source.html#l00040">DriverCjt_items.java:40</a></div></div>
+<div class="ttc" id="aclassdominio_1_1controladores_1_1_driver_cjt__items_html_a9a7055d8d222c4f504449bb760ef1b77"><div class="ttname"><a href="classdominio_1_1controladores_1_1_driver_cjt__items.html#a9a7055d8d222c4f504449bb760ef1b77">dominio.controladores.drivers.DriverCjt_items.testIsInteger</a></div><div class="ttdeci">static void testIsInteger(Cjt_items c, String column)</div><div class="ttdoc">Metodo que comprueba si un string es un entero.</div><div class="ttdef"><b>Definition:</b> <a href="_driver_cjt__items_8java_source.html#l00071">DriverCjt_items.java:71</a></div></div>
+<div class="ttc" id="aclassdominio_1_1controladores_1_1_driver_cjt__items_html_a9d5a188578404f90b5bb5205e1a436ac"><div class="ttname"><a href="classdominio_1_1controladores_1_1_driver_cjt__items.html#a9d5a188578404f90b5bb5205e1a436ac">dominio.controladores.drivers.DriverCjt_items.testIsDate</a></div><div class="ttdeci">static void testIsDate(Cjt_items c, String column)</div><div class="ttdoc">Metodo que comprueba si un string es una fecha.</div><div class="ttdef"><b>Definition:</b> <a href="_driver_cjt__items_8java_source.html#l00052">DriverCjt_items.java:52</a></div></div>
+<div class="ttc" id="aclassdominio_1_1controladores_1_1_driver_cjt__items_html_aaf4b764be82ae760d1e4c2d6040012f9"><div class="ttname"><a href="classdominio_1_1controladores_1_1_driver_cjt__items.html#aaf4b764be82ae760d1e4c2d6040012f9">dominio.controladores.drivers.DriverCjt_items.testGetMinValIntegers</a></div><div class="ttdeci">static void testGetMinValIntegers(Cjt_items c)</div><div class="ttdoc">Metodo de consulta de los valores enteros minimos de las columnas del conjunto de items.</div><div class="ttdef"><b>Definition:</b> <a href="_driver_cjt__items_8java_source.html#l00189">DriverCjt_items.java:189</a></div></div>
+<div class="ttc" id="aclassdominio_1_1controladores_1_1_driver_cjt__items_html_ab3c0f5773dd6064277c086270100ab80"><div class="ttname"><a href="classdominio_1_1controladores_1_1_driver_cjt__items.html#ab3c0f5773dd6064277c086270100ab80">dominio.controladores.drivers.DriverCjt_items.main</a></div><div class="ttdeci">static void main(String args[])</div><div class="ttdef"><b>Definition:</b> <a href="_driver_cjt__items_8java_source.html#l00249">DriverCjt_items.java:249</a></div></div>
+<div class="ttc" id="aclassdominio_1_1controladores_1_1_driver_cjt__items_html_ac40969ba0b12972966989f5fd0d5a368"><div class="ttname"><a href="classdominio_1_1controladores_1_1_driver_cjt__items.html#ac40969ba0b12972966989f5fd0d5a368">dominio.controladores.drivers.DriverCjt_items.testParseToArray</a></div><div class="ttdeci">static void testParseToArray(Cjt_items c, String column)</div><div class="ttdoc">Metodo que comprueba si un string es un conjunto de atributos de un mismo tipo.</div><div class="ttdef"><b>Definition:</b> <a href="_driver_cjt__items_8java_source.html#l00128">DriverCjt_items.java:128</a></div></div>
+<div class="ttc" id="aclassdominio_1_1controladores_1_1_driver_cjt__items_html_af2e74ef7c5211d4ef507b0d1021653fb"><div class="ttname"><a href="classdominio_1_1controladores_1_1_driver_cjt__items.html#af2e74ef7c5211d4ef507b0d1021653fb">dominio.controladores.drivers.DriverCjt_items.testGetMaxValIntegers</a></div><div class="ttdeci">static void testGetMaxValIntegers(Cjt_items c)</div><div class="ttdoc">Metodo de consulta de los valores enteros maximos de las columnas del conjunto de items.</div><div class="ttdef"><b>Definition:</b> <a href="_driver_cjt__items_8java_source.html#l00176">DriverCjt_items.java:176</a></div></div>
+<div class="ttc" id="aclassdominio_1_1controladores_1_1_driver_cjt__items_html_afe454285751dc40fc3577a3a6ce9ec8e"><div class="ttname"><a href="classdominio_1_1controladores_1_1_driver_cjt__items.html#afe454285751dc40fc3577a3a6ce9ec8e">dominio.controladores.drivers.DriverCjt_items.testPrintItems</a></div><div class="ttdeci">static void testPrintItems()</div><div class="ttdoc">Metodo dedicado a la impresion de los objetos contenidos en un Cjt_items.</div><div class="ttdef"><b>Definition:</b> <a href="_driver_cjt__items_8java_source.html#l00164">DriverCjt_items.java:164</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+</small></address>
+</body>
+</html>
