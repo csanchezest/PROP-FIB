@@ -1,0 +1,7 @@
+id,budget,genres,adult,original_language,popularity,release_date
+9,98000000,Action,FALSE,en,7.284477,1995-12-22
+4,52000000,Drama,TRUE,en,10.137389,2010-11-22
+2,4000000,Crime,FALSE,en,9.026586,1999-12-09
+1,18000000,Fantasy,FALSE,fr,9.822423,2001-05-16
+7,0,Music,TRUE,en,7.137117,1995-12-29
+3,900000,Drama,FALSE,nl,2.030174,2000-09-12

@@ -1,0 +1,21 @@
+Prova 1
+
+Descripció: Es prova cada un dels metodes del algoritme K-means i finalent s'executa K-means
+Objectius: Provar la implementació del K-means
+Drivers construits: DriverKmeans
+Entrada: dataset amb usuaris inventats (/persistencia/data/DriversData/KmeansTestSets/SmallSizeTest/smallTestRatingsKmeans.csv)
+Sortida: (output.txt)
+Resultat de la prova: ok
+
+
+Prova 2
+
+Descripció: Es prova cada un dels metodes del algoritme K-means i finalent s'executa K-means
+Objectius: Provar la implementació del K-means
+Drivers construits: DriverKmeans
+Entrada: dataset Movielens 250 
+Sortida: (output2.txt)
+Resultat de la prova: ok
+
+
+
